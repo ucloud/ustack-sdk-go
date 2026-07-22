@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 // UpdateVMSetBoundImageResponse - 更新计算集群绑定的镜像

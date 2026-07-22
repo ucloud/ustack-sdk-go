@@ -3,7 +3,7 @@ package config
 import (
 	"time"
 
-	"third_party/platform-sdk-go/common/log"
+	"github.com/ucloud/ustack-sdk-go/common/log"
 )
 
 // Config is the config of ucloud sdk, use for setting up client

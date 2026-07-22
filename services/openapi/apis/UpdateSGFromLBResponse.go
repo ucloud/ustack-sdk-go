@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 // UpdateSGFromLBResponse - 新增/更新 SG 到 LB

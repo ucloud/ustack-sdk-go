@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // CloneCustomImageToBaseImageRequest 自制镜像复制成基础镜像

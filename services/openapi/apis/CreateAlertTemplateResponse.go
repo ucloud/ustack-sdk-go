@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 // CreateAlertTemplateResponse - 创建告警模版

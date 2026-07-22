@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // DescribeDBSRestoreRangeInfoRequest 查看可恢复时间段详情

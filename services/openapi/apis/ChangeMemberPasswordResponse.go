@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 // ChangeMemberPasswordResponse - 由管理员为子账号更改密码

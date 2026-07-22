@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // AllocateNativeNodeVNCSessionRequest 申请原生节点VNC会话

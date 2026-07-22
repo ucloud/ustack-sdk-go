@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // GetLatestInstallConfigRequest 获取裸金属最近一次安装配置

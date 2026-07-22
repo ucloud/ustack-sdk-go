@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"third_party/platform-sdk-go/common/auth"
-	"third_party/platform-sdk-go/common/helpers/mock"
-	"third_party/platform-sdk-go/common/http"
-	"third_party/platform-sdk-go/common/metadata"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common/helpers/mock"
+	"github.com/ucloud/ustack-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/metadata"
 )
 
 type MockedSTSCase struct {

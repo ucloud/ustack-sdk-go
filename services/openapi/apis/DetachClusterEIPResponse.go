@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 // DetachClusterEIPResponse - 解绑k8s集群外网IP

@@ -3,9 +3,9 @@
 package openapi
 
 import (
-	"third_party/platform-sdk-go/common"
-	"third_party/platform-sdk-go/common/auth"
-	"third_party/platform-sdk-go/services/openapi/apis"
+	"github.com/ucloud/ustack-sdk-go/common"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/services/openapi/apis"
 )
 
 // OpenAPIClient is the client of OpenAPI

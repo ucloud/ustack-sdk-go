@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // UpdateMemberOAuth2UniqueIDRequest 修改账号OAuth2唯一标识ID

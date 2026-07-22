@@ -4,7 +4,7 @@ import (
 	"errors"
 	"time"
 
-	"third_party/platform-sdk-go/common/log"
+	"github.com/ucloud/ustack-sdk-go/common/log"
 )
 
 // Waiter to wait sth until it completed.

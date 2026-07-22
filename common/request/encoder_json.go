@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"third_party/platform-sdk-go/common/auth"
-	"third_party/platform-sdk-go/common/config"
-	"third_party/platform-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common/config"
+	"github.com/ucloud/ustack-sdk-go/common/http"
 )
 
 type JSONEncoder struct {

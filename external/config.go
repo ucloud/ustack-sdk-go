@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"third_party/platform-sdk-go/common"
-	"third_party/platform-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
 )
 
 // CredentialProvider is the provider to store and provide credential instance

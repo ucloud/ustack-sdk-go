@@ -6,12 +6,12 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"third_party/platform-sdk-go/common"
-	"third_party/platform-sdk-go/common/auth"
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 
-	proto "third_party/platform-sdk-go/common/http"
+	proto "github.com/ucloud/ustack-sdk-go/common/http"
 )
 
 func newTestClient() *common.Client {

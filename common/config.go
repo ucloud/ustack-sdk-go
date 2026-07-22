@@ -1,6 +1,6 @@
 package common
 
-import "third_party/platform-sdk-go/common/config"
+import "github.com/ucloud/ustack-sdk-go/common/config"
 
 // Config is the config of ucloud sdk, use for setting up client
 type Config = config.Config

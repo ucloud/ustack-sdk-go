@@ -2,14 +2,14 @@ package external
 
 import (
 	"fmt"
+	"github.com/ucloud/ustack-sdk-go/common"
 	"os"
 	"path/filepath"
 	"strings"
-	"third_party/platform-sdk-go/common"
 	"time"
 
-	"third_party/platform-sdk-go/common/auth"
-	"third_party/platform-sdk-go/common/log"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common/log"
 )
 
 // DefaultProfile is the default named profile for ucloud sdk

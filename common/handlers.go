@@ -4,11 +4,11 @@ import (
 	"math/rand"
 	"time"
 
-	uerr "third_party/platform-sdk-go/common/error"
-	"third_party/platform-sdk-go/common/http"
-	"third_party/platform-sdk-go/common/log"
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
+	uerr "github.com/ucloud/ustack-sdk-go/common/error"
+	"github.com/ucloud/ustack-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/log"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 // RequestHandler receive request and write data into this request memory area

@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // DescribeNICRequest 查询弹性网卡信息,如果指定资源查询就是查询资源绑定的所有网卡

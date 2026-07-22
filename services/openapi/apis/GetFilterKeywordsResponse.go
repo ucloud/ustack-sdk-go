@@ -3,8 +3,8 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
-	"third_party/platform-sdk-go/services/openapi/models"
+	"github.com/ucloud/ustack-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/services/openapi/models"
 )
 
 // GetFilterKeywordsResponse - 获取规格/价格/配额分类筛选关键字

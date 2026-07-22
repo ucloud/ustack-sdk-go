@@ -3,17 +3,17 @@ package utest
 import (
 	"fmt"
 	"github.com/stretchr/testify/assert"
+	"github.com/ucloud/ustack-sdk-go/common"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common/helpers/mock"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/utest/driver"
+	"github.com/ucloud/ustack-sdk-go/common/utest/utils"
+	"github.com/ucloud/ustack-sdk-go/common/utest/validation"
 	"os"
 	"reflect"
 	"testing"
-	"third_party/platform-sdk-go/common"
-	"third_party/platform-sdk-go/common/auth"
-	"third_party/platform-sdk-go/common/helpers/mock"
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
-	"third_party/platform-sdk-go/common/utest/driver"
-	"third_party/platform-sdk-go/common/utest/utils"
-	"third_party/platform-sdk-go/common/utest/validation"
 )
 
 func TestMain(m *testing.M) {

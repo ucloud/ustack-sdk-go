@@ -1,8 +1,8 @@
 package utils
 
 import (
+	"github.com/ucloud/ustack-sdk-go/common/log"
 	"testing"
-	"third_party/platform-sdk-go/common/log"
 	"time"
 )
 

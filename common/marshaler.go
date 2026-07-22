@@ -7,12 +7,12 @@ import (
 	"strconv"
 	"strings"
 
-	uerr "third_party/platform-sdk-go/common/error"
+	uerr "github.com/ucloud/ustack-sdk-go/common/error"
 
-	"third_party/platform-sdk-go/common/http"
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
-	"third_party/platform-sdk-go/common/version"
+	"github.com/ucloud/ustack-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/version"
 )
 
 // SetupRequest will init request by client configuration

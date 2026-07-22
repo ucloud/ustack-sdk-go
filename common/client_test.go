@@ -6,15 +6,15 @@ import (
 	"testing"
 	"time"
 
-	"third_party/platform-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 
-	uerr "third_party/platform-sdk-go/common/error"
-	"third_party/platform-sdk-go/common/log"
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
+	uerr "github.com/ucloud/ustack-sdk-go/common/error"
+	"github.com/ucloud/ustack-sdk-go/common/log"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 const (

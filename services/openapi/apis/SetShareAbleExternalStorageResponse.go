@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 // SetShareAbleExternalStorageResponse - 外置存储盘设置为可共享的磁盘

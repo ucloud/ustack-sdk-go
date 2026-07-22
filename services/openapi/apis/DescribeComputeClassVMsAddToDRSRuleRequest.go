@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // DescribeComputeClassVMsAddToDRSRuleRequest 查看可加入计算集群规则的虚拟机

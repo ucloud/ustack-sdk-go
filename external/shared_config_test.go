@@ -1,12 +1,12 @@
 package external
 
 import (
+	"github.com/ucloud/ustack-sdk-go/common"
 	"testing"
-	"third_party/platform-sdk-go/common"
 
 	"github.com/stretchr/testify/assert"
 
-	"third_party/platform-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
 )
 
 func TestLoadSharedConfig(t *testing.T) {

@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"third_party/platform-sdk-go/common"
-	uerr "third_party/platform-sdk-go/common/error"
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common"
+	uerr "github.com/ucloud/ustack-sdk-go/common/error"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 type StepReport struct {

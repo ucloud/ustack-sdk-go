@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"third_party/platform-sdk-go/common/auth"
-	"third_party/platform-sdk-go/common/config"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/common/config"
 )
 
 func TestRequestAccessor(t *testing.T) {

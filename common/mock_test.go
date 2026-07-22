@@ -7,13 +7,13 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"third_party/platform-sdk-go/common/auth"
-	uerr "third_party/platform-sdk-go/common/error"
-	"third_party/platform-sdk-go/common/helpers/mock"
-	"third_party/platform-sdk-go/common/http"
-	"third_party/platform-sdk-go/common/log"
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	uerr "github.com/ucloud/ustack-sdk-go/common/error"
+	"github.com/ucloud/ustack-sdk-go/common/helpers/mock"
+	"github.com/ucloud/ustack-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/log"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 type clientFactory func() *Client

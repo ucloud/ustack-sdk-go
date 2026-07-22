@@ -6,7 +6,7 @@ package waiter
 import (
 	"time"
 
-	"third_party/platform-sdk-go/common/log"
+	"github.com/ucloud/ustack-sdk-go/common/log"
 )
 
 const graceRefreshTimeout = 30 * time.Second

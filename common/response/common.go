@@ -4,7 +4,7 @@ Package response is the response of service
 package response
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // Common describe a response of action,

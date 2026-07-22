@@ -3,8 +3,8 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/services/openapi/models"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/services/openapi/models"
 )
 
 // SetupSMCRequest 设置SMC任务

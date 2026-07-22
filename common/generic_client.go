@@ -1,8 +1,8 @@
 package common
 
 import (
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 func (c *Client) NewGenericRequest() request.GenericRequest {

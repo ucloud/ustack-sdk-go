@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"third_party/platform-sdk-go/common/utils"
+	"github.com/ucloud/ustack-sdk-go/common/utils"
 )
 
 var availableHTTPMethods = []string{"GET", "POST", "PUT", "DELETE", "OPTION", "HEAD", "PATCH"}

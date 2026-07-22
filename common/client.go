@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"time"
 
-	"third_party/platform-sdk-go/common/auth"
-	uerr "third_party/platform-sdk-go/common/error"
-	"third_party/platform-sdk-go/common/http"
-	"third_party/platform-sdk-go/common/log"
-	"third_party/platform-sdk-go/common/request"
-	"third_party/platform-sdk-go/common/response"
-	"third_party/platform-sdk-go/common/utils"
-	"third_party/platform-sdk-go/common/version"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	uerr "github.com/ucloud/ustack-sdk-go/common/error"
+	"github.com/ucloud/ustack-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/log"
+	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/utils"
+	"github.com/ucloud/ustack-sdk-go/common/version"
 )
 
 // Version is the version of sdk

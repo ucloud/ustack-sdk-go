@@ -3,7 +3,7 @@ package mock
 import (
 	"encoding/json"
 
-	"third_party/platform-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/http"
 )
 
 // Request is the parameters of an action invoking

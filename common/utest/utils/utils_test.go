@@ -2,11 +2,11 @@ package utils
 
 import (
 	"github.com/stretchr/testify/assert"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 	"reflect"
 	"testing"
-	"third_party/platform-sdk-go/common/response"
 
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 func TestGetValue(t *testing.T) {

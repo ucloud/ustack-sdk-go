@@ -3,8 +3,8 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
-	"third_party/platform-sdk-go/services/openapi/models"
+	"github.com/ucloud/ustack-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/services/openapi/models"
 )
 
 // ListInstallProfilesResponse - 获取装机配置模板列表

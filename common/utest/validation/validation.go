@@ -2,8 +2,8 @@ package validation
 
 import (
 	"github.com/pkg/errors"
-	"third_party/platform-sdk-go/common/utest/driver"
-	"third_party/platform-sdk-go/common/utest/utils"
+	"github.com/ucloud/ustack-sdk-go/common/utest/driver"
+	"github.com/ucloud/ustack-sdk-go/common/utest/utils"
 )
 
 var Builtins = NewTestContext(nil)

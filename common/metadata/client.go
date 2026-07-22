@@ -7,7 +7,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"third_party/platform-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/http"
 )
 
 const globalEndpoint = "http://100.80.80.80"

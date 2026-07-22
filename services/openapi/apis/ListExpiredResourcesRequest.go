@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
 // ListExpiredResourcesRequest 查询过期资源，根据资源类型过滤，排除销毁、销毁中和已删除的资源

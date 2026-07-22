@@ -3,7 +3,7 @@ package request
 import (
 	"encoding/base64"
 
-	"third_party/platform-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/http"
 )
 
 type Encoder interface {

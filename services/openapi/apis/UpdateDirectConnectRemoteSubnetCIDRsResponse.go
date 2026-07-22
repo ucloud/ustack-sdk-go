@@ -3,7 +3,7 @@
 package apis
 
 import (
-	"third_party/platform-sdk-go/common/response"
+	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
 // UpdateDirectConnectRemoteSubnetCIDRsResponse - 修改DirectConnect专线接入远端子网网段

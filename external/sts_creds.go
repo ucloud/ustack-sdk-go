@@ -7,8 +7,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"third_party/platform-sdk-go/common/http"
-	"third_party/platform-sdk-go/common/metadata"
+	"github.com/ucloud/ustack-sdk-go/common/http"
+	"github.com/ucloud/ustack-sdk-go/common/metadata"
 )
 
 const internalBaseUrl = "http://api.service.ucloud.cn"
