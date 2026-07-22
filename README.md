@@ -4,11 +4,16 @@
 
 **项目必须启用 `go module`**
 
-将sdk解压至'golang-sdk'目录下，编辑 `go.mod`文件，增加这些内容
-```
-replace git.ucloudadmin.com/taishan/ucloudstacksdk/ucloudstacksdk-go => ./golang-sdk
+执行以下命令安装 SDK：
 
-require git.ucloudadmin.com/taishan/ucloudstacksdk/ucloudstacksdk-go v0.0.0-00010101000000-000000000000
+```bash
+go get github.com/ucloud/ustack-sdk-go
+```
+
+或在 `go.mod` 中增加依赖：
+
+```
+require github.com/ucloud/ustack-sdk-go v0.0.0
 ```
 
 ## 使用
@@ -23,9 +28,9 @@ package main
 import (
 	"fmt"
 
-	"git.ucloudadmin.com/taishan/ucloudstacksdk/ucloudstacksdk-go/common"
-	"git.ucloudadmin.com/taishan/ucloudstacksdk/ucloudstacksdk-go/common/auth"
-	"git.ucloudadmin.com/taishan/ucloudstacksdk/ucloudstacksdk-go/services/openapi"
+	"github.com/ucloud/ustack-sdk-go/common"
+	"github.com/ucloud/ustack-sdk-go/common/auth"
+	"github.com/ucloud/ustack-sdk-go/services/openapi"
 )
 
 func main() {
