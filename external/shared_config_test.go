@@ -10,6 +10,8 @@ import (
 )
 
 func TestLoadSharedConfig(t *testing.T) {
+	setupTestSharedFiles(t)
+
 	cfg, err := LoadUCloudConfigFile(
 		TestValueEnvUCloudSharedConfigFile,
 		TestValueEnvUCloudProfile,

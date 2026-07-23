@@ -505,8 +505,8 @@ func TestEncoder(t *testing.T) {
 				},
 				Name: "foo",
 			},
-			"Action=foo&Name=foo&ProjectId=bar&PublicKey=foo&Region=cn-bj2&SecurityToken=42&Signature=170de002e3ca3acdc3a790badc4d14b09d183e4b&",
-			`{"Action":"foo","Name":"foo","ProjectId":"bar","PublicKey":"foo","Region":"cn-bj2","SecurityToken":"42","Signature":"170de002e3ca3acdc3a790badc4d14b09d183e4b"}`,
+			"Action=foo&Name=foo&ProjectId=bar&PublicKey=foo&Region=cn-bj2&SecurityToken=42&Signature=94b43e973dc79aa6bcbbfa273fb7e956fbd1db0e",
+			`{"Action":"foo","Name":"foo","ProjectId":"bar","PublicKey":"foo","Region":"cn-bj2","SecurityToken":"42","Signature":"94b43e973dc79aa6bcbbfa273fb7e956fbd1db0e"}`,
 			false,
 		},
 		{
