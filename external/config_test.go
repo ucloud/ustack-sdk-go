@@ -1,6 +1,7 @@
 package external
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -32,6 +33,7 @@ var (
 )
 
 func TestLoadConfig(t *testing.T) {
+	setupTestSharedFiles(t)
 	setTestEnv()
 
 	c, err := LoadDefaultUCloudConfig()
@@ -51,6 +53,7 @@ func TestLoadEnvConfig(t *testing.T) {
 }
 
 func TestLoadSharedFile(t *testing.T) {
+	setupTestSharedFiles(t)
 	c := &config{
 		SharedConfigFile:     TestValueEnvUCloudSharedConfigFile,
 		SharedCredentialFile: TestValueEnvUCloudSharedCredentialFile,
@@ -91,4 +94,38 @@ func setTestEnv() {
 	_ = os.Setenv(UCloudSharedCredentialFileEnvVar, TestValueEnvUCloudSharedCredentialFile)
 	durationStr := strings.TrimSuffix(TestValueEnvUCloudTimeout.String(), "s")
 	_ = os.Setenv(UCloudTimeoutSecondEnvVar, durationStr)
+}
+
+func setupTestSharedFiles(t *testing.T) {
+	t.Helper()
+
+	dir := t.TempDir()
+	TestValueEnvUCloudSharedConfigFile = filepath.Join(dir, "config.json")
+	TestValueEnvUCloudSharedCredentialFile = filepath.Join(dir, "credential.json")
+
+	configJSON := fmt.Sprintf(`[
+  {
+    "project_id": %q,
+    "region": %q,
+    "base_url": %q,
+    "timeout_sec": %d,
+    "profile": %q,
+    "active": true
+  }
+]`, TestValueFileUCloudProjectId, TestValueFileUCloudRegion, TestValueFileUCloudBaseUrl, int(TestValueFileUCloudTimeout/time.Second), TestValueEnvUCloudProfile)
+
+	credentialJSON := fmt.Sprintf(`[
+  {
+    "public_key": %q,
+    "private_key": %q,
+    "profile": %q
+  }
+]`, TestValueFileUCloudPublicKey, TestValueFileUCloudPrivateKey, TestValueEnvUCloudProfile)
+
+	if err := os.WriteFile(TestValueEnvUCloudSharedConfigFile, []byte(configJSON), 0644); err != nil {
+		t.Fatalf("write shared config fixture: %v", err)
+	}
+	if err := os.WriteFile(TestValueEnvUCloudSharedCredentialFile, []byte(credentialJSON), 0644); err != nil {
+		t.Fatalf("write shared credential fixture: %v", err)
+	}
 }

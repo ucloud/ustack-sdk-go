@@ -26,19 +26,19 @@ func TestCredential_CreateSign(t *testing.T) {
 			"standard",
 			fields{"ucloudsomeone@example.com1296235120854146120", "46f09bb9fab4f12dfc160dae12273d5332b5debe"},
 			args{testCredentialCreateSignQuery00},
-			"4f9ef5df2abab2c6fccd1e9515cb7e2df8c6bb65",
+			"ad22c1e5d9571e532a9fffa2b2422d35b14b2f1e",
 		},
 		{
 			"unorder",
 			fields{"ucloudsomeone@example.com1296235120854146120", "46f09bb9fab4f12dfc160dae12273d5332b5debe"},
 			args{testCredentialCreateSignQuery01},
-			"4f9ef5df2abab2c6fccd1e9515cb7e2df8c6bb65",
+			"ad22c1e5d9571e532a9fffa2b2422d35b14b2f1e",
 		},
 		{
 			"noPublicKey",
 			fields{"ucloudsomeone@example.com1296235120854146120", "46f09bb9fab4f12dfc160dae12273d5332b5debe"},
 			args{testCredentialCreateSignQuery02},
-			"4f9ef5df2abab2c6fccd1e9515cb7e2df8c6bb65",
+			"ad22c1e5d9571e532a9fffa2b2422d35b14b2f1e",
 		},
 	}
 	for _, tt := range tests {
@@ -72,7 +72,7 @@ func TestCredential_BuildCredentialedQuery(t *testing.T) {
 			"standard",
 			fields{"ucloudsomeone@example.com1296235120854146120", "46f09bb9fab4f12dfc160dae12273d5332b5debe"},
 			args{testCredentialBuildCredentialedQuery01},
-			"4f9ef5df2abab2c6fccd1e9515cb7e2df8c6bb65",
+			"ad22c1e5d9571e532a9fffa2b2422d35b14b2f1e",
 		},
 		{
 			"longArray",
@@ -105,7 +105,7 @@ func TestCredential_STSCredential(t *testing.T) {
 	query := c.BuildCredentialedQuery(testCredentialBuildCredentialedQuery01)
 	values, err := url.ParseQuery(query)
 	assert.NoError(t, err)
-	assert.Equal(t, "170c480ad176a247b324eb92a2cfe536aacfbd04", values.Get("Signature"))
+	assert.Equal(t, "f834b40c4d0312ae837105bcacac3ea0f6be4512", values.Get("Signature"))
 	assert.True(t, c.IsExpired())
 }
 
