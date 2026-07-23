@@ -30,7 +30,7 @@ import (
 
 	"github.com/ucloud/ustack-sdk-go/common"
 	"github.com/ucloud/ustack-sdk-go/common/auth"
-	"github.com/ucloud/ustack-sdk-go/services/openapi"
+	"github.com/ucloud/ustack-sdk-go/services/ucloudstack"
 )
 
 func main() {
@@ -41,7 +41,7 @@ func main() {
 	credential.PrivateKey = "my_private_key"
 	credential.PublicKey = "my_public_key"
 
-	client := openapi.NewClient(&cfg, &credential)
+	client := ucloudstack.NewClient(&cfg, &credential)
 
 	req := client.NewCreateVMInstanceRequest()
 	req.Region = common.String("my_region") // 替换成平台上的目标地域
