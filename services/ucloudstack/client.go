@@ -8,32 +8,32 @@ import (
 	"github.com/ucloud/ustack-sdk-go/services/ucloudstack/apis"
 )
 
-// OpenAPIClient is the client of OpenAPI
-type OpenAPIClient struct {
+// UCloudStackClient is the client of UCloudStack
+type UCloudStackClient struct {
 	*common.Client
 }
 
-// NewClient will return a instance of OpenAPIClient
-func NewClient(config *common.Config, credential *auth.Credential) *OpenAPIClient {
-	meta := common.ClientMeta{Product: "OpenAPI"}
+// NewClient will return a instance of UCloudStackClient
+func NewClient(config *common.Config, credential *auth.Credential) *UCloudStackClient {
+	meta := common.ClientMeta{Product: "UCloudStack"}
 	client := common.NewClientWithMeta(config, credential, meta)
-	return &OpenAPIClient{
+	return &UCloudStackClient{
 		client,
 	}
 }
 
 // NewBindAlertTemplateRequest will create request of BindAlertTemplate action.
-func (c *OpenAPIClient) NewBindAlertTemplateRequest() *apis.BindAlertTemplateRequest {
+func (c *UCloudStackClient) NewBindAlertTemplateRequest() *apis.BindAlertTemplateRequest {
 	req := &apis.BindAlertTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // BindAlertTemplate 绑定告警模版
-func (c *OpenAPIClient) BindAlertTemplate(req *apis.BindAlertTemplateRequest) (*apis.BindAlertTemplateResponse, error) {
+func (c *UCloudStackClient) BindAlertTemplate(req *apis.BindAlertTemplateRequest) (*apis.BindAlertTemplateResponse, error) {
 	var err error
 	var res apis.BindAlertTemplateResponse
 
@@ -45,17 +45,17 @@ func (c *OpenAPIClient) BindAlertTemplate(req *apis.BindAlertTemplateRequest) (*
 }
 
 // NewCreateAlertNotifyGroupRequest will create request of CreateAlertNotifyGroup action.
-func (c *OpenAPIClient) NewCreateAlertNotifyGroupRequest() *apis.CreateAlertNotifyGroupRequest {
+func (c *UCloudStackClient) NewCreateAlertNotifyGroupRequest() *apis.CreateAlertNotifyGroupRequest {
 	req := &apis.CreateAlertNotifyGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateAlertNotifyGroup 创建告警通知组
-func (c *OpenAPIClient) CreateAlertNotifyGroup(req *apis.CreateAlertNotifyGroupRequest) (*apis.CreateAlertNotifyGroupResponse, error) {
+func (c *UCloudStackClient) CreateAlertNotifyGroup(req *apis.CreateAlertNotifyGroupRequest) (*apis.CreateAlertNotifyGroupResponse, error) {
 	var err error
 	var res apis.CreateAlertNotifyGroupResponse
 
@@ -67,17 +67,17 @@ func (c *OpenAPIClient) CreateAlertNotifyGroup(req *apis.CreateAlertNotifyGroupR
 }
 
 // NewCreateAlertNotifyReceiverRequest will create request of CreateAlertNotifyReceiver action.
-func (c *OpenAPIClient) NewCreateAlertNotifyReceiverRequest() *apis.CreateAlertNotifyReceiverRequest {
+func (c *UCloudStackClient) NewCreateAlertNotifyReceiverRequest() *apis.CreateAlertNotifyReceiverRequest {
 	req := &apis.CreateAlertNotifyReceiverRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateAlertNotifyReceiver 创建告警通知人
-func (c *OpenAPIClient) CreateAlertNotifyReceiver(req *apis.CreateAlertNotifyReceiverRequest) (*apis.CreateAlertNotifyReceiverResponse, error) {
+func (c *UCloudStackClient) CreateAlertNotifyReceiver(req *apis.CreateAlertNotifyReceiverRequest) (*apis.CreateAlertNotifyReceiverResponse, error) {
 	var err error
 	var res apis.CreateAlertNotifyReceiverResponse
 
@@ -89,17 +89,17 @@ func (c *OpenAPIClient) CreateAlertNotifyReceiver(req *apis.CreateAlertNotifyRec
 }
 
 // NewCreateAlertNotifyWebhookRequest will create request of CreateAlertNotifyWebhook action.
-func (c *OpenAPIClient) NewCreateAlertNotifyWebhookRequest() *apis.CreateAlertNotifyWebhookRequest {
+func (c *UCloudStackClient) NewCreateAlertNotifyWebhookRequest() *apis.CreateAlertNotifyWebhookRequest {
 	req := &apis.CreateAlertNotifyWebhookRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateAlertNotifyWebhook 创建告警回调接口
-func (c *OpenAPIClient) CreateAlertNotifyWebhook(req *apis.CreateAlertNotifyWebhookRequest) (*apis.CreateAlertNotifyWebhookResponse, error) {
+func (c *UCloudStackClient) CreateAlertNotifyWebhook(req *apis.CreateAlertNotifyWebhookRequest) (*apis.CreateAlertNotifyWebhookResponse, error) {
 	var err error
 	var res apis.CreateAlertNotifyWebhookResponse
 
@@ -111,17 +111,17 @@ func (c *OpenAPIClient) CreateAlertNotifyWebhook(req *apis.CreateAlertNotifyWebh
 }
 
 // NewCreateAlertTemplateRequest will create request of CreateAlertTemplate action.
-func (c *OpenAPIClient) NewCreateAlertTemplateRequest() *apis.CreateAlertTemplateRequest {
+func (c *UCloudStackClient) NewCreateAlertTemplateRequest() *apis.CreateAlertTemplateRequest {
 	req := &apis.CreateAlertTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateAlertTemplate 创建告警模版
-func (c *OpenAPIClient) CreateAlertTemplate(req *apis.CreateAlertTemplateRequest) (*apis.CreateAlertTemplateResponse, error) {
+func (c *UCloudStackClient) CreateAlertTemplate(req *apis.CreateAlertTemplateRequest) (*apis.CreateAlertTemplateResponse, error) {
 	var err error
 	var res apis.CreateAlertTemplateResponse
 
@@ -133,17 +133,17 @@ func (c *OpenAPIClient) CreateAlertTemplate(req *apis.CreateAlertTemplateRequest
 }
 
 // NewCreateAlertTemplateRuleRequest will create request of CreateAlertTemplateRule action.
-func (c *OpenAPIClient) NewCreateAlertTemplateRuleRequest() *apis.CreateAlertTemplateRuleRequest {
+func (c *UCloudStackClient) NewCreateAlertTemplateRuleRequest() *apis.CreateAlertTemplateRuleRequest {
 	req := &apis.CreateAlertTemplateRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateAlertTemplateRule 创建告警模版规则
-func (c *OpenAPIClient) CreateAlertTemplateRule(req *apis.CreateAlertTemplateRuleRequest) (*apis.CreateAlertTemplateRuleResponse, error) {
+func (c *UCloudStackClient) CreateAlertTemplateRule(req *apis.CreateAlertTemplateRuleRequest) (*apis.CreateAlertTemplateRuleResponse, error) {
 	var err error
 	var res apis.CreateAlertTemplateRuleResponse
 
@@ -155,17 +155,17 @@ func (c *OpenAPIClient) CreateAlertTemplateRule(req *apis.CreateAlertTemplateRul
 }
 
 // NewCreateOPLogNotifyRuleRequest will create request of CreateOPLogNotifyRule action.
-func (c *OpenAPIClient) NewCreateOPLogNotifyRuleRequest() *apis.CreateOPLogNotifyRuleRequest {
+func (c *UCloudStackClient) NewCreateOPLogNotifyRuleRequest() *apis.CreateOPLogNotifyRuleRequest {
 	req := &apis.CreateOPLogNotifyRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateOPLogNotifyRule 创建操作日志通知规则
-func (c *OpenAPIClient) CreateOPLogNotifyRule(req *apis.CreateOPLogNotifyRuleRequest) (*apis.CreateOPLogNotifyRuleResponse, error) {
+func (c *UCloudStackClient) CreateOPLogNotifyRule(req *apis.CreateOPLogNotifyRuleRequest) (*apis.CreateOPLogNotifyRuleResponse, error) {
 	var err error
 	var res apis.CreateOPLogNotifyRuleResponse
 
@@ -177,17 +177,17 @@ func (c *OpenAPIClient) CreateOPLogNotifyRule(req *apis.CreateOPLogNotifyRuleReq
 }
 
 // NewCreateResourceEventNotifyRuleRequest will create request of CreateResourceEventNotifyRule action.
-func (c *OpenAPIClient) NewCreateResourceEventNotifyRuleRequest() *apis.CreateResourceEventNotifyRuleRequest {
+func (c *UCloudStackClient) NewCreateResourceEventNotifyRuleRequest() *apis.CreateResourceEventNotifyRuleRequest {
 	req := &apis.CreateResourceEventNotifyRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateResourceEventNotifyRule 创建资源事件通知规则
-func (c *OpenAPIClient) CreateResourceEventNotifyRule(req *apis.CreateResourceEventNotifyRuleRequest) (*apis.CreateResourceEventNotifyRuleResponse, error) {
+func (c *UCloudStackClient) CreateResourceEventNotifyRule(req *apis.CreateResourceEventNotifyRuleRequest) (*apis.CreateResourceEventNotifyRuleResponse, error) {
 	var err error
 	var res apis.CreateResourceEventNotifyRuleResponse
 
@@ -199,17 +199,17 @@ func (c *OpenAPIClient) CreateResourceEventNotifyRule(req *apis.CreateResourceEv
 }
 
 // NewDeleteAlertNotifyGroupRequest will create request of DeleteAlertNotifyGroup action.
-func (c *OpenAPIClient) NewDeleteAlertNotifyGroupRequest() *apis.DeleteAlertNotifyGroupRequest {
+func (c *UCloudStackClient) NewDeleteAlertNotifyGroupRequest() *apis.DeleteAlertNotifyGroupRequest {
 	req := &apis.DeleteAlertNotifyGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteAlertNotifyGroup 删除告警通知组
-func (c *OpenAPIClient) DeleteAlertNotifyGroup(req *apis.DeleteAlertNotifyGroupRequest) (*apis.DeleteAlertNotifyGroupResponse, error) {
+func (c *UCloudStackClient) DeleteAlertNotifyGroup(req *apis.DeleteAlertNotifyGroupRequest) (*apis.DeleteAlertNotifyGroupResponse, error) {
 	var err error
 	var res apis.DeleteAlertNotifyGroupResponse
 
@@ -221,17 +221,17 @@ func (c *OpenAPIClient) DeleteAlertNotifyGroup(req *apis.DeleteAlertNotifyGroupR
 }
 
 // NewDeleteAlertNotifyReceiverRequest will create request of DeleteAlertNotifyReceiver action.
-func (c *OpenAPIClient) NewDeleteAlertNotifyReceiverRequest() *apis.DeleteAlertNotifyReceiverRequest {
+func (c *UCloudStackClient) NewDeleteAlertNotifyReceiverRequest() *apis.DeleteAlertNotifyReceiverRequest {
 	req := &apis.DeleteAlertNotifyReceiverRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteAlertNotifyReceiver 删除告警通知人
-func (c *OpenAPIClient) DeleteAlertNotifyReceiver(req *apis.DeleteAlertNotifyReceiverRequest) (*apis.DeleteAlertNotifyReceiverResponse, error) {
+func (c *UCloudStackClient) DeleteAlertNotifyReceiver(req *apis.DeleteAlertNotifyReceiverRequest) (*apis.DeleteAlertNotifyReceiverResponse, error) {
 	var err error
 	var res apis.DeleteAlertNotifyReceiverResponse
 
@@ -243,17 +243,17 @@ func (c *OpenAPIClient) DeleteAlertNotifyReceiver(req *apis.DeleteAlertNotifyRec
 }
 
 // NewDeleteAlertNotifyWebhookRequest will create request of DeleteAlertNotifyWebhook action.
-func (c *OpenAPIClient) NewDeleteAlertNotifyWebhookRequest() *apis.DeleteAlertNotifyWebhookRequest {
+func (c *UCloudStackClient) NewDeleteAlertNotifyWebhookRequest() *apis.DeleteAlertNotifyWebhookRequest {
 	req := &apis.DeleteAlertNotifyWebhookRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteAlertNotifyWebhook 删除告警回调接口
-func (c *OpenAPIClient) DeleteAlertNotifyWebhook(req *apis.DeleteAlertNotifyWebhookRequest) (*apis.DeleteAlertNotifyWebhookResponse, error) {
+func (c *UCloudStackClient) DeleteAlertNotifyWebhook(req *apis.DeleteAlertNotifyWebhookRequest) (*apis.DeleteAlertNotifyWebhookResponse, error) {
 	var err error
 	var res apis.DeleteAlertNotifyWebhookResponse
 
@@ -265,17 +265,17 @@ func (c *OpenAPIClient) DeleteAlertNotifyWebhook(req *apis.DeleteAlertNotifyWebh
 }
 
 // NewDeleteAlertTemplateRequest will create request of DeleteAlertTemplate action.
-func (c *OpenAPIClient) NewDeleteAlertTemplateRequest() *apis.DeleteAlertTemplateRequest {
+func (c *UCloudStackClient) NewDeleteAlertTemplateRequest() *apis.DeleteAlertTemplateRequest {
 	req := &apis.DeleteAlertTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteAlertTemplate 删除告警模版
-func (c *OpenAPIClient) DeleteAlertTemplate(req *apis.DeleteAlertTemplateRequest) (*apis.DeleteAlertTemplateResponse, error) {
+func (c *UCloudStackClient) DeleteAlertTemplate(req *apis.DeleteAlertTemplateRequest) (*apis.DeleteAlertTemplateResponse, error) {
 	var err error
 	var res apis.DeleteAlertTemplateResponse
 
@@ -287,17 +287,17 @@ func (c *OpenAPIClient) DeleteAlertTemplate(req *apis.DeleteAlertTemplateRequest
 }
 
 // NewDeleteAlertTemplateRuleRequest will create request of DeleteAlertTemplateRule action.
-func (c *OpenAPIClient) NewDeleteAlertTemplateRuleRequest() *apis.DeleteAlertTemplateRuleRequest {
+func (c *UCloudStackClient) NewDeleteAlertTemplateRuleRequest() *apis.DeleteAlertTemplateRuleRequest {
 	req := &apis.DeleteAlertTemplateRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteAlertTemplateRule 删除告警模版规则
-func (c *OpenAPIClient) DeleteAlertTemplateRule(req *apis.DeleteAlertTemplateRuleRequest) (*apis.DeleteAlertTemplateRuleResponse, error) {
+func (c *UCloudStackClient) DeleteAlertTemplateRule(req *apis.DeleteAlertTemplateRuleRequest) (*apis.DeleteAlertTemplateRuleResponse, error) {
 	var err error
 	var res apis.DeleteAlertTemplateRuleResponse
 
@@ -309,17 +309,17 @@ func (c *OpenAPIClient) DeleteAlertTemplateRule(req *apis.DeleteAlertTemplateRul
 }
 
 // NewDeleteOPLogNotifyRuleRequest will create request of DeleteOPLogNotifyRule action.
-func (c *OpenAPIClient) NewDeleteOPLogNotifyRuleRequest() *apis.DeleteOPLogNotifyRuleRequest {
+func (c *UCloudStackClient) NewDeleteOPLogNotifyRuleRequest() *apis.DeleteOPLogNotifyRuleRequest {
 	req := &apis.DeleteOPLogNotifyRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteOPLogNotifyRule 删除操作日志通知规则
-func (c *OpenAPIClient) DeleteOPLogNotifyRule(req *apis.DeleteOPLogNotifyRuleRequest) (*apis.DeleteOPLogNotifyRuleResponse, error) {
+func (c *UCloudStackClient) DeleteOPLogNotifyRule(req *apis.DeleteOPLogNotifyRuleRequest) (*apis.DeleteOPLogNotifyRuleResponse, error) {
 	var err error
 	var res apis.DeleteOPLogNotifyRuleResponse
 
@@ -331,17 +331,17 @@ func (c *OpenAPIClient) DeleteOPLogNotifyRule(req *apis.DeleteOPLogNotifyRuleReq
 }
 
 // NewDeleteResourceEventNotifyRuleRequest will create request of DeleteResourceEventNotifyRule action.
-func (c *OpenAPIClient) NewDeleteResourceEventNotifyRuleRequest() *apis.DeleteResourceEventNotifyRuleRequest {
+func (c *UCloudStackClient) NewDeleteResourceEventNotifyRuleRequest() *apis.DeleteResourceEventNotifyRuleRequest {
 	req := &apis.DeleteResourceEventNotifyRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteResourceEventNotifyRule 删除资源事件通知规则
-func (c *OpenAPIClient) DeleteResourceEventNotifyRule(req *apis.DeleteResourceEventNotifyRuleRequest) (*apis.DeleteResourceEventNotifyRuleResponse, error) {
+func (c *UCloudStackClient) DeleteResourceEventNotifyRule(req *apis.DeleteResourceEventNotifyRuleRequest) (*apis.DeleteResourceEventNotifyRuleResponse, error) {
 	var err error
 	var res apis.DeleteResourceEventNotifyRuleResponse
 
@@ -353,17 +353,17 @@ func (c *OpenAPIClient) DeleteResourceEventNotifyRule(req *apis.DeleteResourceEv
 }
 
 // NewDescribeAlertRequest will create request of DescribeAlert action.
-func (c *OpenAPIClient) NewDescribeAlertRequest() *apis.DescribeAlertRequest {
+func (c *UCloudStackClient) NewDescribeAlertRequest() *apis.DescribeAlertRequest {
 	req := &apis.DescribeAlertRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeAlert 查询告警
-func (c *OpenAPIClient) DescribeAlert(req *apis.DescribeAlertRequest) (*apis.DescribeAlertResponse, error) {
+func (c *UCloudStackClient) DescribeAlert(req *apis.DescribeAlertRequest) (*apis.DescribeAlertResponse, error) {
 	var err error
 	var res apis.DescribeAlertResponse
 
@@ -375,17 +375,17 @@ func (c *OpenAPIClient) DescribeAlert(req *apis.DescribeAlertRequest) (*apis.Des
 }
 
 // NewDescribeAlertNotifyGroupRequest will create request of DescribeAlertNotifyGroup action.
-func (c *OpenAPIClient) NewDescribeAlertNotifyGroupRequest() *apis.DescribeAlertNotifyGroupRequest {
+func (c *UCloudStackClient) NewDescribeAlertNotifyGroupRequest() *apis.DescribeAlertNotifyGroupRequest {
 	req := &apis.DescribeAlertNotifyGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeAlertNotifyGroup 获取告警通知组
-func (c *OpenAPIClient) DescribeAlertNotifyGroup(req *apis.DescribeAlertNotifyGroupRequest) (*apis.DescribeAlertNotifyGroupResponse, error) {
+func (c *UCloudStackClient) DescribeAlertNotifyGroup(req *apis.DescribeAlertNotifyGroupRequest) (*apis.DescribeAlertNotifyGroupResponse, error) {
 	var err error
 	var res apis.DescribeAlertNotifyGroupResponse
 
@@ -397,17 +397,17 @@ func (c *OpenAPIClient) DescribeAlertNotifyGroup(req *apis.DescribeAlertNotifyGr
 }
 
 // NewDescribeAlertNotifyReceiverRequest will create request of DescribeAlertNotifyReceiver action.
-func (c *OpenAPIClient) NewDescribeAlertNotifyReceiverRequest() *apis.DescribeAlertNotifyReceiverRequest {
+func (c *UCloudStackClient) NewDescribeAlertNotifyReceiverRequest() *apis.DescribeAlertNotifyReceiverRequest {
 	req := &apis.DescribeAlertNotifyReceiverRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeAlertNotifyReceiver 获取告警通知人
-func (c *OpenAPIClient) DescribeAlertNotifyReceiver(req *apis.DescribeAlertNotifyReceiverRequest) (*apis.DescribeAlertNotifyReceiverResponse, error) {
+func (c *UCloudStackClient) DescribeAlertNotifyReceiver(req *apis.DescribeAlertNotifyReceiverRequest) (*apis.DescribeAlertNotifyReceiverResponse, error) {
 	var err error
 	var res apis.DescribeAlertNotifyReceiverResponse
 
@@ -419,17 +419,17 @@ func (c *OpenAPIClient) DescribeAlertNotifyReceiver(req *apis.DescribeAlertNotif
 }
 
 // NewDescribeAlertNotifyWebhookRequest will create request of DescribeAlertNotifyWebhook action.
-func (c *OpenAPIClient) NewDescribeAlertNotifyWebhookRequest() *apis.DescribeAlertNotifyWebhookRequest {
+func (c *UCloudStackClient) NewDescribeAlertNotifyWebhookRequest() *apis.DescribeAlertNotifyWebhookRequest {
 	req := &apis.DescribeAlertNotifyWebhookRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeAlertNotifyWebhook 获取告警回调接口
-func (c *OpenAPIClient) DescribeAlertNotifyWebhook(req *apis.DescribeAlertNotifyWebhookRequest) (*apis.DescribeAlertNotifyWebhookResponse, error) {
+func (c *UCloudStackClient) DescribeAlertNotifyWebhook(req *apis.DescribeAlertNotifyWebhookRequest) (*apis.DescribeAlertNotifyWebhookResponse, error) {
 	var err error
 	var res apis.DescribeAlertNotifyWebhookResponse
 
@@ -441,17 +441,17 @@ func (c *OpenAPIClient) DescribeAlertNotifyWebhook(req *apis.DescribeAlertNotify
 }
 
 // NewDescribeAlertTemplateRequest will create request of DescribeAlertTemplate action.
-func (c *OpenAPIClient) NewDescribeAlertTemplateRequest() *apis.DescribeAlertTemplateRequest {
+func (c *UCloudStackClient) NewDescribeAlertTemplateRequest() *apis.DescribeAlertTemplateRequest {
 	req := &apis.DescribeAlertTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeAlertTemplate 获取告警模版
-func (c *OpenAPIClient) DescribeAlertTemplate(req *apis.DescribeAlertTemplateRequest) (*apis.DescribeAlertTemplateResponse, error) {
+func (c *UCloudStackClient) DescribeAlertTemplate(req *apis.DescribeAlertTemplateRequest) (*apis.DescribeAlertTemplateResponse, error) {
 	var err error
 	var res apis.DescribeAlertTemplateResponse
 
@@ -463,17 +463,17 @@ func (c *OpenAPIClient) DescribeAlertTemplate(req *apis.DescribeAlertTemplateReq
 }
 
 // NewDescribeAlertTemplateRuleRequest will create request of DescribeAlertTemplateRule action.
-func (c *OpenAPIClient) NewDescribeAlertTemplateRuleRequest() *apis.DescribeAlertTemplateRuleRequest {
+func (c *UCloudStackClient) NewDescribeAlertTemplateRuleRequest() *apis.DescribeAlertTemplateRuleRequest {
 	req := &apis.DescribeAlertTemplateRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeAlertTemplateRule 获取告警模版规则
-func (c *OpenAPIClient) DescribeAlertTemplateRule(req *apis.DescribeAlertTemplateRuleRequest) (*apis.DescribeAlertTemplateRuleResponse, error) {
+func (c *UCloudStackClient) DescribeAlertTemplateRule(req *apis.DescribeAlertTemplateRuleRequest) (*apis.DescribeAlertTemplateRuleResponse, error) {
 	var err error
 	var res apis.DescribeAlertTemplateRuleResponse
 
@@ -485,17 +485,17 @@ func (c *OpenAPIClient) DescribeAlertTemplateRule(req *apis.DescribeAlertTemplat
 }
 
 // NewDescribeAlertTemplateTargetRequest will create request of DescribeAlertTemplateTarget action.
-func (c *OpenAPIClient) NewDescribeAlertTemplateTargetRequest() *apis.DescribeAlertTemplateTargetRequest {
+func (c *UCloudStackClient) NewDescribeAlertTemplateTargetRequest() *apis.DescribeAlertTemplateTargetRequest {
 	req := &apis.DescribeAlertTemplateTargetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeAlertTemplateTarget 获取告警模版绑定目标
-func (c *OpenAPIClient) DescribeAlertTemplateTarget(req *apis.DescribeAlertTemplateTargetRequest) (*apis.DescribeAlertTemplateTargetResponse, error) {
+func (c *UCloudStackClient) DescribeAlertTemplateTarget(req *apis.DescribeAlertTemplateTargetRequest) (*apis.DescribeAlertTemplateTargetResponse, error) {
 	var err error
 	var res apis.DescribeAlertTemplateTargetResponse
 
@@ -507,17 +507,17 @@ func (c *OpenAPIClient) DescribeAlertTemplateTarget(req *apis.DescribeAlertTempl
 }
 
 // NewDescribeMetricRequest will create request of DescribeMetric action.
-func (c *OpenAPIClient) NewDescribeMetricRequest() *apis.DescribeMetricRequest {
+func (c *UCloudStackClient) NewDescribeMetricRequest() *apis.DescribeMetricRequest {
 	req := &apis.DescribeMetricRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMetric 获取监控指标
-func (c *OpenAPIClient) DescribeMetric(req *apis.DescribeMetricRequest) (*apis.DescribeMetricResponse, error) {
+func (c *UCloudStackClient) DescribeMetric(req *apis.DescribeMetricRequest) (*apis.DescribeMetricResponse, error) {
 	var err error
 	var res apis.DescribeMetricResponse
 
@@ -529,17 +529,17 @@ func (c *OpenAPIClient) DescribeMetric(req *apis.DescribeMetricRequest) (*apis.D
 }
 
 // NewDescribeOPLogNotifyRuleRequest will create request of DescribeOPLogNotifyRule action.
-func (c *OpenAPIClient) NewDescribeOPLogNotifyRuleRequest() *apis.DescribeOPLogNotifyRuleRequest {
+func (c *UCloudStackClient) NewDescribeOPLogNotifyRuleRequest() *apis.DescribeOPLogNotifyRuleRequest {
 	req := &apis.DescribeOPLogNotifyRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeOPLogNotifyRule 获取操作日志通知规则
-func (c *OpenAPIClient) DescribeOPLogNotifyRule(req *apis.DescribeOPLogNotifyRuleRequest) (*apis.DescribeOPLogNotifyRuleResponse, error) {
+func (c *UCloudStackClient) DescribeOPLogNotifyRule(req *apis.DescribeOPLogNotifyRuleRequest) (*apis.DescribeOPLogNotifyRuleResponse, error) {
 	var err error
 	var res apis.DescribeOPLogNotifyRuleResponse
 
@@ -551,17 +551,17 @@ func (c *OpenAPIClient) DescribeOPLogNotifyRule(req *apis.DescribeOPLogNotifyRul
 }
 
 // NewDescribeResourceEventNotifyRuleRequest will create request of DescribeResourceEventNotifyRule action.
-func (c *OpenAPIClient) NewDescribeResourceEventNotifyRuleRequest() *apis.DescribeResourceEventNotifyRuleRequest {
+func (c *UCloudStackClient) NewDescribeResourceEventNotifyRuleRequest() *apis.DescribeResourceEventNotifyRuleRequest {
 	req := &apis.DescribeResourceEventNotifyRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeResourceEventNotifyRule 获取资源事件通知规则
-func (c *OpenAPIClient) DescribeResourceEventNotifyRule(req *apis.DescribeResourceEventNotifyRuleRequest) (*apis.DescribeResourceEventNotifyRuleResponse, error) {
+func (c *UCloudStackClient) DescribeResourceEventNotifyRule(req *apis.DescribeResourceEventNotifyRuleRequest) (*apis.DescribeResourceEventNotifyRuleResponse, error) {
 	var err error
 	var res apis.DescribeResourceEventNotifyRuleResponse
 
@@ -573,17 +573,17 @@ func (c *OpenAPIClient) DescribeResourceEventNotifyRule(req *apis.DescribeResour
 }
 
 // NewOperateAlertRequest will create request of OperateAlert action.
-func (c *OpenAPIClient) NewOperateAlertRequest() *apis.OperateAlertRequest {
+func (c *UCloudStackClient) NewOperateAlertRequest() *apis.OperateAlertRequest {
 	req := &apis.OperateAlertRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // OperateAlert 操作告警处理状态
-func (c *OpenAPIClient) OperateAlert(req *apis.OperateAlertRequest) (*apis.OperateAlertResponse, error) {
+func (c *UCloudStackClient) OperateAlert(req *apis.OperateAlertRequest) (*apis.OperateAlertResponse, error) {
 	var err error
 	var res apis.OperateAlertResponse
 
@@ -595,17 +595,17 @@ func (c *OpenAPIClient) OperateAlert(req *apis.OperateAlertRequest) (*apis.Opera
 }
 
 // NewPrometheusQueryRequest will create request of PrometheusQuery action.
-func (c *OpenAPIClient) NewPrometheusQueryRequest() *apis.PrometheusQueryRequest {
+func (c *UCloudStackClient) NewPrometheusQueryRequest() *apis.PrometheusQueryRequest {
 	req := &apis.PrometheusQueryRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // PrometheusQuery 获取即时查询监控数据
-func (c *OpenAPIClient) PrometheusQuery(req *apis.PrometheusQueryRequest) (*apis.PrometheusQueryResponse, error) {
+func (c *UCloudStackClient) PrometheusQuery(req *apis.PrometheusQueryRequest) (*apis.PrometheusQueryResponse, error) {
 	var err error
 	var res apis.PrometheusQueryResponse
 
@@ -617,17 +617,17 @@ func (c *OpenAPIClient) PrometheusQuery(req *apis.PrometheusQueryRequest) (*apis
 }
 
 // NewPrometheusQueryRangeRequest will create request of PrometheusQueryRange action.
-func (c *OpenAPIClient) NewPrometheusQueryRangeRequest() *apis.PrometheusQueryRangeRequest {
+func (c *UCloudStackClient) NewPrometheusQueryRangeRequest() *apis.PrometheusQueryRangeRequest {
 	req := &apis.PrometheusQueryRangeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // PrometheusQueryRange 获取范围查询监控数据
-func (c *OpenAPIClient) PrometheusQueryRange(req *apis.PrometheusQueryRangeRequest) (*apis.PrometheusQueryRangeResponse, error) {
+func (c *UCloudStackClient) PrometheusQueryRange(req *apis.PrometheusQueryRangeRequest) (*apis.PrometheusQueryRangeResponse, error) {
 	var err error
 	var res apis.PrometheusQueryRangeResponse
 
@@ -639,17 +639,17 @@ func (c *OpenAPIClient) PrometheusQueryRange(req *apis.PrometheusQueryRangeReque
 }
 
 // NewUnbindAlertTemplateRequest will create request of UnbindAlertTemplate action.
-func (c *OpenAPIClient) NewUnbindAlertTemplateRequest() *apis.UnbindAlertTemplateRequest {
+func (c *UCloudStackClient) NewUnbindAlertTemplateRequest() *apis.UnbindAlertTemplateRequest {
 	req := &apis.UnbindAlertTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnbindAlertTemplate 解绑告警模版
-func (c *OpenAPIClient) UnbindAlertTemplate(req *apis.UnbindAlertTemplateRequest) (*apis.UnbindAlertTemplateResponse, error) {
+func (c *UCloudStackClient) UnbindAlertTemplate(req *apis.UnbindAlertTemplateRequest) (*apis.UnbindAlertTemplateResponse, error) {
 	var err error
 	var res apis.UnbindAlertTemplateResponse
 
@@ -661,17 +661,17 @@ func (c *OpenAPIClient) UnbindAlertTemplate(req *apis.UnbindAlertTemplateRequest
 }
 
 // NewUpdateAlertNotifyGroupRequest will create request of UpdateAlertNotifyGroup action.
-func (c *OpenAPIClient) NewUpdateAlertNotifyGroupRequest() *apis.UpdateAlertNotifyGroupRequest {
+func (c *UCloudStackClient) NewUpdateAlertNotifyGroupRequest() *apis.UpdateAlertNotifyGroupRequest {
 	req := &apis.UpdateAlertNotifyGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateAlertNotifyGroup 更新告警通知组
-func (c *OpenAPIClient) UpdateAlertNotifyGroup(req *apis.UpdateAlertNotifyGroupRequest) (*apis.UpdateAlertNotifyGroupResponse, error) {
+func (c *UCloudStackClient) UpdateAlertNotifyGroup(req *apis.UpdateAlertNotifyGroupRequest) (*apis.UpdateAlertNotifyGroupResponse, error) {
 	var err error
 	var res apis.UpdateAlertNotifyGroupResponse
 
@@ -683,17 +683,17 @@ func (c *OpenAPIClient) UpdateAlertNotifyGroup(req *apis.UpdateAlertNotifyGroupR
 }
 
 // NewUpdateAlertNotifyReceiverRequest will create request of UpdateAlertNotifyReceiver action.
-func (c *OpenAPIClient) NewUpdateAlertNotifyReceiverRequest() *apis.UpdateAlertNotifyReceiverRequest {
+func (c *UCloudStackClient) NewUpdateAlertNotifyReceiverRequest() *apis.UpdateAlertNotifyReceiverRequest {
 	req := &apis.UpdateAlertNotifyReceiverRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateAlertNotifyReceiver 更新告警通知人
-func (c *OpenAPIClient) UpdateAlertNotifyReceiver(req *apis.UpdateAlertNotifyReceiverRequest) (*apis.UpdateAlertNotifyReceiverResponse, error) {
+func (c *UCloudStackClient) UpdateAlertNotifyReceiver(req *apis.UpdateAlertNotifyReceiverRequest) (*apis.UpdateAlertNotifyReceiverResponse, error) {
 	var err error
 	var res apis.UpdateAlertNotifyReceiverResponse
 
@@ -705,17 +705,17 @@ func (c *OpenAPIClient) UpdateAlertNotifyReceiver(req *apis.UpdateAlertNotifyRec
 }
 
 // NewUpdateAlertNotifyWebhookRequest will create request of UpdateAlertNotifyWebhook action.
-func (c *OpenAPIClient) NewUpdateAlertNotifyWebhookRequest() *apis.UpdateAlertNotifyWebhookRequest {
+func (c *UCloudStackClient) NewUpdateAlertNotifyWebhookRequest() *apis.UpdateAlertNotifyWebhookRequest {
 	req := &apis.UpdateAlertNotifyWebhookRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateAlertNotifyWebhook 更新告警回调接口
-func (c *OpenAPIClient) UpdateAlertNotifyWebhook(req *apis.UpdateAlertNotifyWebhookRequest) (*apis.UpdateAlertNotifyWebhookResponse, error) {
+func (c *UCloudStackClient) UpdateAlertNotifyWebhook(req *apis.UpdateAlertNotifyWebhookRequest) (*apis.UpdateAlertNotifyWebhookResponse, error) {
 	var err error
 	var res apis.UpdateAlertNotifyWebhookResponse
 
@@ -727,17 +727,17 @@ func (c *OpenAPIClient) UpdateAlertNotifyWebhook(req *apis.UpdateAlertNotifyWebh
 }
 
 // NewUpdateAlertTemplateRequest will create request of UpdateAlertTemplate action.
-func (c *OpenAPIClient) NewUpdateAlertTemplateRequest() *apis.UpdateAlertTemplateRequest {
+func (c *UCloudStackClient) NewUpdateAlertTemplateRequest() *apis.UpdateAlertTemplateRequest {
 	req := &apis.UpdateAlertTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateAlertTemplate 更新告警模版
-func (c *OpenAPIClient) UpdateAlertTemplate(req *apis.UpdateAlertTemplateRequest) (*apis.UpdateAlertTemplateResponse, error) {
+func (c *UCloudStackClient) UpdateAlertTemplate(req *apis.UpdateAlertTemplateRequest) (*apis.UpdateAlertTemplateResponse, error) {
 	var err error
 	var res apis.UpdateAlertTemplateResponse
 
@@ -749,17 +749,17 @@ func (c *OpenAPIClient) UpdateAlertTemplate(req *apis.UpdateAlertTemplateRequest
 }
 
 // NewUpdateAlertTemplateRuleRequest will create request of UpdateAlertTemplateRule action.
-func (c *OpenAPIClient) NewUpdateAlertTemplateRuleRequest() *apis.UpdateAlertTemplateRuleRequest {
+func (c *UCloudStackClient) NewUpdateAlertTemplateRuleRequest() *apis.UpdateAlertTemplateRuleRequest {
 	req := &apis.UpdateAlertTemplateRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateAlertTemplateRule 更新告警通知规则
-func (c *OpenAPIClient) UpdateAlertTemplateRule(req *apis.UpdateAlertTemplateRuleRequest) (*apis.UpdateAlertTemplateRuleResponse, error) {
+func (c *UCloudStackClient) UpdateAlertTemplateRule(req *apis.UpdateAlertTemplateRuleRequest) (*apis.UpdateAlertTemplateRuleResponse, error) {
 	var err error
 	var res apis.UpdateAlertTemplateRuleResponse
 
@@ -771,17 +771,17 @@ func (c *OpenAPIClient) UpdateAlertTemplateRule(req *apis.UpdateAlertTemplateRul
 }
 
 // NewUpdateOPLogNotifyRuleRequest will create request of UpdateOPLogNotifyRule action.
-func (c *OpenAPIClient) NewUpdateOPLogNotifyRuleRequest() *apis.UpdateOPLogNotifyRuleRequest {
+func (c *UCloudStackClient) NewUpdateOPLogNotifyRuleRequest() *apis.UpdateOPLogNotifyRuleRequest {
 	req := &apis.UpdateOPLogNotifyRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateOPLogNotifyRule 更新操作日志通知规则
-func (c *OpenAPIClient) UpdateOPLogNotifyRule(req *apis.UpdateOPLogNotifyRuleRequest) (*apis.UpdateOPLogNotifyRuleResponse, error) {
+func (c *UCloudStackClient) UpdateOPLogNotifyRule(req *apis.UpdateOPLogNotifyRuleRequest) (*apis.UpdateOPLogNotifyRuleResponse, error) {
 	var err error
 	var res apis.UpdateOPLogNotifyRuleResponse
 
@@ -793,17 +793,17 @@ func (c *OpenAPIClient) UpdateOPLogNotifyRule(req *apis.UpdateOPLogNotifyRuleReq
 }
 
 // NewUpdateResourceEventNotifyRuleRequest will create request of UpdateResourceEventNotifyRule action.
-func (c *OpenAPIClient) NewUpdateResourceEventNotifyRuleRequest() *apis.UpdateResourceEventNotifyRuleRequest {
+func (c *UCloudStackClient) NewUpdateResourceEventNotifyRuleRequest() *apis.UpdateResourceEventNotifyRuleRequest {
 	req := &apis.UpdateResourceEventNotifyRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateResourceEventNotifyRule 更新资源事件通知规则
-func (c *OpenAPIClient) UpdateResourceEventNotifyRule(req *apis.UpdateResourceEventNotifyRuleRequest) (*apis.UpdateResourceEventNotifyRuleResponse, error) {
+func (c *UCloudStackClient) UpdateResourceEventNotifyRule(req *apis.UpdateResourceEventNotifyRuleRequest) (*apis.UpdateResourceEventNotifyRuleResponse, error) {
 	var err error
 	var res apis.UpdateResourceEventNotifyRuleResponse
 
@@ -815,17 +815,17 @@ func (c *OpenAPIClient) UpdateResourceEventNotifyRule(req *apis.UpdateResourceEv
 }
 
 // NewAddASMemberRequest will create request of AddASMember action.
-func (c *OpenAPIClient) NewAddASMemberRequest() *apis.AddASMemberRequest {
+func (c *UCloudStackClient) NewAddASMemberRequest() *apis.AddASMemberRequest {
 	req := &apis.AddASMemberRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AddASMember 添加伸缩成员
-func (c *OpenAPIClient) AddASMember(req *apis.AddASMemberRequest) (*apis.AddASMemberResponse, error) {
+func (c *UCloudStackClient) AddASMember(req *apis.AddASMemberRequest) (*apis.AddASMemberResponse, error) {
 	var err error
 	var res apis.AddASMemberResponse
 
@@ -837,17 +837,17 @@ func (c *OpenAPIClient) AddASMember(req *apis.AddASMemberRequest) (*apis.AddASMe
 }
 
 // NewAttachLoadBalancerRequest will create request of AttachLoadBalancer action.
-func (c *OpenAPIClient) NewAttachLoadBalancerRequest() *apis.AttachLoadBalancerRequest {
+func (c *UCloudStackClient) NewAttachLoadBalancerRequest() *apis.AttachLoadBalancerRequest {
 	req := &apis.AttachLoadBalancerRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AttachLoadBalancer 伸缩组关联lb
-func (c *OpenAPIClient) AttachLoadBalancer(req *apis.AttachLoadBalancerRequest) (*apis.AttachLoadBalancerResponse, error) {
+func (c *UCloudStackClient) AttachLoadBalancer(req *apis.AttachLoadBalancerRequest) (*apis.AttachLoadBalancerResponse, error) {
 	var err error
 	var res apis.AttachLoadBalancerResponse
 
@@ -859,17 +859,17 @@ func (c *OpenAPIClient) AttachLoadBalancer(req *apis.AttachLoadBalancerRequest) 
 }
 
 // NewCreateASGroupRequest will create request of CreateASGroup action.
-func (c *OpenAPIClient) NewCreateASGroupRequest() *apis.CreateASGroupRequest {
+func (c *UCloudStackClient) NewCreateASGroupRequest() *apis.CreateASGroupRequest {
 	req := &apis.CreateASGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateASGroup 创建伸缩组
-func (c *OpenAPIClient) CreateASGroup(req *apis.CreateASGroupRequest) (*apis.CreateASGroupResponse, error) {
+func (c *UCloudStackClient) CreateASGroup(req *apis.CreateASGroupRequest) (*apis.CreateASGroupResponse, error) {
 	var err error
 	var res apis.CreateASGroupResponse
 
@@ -881,17 +881,17 @@ func (c *OpenAPIClient) CreateASGroup(req *apis.CreateASGroupRequest) (*apis.Cre
 }
 
 // NewDeleteASGroupRequest will create request of DeleteASGroup action.
-func (c *OpenAPIClient) NewDeleteASGroupRequest() *apis.DeleteASGroupRequest {
+func (c *UCloudStackClient) NewDeleteASGroupRequest() *apis.DeleteASGroupRequest {
 	req := &apis.DeleteASGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteASGroup 删除伸缩组
-func (c *OpenAPIClient) DeleteASGroup(req *apis.DeleteASGroupRequest) (*apis.DeleteASGroupResponse, error) {
+func (c *UCloudStackClient) DeleteASGroup(req *apis.DeleteASGroupRequest) (*apis.DeleteASGroupResponse, error) {
 	var err error
 	var res apis.DeleteASGroupResponse
 
@@ -903,17 +903,17 @@ func (c *OpenAPIClient) DeleteASGroup(req *apis.DeleteASGroupRequest) (*apis.Del
 }
 
 // NewDescribeASGroupRequest will create request of DescribeASGroup action.
-func (c *OpenAPIClient) NewDescribeASGroupRequest() *apis.DescribeASGroupRequest {
+func (c *UCloudStackClient) NewDescribeASGroupRequest() *apis.DescribeASGroupRequest {
 	req := &apis.DescribeASGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeASGroup 查询伸缩组
-func (c *OpenAPIClient) DescribeASGroup(req *apis.DescribeASGroupRequest) (*apis.DescribeASGroupResponse, error) {
+func (c *UCloudStackClient) DescribeASGroup(req *apis.DescribeASGroupRequest) (*apis.DescribeASGroupResponse, error) {
 	var err error
 	var res apis.DescribeASGroupResponse
 
@@ -925,17 +925,17 @@ func (c *OpenAPIClient) DescribeASGroup(req *apis.DescribeASGroupRequest) (*apis
 }
 
 // NewDetachLoadBalancerRequest will create request of DetachLoadBalancer action.
-func (c *OpenAPIClient) NewDetachLoadBalancerRequest() *apis.DetachLoadBalancerRequest {
+func (c *UCloudStackClient) NewDetachLoadBalancerRequest() *apis.DetachLoadBalancerRequest {
 	req := &apis.DetachLoadBalancerRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DetachLoadBalancer 伸缩组解关联lb
-func (c *OpenAPIClient) DetachLoadBalancer(req *apis.DetachLoadBalancerRequest) (*apis.DetachLoadBalancerResponse, error) {
+func (c *UCloudStackClient) DetachLoadBalancer(req *apis.DetachLoadBalancerRequest) (*apis.DetachLoadBalancerResponse, error) {
 	var err error
 	var res apis.DetachLoadBalancerResponse
 
@@ -947,17 +947,17 @@ func (c *OpenAPIClient) DetachLoadBalancer(req *apis.DetachLoadBalancerRequest) 
 }
 
 // NewDisableASGroupRequest will create request of DisableASGroup action.
-func (c *OpenAPIClient) NewDisableASGroupRequest() *apis.DisableASGroupRequest {
+func (c *UCloudStackClient) NewDisableASGroupRequest() *apis.DisableASGroupRequest {
 	req := &apis.DisableASGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DisableASGroup 禁用伸缩组
-func (c *OpenAPIClient) DisableASGroup(req *apis.DisableASGroupRequest) (*apis.DisableASGroupResponse, error) {
+func (c *UCloudStackClient) DisableASGroup(req *apis.DisableASGroupRequest) (*apis.DisableASGroupResponse, error) {
 	var err error
 	var res apis.DisableASGroupResponse
 
@@ -969,17 +969,17 @@ func (c *OpenAPIClient) DisableASGroup(req *apis.DisableASGroupRequest) (*apis.D
 }
 
 // NewEnableASGroupRequest will create request of EnableASGroup action.
-func (c *OpenAPIClient) NewEnableASGroupRequest() *apis.EnableASGroupRequest {
+func (c *UCloudStackClient) NewEnableASGroupRequest() *apis.EnableASGroupRequest {
 	req := &apis.EnableASGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // EnableASGroup 启用伸缩组
-func (c *OpenAPIClient) EnableASGroup(req *apis.EnableASGroupRequest) (*apis.EnableASGroupResponse, error) {
+func (c *UCloudStackClient) EnableASGroup(req *apis.EnableASGroupRequest) (*apis.EnableASGroupResponse, error) {
 	var err error
 	var res apis.EnableASGroupResponse
 
@@ -991,17 +991,17 @@ func (c *OpenAPIClient) EnableASGroup(req *apis.EnableASGroupRequest) (*apis.Ena
 }
 
 // NewRemoveASMemberRequest will create request of RemoveASMember action.
-func (c *OpenAPIClient) NewRemoveASMemberRequest() *apis.RemoveASMemberRequest {
+func (c *UCloudStackClient) NewRemoveASMemberRequest() *apis.RemoveASMemberRequest {
 	req := &apis.RemoveASMemberRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RemoveASMember 移除伸缩成员
-func (c *OpenAPIClient) RemoveASMember(req *apis.RemoveASMemberRequest) (*apis.RemoveASMemberResponse, error) {
+func (c *UCloudStackClient) RemoveASMember(req *apis.RemoveASMemberRequest) (*apis.RemoveASMemberResponse, error) {
 	var err error
 	var res apis.RemoveASMemberResponse
 
@@ -1013,17 +1013,17 @@ func (c *OpenAPIClient) RemoveASMember(req *apis.RemoveASMemberRequest) (*apis.R
 }
 
 // NewUpdateASGroupRequest will create request of UpdateASGroup action.
-func (c *OpenAPIClient) NewUpdateASGroupRequest() *apis.UpdateASGroupRequest {
+func (c *UCloudStackClient) NewUpdateASGroupRequest() *apis.UpdateASGroupRequest {
 	req := &apis.UpdateASGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateASGroup 更新伸缩组
-func (c *OpenAPIClient) UpdateASGroup(req *apis.UpdateASGroupRequest) (*apis.UpdateASGroupResponse, error) {
+func (c *UCloudStackClient) UpdateASGroup(req *apis.UpdateASGroupRequest) (*apis.UpdateASGroupResponse, error) {
 	var err error
 	var res apis.UpdateASGroupResponse
 
@@ -1035,17 +1035,17 @@ func (c *OpenAPIClient) UpdateASGroup(req *apis.UpdateASGroupRequest) (*apis.Upd
 }
 
 // NewDescribeBillDetailRequest will create request of DescribeBillDetail action.
-func (c *OpenAPIClient) NewDescribeBillDetailRequest() *apis.DescribeBillDetailRequest {
+func (c *UCloudStackClient) NewDescribeBillDetailRequest() *apis.DescribeBillDetailRequest {
 	req := &apis.DescribeBillDetailRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeBillDetail 获取账单详情
-func (c *OpenAPIClient) DescribeBillDetail(req *apis.DescribeBillDetailRequest) (*apis.DescribeBillDetailResponse, error) {
+func (c *UCloudStackClient) DescribeBillDetail(req *apis.DescribeBillDetailRequest) (*apis.DescribeBillDetailResponse, error) {
 	var err error
 	var res apis.DescribeBillDetailResponse
 
@@ -1057,17 +1057,17 @@ func (c *OpenAPIClient) DescribeBillDetail(req *apis.DescribeBillDetailRequest) 
 }
 
 // NewDescribeBillOverViewRequest will create request of DescribeBillOverView action.
-func (c *OpenAPIClient) NewDescribeBillOverViewRequest() *apis.DescribeBillOverViewRequest {
+func (c *UCloudStackClient) NewDescribeBillOverViewRequest() *apis.DescribeBillOverViewRequest {
 	req := &apis.DescribeBillOverViewRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeBillOverView 获取账单总览
-func (c *OpenAPIClient) DescribeBillOverView(req *apis.DescribeBillOverViewRequest) (*apis.DescribeBillOverViewResponse, error) {
+func (c *UCloudStackClient) DescribeBillOverView(req *apis.DescribeBillOverViewRequest) (*apis.DescribeBillOverViewResponse, error) {
 	var err error
 	var res apis.DescribeBillOverViewResponse
 
@@ -1079,17 +1079,17 @@ func (c *OpenAPIClient) DescribeBillOverView(req *apis.DescribeBillOverViewReque
 }
 
 // NewDescribeBillResourceRequest will create request of DescribeBillResource action.
-func (c *OpenAPIClient) NewDescribeBillResourceRequest() *apis.DescribeBillResourceRequest {
+func (c *UCloudStackClient) NewDescribeBillResourceRequest() *apis.DescribeBillResourceRequest {
 	req := &apis.DescribeBillResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeBillResource 获取资源账单详情
-func (c *OpenAPIClient) DescribeBillResource(req *apis.DescribeBillResourceRequest) (*apis.DescribeBillResourceResponse, error) {
+func (c *UCloudStackClient) DescribeBillResource(req *apis.DescribeBillResourceRequest) (*apis.DescribeBillResourceResponse, error) {
 	var err error
 	var res apis.DescribeBillResourceResponse
 
@@ -1101,17 +1101,17 @@ func (c *OpenAPIClient) DescribeBillResource(req *apis.DescribeBillResourceReque
 }
 
 // NewDescribeOrderRequest will create request of DescribeOrder action.
-func (c *OpenAPIClient) NewDescribeOrderRequest() *apis.DescribeOrderRequest {
+func (c *UCloudStackClient) NewDescribeOrderRequest() *apis.DescribeOrderRequest {
 	req := &apis.DescribeOrderRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeOrder 获取订单信息
-func (c *OpenAPIClient) DescribeOrder(req *apis.DescribeOrderRequest) (*apis.DescribeOrderResponse, error) {
+func (c *UCloudStackClient) DescribeOrder(req *apis.DescribeOrderRequest) (*apis.DescribeOrderResponse, error) {
 	var err error
 	var res apis.DescribeOrderResponse
 
@@ -1123,17 +1123,17 @@ func (c *OpenAPIClient) DescribeOrder(req *apis.DescribeOrderRequest) (*apis.Des
 }
 
 // NewDescribePriceRequest will create request of DescribePrice action.
-func (c *OpenAPIClient) NewDescribePriceRequest() *apis.DescribePriceRequest {
+func (c *UCloudStackClient) NewDescribePriceRequest() *apis.DescribePriceRequest {
 	req := &apis.DescribePriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribePrice 获取价格信息
-func (c *OpenAPIClient) DescribePrice(req *apis.DescribePriceRequest) (*apis.DescribePriceResponse, error) {
+func (c *UCloudStackClient) DescribePrice(req *apis.DescribePriceRequest) (*apis.DescribePriceResponse, error) {
 	var err error
 	var res apis.DescribePriceResponse
 
@@ -1145,17 +1145,17 @@ func (c *OpenAPIClient) DescribePrice(req *apis.DescribePriceRequest) (*apis.Des
 }
 
 // NewDescribeRechargeRequest will create request of DescribeRecharge action.
-func (c *OpenAPIClient) NewDescribeRechargeRequest() *apis.DescribeRechargeRequest {
+func (c *UCloudStackClient) NewDescribeRechargeRequest() *apis.DescribeRechargeRequest {
 	req := &apis.DescribeRechargeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRecharge 获取充值信息
-func (c *OpenAPIClient) DescribeRecharge(req *apis.DescribeRechargeRequest) (*apis.DescribeRechargeResponse, error) {
+func (c *UCloudStackClient) DescribeRecharge(req *apis.DescribeRechargeRequest) (*apis.DescribeRechargeResponse, error) {
 	var err error
 	var res apis.DescribeRechargeResponse
 
@@ -1167,17 +1167,17 @@ func (c *OpenAPIClient) DescribeRecharge(req *apis.DescribeRechargeRequest) (*ap
 }
 
 // NewDescribeTransactionRequest will create request of DescribeTransaction action.
-func (c *OpenAPIClient) NewDescribeTransactionRequest() *apis.DescribeTransactionRequest {
+func (c *UCloudStackClient) NewDescribeTransactionRequest() *apis.DescribeTransactionRequest {
 	req := &apis.DescribeTransactionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeTransaction 获取交易记录
-func (c *OpenAPIClient) DescribeTransaction(req *apis.DescribeTransactionRequest) (*apis.DescribeTransactionResponse, error) {
+func (c *UCloudStackClient) DescribeTransaction(req *apis.DescribeTransactionRequest) (*apis.DescribeTransactionResponse, error) {
 	var err error
 	var res apis.DescribeTransactionResponse
 
@@ -1189,17 +1189,17 @@ func (c *OpenAPIClient) DescribeTransaction(req *apis.DescribeTransactionRequest
 }
 
 // NewDescribeWithdrawRequest will create request of DescribeWithdraw action.
-func (c *OpenAPIClient) NewDescribeWithdrawRequest() *apis.DescribeWithdrawRequest {
+func (c *UCloudStackClient) NewDescribeWithdrawRequest() *apis.DescribeWithdrawRequest {
 	req := &apis.DescribeWithdrawRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeWithdraw 获取提现流水列表
-func (c *OpenAPIClient) DescribeWithdraw(req *apis.DescribeWithdrawRequest) (*apis.DescribeWithdrawResponse, error) {
+func (c *UCloudStackClient) DescribeWithdraw(req *apis.DescribeWithdrawRequest) (*apis.DescribeWithdrawResponse, error) {
 	var err error
 	var res apis.DescribeWithdrawResponse
 
@@ -1211,17 +1211,17 @@ func (c *OpenAPIClient) DescribeWithdraw(req *apis.DescribeWithdrawRequest) (*ap
 }
 
 // NewGetRenewPriceRequest will create request of GetRenewPrice action.
-func (c *OpenAPIClient) NewGetRenewPriceRequest() *apis.GetRenewPriceRequest {
+func (c *UCloudStackClient) NewGetRenewPriceRequest() *apis.GetRenewPriceRequest {
 	req := &apis.GetRenewPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetRenewPrice 获取续费价格
-func (c *OpenAPIClient) GetRenewPrice(req *apis.GetRenewPriceRequest) (*apis.GetRenewPriceResponse, error) {
+func (c *UCloudStackClient) GetRenewPrice(req *apis.GetRenewPriceRequest) (*apis.GetRenewPriceResponse, error) {
 	var err error
 	var res apis.GetRenewPriceResponse
 
@@ -1233,17 +1233,17 @@ func (c *OpenAPIClient) GetRenewPrice(req *apis.GetRenewPriceRequest) (*apis.Get
 }
 
 // NewGetWithdrawableAmountRequest will create request of GetWithdrawableAmount action.
-func (c *OpenAPIClient) NewGetWithdrawableAmountRequest() *apis.GetWithdrawableAmountRequest {
+func (c *UCloudStackClient) NewGetWithdrawableAmountRequest() *apis.GetWithdrawableAmountRequest {
 	req := &apis.GetWithdrawableAmountRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetWithdrawableAmount 获取账户可提现金额等信息
-func (c *OpenAPIClient) GetWithdrawableAmount(req *apis.GetWithdrawableAmountRequest) (*apis.GetWithdrawableAmountResponse, error) {
+func (c *UCloudStackClient) GetWithdrawableAmount(req *apis.GetWithdrawableAmountRequest) (*apis.GetWithdrawableAmountResponse, error) {
 	var err error
 	var res apis.GetWithdrawableAmountResponse
 
@@ -1255,17 +1255,17 @@ func (c *OpenAPIClient) GetWithdrawableAmount(req *apis.GetWithdrawableAmountReq
 }
 
 // NewRechargeRequest will create request of Recharge action.
-func (c *OpenAPIClient) NewRechargeRequest() *apis.RechargeRequest {
+func (c *UCloudStackClient) NewRechargeRequest() *apis.RechargeRequest {
 	req := &apis.RechargeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // Recharge 充值
-func (c *OpenAPIClient) Recharge(req *apis.RechargeRequest) (*apis.RechargeResponse, error) {
+func (c *UCloudStackClient) Recharge(req *apis.RechargeRequest) (*apis.RechargeResponse, error) {
 	var err error
 	var res apis.RechargeResponse
 
@@ -1277,17 +1277,17 @@ func (c *OpenAPIClient) Recharge(req *apis.RechargeRequest) (*apis.RechargeRespo
 }
 
 // NewRenewResourceRequest will create request of RenewResource action.
-func (c *OpenAPIClient) NewRenewResourceRequest() *apis.RenewResourceRequest {
+func (c *UCloudStackClient) NewRenewResourceRequest() *apis.RenewResourceRequest {
 	req := &apis.RenewResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RenewResource 续费
-func (c *OpenAPIClient) RenewResource(req *apis.RenewResourceRequest) (*apis.RenewResourceResponse, error) {
+func (c *UCloudStackClient) RenewResource(req *apis.RenewResourceRequest) (*apis.RenewResourceResponse, error) {
 	var err error
 	var res apis.RenewResourceResponse
 
@@ -1299,17 +1299,17 @@ func (c *OpenAPIClient) RenewResource(req *apis.RenewResourceRequest) (*apis.Ren
 }
 
 // NewUpdateDiscountRequest will create request of UpdateDiscount action.
-func (c *OpenAPIClient) NewUpdateDiscountRequest() *apis.UpdateDiscountRequest {
+func (c *UCloudStackClient) NewUpdateDiscountRequest() *apis.UpdateDiscountRequest {
 	req := &apis.UpdateDiscountRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDiscount 更新折扣
-func (c *OpenAPIClient) UpdateDiscount(req *apis.UpdateDiscountRequest) (*apis.UpdateDiscountResponse, error) {
+func (c *UCloudStackClient) UpdateDiscount(req *apis.UpdateDiscountRequest) (*apis.UpdateDiscountResponse, error) {
 	var err error
 	var res apis.UpdateDiscountResponse
 
@@ -1321,17 +1321,17 @@ func (c *OpenAPIClient) UpdateDiscount(req *apis.UpdateDiscountRequest) (*apis.U
 }
 
 // NewUpdatePriceRequest will create request of UpdatePrice action.
-func (c *OpenAPIClient) NewUpdatePriceRequest() *apis.UpdatePriceRequest {
+func (c *UCloudStackClient) NewUpdatePriceRequest() *apis.UpdatePriceRequest {
 	req := &apis.UpdatePriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdatePrice 更新价格
-func (c *OpenAPIClient) UpdatePrice(req *apis.UpdatePriceRequest) (*apis.UpdatePriceResponse, error) {
+func (c *UCloudStackClient) UpdatePrice(req *apis.UpdatePriceRequest) (*apis.UpdatePriceResponse, error) {
 	var err error
 	var res apis.UpdatePriceResponse
 
@@ -1343,17 +1343,17 @@ func (c *OpenAPIClient) UpdatePrice(req *apis.UpdatePriceRequest) (*apis.UpdateP
 }
 
 // NewWithdrawRequest will create request of Withdraw action.
-func (c *OpenAPIClient) NewWithdrawRequest() *apis.WithdrawRequest {
+func (c *UCloudStackClient) NewWithdrawRequest() *apis.WithdrawRequest {
 	req := &apis.WithdrawRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // Withdraw 申请提现
-func (c *OpenAPIClient) Withdraw(req *apis.WithdrawRequest) (*apis.WithdrawResponse, error) {
+func (c *UCloudStackClient) Withdraw(req *apis.WithdrawRequest) (*apis.WithdrawResponse, error) {
 	var err error
 	var res apis.WithdrawResponse
 
@@ -1365,17 +1365,17 @@ func (c *OpenAPIClient) Withdraw(req *apis.WithdrawRequest) (*apis.WithdrawRespo
 }
 
 // NewCreateBucketRequest will create request of CreateBucket action.
-func (c *OpenAPIClient) NewCreateBucketRequest() *apis.CreateBucketRequest {
+func (c *UCloudStackClient) NewCreateBucketRequest() *apis.CreateBucketRequest {
 	req := &apis.CreateBucketRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateBucket 创建桶
-func (c *OpenAPIClient) CreateBucket(req *apis.CreateBucketRequest) (*apis.CreateBucketResponse, error) {
+func (c *UCloudStackClient) CreateBucket(req *apis.CreateBucketRequest) (*apis.CreateBucketResponse, error) {
 	var err error
 	var res apis.CreateBucketResponse
 
@@ -1387,17 +1387,17 @@ func (c *OpenAPIClient) CreateBucket(req *apis.CreateBucketRequest) (*apis.Creat
 }
 
 // NewCreateBucketLifecycleRuleRequest will create request of CreateBucketLifecycleRule action.
-func (c *OpenAPIClient) NewCreateBucketLifecycleRuleRequest() *apis.CreateBucketLifecycleRuleRequest {
+func (c *UCloudStackClient) NewCreateBucketLifecycleRuleRequest() *apis.CreateBucketLifecycleRuleRequest {
 	req := &apis.CreateBucketLifecycleRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateBucketLifecycleRule 创建桶的生命周期
-func (c *OpenAPIClient) CreateBucketLifecycleRule(req *apis.CreateBucketLifecycleRuleRequest) (*apis.CreateBucketLifecycleRuleResponse, error) {
+func (c *UCloudStackClient) CreateBucketLifecycleRule(req *apis.CreateBucketLifecycleRuleRequest) (*apis.CreateBucketLifecycleRuleResponse, error) {
 	var err error
 	var res apis.CreateBucketLifecycleRuleResponse
 
@@ -1409,17 +1409,17 @@ func (c *OpenAPIClient) CreateBucketLifecycleRule(req *apis.CreateBucketLifecycl
 }
 
 // NewCreateDOSTokenRequest will create request of CreateDOSToken action.
-func (c *OpenAPIClient) NewCreateDOSTokenRequest() *apis.CreateDOSTokenRequest {
+func (c *UCloudStackClient) NewCreateDOSTokenRequest() *apis.CreateDOSTokenRequest {
 	req := &apis.CreateDOSTokenRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateDOSToken 创建令牌
-func (c *OpenAPIClient) CreateDOSToken(req *apis.CreateDOSTokenRequest) (*apis.CreateDOSTokenResponse, error) {
+func (c *UCloudStackClient) CreateDOSToken(req *apis.CreateDOSTokenRequest) (*apis.CreateDOSTokenResponse, error) {
 	var err error
 	var res apis.CreateDOSTokenResponse
 
@@ -1431,17 +1431,17 @@ func (c *OpenAPIClient) CreateDOSToken(req *apis.CreateDOSTokenRequest) (*apis.C
 }
 
 // NewDOSLoginRequest will create request of DOSLogin action.
-func (c *OpenAPIClient) NewDOSLoginRequest() *apis.DOSLoginRequest {
+func (c *UCloudStackClient) NewDOSLoginRequest() *apis.DOSLoginRequest {
 	req := &apis.DOSLoginRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DOSLogin 获取S3登录信息
-func (c *OpenAPIClient) DOSLogin(req *apis.DOSLoginRequest) (*apis.DOSLoginResponse, error) {
+func (c *UCloudStackClient) DOSLogin(req *apis.DOSLoginRequest) (*apis.DOSLoginResponse, error) {
 	var err error
 	var res apis.DOSLoginResponse
 
@@ -1453,17 +1453,17 @@ func (c *OpenAPIClient) DOSLogin(req *apis.DOSLoginRequest) (*apis.DOSLoginRespo
 }
 
 // NewDeleteBucketRequest will create request of DeleteBucket action.
-func (c *OpenAPIClient) NewDeleteBucketRequest() *apis.DeleteBucketRequest {
+func (c *UCloudStackClient) NewDeleteBucketRequest() *apis.DeleteBucketRequest {
 	req := &apis.DeleteBucketRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteBucket 删除桶
-func (c *OpenAPIClient) DeleteBucket(req *apis.DeleteBucketRequest) (*apis.DeleteBucketResponse, error) {
+func (c *UCloudStackClient) DeleteBucket(req *apis.DeleteBucketRequest) (*apis.DeleteBucketResponse, error) {
 	var err error
 	var res apis.DeleteBucketResponse
 
@@ -1475,17 +1475,17 @@ func (c *OpenAPIClient) DeleteBucket(req *apis.DeleteBucketRequest) (*apis.Delet
 }
 
 // NewDeleteBucketLifecycleRuleRequest will create request of DeleteBucketLifecycleRule action.
-func (c *OpenAPIClient) NewDeleteBucketLifecycleRuleRequest() *apis.DeleteBucketLifecycleRuleRequest {
+func (c *UCloudStackClient) NewDeleteBucketLifecycleRuleRequest() *apis.DeleteBucketLifecycleRuleRequest {
 	req := &apis.DeleteBucketLifecycleRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteBucketLifecycleRule 删除桶的生命周期
-func (c *OpenAPIClient) DeleteBucketLifecycleRule(req *apis.DeleteBucketLifecycleRuleRequest) (*apis.DeleteBucketLifecycleRuleResponse, error) {
+func (c *UCloudStackClient) DeleteBucketLifecycleRule(req *apis.DeleteBucketLifecycleRuleRequest) (*apis.DeleteBucketLifecycleRuleResponse, error) {
 	var err error
 	var res apis.DeleteBucketLifecycleRuleResponse
 
@@ -1497,17 +1497,17 @@ func (c *OpenAPIClient) DeleteBucketLifecycleRule(req *apis.DeleteBucketLifecycl
 }
 
 // NewDeleteDOSTokenRequest will create request of DeleteDOSToken action.
-func (c *OpenAPIClient) NewDeleteDOSTokenRequest() *apis.DeleteDOSTokenRequest {
+func (c *UCloudStackClient) NewDeleteDOSTokenRequest() *apis.DeleteDOSTokenRequest {
 	req := &apis.DeleteDOSTokenRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteDOSToken 删除令牌
-func (c *OpenAPIClient) DeleteDOSToken(req *apis.DeleteDOSTokenRequest) (*apis.DeleteDOSTokenResponse, error) {
+func (c *UCloudStackClient) DeleteDOSToken(req *apis.DeleteDOSTokenRequest) (*apis.DeleteDOSTokenResponse, error) {
 	var err error
 	var res apis.DeleteDOSTokenResponse
 
@@ -1519,17 +1519,17 @@ func (c *OpenAPIClient) DeleteDOSToken(req *apis.DeleteDOSTokenRequest) (*apis.D
 }
 
 // NewDescribeBucketLifecycleRulesRequest will create request of DescribeBucketLifecycleRules action.
-func (c *OpenAPIClient) NewDescribeBucketLifecycleRulesRequest() *apis.DescribeBucketLifecycleRulesRequest {
+func (c *UCloudStackClient) NewDescribeBucketLifecycleRulesRequest() *apis.DescribeBucketLifecycleRulesRequest {
 	req := &apis.DescribeBucketLifecycleRulesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeBucketLifecycleRules 桶的生命周期列表
-func (c *OpenAPIClient) DescribeBucketLifecycleRules(req *apis.DescribeBucketLifecycleRulesRequest) (*apis.DescribeBucketLifecycleRulesResponse, error) {
+func (c *UCloudStackClient) DescribeBucketLifecycleRules(req *apis.DescribeBucketLifecycleRulesRequest) (*apis.DescribeBucketLifecycleRulesResponse, error) {
 	var err error
 	var res apis.DescribeBucketLifecycleRulesResponse
 
@@ -1541,17 +1541,17 @@ func (c *OpenAPIClient) DescribeBucketLifecycleRules(req *apis.DescribeBucketLif
 }
 
 // NewDescribeBucketsRequest will create request of DescribeBuckets action.
-func (c *OpenAPIClient) NewDescribeBucketsRequest() *apis.DescribeBucketsRequest {
+func (c *UCloudStackClient) NewDescribeBucketsRequest() *apis.DescribeBucketsRequest {
 	req := &apis.DescribeBucketsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeBuckets 桶列表
-func (c *OpenAPIClient) DescribeBuckets(req *apis.DescribeBucketsRequest) (*apis.DescribeBucketsResponse, error) {
+func (c *UCloudStackClient) DescribeBuckets(req *apis.DescribeBucketsRequest) (*apis.DescribeBucketsResponse, error) {
 	var err error
 	var res apis.DescribeBucketsResponse
 
@@ -1563,17 +1563,17 @@ func (c *OpenAPIClient) DescribeBuckets(req *apis.DescribeBucketsRequest) (*apis
 }
 
 // NewDescribeDOSTokenRequest will create request of DescribeDOSToken action.
-func (c *OpenAPIClient) NewDescribeDOSTokenRequest() *apis.DescribeDOSTokenRequest {
+func (c *UCloudStackClient) NewDescribeDOSTokenRequest() *apis.DescribeDOSTokenRequest {
 	req := &apis.DescribeDOSTokenRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDOSToken 获取令牌列表
-func (c *OpenAPIClient) DescribeDOSToken(req *apis.DescribeDOSTokenRequest) (*apis.DescribeDOSTokenResponse, error) {
+func (c *UCloudStackClient) DescribeDOSToken(req *apis.DescribeDOSTokenRequest) (*apis.DescribeDOSTokenResponse, error) {
 	var err error
 	var res apis.DescribeDOSTokenResponse
 
@@ -1585,17 +1585,17 @@ func (c *OpenAPIClient) DescribeDOSToken(req *apis.DescribeDOSTokenRequest) (*ap
 }
 
 // NewFlushBucketRequest will create request of FlushBucket action.
-func (c *OpenAPIClient) NewFlushBucketRequest() *apis.FlushBucketRequest {
+func (c *UCloudStackClient) NewFlushBucketRequest() *apis.FlushBucketRequest {
 	req := &apis.FlushBucketRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // FlushBucket 清空桶数据
-func (c *OpenAPIClient) FlushBucket(req *apis.FlushBucketRequest) (*apis.FlushBucketResponse, error) {
+func (c *UCloudStackClient) FlushBucket(req *apis.FlushBucketRequest) (*apis.FlushBucketResponse, error) {
 	var err error
 	var res apis.FlushBucketResponse
 
@@ -1607,17 +1607,17 @@ func (c *OpenAPIClient) FlushBucket(req *apis.FlushBucketRequest) (*apis.FlushBu
 }
 
 // NewUpdateBucketAccessTypeRequest will create request of UpdateBucketAccessType action.
-func (c *OpenAPIClient) NewUpdateBucketAccessTypeRequest() *apis.UpdateBucketAccessTypeRequest {
+func (c *UCloudStackClient) NewUpdateBucketAccessTypeRequest() *apis.UpdateBucketAccessTypeRequest {
 	req := &apis.UpdateBucketAccessTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateBucketAccessType 更新桶访问类型
-func (c *OpenAPIClient) UpdateBucketAccessType(req *apis.UpdateBucketAccessTypeRequest) (*apis.UpdateBucketAccessTypeResponse, error) {
+func (c *UCloudStackClient) UpdateBucketAccessType(req *apis.UpdateBucketAccessTypeRequest) (*apis.UpdateBucketAccessTypeResponse, error) {
 	var err error
 	var res apis.UpdateBucketAccessTypeResponse
 
@@ -1629,17 +1629,17 @@ func (c *OpenAPIClient) UpdateBucketAccessType(req *apis.UpdateBucketAccessTypeR
 }
 
 // NewUpdateBucketEventLoggingRequest will create request of UpdateBucketEventLogging action.
-func (c *OpenAPIClient) NewUpdateBucketEventLoggingRequest() *apis.UpdateBucketEventLoggingRequest {
+func (c *UCloudStackClient) NewUpdateBucketEventLoggingRequest() *apis.UpdateBucketEventLoggingRequest {
 	req := &apis.UpdateBucketEventLoggingRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateBucketEventLogging 更新对象存储桶是否开启事件日志
-func (c *OpenAPIClient) UpdateBucketEventLogging(req *apis.UpdateBucketEventLoggingRequest) (*apis.UpdateBucketEventLoggingResponse, error) {
+func (c *UCloudStackClient) UpdateBucketEventLogging(req *apis.UpdateBucketEventLoggingRequest) (*apis.UpdateBucketEventLoggingResponse, error) {
 	var err error
 	var res apis.UpdateBucketEventLoggingResponse
 
@@ -1651,17 +1651,17 @@ func (c *OpenAPIClient) UpdateBucketEventLogging(req *apis.UpdateBucketEventLogg
 }
 
 // NewUpdateBucketLifecycleRuleRequest will create request of UpdateBucketLifecycleRule action.
-func (c *OpenAPIClient) NewUpdateBucketLifecycleRuleRequest() *apis.UpdateBucketLifecycleRuleRequest {
+func (c *UCloudStackClient) NewUpdateBucketLifecycleRuleRequest() *apis.UpdateBucketLifecycleRuleRequest {
 	req := &apis.UpdateBucketLifecycleRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateBucketLifecycleRule 更新桶的生命周期
-func (c *OpenAPIClient) UpdateBucketLifecycleRule(req *apis.UpdateBucketLifecycleRuleRequest) (*apis.UpdateBucketLifecycleRuleResponse, error) {
+func (c *UCloudStackClient) UpdateBucketLifecycleRule(req *apis.UpdateBucketLifecycleRuleRequest) (*apis.UpdateBucketLifecycleRuleResponse, error) {
 	var err error
 	var res apis.UpdateBucketLifecycleRuleResponse
 
@@ -1673,17 +1673,17 @@ func (c *OpenAPIClient) UpdateBucketLifecycleRule(req *apis.UpdateBucketLifecycl
 }
 
 // NewUpdateBucketObjectLockRequest will create request of UpdateBucketObjectLock action.
-func (c *OpenAPIClient) NewUpdateBucketObjectLockRequest() *apis.UpdateBucketObjectLockRequest {
+func (c *UCloudStackClient) NewUpdateBucketObjectLockRequest() *apis.UpdateBucketObjectLockRequest {
 	req := &apis.UpdateBucketObjectLockRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateBucketObjectLock 更新桶的对象锁定开关
-func (c *OpenAPIClient) UpdateBucketObjectLock(req *apis.UpdateBucketObjectLockRequest) (*apis.UpdateBucketObjectLockResponse, error) {
+func (c *UCloudStackClient) UpdateBucketObjectLock(req *apis.UpdateBucketObjectLockRequest) (*apis.UpdateBucketObjectLockResponse, error) {
 	var err error
 	var res apis.UpdateBucketObjectLockResponse
 
@@ -1695,17 +1695,17 @@ func (c *OpenAPIClient) UpdateBucketObjectLock(req *apis.UpdateBucketObjectLockR
 }
 
 // NewUpdateBucketQuotaRequest will create request of UpdateBucketQuota action.
-func (c *OpenAPIClient) NewUpdateBucketQuotaRequest() *apis.UpdateBucketQuotaRequest {
+func (c *UCloudStackClient) NewUpdateBucketQuotaRequest() *apis.UpdateBucketQuotaRequest {
 	req := &apis.UpdateBucketQuotaRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateBucketQuota 更新存储桶配额
-func (c *OpenAPIClient) UpdateBucketQuota(req *apis.UpdateBucketQuotaRequest) (*apis.UpdateBucketQuotaResponse, error) {
+func (c *UCloudStackClient) UpdateBucketQuota(req *apis.UpdateBucketQuotaRequest) (*apis.UpdateBucketQuotaResponse, error) {
 	var err error
 	var res apis.UpdateBucketQuotaResponse
 
@@ -1717,17 +1717,17 @@ func (c *OpenAPIClient) UpdateBucketQuota(req *apis.UpdateBucketQuotaRequest) (*
 }
 
 // NewUpdateBucketVersioningRequest will create request of UpdateBucketVersioning action.
-func (c *OpenAPIClient) NewUpdateBucketVersioningRequest() *apis.UpdateBucketVersioningRequest {
+func (c *UCloudStackClient) NewUpdateBucketVersioningRequest() *apis.UpdateBucketVersioningRequest {
 	req := &apis.UpdateBucketVersioningRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateBucketVersioning 更新桶的多版本开关
-func (c *OpenAPIClient) UpdateBucketVersioning(req *apis.UpdateBucketVersioningRequest) (*apis.UpdateBucketVersioningResponse, error) {
+func (c *UCloudStackClient) UpdateBucketVersioning(req *apis.UpdateBucketVersioningRequest) (*apis.UpdateBucketVersioningResponse, error) {
 	var err error
 	var res apis.UpdateBucketVersioningResponse
 
@@ -1739,17 +1739,17 @@ func (c *OpenAPIClient) UpdateBucketVersioning(req *apis.UpdateBucketVersioningR
 }
 
 // NewUpdateDOSTokenRequest will create request of UpdateDOSToken action.
-func (c *OpenAPIClient) NewUpdateDOSTokenRequest() *apis.UpdateDOSTokenRequest {
+func (c *UCloudStackClient) NewUpdateDOSTokenRequest() *apis.UpdateDOSTokenRequest {
 	req := &apis.UpdateDOSTokenRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDOSToken 更新令牌
-func (c *OpenAPIClient) UpdateDOSToken(req *apis.UpdateDOSTokenRequest) (*apis.UpdateDOSTokenResponse, error) {
+func (c *UCloudStackClient) UpdateDOSToken(req *apis.UpdateDOSTokenRequest) (*apis.UpdateDOSTokenResponse, error) {
 	var err error
 	var res apis.UpdateDOSTokenResponse
 
@@ -1761,17 +1761,17 @@ func (c *OpenAPIClient) UpdateDOSToken(req *apis.UpdateDOSTokenRequest) (*apis.U
 }
 
 // NewCreateUserRequest will create request of CreateUser action.
-func (c *OpenAPIClient) NewCreateUserRequest() *apis.CreateUserRequest {
+func (c *UCloudStackClient) NewCreateUserRequest() *apis.CreateUserRequest {
 	req := &apis.CreateUserRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateUser 创建租户
-func (c *OpenAPIClient) CreateUser(req *apis.CreateUserRequest) (*apis.CreateUserResponse, error) {
+func (c *UCloudStackClient) CreateUser(req *apis.CreateUserRequest) (*apis.CreateUserResponse, error) {
 	var err error
 	var res apis.CreateUserResponse
 
@@ -1783,17 +1783,17 @@ func (c *OpenAPIClient) CreateUser(req *apis.CreateUserRequest) (*apis.CreateUse
 }
 
 // NewDeleteCompanyRequest will create request of DeleteCompany action.
-func (c *OpenAPIClient) NewDeleteCompanyRequest() *apis.DeleteCompanyRequest {
+func (c *UCloudStackClient) NewDeleteCompanyRequest() *apis.DeleteCompanyRequest {
 	req := &apis.DeleteCompanyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteCompany 删除租户
-func (c *OpenAPIClient) DeleteCompany(req *apis.DeleteCompanyRequest) (*apis.DeleteCompanyResponse, error) {
+func (c *UCloudStackClient) DeleteCompany(req *apis.DeleteCompanyRequest) (*apis.DeleteCompanyResponse, error) {
 	var err error
 	var res apis.DeleteCompanyResponse
 
@@ -1805,17 +1805,17 @@ func (c *OpenAPIClient) DeleteCompany(req *apis.DeleteCompanyRequest) (*apis.Del
 }
 
 // NewDescribeLoginWhitelistRequest will create request of DescribeLoginWhitelist action.
-func (c *OpenAPIClient) NewDescribeLoginWhitelistRequest() *apis.DescribeLoginWhitelistRequest {
+func (c *UCloudStackClient) NewDescribeLoginWhitelistRequest() *apis.DescribeLoginWhitelistRequest {
 	req := &apis.DescribeLoginWhitelistRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeLoginWhitelist 获取用户登录IP白名单
-func (c *OpenAPIClient) DescribeLoginWhitelist(req *apis.DescribeLoginWhitelistRequest) (*apis.DescribeLoginWhitelistResponse, error) {
+func (c *UCloudStackClient) DescribeLoginWhitelist(req *apis.DescribeLoginWhitelistRequest) (*apis.DescribeLoginWhitelistResponse, error) {
 	var err error
 	var res apis.DescribeLoginWhitelistResponse
 
@@ -1827,17 +1827,17 @@ func (c *OpenAPIClient) DescribeLoginWhitelist(req *apis.DescribeLoginWhitelistR
 }
 
 // NewDescribeTenantResourcesRequest will create request of DescribeTenantResources action.
-func (c *OpenAPIClient) NewDescribeTenantResourcesRequest() *apis.DescribeTenantResourcesRequest {
+func (c *UCloudStackClient) NewDescribeTenantResourcesRequest() *apis.DescribeTenantResourcesRequest {
 	req := &apis.DescribeTenantResourcesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeTenantResources 获取租户资源
-func (c *OpenAPIClient) DescribeTenantResources(req *apis.DescribeTenantResourcesRequest) (*apis.DescribeTenantResourcesResponse, error) {
+func (c *UCloudStackClient) DescribeTenantResources(req *apis.DescribeTenantResourcesRequest) (*apis.DescribeTenantResourcesResponse, error) {
 	var err error
 	var res apis.DescribeTenantResourcesResponse
 
@@ -1849,17 +1849,17 @@ func (c *OpenAPIClient) DescribeTenantResources(req *apis.DescribeTenantResource
 }
 
 // NewDescribeUserRequest will create request of DescribeUser action.
-func (c *OpenAPIClient) NewDescribeUserRequest() *apis.DescribeUserRequest {
+func (c *UCloudStackClient) NewDescribeUserRequest() *apis.DescribeUserRequest {
 	req := &apis.DescribeUserRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeUser 获取租户列表
-func (c *OpenAPIClient) DescribeUser(req *apis.DescribeUserRequest) (*apis.DescribeUserResponse, error) {
+func (c *UCloudStackClient) DescribeUser(req *apis.DescribeUserRequest) (*apis.DescribeUserResponse, error) {
 	var err error
 	var res apis.DescribeUserResponse
 
@@ -1871,17 +1871,17 @@ func (c *OpenAPIClient) DescribeUser(req *apis.DescribeUserRequest) (*apis.Descr
 }
 
 // NewFreezeUserRequest will create request of FreezeUser action.
-func (c *OpenAPIClient) NewFreezeUserRequest() *apis.FreezeUserRequest {
+func (c *UCloudStackClient) NewFreezeUserRequest() *apis.FreezeUserRequest {
 	req := &apis.FreezeUserRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // FreezeUser 冻结租户
-func (c *OpenAPIClient) FreezeUser(req *apis.FreezeUserRequest) (*apis.FreezeUserResponse, error) {
+func (c *UCloudStackClient) FreezeUser(req *apis.FreezeUserRequest) (*apis.FreezeUserResponse, error) {
 	var err error
 	var res apis.FreezeUserResponse
 
@@ -1893,17 +1893,17 @@ func (c *OpenAPIClient) FreezeUser(req *apis.FreezeUserRequest) (*apis.FreezeUse
 }
 
 // NewRenameCompanyRequest will create request of RenameCompany action.
-func (c *OpenAPIClient) NewRenameCompanyRequest() *apis.RenameCompanyRequest {
+func (c *UCloudStackClient) NewRenameCompanyRequest() *apis.RenameCompanyRequest {
 	req := &apis.RenameCompanyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RenameCompany 重命名租户名称备注
-func (c *OpenAPIClient) RenameCompany(req *apis.RenameCompanyRequest) (*apis.RenameCompanyResponse, error) {
+func (c *UCloudStackClient) RenameCompany(req *apis.RenameCompanyRequest) (*apis.RenameCompanyResponse, error) {
 	var err error
 	var res apis.RenameCompanyResponse
 
@@ -1915,17 +1915,17 @@ func (c *OpenAPIClient) RenameCompany(req *apis.RenameCompanyRequest) (*apis.Ren
 }
 
 // NewUnFreezeUserRequest will create request of UnFreezeUser action.
-func (c *OpenAPIClient) NewUnFreezeUserRequest() *apis.UnFreezeUserRequest {
+func (c *UCloudStackClient) NewUnFreezeUserRequest() *apis.UnFreezeUserRequest {
 	req := &apis.UnFreezeUserRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnFreezeUser 解冻租户
-func (c *OpenAPIClient) UnFreezeUser(req *apis.UnFreezeUserRequest) (*apis.UnFreezeUserResponse, error) {
+func (c *UCloudStackClient) UnFreezeUser(req *apis.UnFreezeUserRequest) (*apis.UnFreezeUserResponse, error) {
 	var err error
 	var res apis.UnFreezeUserResponse
 
@@ -1937,17 +1937,17 @@ func (c *OpenAPIClient) UnFreezeUser(req *apis.UnFreezeUserRequest) (*apis.UnFre
 }
 
 // NewUpdateCompanyEmailRequest will create request of UpdateCompanyEmail action.
-func (c *OpenAPIClient) NewUpdateCompanyEmailRequest() *apis.UpdateCompanyEmailRequest {
+func (c *UCloudStackClient) NewUpdateCompanyEmailRequest() *apis.UpdateCompanyEmailRequest {
 	req := &apis.UpdateCompanyEmailRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateCompanyEmail 修改租户邮箱
-func (c *OpenAPIClient) UpdateCompanyEmail(req *apis.UpdateCompanyEmailRequest) (*apis.UpdateCompanyEmailResponse, error) {
+func (c *UCloudStackClient) UpdateCompanyEmail(req *apis.UpdateCompanyEmailRequest) (*apis.UpdateCompanyEmailResponse, error) {
 	var err error
 	var res apis.UpdateCompanyEmailResponse
 
@@ -1959,17 +1959,17 @@ func (c *OpenAPIClient) UpdateCompanyEmail(req *apis.UpdateCompanyEmailRequest) 
 }
 
 // NewUpdateCompanyNameRequest will create request of UpdateCompanyName action.
-func (c *OpenAPIClient) NewUpdateCompanyNameRequest() *apis.UpdateCompanyNameRequest {
+func (c *UCloudStackClient) NewUpdateCompanyNameRequest() *apis.UpdateCompanyNameRequest {
 	req := &apis.UpdateCompanyNameRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateCompanyName 更新租户名称
-func (c *OpenAPIClient) UpdateCompanyName(req *apis.UpdateCompanyNameRequest) (*apis.UpdateCompanyNameResponse, error) {
+func (c *UCloudStackClient) UpdateCompanyName(req *apis.UpdateCompanyNameRequest) (*apis.UpdateCompanyNameResponse, error) {
 	var err error
 	var res apis.UpdateCompanyNameResponse
 
@@ -1981,17 +1981,17 @@ func (c *OpenAPIClient) UpdateCompanyName(req *apis.UpdateCompanyNameRequest) (*
 }
 
 // NewUpdateLoginWhitelistRequest will create request of UpdateLoginWhitelist action.
-func (c *OpenAPIClient) NewUpdateLoginWhitelistRequest() *apis.UpdateLoginWhitelistRequest {
+func (c *UCloudStackClient) NewUpdateLoginWhitelistRequest() *apis.UpdateLoginWhitelistRequest {
 	req := &apis.UpdateLoginWhitelistRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateLoginWhitelist 设置用户登录IP白名单
-func (c *OpenAPIClient) UpdateLoginWhitelist(req *apis.UpdateLoginWhitelistRequest) (*apis.UpdateLoginWhitelistResponse, error) {
+func (c *UCloudStackClient) UpdateLoginWhitelist(req *apis.UpdateLoginWhitelistRequest) (*apis.UpdateLoginWhitelistResponse, error) {
 	var err error
 	var res apis.UpdateLoginWhitelistResponse
 
@@ -2003,17 +2003,17 @@ func (c *OpenAPIClient) UpdateLoginWhitelist(req *apis.UpdateLoginWhitelistReque
 }
 
 // NewCreateProductSpecificationRequest will create request of CreateProductSpecification action.
-func (c *OpenAPIClient) NewCreateProductSpecificationRequest() *apis.CreateProductSpecificationRequest {
+func (c *UCloudStackClient) NewCreateProductSpecificationRequest() *apis.CreateProductSpecificationRequest {
 	req := &apis.CreateProductSpecificationRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateProductSpecification 创建产品规格
-func (c *OpenAPIClient) CreateProductSpecification(req *apis.CreateProductSpecificationRequest) (*apis.CreateProductSpecificationResponse, error) {
+func (c *UCloudStackClient) CreateProductSpecification(req *apis.CreateProductSpecificationRequest) (*apis.CreateProductSpecificationResponse, error) {
 	var err error
 	var res apis.CreateProductSpecificationResponse
 
@@ -2025,17 +2025,17 @@ func (c *OpenAPIClient) CreateProductSpecification(req *apis.CreateProductSpecif
 }
 
 // NewDeleteProductSpecificationRequest will create request of DeleteProductSpecification action.
-func (c *OpenAPIClient) NewDeleteProductSpecificationRequest() *apis.DeleteProductSpecificationRequest {
+func (c *UCloudStackClient) NewDeleteProductSpecificationRequest() *apis.DeleteProductSpecificationRequest {
 	req := &apis.DeleteProductSpecificationRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteProductSpecification 删除产品规格
-func (c *OpenAPIClient) DeleteProductSpecification(req *apis.DeleteProductSpecificationRequest) (*apis.DeleteProductSpecificationResponse, error) {
+func (c *UCloudStackClient) DeleteProductSpecification(req *apis.DeleteProductSpecificationRequest) (*apis.DeleteProductSpecificationResponse, error) {
 	var err error
 	var res apis.DeleteProductSpecificationResponse
 
@@ -2047,17 +2047,17 @@ func (c *OpenAPIClient) DeleteProductSpecification(req *apis.DeleteProductSpecif
 }
 
 // NewDescribeProductSpecificationRequest will create request of DescribeProductSpecification action.
-func (c *OpenAPIClient) NewDescribeProductSpecificationRequest() *apis.DescribeProductSpecificationRequest {
+func (c *UCloudStackClient) NewDescribeProductSpecificationRequest() *apis.DescribeProductSpecificationRequest {
 	req := &apis.DescribeProductSpecificationRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeProductSpecification 查询产品规格
-func (c *OpenAPIClient) DescribeProductSpecification(req *apis.DescribeProductSpecificationRequest) (*apis.DescribeProductSpecificationResponse, error) {
+func (c *UCloudStackClient) DescribeProductSpecification(req *apis.DescribeProductSpecificationRequest) (*apis.DescribeProductSpecificationResponse, error) {
 	var err error
 	var res apis.DescribeProductSpecificationResponse
 
@@ -2069,17 +2069,17 @@ func (c *OpenAPIClient) DescribeProductSpecification(req *apis.DescribeProductSp
 }
 
 // NewDescribeProductSpecificationTemplateRequest will create request of DescribeProductSpecificationTemplate action.
-func (c *OpenAPIClient) NewDescribeProductSpecificationTemplateRequest() *apis.DescribeProductSpecificationTemplateRequest {
+func (c *UCloudStackClient) NewDescribeProductSpecificationTemplateRequest() *apis.DescribeProductSpecificationTemplateRequest {
 	req := &apis.DescribeProductSpecificationTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeProductSpecificationTemplate 查询产品规格模板
-func (c *OpenAPIClient) DescribeProductSpecificationTemplate(req *apis.DescribeProductSpecificationTemplateRequest) (*apis.DescribeProductSpecificationTemplateResponse, error) {
+func (c *UCloudStackClient) DescribeProductSpecificationTemplate(req *apis.DescribeProductSpecificationTemplateRequest) (*apis.DescribeProductSpecificationTemplateResponse, error) {
 	var err error
 	var res apis.DescribeProductSpecificationTemplateResponse
 
@@ -2091,17 +2091,17 @@ func (c *OpenAPIClient) DescribeProductSpecificationTemplate(req *apis.DescribeP
 }
 
 // NewDescribeQuotaRequest will create request of DescribeQuota action.
-func (c *OpenAPIClient) NewDescribeQuotaRequest() *apis.DescribeQuotaRequest {
+func (c *UCloudStackClient) NewDescribeQuotaRequest() *apis.DescribeQuotaRequest {
 	req := &apis.DescribeQuotaRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeQuota 查询配额列表
-func (c *OpenAPIClient) DescribeQuota(req *apis.DescribeQuotaRequest) (*apis.DescribeQuotaResponse, error) {
+func (c *UCloudStackClient) DescribeQuota(req *apis.DescribeQuotaRequest) (*apis.DescribeQuotaResponse, error) {
 	var err error
 	var res apis.DescribeQuotaResponse
 
@@ -2113,17 +2113,17 @@ func (c *OpenAPIClient) DescribeQuota(req *apis.DescribeQuotaRequest) (*apis.Des
 }
 
 // NewDescribeQuotaUsageRequest will create request of DescribeQuotaUsage action.
-func (c *OpenAPIClient) NewDescribeQuotaUsageRequest() *apis.DescribeQuotaUsageRequest {
+func (c *UCloudStackClient) NewDescribeQuotaUsageRequest() *apis.DescribeQuotaUsageRequest {
 	req := &apis.DescribeQuotaUsageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeQuotaUsage 查询配额资源用量列表
-func (c *OpenAPIClient) DescribeQuotaUsage(req *apis.DescribeQuotaUsageRequest) (*apis.DescribeQuotaUsageResponse, error) {
+func (c *UCloudStackClient) DescribeQuotaUsage(req *apis.DescribeQuotaUsageRequest) (*apis.DescribeQuotaUsageResponse, error) {
 	var err error
 	var res apis.DescribeQuotaUsageResponse
 
@@ -2135,17 +2135,17 @@ func (c *OpenAPIClient) DescribeQuotaUsage(req *apis.DescribeQuotaUsageRequest) 
 }
 
 // NewDescribeResourceInfoRequest will create request of DescribeResourceInfo action.
-func (c *OpenAPIClient) NewDescribeResourceInfoRequest() *apis.DescribeResourceInfoRequest {
+func (c *UCloudStackClient) NewDescribeResourceInfoRequest() *apis.DescribeResourceInfoRequest {
 	req := &apis.DescribeResourceInfoRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeResourceInfo 获取资源信息
-func (c *OpenAPIClient) DescribeResourceInfo(req *apis.DescribeResourceInfoRequest) (*apis.DescribeResourceInfoResponse, error) {
+func (c *UCloudStackClient) DescribeResourceInfo(req *apis.DescribeResourceInfoRequest) (*apis.DescribeResourceInfoResponse, error) {
 	var err error
 	var res apis.DescribeResourceInfoResponse
 
@@ -2157,17 +2157,17 @@ func (c *OpenAPIClient) DescribeResourceInfo(req *apis.DescribeResourceInfoReque
 }
 
 // NewDescribeSetAllocateUsageRequest will create request of DescribeSetAllocateUsage action.
-func (c *OpenAPIClient) NewDescribeSetAllocateUsageRequest() *apis.DescribeSetAllocateUsageRequest {
+func (c *UCloudStackClient) NewDescribeSetAllocateUsageRequest() *apis.DescribeSetAllocateUsageRequest {
 	req := &apis.DescribeSetAllocateUsageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSetAllocateUsage 查询集群资源用量列表
-func (c *OpenAPIClient) DescribeSetAllocateUsage(req *apis.DescribeSetAllocateUsageRequest) (*apis.DescribeSetAllocateUsageResponse, error) {
+func (c *UCloudStackClient) DescribeSetAllocateUsage(req *apis.DescribeSetAllocateUsageRequest) (*apis.DescribeSetAllocateUsageResponse, error) {
 	var err error
 	var res apis.DescribeSetAllocateUsageResponse
 
@@ -2179,17 +2179,17 @@ func (c *OpenAPIClient) DescribeSetAllocateUsage(req *apis.DescribeSetAllocateUs
 }
 
 // NewGetConfigRequest will create request of GetConfig action.
-func (c *OpenAPIClient) NewGetConfigRequest() *apis.GetConfigRequest {
+func (c *UCloudStackClient) NewGetConfigRequest() *apis.GetConfigRequest {
 	req := &apis.GetConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetConfig 获取指定配置
-func (c *OpenAPIClient) GetConfig(req *apis.GetConfigRequest) (*apis.GetConfigResponse, error) {
+func (c *UCloudStackClient) GetConfig(req *apis.GetConfigRequest) (*apis.GetConfigResponse, error) {
 	var err error
 	var res apis.GetConfigResponse
 
@@ -2201,17 +2201,17 @@ func (c *OpenAPIClient) GetConfig(req *apis.GetConfigRequest) (*apis.GetConfigRe
 }
 
 // NewGetFilterKeywordsRequest will create request of GetFilterKeywords action.
-func (c *OpenAPIClient) NewGetFilterKeywordsRequest() *apis.GetFilterKeywordsRequest {
+func (c *UCloudStackClient) NewGetFilterKeywordsRequest() *apis.GetFilterKeywordsRequest {
 	req := &apis.GetFilterKeywordsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetFilterKeywords 获取规格/价格/配额分类筛选关键字
-func (c *OpenAPIClient) GetFilterKeywords(req *apis.GetFilterKeywordsRequest) (*apis.GetFilterKeywordsResponse, error) {
+func (c *UCloudStackClient) GetFilterKeywords(req *apis.GetFilterKeywordsRequest) (*apis.GetFilterKeywordsResponse, error) {
 	var err error
 	var res apis.GetFilterKeywordsResponse
 
@@ -2223,17 +2223,17 @@ func (c *OpenAPIClient) GetFilterKeywords(req *apis.GetFilterKeywordsRequest) (*
 }
 
 // NewGetRegionConfigRequest will create request of GetRegionConfig action.
-func (c *OpenAPIClient) NewGetRegionConfigRequest() *apis.GetRegionConfigRequest {
+func (c *UCloudStackClient) NewGetRegionConfigRequest() *apis.GetRegionConfigRequest {
 	req := &apis.GetRegionConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetRegionConfig 获取地域指定配置
-func (c *OpenAPIClient) GetRegionConfig(req *apis.GetRegionConfigRequest) (*apis.GetRegionConfigResponse, error) {
+func (c *UCloudStackClient) GetRegionConfig(req *apis.GetRegionConfigRequest) (*apis.GetRegionConfigResponse, error) {
 	var err error
 	var res apis.GetRegionConfigResponse
 
@@ -2245,17 +2245,17 @@ func (c *OpenAPIClient) GetRegionConfig(req *apis.GetRegionConfigRequest) (*apis
 }
 
 // NewGetSSOConfigRequest will create request of GetSSOConfig action.
-func (c *OpenAPIClient) NewGetSSOConfigRequest() *apis.GetSSOConfigRequest {
+func (c *UCloudStackClient) NewGetSSOConfigRequest() *apis.GetSSOConfigRequest {
 	req := &apis.GetSSOConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetSSOConfig 获取sso配置信息
-func (c *OpenAPIClient) GetSSOConfig(req *apis.GetSSOConfigRequest) (*apis.GetSSOConfigResponse, error) {
+func (c *UCloudStackClient) GetSSOConfig(req *apis.GetSSOConfigRequest) (*apis.GetSSOConfigResponse, error) {
 	var err error
 	var res apis.GetSSOConfigResponse
 
@@ -2267,17 +2267,17 @@ func (c *OpenAPIClient) GetSSOConfig(req *apis.GetSSOConfigRequest) (*apis.GetSS
 }
 
 // NewListGlobalConfigsRequest will create request of ListGlobalConfigs action.
-func (c *OpenAPIClient) NewListGlobalConfigsRequest() *apis.ListGlobalConfigsRequest {
+func (c *UCloudStackClient) NewListGlobalConfigsRequest() *apis.ListGlobalConfigsRequest {
 	req := &apis.ListGlobalConfigsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListGlobalConfigs 按照类型和地域获取全局配置
-func (c *OpenAPIClient) ListGlobalConfigs(req *apis.ListGlobalConfigsRequest) (*apis.ListGlobalConfigsResponse, error) {
+func (c *UCloudStackClient) ListGlobalConfigs(req *apis.ListGlobalConfigsRequest) (*apis.ListGlobalConfigsResponse, error) {
 	var err error
 	var res apis.ListGlobalConfigsResponse
 
@@ -2289,17 +2289,17 @@ func (c *OpenAPIClient) ListGlobalConfigs(req *apis.ListGlobalConfigsRequest) (*
 }
 
 // NewListRegionConfigSyncStatusRequest will create request of ListRegionConfigSyncStatus action.
-func (c *OpenAPIClient) NewListRegionConfigSyncStatusRequest() *apis.ListRegionConfigSyncStatusRequest {
+func (c *UCloudStackClient) NewListRegionConfigSyncStatusRequest() *apis.ListRegionConfigSyncStatusRequest {
 	req := &apis.ListRegionConfigSyncStatusRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListRegionConfigSyncStatus 查询地域配置同步状态
-func (c *OpenAPIClient) ListRegionConfigSyncStatus(req *apis.ListRegionConfigSyncStatusRequest) (*apis.ListRegionConfigSyncStatusResponse, error) {
+func (c *UCloudStackClient) ListRegionConfigSyncStatus(req *apis.ListRegionConfigSyncStatusRequest) (*apis.ListRegionConfigSyncStatusResponse, error) {
 	var err error
 	var res apis.ListRegionConfigSyncStatusResponse
 
@@ -2311,17 +2311,17 @@ func (c *OpenAPIClient) ListRegionConfigSyncStatus(req *apis.ListRegionConfigSyn
 }
 
 // NewListRegionConfigsRequest will create request of ListRegionConfigs action.
-func (c *OpenAPIClient) NewListRegionConfigsRequest() *apis.ListRegionConfigsRequest {
+func (c *UCloudStackClient) NewListRegionConfigsRequest() *apis.ListRegionConfigsRequest {
 	req := &apis.ListRegionConfigsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListRegionConfigs 按照类型和地域获取地域配置
-func (c *OpenAPIClient) ListRegionConfigs(req *apis.ListRegionConfigsRequest) (*apis.ListRegionConfigsResponse, error) {
+func (c *UCloudStackClient) ListRegionConfigs(req *apis.ListRegionConfigsRequest) (*apis.ListRegionConfigsResponse, error) {
 	var err error
 	var res apis.ListRegionConfigsResponse
 
@@ -2333,17 +2333,17 @@ func (c *OpenAPIClient) ListRegionConfigs(req *apis.ListRegionConfigsRequest) (*
 }
 
 // NewSetAccountQuotaRequest will create request of SetAccountQuota action.
-func (c *OpenAPIClient) NewSetAccountQuotaRequest() *apis.SetAccountQuotaRequest {
+func (c *UCloudStackClient) NewSetAccountQuotaRequest() *apis.SetAccountQuotaRequest {
 	req := &apis.SetAccountQuotaRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetAccountQuota 设置资源配额
-func (c *OpenAPIClient) SetAccountQuota(req *apis.SetAccountQuotaRequest) (*apis.SetAccountQuotaResponse, error) {
+func (c *UCloudStackClient) SetAccountQuota(req *apis.SetAccountQuotaRequest) (*apis.SetAccountQuotaResponse, error) {
 	var err error
 	var res apis.SetAccountQuotaResponse
 
@@ -2355,17 +2355,17 @@ func (c *OpenAPIClient) SetAccountQuota(req *apis.SetAccountQuotaRequest) (*apis
 }
 
 // NewUpdateConfigRequest will create request of UpdateConfig action.
-func (c *OpenAPIClient) NewUpdateConfigRequest() *apis.UpdateConfigRequest {
+func (c *UCloudStackClient) NewUpdateConfigRequest() *apis.UpdateConfigRequest {
 	req := &apis.UpdateConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateConfig 更新配置
-func (c *OpenAPIClient) UpdateConfig(req *apis.UpdateConfigRequest) (*apis.UpdateConfigResponse, error) {
+func (c *UCloudStackClient) UpdateConfig(req *apis.UpdateConfigRequest) (*apis.UpdateConfigResponse, error) {
 	var err error
 	var res apis.UpdateConfigResponse
 
@@ -2377,17 +2377,17 @@ func (c *OpenAPIClient) UpdateConfig(req *apis.UpdateConfigRequest) (*apis.Updat
 }
 
 // NewUpdateProductSpecificationRequest will create request of UpdateProductSpecification action.
-func (c *OpenAPIClient) NewUpdateProductSpecificationRequest() *apis.UpdateProductSpecificationRequest {
+func (c *UCloudStackClient) NewUpdateProductSpecificationRequest() *apis.UpdateProductSpecificationRequest {
 	req := &apis.UpdateProductSpecificationRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateProductSpecification 更新产品规格
-func (c *OpenAPIClient) UpdateProductSpecification(req *apis.UpdateProductSpecificationRequest) (*apis.UpdateProductSpecificationResponse, error) {
+func (c *UCloudStackClient) UpdateProductSpecification(req *apis.UpdateProductSpecificationRequest) (*apis.UpdateProductSpecificationResponse, error) {
 	var err error
 	var res apis.UpdateProductSpecificationResponse
 
@@ -2399,17 +2399,17 @@ func (c *OpenAPIClient) UpdateProductSpecification(req *apis.UpdateProductSpecif
 }
 
 // NewUpdateRegionConfigRequest will create request of UpdateRegionConfig action.
-func (c *OpenAPIClient) NewUpdateRegionConfigRequest() *apis.UpdateRegionConfigRequest {
+func (c *UCloudStackClient) NewUpdateRegionConfigRequest() *apis.UpdateRegionConfigRequest {
 	req := &apis.UpdateRegionConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateRegionConfig 更新地域配置
-func (c *OpenAPIClient) UpdateRegionConfig(req *apis.UpdateRegionConfigRequest) (*apis.UpdateRegionConfigResponse, error) {
+func (c *UCloudStackClient) UpdateRegionConfig(req *apis.UpdateRegionConfigRequest) (*apis.UpdateRegionConfigResponse, error) {
 	var err error
 	var res apis.UpdateRegionConfigResponse
 
@@ -2421,17 +2421,17 @@ func (c *OpenAPIClient) UpdateRegionConfig(req *apis.UpdateRegionConfigRequest) 
 }
 
 // NewVerifyEmailAvailabilityRequest will create request of VerifyEmailAvailability action.
-func (c *OpenAPIClient) NewVerifyEmailAvailabilityRequest() *apis.VerifyEmailAvailabilityRequest {
+func (c *UCloudStackClient) NewVerifyEmailAvailabilityRequest() *apis.VerifyEmailAvailabilityRequest {
 	req := &apis.VerifyEmailAvailabilityRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // VerifyEmailAvailability 验证邮箱服务器可用性
-func (c *OpenAPIClient) VerifyEmailAvailability(req *apis.VerifyEmailAvailabilityRequest) (*apis.VerifyEmailAvailabilityResponse, error) {
+func (c *UCloudStackClient) VerifyEmailAvailability(req *apis.VerifyEmailAvailabilityRequest) (*apis.VerifyEmailAvailabilityResponse, error) {
 	var err error
 	var res apis.VerifyEmailAvailabilityResponse
 
@@ -2443,17 +2443,17 @@ func (c *OpenAPIClient) VerifyEmailAvailability(req *apis.VerifyEmailAvailabilit
 }
 
 // NewCreateContainerImageRepositoryRequest will create request of CreateContainerImageRepository action.
-func (c *OpenAPIClient) NewCreateContainerImageRepositoryRequest() *apis.CreateContainerImageRepositoryRequest {
+func (c *UCloudStackClient) NewCreateContainerImageRepositoryRequest() *apis.CreateContainerImageRepositoryRequest {
 	req := &apis.CreateContainerImageRepositoryRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateContainerImageRepository 创建镜像仓库
-func (c *OpenAPIClient) CreateContainerImageRepository(req *apis.CreateContainerImageRepositoryRequest) (*apis.CreateContainerImageRepositoryResponse, error) {
+func (c *UCloudStackClient) CreateContainerImageRepository(req *apis.CreateContainerImageRepositoryRequest) (*apis.CreateContainerImageRepositoryResponse, error) {
 	var err error
 	var res apis.CreateContainerImageRepositoryResponse
 
@@ -2465,17 +2465,17 @@ func (c *OpenAPIClient) CreateContainerImageRepository(req *apis.CreateContainer
 }
 
 // NewDeleteContainerImageRequest will create request of DeleteContainerImage action.
-func (c *OpenAPIClient) NewDeleteContainerImageRequest() *apis.DeleteContainerImageRequest {
+func (c *UCloudStackClient) NewDeleteContainerImageRequest() *apis.DeleteContainerImageRequest {
 	req := &apis.DeleteContainerImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteContainerImage 删除容器镜像
-func (c *OpenAPIClient) DeleteContainerImage(req *apis.DeleteContainerImageRequest) (*apis.DeleteContainerImageResponse, error) {
+func (c *UCloudStackClient) DeleteContainerImage(req *apis.DeleteContainerImageRequest) (*apis.DeleteContainerImageResponse, error) {
 	var err error
 	var res apis.DeleteContainerImageResponse
 
@@ -2487,17 +2487,17 @@ func (c *OpenAPIClient) DeleteContainerImage(req *apis.DeleteContainerImageReque
 }
 
 // NewDeleteContainerImageRepositoryRequest will create request of DeleteContainerImageRepository action.
-func (c *OpenAPIClient) NewDeleteContainerImageRepositoryRequest() *apis.DeleteContainerImageRepositoryRequest {
+func (c *UCloudStackClient) NewDeleteContainerImageRepositoryRequest() *apis.DeleteContainerImageRepositoryRequest {
 	req := &apis.DeleteContainerImageRepositoryRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteContainerImageRepository 删除镜像仓库
-func (c *OpenAPIClient) DeleteContainerImageRepository(req *apis.DeleteContainerImageRepositoryRequest) (*apis.DeleteContainerImageRepositoryResponse, error) {
+func (c *UCloudStackClient) DeleteContainerImageRepository(req *apis.DeleteContainerImageRepositoryRequest) (*apis.DeleteContainerImageRepositoryResponse, error) {
 	var err error
 	var res apis.DeleteContainerImageRepositoryResponse
 
@@ -2509,17 +2509,17 @@ func (c *OpenAPIClient) DeleteContainerImageRepository(req *apis.DeleteContainer
 }
 
 // NewDeleteContainerImageTagRequest will create request of DeleteContainerImageTag action.
-func (c *OpenAPIClient) NewDeleteContainerImageTagRequest() *apis.DeleteContainerImageTagRequest {
+func (c *UCloudStackClient) NewDeleteContainerImageTagRequest() *apis.DeleteContainerImageTagRequest {
 	req := &apis.DeleteContainerImageTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteContainerImageTag 删除容器镜像tag
-func (c *OpenAPIClient) DeleteContainerImageTag(req *apis.DeleteContainerImageTagRequest) (*apis.DeleteContainerImageTagResponse, error) {
+func (c *UCloudStackClient) DeleteContainerImageTag(req *apis.DeleteContainerImageTagRequest) (*apis.DeleteContainerImageTagResponse, error) {
 	var err error
 	var res apis.DeleteContainerImageTagResponse
 
@@ -2531,17 +2531,17 @@ func (c *OpenAPIClient) DeleteContainerImageTag(req *apis.DeleteContainerImageTa
 }
 
 // NewDescribeContainerImageRequest will create request of DescribeContainerImage action.
-func (c *OpenAPIClient) NewDescribeContainerImageRequest() *apis.DescribeContainerImageRequest {
+func (c *UCloudStackClient) NewDescribeContainerImageRequest() *apis.DescribeContainerImageRequest {
 	req := &apis.DescribeContainerImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeContainerImage 查询容器镜像
-func (c *OpenAPIClient) DescribeContainerImage(req *apis.DescribeContainerImageRequest) (*apis.DescribeContainerImageResponse, error) {
+func (c *UCloudStackClient) DescribeContainerImage(req *apis.DescribeContainerImageRequest) (*apis.DescribeContainerImageResponse, error) {
 	var err error
 	var res apis.DescribeContainerImageResponse
 
@@ -2553,17 +2553,17 @@ func (c *OpenAPIClient) DescribeContainerImage(req *apis.DescribeContainerImageR
 }
 
 // NewDescribeContainerImageRepositoryRequest will create request of DescribeContainerImageRepository action.
-func (c *OpenAPIClient) NewDescribeContainerImageRepositoryRequest() *apis.DescribeContainerImageRepositoryRequest {
+func (c *UCloudStackClient) NewDescribeContainerImageRepositoryRequest() *apis.DescribeContainerImageRepositoryRequest {
 	req := &apis.DescribeContainerImageRepositoryRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeContainerImageRepository 查询镜像仓库
-func (c *OpenAPIClient) DescribeContainerImageRepository(req *apis.DescribeContainerImageRepositoryRequest) (*apis.DescribeContainerImageRepositoryResponse, error) {
+func (c *UCloudStackClient) DescribeContainerImageRepository(req *apis.DescribeContainerImageRepositoryRequest) (*apis.DescribeContainerImageRepositoryResponse, error) {
 	var err error
 	var res apis.DescribeContainerImageRepositoryResponse
 
@@ -2575,17 +2575,17 @@ func (c *OpenAPIClient) DescribeContainerImageRepository(req *apis.DescribeConta
 }
 
 // NewDescribeContainerImageTagRequest will create request of DescribeContainerImageTag action.
-func (c *OpenAPIClient) NewDescribeContainerImageTagRequest() *apis.DescribeContainerImageTagRequest {
+func (c *UCloudStackClient) NewDescribeContainerImageTagRequest() *apis.DescribeContainerImageTagRequest {
 	req := &apis.DescribeContainerImageTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeContainerImageTag 查询容器镜像tags
-func (c *OpenAPIClient) DescribeContainerImageTag(req *apis.DescribeContainerImageTagRequest) (*apis.DescribeContainerImageTagResponse, error) {
+func (c *UCloudStackClient) DescribeContainerImageTag(req *apis.DescribeContainerImageTagRequest) (*apis.DescribeContainerImageTagResponse, error) {
 	var err error
 	var res apis.DescribeContainerImageTagResponse
 
@@ -2597,17 +2597,17 @@ func (c *OpenAPIClient) DescribeContainerImageTag(req *apis.DescribeContainerIma
 }
 
 // NewUpdateContainerImageRepositoryRequest will create request of UpdateContainerImageRepository action.
-func (c *OpenAPIClient) NewUpdateContainerImageRepositoryRequest() *apis.UpdateContainerImageRepositoryRequest {
+func (c *UCloudStackClient) NewUpdateContainerImageRepositoryRequest() *apis.UpdateContainerImageRepositoryRequest {
 	req := &apis.UpdateContainerImageRepositoryRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateContainerImageRepository 更新镜像仓库
-func (c *OpenAPIClient) UpdateContainerImageRepository(req *apis.UpdateContainerImageRepositoryRequest) (*apis.UpdateContainerImageRepositoryResponse, error) {
+func (c *UCloudStackClient) UpdateContainerImageRepository(req *apis.UpdateContainerImageRepositoryRequest) (*apis.UpdateContainerImageRepositoryResponse, error) {
 	var err error
 	var res apis.UpdateContainerImageRepositoryResponse
 
@@ -2619,17 +2619,17 @@ func (c *OpenAPIClient) UpdateContainerImageRepository(req *apis.UpdateContainer
 }
 
 // NewBindStorageToDBSRequest will create request of BindStorageToDBS action.
-func (c *OpenAPIClient) NewBindStorageToDBSRequest() *apis.BindStorageToDBSRequest {
+func (c *UCloudStackClient) NewBindStorageToDBSRequest() *apis.BindStorageToDBSRequest {
 	req := &apis.BindStorageToDBSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // BindStorageToDBS 绑定存储系统到DBS
-func (c *OpenAPIClient) BindStorageToDBS(req *apis.BindStorageToDBSRequest) (*apis.BindStorageToDBSResponse, error) {
+func (c *UCloudStackClient) BindStorageToDBS(req *apis.BindStorageToDBSRequest) (*apis.BindStorageToDBSResponse, error) {
 	var err error
 	var res apis.BindStorageToDBSResponse
 
@@ -2641,17 +2641,17 @@ func (c *OpenAPIClient) BindStorageToDBS(req *apis.BindStorageToDBSRequest) (*ap
 }
 
 // NewChangeDBSGatewayEIPRequest will create request of ChangeDBSGatewayEIP action.
-func (c *OpenAPIClient) NewChangeDBSGatewayEIPRequest() *apis.ChangeDBSGatewayEIPRequest {
+func (c *UCloudStackClient) NewChangeDBSGatewayEIPRequest() *apis.ChangeDBSGatewayEIPRequest {
 	req := &apis.ChangeDBSGatewayEIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ChangeDBSGatewayEIP 换绑备份网关
-func (c *OpenAPIClient) ChangeDBSGatewayEIP(req *apis.ChangeDBSGatewayEIPRequest) (*apis.ChangeDBSGatewayEIPResponse, error) {
+func (c *UCloudStackClient) ChangeDBSGatewayEIP(req *apis.ChangeDBSGatewayEIPRequest) (*apis.ChangeDBSGatewayEIPResponse, error) {
 	var err error
 	var res apis.ChangeDBSGatewayEIPResponse
 
@@ -2663,17 +2663,17 @@ func (c *OpenAPIClient) ChangeDBSGatewayEIP(req *apis.ChangeDBSGatewayEIPRequest
 }
 
 // NewCreateDBSBackupPlanRequest will create request of CreateDBSBackupPlan action.
-func (c *OpenAPIClient) NewCreateDBSBackupPlanRequest() *apis.CreateDBSBackupPlanRequest {
+func (c *UCloudStackClient) NewCreateDBSBackupPlanRequest() *apis.CreateDBSBackupPlanRequest {
 	req := &apis.CreateDBSBackupPlanRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateDBSBackupPlan 创建备份计划
-func (c *OpenAPIClient) CreateDBSBackupPlan(req *apis.CreateDBSBackupPlanRequest) (*apis.CreateDBSBackupPlanResponse, error) {
+func (c *UCloudStackClient) CreateDBSBackupPlan(req *apis.CreateDBSBackupPlanRequest) (*apis.CreateDBSBackupPlanResponse, error) {
 	var err error
 	var res apis.CreateDBSBackupPlanResponse
 
@@ -2685,17 +2685,17 @@ func (c *OpenAPIClient) CreateDBSBackupPlan(req *apis.CreateDBSBackupPlanRequest
 }
 
 // NewCreateDBSGatewayRequest will create request of CreateDBSGateway action.
-func (c *OpenAPIClient) NewCreateDBSGatewayRequest() *apis.CreateDBSGatewayRequest {
+func (c *UCloudStackClient) NewCreateDBSGatewayRequest() *apis.CreateDBSGatewayRequest {
 	req := &apis.CreateDBSGatewayRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateDBSGateway 创建DBS网关
-func (c *OpenAPIClient) CreateDBSGateway(req *apis.CreateDBSGatewayRequest) (*apis.CreateDBSGatewayResponse, error) {
+func (c *UCloudStackClient) CreateDBSGateway(req *apis.CreateDBSGatewayRequest) (*apis.CreateDBSGatewayResponse, error) {
 	var err error
 	var res apis.CreateDBSGatewayResponse
 
@@ -2707,17 +2707,17 @@ func (c *OpenAPIClient) CreateDBSGateway(req *apis.CreateDBSGatewayRequest) (*ap
 }
 
 // NewDeleteDBSBackupRequest will create request of DeleteDBSBackup action.
-func (c *OpenAPIClient) NewDeleteDBSBackupRequest() *apis.DeleteDBSBackupRequest {
+func (c *UCloudStackClient) NewDeleteDBSBackupRequest() *apis.DeleteDBSBackupRequest {
 	req := &apis.DeleteDBSBackupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteDBSBackup 删除备份
-func (c *OpenAPIClient) DeleteDBSBackup(req *apis.DeleteDBSBackupRequest) (*apis.DeleteDBSBackupResponse, error) {
+func (c *UCloudStackClient) DeleteDBSBackup(req *apis.DeleteDBSBackupRequest) (*apis.DeleteDBSBackupResponse, error) {
 	var err error
 	var res apis.DeleteDBSBackupResponse
 
@@ -2729,17 +2729,17 @@ func (c *OpenAPIClient) DeleteDBSBackup(req *apis.DeleteDBSBackupRequest) (*apis
 }
 
 // NewDeleteDBSBackupPlanRequest will create request of DeleteDBSBackupPlan action.
-func (c *OpenAPIClient) NewDeleteDBSBackupPlanRequest() *apis.DeleteDBSBackupPlanRequest {
+func (c *UCloudStackClient) NewDeleteDBSBackupPlanRequest() *apis.DeleteDBSBackupPlanRequest {
 	req := &apis.DeleteDBSBackupPlanRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteDBSBackupPlan 删除备份计划
-func (c *OpenAPIClient) DeleteDBSBackupPlan(req *apis.DeleteDBSBackupPlanRequest) (*apis.DeleteDBSBackupPlanResponse, error) {
+func (c *UCloudStackClient) DeleteDBSBackupPlan(req *apis.DeleteDBSBackupPlanRequest) (*apis.DeleteDBSBackupPlanResponse, error) {
 	var err error
 	var res apis.DeleteDBSBackupPlanResponse
 
@@ -2751,17 +2751,17 @@ func (c *OpenAPIClient) DeleteDBSBackupPlan(req *apis.DeleteDBSBackupPlanRequest
 }
 
 // NewDeleteDBSGatewayRequest will create request of DeleteDBSGateway action.
-func (c *OpenAPIClient) NewDeleteDBSGatewayRequest() *apis.DeleteDBSGatewayRequest {
+func (c *UCloudStackClient) NewDeleteDBSGatewayRequest() *apis.DeleteDBSGatewayRequest {
 	req := &apis.DeleteDBSGatewayRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteDBSGateway 解绑备份网关
-func (c *OpenAPIClient) DeleteDBSGateway(req *apis.DeleteDBSGatewayRequest) (*apis.DeleteDBSGatewayResponse, error) {
+func (c *UCloudStackClient) DeleteDBSGateway(req *apis.DeleteDBSGatewayRequest) (*apis.DeleteDBSGatewayResponse, error) {
 	var err error
 	var res apis.DeleteDBSGatewayResponse
 
@@ -2773,17 +2773,17 @@ func (c *OpenAPIClient) DeleteDBSGateway(req *apis.DeleteDBSGatewayRequest) (*ap
 }
 
 // NewDescribeDBSBackupRequest will create request of DescribeDBSBackup action.
-func (c *OpenAPIClient) NewDescribeDBSBackupRequest() *apis.DescribeDBSBackupRequest {
+func (c *UCloudStackClient) NewDescribeDBSBackupRequest() *apis.DescribeDBSBackupRequest {
 	req := &apis.DescribeDBSBackupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDBSBackup 获取备份
-func (c *OpenAPIClient) DescribeDBSBackup(req *apis.DescribeDBSBackupRequest) (*apis.DescribeDBSBackupResponse, error) {
+func (c *UCloudStackClient) DescribeDBSBackup(req *apis.DescribeDBSBackupRequest) (*apis.DescribeDBSBackupResponse, error) {
 	var err error
 	var res apis.DescribeDBSBackupResponse
 
@@ -2795,17 +2795,17 @@ func (c *OpenAPIClient) DescribeDBSBackup(req *apis.DescribeDBSBackupRequest) (*
 }
 
 // NewDescribeDBSBackupPlanRequest will create request of DescribeDBSBackupPlan action.
-func (c *OpenAPIClient) NewDescribeDBSBackupPlanRequest() *apis.DescribeDBSBackupPlanRequest {
+func (c *UCloudStackClient) NewDescribeDBSBackupPlanRequest() *apis.DescribeDBSBackupPlanRequest {
 	req := &apis.DescribeDBSBackupPlanRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDBSBackupPlan 获取备份计划
-func (c *OpenAPIClient) DescribeDBSBackupPlan(req *apis.DescribeDBSBackupPlanRequest) (*apis.DescribeDBSBackupPlanResponse, error) {
+func (c *UCloudStackClient) DescribeDBSBackupPlan(req *apis.DescribeDBSBackupPlanRequest) (*apis.DescribeDBSBackupPlanResponse, error) {
 	var err error
 	var res apis.DescribeDBSBackupPlanResponse
 
@@ -2817,17 +2817,17 @@ func (c *OpenAPIClient) DescribeDBSBackupPlan(req *apis.DescribeDBSBackupPlanReq
 }
 
 // NewDescribeDBSGatewayRequest will create request of DescribeDBSGateway action.
-func (c *OpenAPIClient) NewDescribeDBSGatewayRequest() *apis.DescribeDBSGatewayRequest {
+func (c *UCloudStackClient) NewDescribeDBSGatewayRequest() *apis.DescribeDBSGatewayRequest {
 	req := &apis.DescribeDBSGatewayRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDBSGateway 获取DBS网关
-func (c *OpenAPIClient) DescribeDBSGateway(req *apis.DescribeDBSGatewayRequest) (*apis.DescribeDBSGatewayResponse, error) {
+func (c *UCloudStackClient) DescribeDBSGateway(req *apis.DescribeDBSGatewayRequest) (*apis.DescribeDBSGatewayResponse, error) {
 	var err error
 	var res apis.DescribeDBSGatewayResponse
 
@@ -2839,17 +2839,17 @@ func (c *OpenAPIClient) DescribeDBSGateway(req *apis.DescribeDBSGatewayRequest) 
 }
 
 // NewDescribeDBSRestoreRangeInfoRequest will create request of DescribeDBSRestoreRangeInfo action.
-func (c *OpenAPIClient) NewDescribeDBSRestoreRangeInfoRequest() *apis.DescribeDBSRestoreRangeInfoRequest {
+func (c *UCloudStackClient) NewDescribeDBSRestoreRangeInfoRequest() *apis.DescribeDBSRestoreRangeInfoRequest {
 	req := &apis.DescribeDBSRestoreRangeInfoRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDBSRestoreRangeInfo 查看可恢复时间段详情
-func (c *OpenAPIClient) DescribeDBSRestoreRangeInfo(req *apis.DescribeDBSRestoreRangeInfoRequest) (*apis.DescribeDBSRestoreRangeInfoResponse, error) {
+func (c *UCloudStackClient) DescribeDBSRestoreRangeInfo(req *apis.DescribeDBSRestoreRangeInfoRequest) (*apis.DescribeDBSRestoreRangeInfoResponse, error) {
 	var err error
 	var res apis.DescribeDBSRestoreRangeInfoResponse
 
@@ -2861,17 +2861,17 @@ func (c *OpenAPIClient) DescribeDBSRestoreRangeInfo(req *apis.DescribeDBSRestore
 }
 
 // NewDescribeDBSStorageRequest will create request of DescribeDBSStorage action.
-func (c *OpenAPIClient) NewDescribeDBSStorageRequest() *apis.DescribeDBSStorageRequest {
+func (c *UCloudStackClient) NewDescribeDBSStorageRequest() *apis.DescribeDBSStorageRequest {
 	req := &apis.DescribeDBSStorageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDBSStorage 获取DBS存储系统
-func (c *OpenAPIClient) DescribeDBSStorage(req *apis.DescribeDBSStorageRequest) (*apis.DescribeDBSStorageResponse, error) {
+func (c *UCloudStackClient) DescribeDBSStorage(req *apis.DescribeDBSStorageRequest) (*apis.DescribeDBSStorageResponse, error) {
 	var err error
 	var res apis.DescribeDBSStorageResponse
 
@@ -2883,17 +2883,17 @@ func (c *OpenAPIClient) DescribeDBSStorage(req *apis.DescribeDBSStorageRequest) 
 }
 
 // NewExecDBSBackupPlanRequest will create request of ExecDBSBackupPlan action.
-func (c *OpenAPIClient) NewExecDBSBackupPlanRequest() *apis.ExecDBSBackupPlanRequest {
+func (c *UCloudStackClient) NewExecDBSBackupPlanRequest() *apis.ExecDBSBackupPlanRequest {
 	req := &apis.ExecDBSBackupPlanRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ExecDBSBackupPlan 手动执行备份计划
-func (c *OpenAPIClient) ExecDBSBackupPlan(req *apis.ExecDBSBackupPlanRequest) (*apis.ExecDBSBackupPlanResponse, error) {
+func (c *UCloudStackClient) ExecDBSBackupPlan(req *apis.ExecDBSBackupPlanRequest) (*apis.ExecDBSBackupPlanResponse, error) {
 	var err error
 	var res apis.ExecDBSBackupPlanResponse
 
@@ -2905,17 +2905,17 @@ func (c *OpenAPIClient) ExecDBSBackupPlan(req *apis.ExecDBSBackupPlanRequest) (*
 }
 
 // NewPauseDBSBackupRequest will create request of PauseDBSBackup action.
-func (c *OpenAPIClient) NewPauseDBSBackupRequest() *apis.PauseDBSBackupRequest {
+func (c *UCloudStackClient) NewPauseDBSBackupRequest() *apis.PauseDBSBackupRequest {
 	req := &apis.PauseDBSBackupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // PauseDBSBackup 暂停备份
-func (c *OpenAPIClient) PauseDBSBackup(req *apis.PauseDBSBackupRequest) (*apis.PauseDBSBackupResponse, error) {
+func (c *UCloudStackClient) PauseDBSBackup(req *apis.PauseDBSBackupRequest) (*apis.PauseDBSBackupResponse, error) {
 	var err error
 	var res apis.PauseDBSBackupResponse
 
@@ -2927,17 +2927,17 @@ func (c *OpenAPIClient) PauseDBSBackup(req *apis.PauseDBSBackupRequest) (*apis.P
 }
 
 // NewResumeDBSBackupRequest will create request of ResumeDBSBackup action.
-func (c *OpenAPIClient) NewResumeDBSBackupRequest() *apis.ResumeDBSBackupRequest {
+func (c *UCloudStackClient) NewResumeDBSBackupRequest() *apis.ResumeDBSBackupRequest {
 	req := &apis.ResumeDBSBackupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ResumeDBSBackup 恢复定时备份
-func (c *OpenAPIClient) ResumeDBSBackup(req *apis.ResumeDBSBackupRequest) (*apis.ResumeDBSBackupResponse, error) {
+func (c *UCloudStackClient) ResumeDBSBackup(req *apis.ResumeDBSBackupRequest) (*apis.ResumeDBSBackupResponse, error) {
 	var err error
 	var res apis.ResumeDBSBackupResponse
 
@@ -2949,17 +2949,17 @@ func (c *OpenAPIClient) ResumeDBSBackup(req *apis.ResumeDBSBackupRequest) (*apis
 }
 
 // NewUnbindStorageFromDBSRequest will create request of UnbindStorageFromDBS action.
-func (c *OpenAPIClient) NewUnbindStorageFromDBSRequest() *apis.UnbindStorageFromDBSRequest {
+func (c *UCloudStackClient) NewUnbindStorageFromDBSRequest() *apis.UnbindStorageFromDBSRequest {
 	req := &apis.UnbindStorageFromDBSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnbindStorageFromDBS 从DBS解绑存储系统
-func (c *OpenAPIClient) UnbindStorageFromDBS(req *apis.UnbindStorageFromDBSRequest) (*apis.UnbindStorageFromDBSResponse, error) {
+func (c *UCloudStackClient) UnbindStorageFromDBS(req *apis.UnbindStorageFromDBSRequest) (*apis.UnbindStorageFromDBSResponse, error) {
 	var err error
 	var res apis.UnbindStorageFromDBSResponse
 
@@ -2971,17 +2971,17 @@ func (c *OpenAPIClient) UnbindStorageFromDBS(req *apis.UnbindStorageFromDBSReque
 }
 
 // NewUpdateDBSBackupPlanRequest will create request of UpdateDBSBackupPlan action.
-func (c *OpenAPIClient) NewUpdateDBSBackupPlanRequest() *apis.UpdateDBSBackupPlanRequest {
+func (c *UCloudStackClient) NewUpdateDBSBackupPlanRequest() *apis.UpdateDBSBackupPlanRequest {
 	req := &apis.UpdateDBSBackupPlanRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDBSBackupPlan 更新备份计划
-func (c *OpenAPIClient) UpdateDBSBackupPlan(req *apis.UpdateDBSBackupPlanRequest) (*apis.UpdateDBSBackupPlanResponse, error) {
+func (c *UCloudStackClient) UpdateDBSBackupPlan(req *apis.UpdateDBSBackupPlanRequest) (*apis.UpdateDBSBackupPlanResponse, error) {
 	var err error
 	var res apis.UpdateDBSBackupPlanResponse
 
@@ -2993,17 +2993,17 @@ func (c *OpenAPIClient) UpdateDBSBackupPlan(req *apis.UpdateDBSBackupPlanRequest
 }
 
 // NewUpdateDBSBackupPlanSimpleRequest will create request of UpdateDBSBackupPlanSimple action.
-func (c *OpenAPIClient) NewUpdateDBSBackupPlanSimpleRequest() *apis.UpdateDBSBackupPlanSimpleRequest {
+func (c *UCloudStackClient) NewUpdateDBSBackupPlanSimpleRequest() *apis.UpdateDBSBackupPlanSimpleRequest {
 	req := &apis.UpdateDBSBackupPlanSimpleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDBSBackupPlanSimple 更新备份计划的名称和remark
-func (c *OpenAPIClient) UpdateDBSBackupPlanSimple(req *apis.UpdateDBSBackupPlanSimpleRequest) (*apis.UpdateDBSBackupPlanSimpleResponse, error) {
+func (c *UCloudStackClient) UpdateDBSBackupPlanSimple(req *apis.UpdateDBSBackupPlanSimpleRequest) (*apis.UpdateDBSBackupPlanSimpleResponse, error) {
 	var err error
 	var res apis.UpdateDBSBackupPlanSimpleResponse
 
@@ -3015,17 +3015,17 @@ func (c *OpenAPIClient) UpdateDBSBackupPlanSimple(req *apis.UpdateDBSBackupPlanS
 }
 
 // NewUpdateDBSStorageRequest will create request of UpdateDBSStorage action.
-func (c *OpenAPIClient) NewUpdateDBSStorageRequest() *apis.UpdateDBSStorageRequest {
+func (c *UCloudStackClient) NewUpdateDBSStorageRequest() *apis.UpdateDBSStorageRequest {
 	req := &apis.UpdateDBSStorageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDBSStorage 更新DBS存储系统
-func (c *OpenAPIClient) UpdateDBSStorage(req *apis.UpdateDBSStorageRequest) (*apis.UpdateDBSStorageResponse, error) {
+func (c *UCloudStackClient) UpdateDBSStorage(req *apis.UpdateDBSStorageRequest) (*apis.UpdateDBSStorageResponse, error) {
 	var err error
 	var res apis.UpdateDBSStorageResponse
 
@@ -3037,17 +3037,17 @@ func (c *OpenAPIClient) UpdateDBSStorage(req *apis.UpdateDBSStorageRequest) (*ap
 }
 
 // NewAttachDiskRequest will create request of AttachDisk action.
-func (c *OpenAPIClient) NewAttachDiskRequest() *apis.AttachDiskRequest {
+func (c *UCloudStackClient) NewAttachDiskRequest() *apis.AttachDiskRequest {
 	req := &apis.AttachDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AttachDisk 绑定磁盘
-func (c *OpenAPIClient) AttachDisk(req *apis.AttachDiskRequest) (*apis.AttachDiskResponse, error) {
+func (c *UCloudStackClient) AttachDisk(req *apis.AttachDiskRequest) (*apis.AttachDiskResponse, error) {
 	var err error
 	var res apis.AttachDiskResponse
 
@@ -3059,17 +3059,17 @@ func (c *OpenAPIClient) AttachDisk(req *apis.AttachDiskRequest) (*apis.AttachDis
 }
 
 // NewAttachISORequest will create request of AttachISO action.
-func (c *OpenAPIClient) NewAttachISORequest() *apis.AttachISORequest {
+func (c *UCloudStackClient) NewAttachISORequest() *apis.AttachISORequest {
 	req := &apis.AttachISORequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AttachISO 绑定iso
-func (c *OpenAPIClient) AttachISO(req *apis.AttachISORequest) (*apis.AttachISOResponse, error) {
+func (c *UCloudStackClient) AttachISO(req *apis.AttachISORequest) (*apis.AttachISOResponse, error) {
 	var err error
 	var res apis.AttachISOResponse
 
@@ -3081,17 +3081,17 @@ func (c *OpenAPIClient) AttachISO(req *apis.AttachISORequest) (*apis.AttachISORe
 }
 
 // NewCloneDiskRequest will create request of CloneDisk action.
-func (c *OpenAPIClient) NewCloneDiskRequest() *apis.CloneDiskRequest {
+func (c *UCloudStackClient) NewCloneDiskRequest() *apis.CloneDiskRequest {
 	req := &apis.CloneDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CloneDisk 克隆硬盘
-func (c *OpenAPIClient) CloneDisk(req *apis.CloneDiskRequest) (*apis.CloneDiskResponse, error) {
+func (c *UCloudStackClient) CloneDisk(req *apis.CloneDiskRequest) (*apis.CloneDiskResponse, error) {
 	var err error
 	var res apis.CloneDiskResponse
 
@@ -3103,17 +3103,17 @@ func (c *OpenAPIClient) CloneDisk(req *apis.CloneDiskRequest) (*apis.CloneDiskRe
 }
 
 // NewCreateDiskRequest will create request of CreateDisk action.
-func (c *OpenAPIClient) NewCreateDiskRequest() *apis.CreateDiskRequest {
+func (c *UCloudStackClient) NewCreateDiskRequest() *apis.CreateDiskRequest {
 	req := &apis.CreateDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateDisk 创建数据盘
-func (c *OpenAPIClient) CreateDisk(req *apis.CreateDiskRequest) (*apis.CreateDiskResponse, error) {
+func (c *UCloudStackClient) CreateDisk(req *apis.CreateDiskRequest) (*apis.CreateDiskResponse, error) {
 	var err error
 	var res apis.CreateDiskResponse
 
@@ -3125,17 +3125,17 @@ func (c *OpenAPIClient) CreateDisk(req *apis.CreateDiskRequest) (*apis.CreateDis
 }
 
 // NewCreateDiskFromSnapshotRequest will create request of CreateDiskFromSnapshot action.
-func (c *OpenAPIClient) NewCreateDiskFromSnapshotRequest() *apis.CreateDiskFromSnapshotRequest {
+func (c *UCloudStackClient) NewCreateDiskFromSnapshotRequest() *apis.CreateDiskFromSnapshotRequest {
 	req := &apis.CreateDiskFromSnapshotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateDiskFromSnapshot 从快照创建数据盘
-func (c *OpenAPIClient) CreateDiskFromSnapshot(req *apis.CreateDiskFromSnapshotRequest) (*apis.CreateDiskFromSnapshotResponse, error) {
+func (c *UCloudStackClient) CreateDiskFromSnapshot(req *apis.CreateDiskFromSnapshotRequest) (*apis.CreateDiskFromSnapshotResponse, error) {
 	var err error
 	var res apis.CreateDiskFromSnapshotResponse
 
@@ -3147,17 +3147,17 @@ func (c *OpenAPIClient) CreateDiskFromSnapshot(req *apis.CreateDiskFromSnapshotR
 }
 
 // NewDeleteDiskRequest will create request of DeleteDisk action.
-func (c *OpenAPIClient) NewDeleteDiskRequest() *apis.DeleteDiskRequest {
+func (c *UCloudStackClient) NewDeleteDiskRequest() *apis.DeleteDiskRequest {
 	req := &apis.DeleteDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteDisk 删除磁盘
-func (c *OpenAPIClient) DeleteDisk(req *apis.DeleteDiskRequest) (*apis.DeleteDiskResponse, error) {
+func (c *UCloudStackClient) DeleteDisk(req *apis.DeleteDiskRequest) (*apis.DeleteDiskResponse, error) {
 	var err error
 	var res apis.DeleteDiskResponse
 
@@ -3169,17 +3169,17 @@ func (c *OpenAPIClient) DeleteDisk(req *apis.DeleteDiskRequest) (*apis.DeleteDis
 }
 
 // NewDescribeDiskRequest will create request of DescribeDisk action.
-func (c *OpenAPIClient) NewDescribeDiskRequest() *apis.DescribeDiskRequest {
+func (c *UCloudStackClient) NewDescribeDiskRequest() *apis.DescribeDiskRequest {
 	req := &apis.DescribeDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDisk 查询磁盘信息
-func (c *OpenAPIClient) DescribeDisk(req *apis.DescribeDiskRequest) (*apis.DescribeDiskResponse, error) {
+func (c *UCloudStackClient) DescribeDisk(req *apis.DescribeDiskRequest) (*apis.DescribeDiskResponse, error) {
 	var err error
 	var res apis.DescribeDiskResponse
 
@@ -3191,17 +3191,17 @@ func (c *OpenAPIClient) DescribeDisk(req *apis.DescribeDiskRequest) (*apis.Descr
 }
 
 // NewDescribeVMISORequest will create request of DescribeVMISO action.
-func (c *OpenAPIClient) NewDescribeVMISORequest() *apis.DescribeVMISORequest {
+func (c *UCloudStackClient) NewDescribeVMISORequest() *apis.DescribeVMISORequest {
 	req := &apis.DescribeVMISORequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVMISO 查询iso信息
-func (c *OpenAPIClient) DescribeVMISO(req *apis.DescribeVMISORequest) (*apis.DescribeVMISOResponse, error) {
+func (c *UCloudStackClient) DescribeVMISO(req *apis.DescribeVMISORequest) (*apis.DescribeVMISOResponse, error) {
 	var err error
 	var res apis.DescribeVMISOResponse
 
@@ -3213,17 +3213,17 @@ func (c *OpenAPIClient) DescribeVMISO(req *apis.DescribeVMISORequest) (*apis.Des
 }
 
 // NewDetachDiskRequest will create request of DetachDisk action.
-func (c *OpenAPIClient) NewDetachDiskRequest() *apis.DetachDiskRequest {
+func (c *UCloudStackClient) NewDetachDiskRequest() *apis.DetachDiskRequest {
 	req := &apis.DetachDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DetachDisk 解绑磁盘
-func (c *OpenAPIClient) DetachDisk(req *apis.DetachDiskRequest) (*apis.DetachDiskResponse, error) {
+func (c *UCloudStackClient) DetachDisk(req *apis.DetachDiskRequest) (*apis.DetachDiskResponse, error) {
 	var err error
 	var res apis.DetachDiskResponse
 
@@ -3235,17 +3235,17 @@ func (c *OpenAPIClient) DetachDisk(req *apis.DetachDiskRequest) (*apis.DetachDis
 }
 
 // NewDetachISORequest will create request of DetachISO action.
-func (c *OpenAPIClient) NewDetachISORequest() *apis.DetachISORequest {
+func (c *UCloudStackClient) NewDetachISORequest() *apis.DetachISORequest {
 	req := &apis.DetachISORequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DetachISO 解绑iso
-func (c *OpenAPIClient) DetachISO(req *apis.DetachISORequest) (*apis.DetachISOResponse, error) {
+func (c *UCloudStackClient) DetachISO(req *apis.DetachISORequest) (*apis.DetachISOResponse, error) {
 	var err error
 	var res apis.DetachISOResponse
 
@@ -3257,17 +3257,17 @@ func (c *OpenAPIClient) DetachISO(req *apis.DetachISORequest) (*apis.DetachISORe
 }
 
 // NewGetCreateDiskPriceRequest will create request of GetCreateDiskPrice action.
-func (c *OpenAPIClient) NewGetCreateDiskPriceRequest() *apis.GetCreateDiskPriceRequest {
+func (c *UCloudStackClient) NewGetCreateDiskPriceRequest() *apis.GetCreateDiskPriceRequest {
 	req := &apis.GetCreateDiskPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetCreateDiskPrice 获取创建硬盘价格
-func (c *OpenAPIClient) GetCreateDiskPrice(req *apis.GetCreateDiskPriceRequest) (*apis.GetCreateDiskPriceResponse, error) {
+func (c *UCloudStackClient) GetCreateDiskPrice(req *apis.GetCreateDiskPriceRequest) (*apis.GetCreateDiskPriceResponse, error) {
 	var err error
 	var res apis.GetCreateDiskPriceResponse
 
@@ -3279,17 +3279,17 @@ func (c *OpenAPIClient) GetCreateDiskPrice(req *apis.GetCreateDiskPriceRequest) 
 }
 
 // NewGetDiskPriceRequest will create request of GetDiskPrice action.
-func (c *OpenAPIClient) NewGetDiskPriceRequest() *apis.GetDiskPriceRequest {
+func (c *UCloudStackClient) NewGetDiskPriceRequest() *apis.GetDiskPriceRequest {
 	req := &apis.GetDiskPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetDiskPrice 获取数据盘的价格
-func (c *OpenAPIClient) GetDiskPrice(req *apis.GetDiskPriceRequest) (*apis.GetDiskPriceResponse, error) {
+func (c *UCloudStackClient) GetDiskPrice(req *apis.GetDiskPriceRequest) (*apis.GetDiskPriceResponse, error) {
 	var err error
 	var res apis.GetDiskPriceResponse
 
@@ -3301,17 +3301,17 @@ func (c *OpenAPIClient) GetDiskPrice(req *apis.GetDiskPriceRequest) (*apis.GetDi
 }
 
 // NewGetUpgradeDiskPriceRequest will create request of GetUpgradeDiskPrice action.
-func (c *OpenAPIClient) NewGetUpgradeDiskPriceRequest() *apis.GetUpgradeDiskPriceRequest {
+func (c *UCloudStackClient) NewGetUpgradeDiskPriceRequest() *apis.GetUpgradeDiskPriceRequest {
 	req := &apis.GetUpgradeDiskPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetUpgradeDiskPrice 获取升级虚拟硬盘的差价
-func (c *OpenAPIClient) GetUpgradeDiskPrice(req *apis.GetUpgradeDiskPriceRequest) (*apis.GetUpgradeDiskPriceResponse, error) {
+func (c *UCloudStackClient) GetUpgradeDiskPrice(req *apis.GetUpgradeDiskPriceRequest) (*apis.GetUpgradeDiskPriceResponse, error) {
 	var err error
 	var res apis.GetUpgradeDiskPriceResponse
 
@@ -3323,17 +3323,17 @@ func (c *OpenAPIClient) GetUpgradeDiskPrice(req *apis.GetUpgradeDiskPriceRequest
 }
 
 // NewUpdateDiskQoSRequest will create request of UpdateDiskQoS action.
-func (c *OpenAPIClient) NewUpdateDiskQoSRequest() *apis.UpdateDiskQoSRequest {
+func (c *UCloudStackClient) NewUpdateDiskQoSRequest() *apis.UpdateDiskQoSRequest {
 	req := &apis.UpdateDiskQoSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDiskQoS 设置硬盘QoS
-func (c *OpenAPIClient) UpdateDiskQoS(req *apis.UpdateDiskQoSRequest) (*apis.UpdateDiskQoSResponse, error) {
+func (c *UCloudStackClient) UpdateDiskQoS(req *apis.UpdateDiskQoSRequest) (*apis.UpdateDiskQoSResponse, error) {
 	var err error
 	var res apis.UpdateDiskQoSResponse
 
@@ -3345,17 +3345,17 @@ func (c *OpenAPIClient) UpdateDiskQoS(req *apis.UpdateDiskQoSRequest) (*apis.Upd
 }
 
 // NewUpgradeDiskRequest will create request of UpgradeDisk action.
-func (c *OpenAPIClient) NewUpgradeDiskRequest() *apis.UpgradeDiskRequest {
+func (c *UCloudStackClient) NewUpgradeDiskRequest() *apis.UpgradeDiskRequest {
 	req := &apis.UpgradeDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeDisk 升级虚拟硬盘
-func (c *OpenAPIClient) UpgradeDisk(req *apis.UpgradeDiskRequest) (*apis.UpgradeDiskResponse, error) {
+func (c *UCloudStackClient) UpgradeDisk(req *apis.UpgradeDiskRequest) (*apis.UpgradeDiskResponse, error) {
 	var err error
 	var res apis.UpgradeDiskResponse
 
@@ -3367,17 +3367,17 @@ func (c *OpenAPIClient) UpgradeDisk(req *apis.UpgradeDiskRequest) (*apis.Upgrade
 }
 
 // NewCreateSnapshotRequest will create request of CreateSnapshot action.
-func (c *OpenAPIClient) NewCreateSnapshotRequest() *apis.CreateSnapshotRequest {
+func (c *UCloudStackClient) NewCreateSnapshotRequest() *apis.CreateSnapshotRequest {
 	req := &apis.CreateSnapshotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSnapshot 创建快照
-func (c *OpenAPIClient) CreateSnapshot(req *apis.CreateSnapshotRequest) (*apis.CreateSnapshotResponse, error) {
+func (c *UCloudStackClient) CreateSnapshot(req *apis.CreateSnapshotRequest) (*apis.CreateSnapshotResponse, error) {
 	var err error
 	var res apis.CreateSnapshotResponse
 
@@ -3389,17 +3389,17 @@ func (c *OpenAPIClient) CreateSnapshot(req *apis.CreateSnapshotRequest) (*apis.C
 }
 
 // NewDeleteSnapshotRequest will create request of DeleteSnapshot action.
-func (c *OpenAPIClient) NewDeleteSnapshotRequest() *apis.DeleteSnapshotRequest {
+func (c *UCloudStackClient) NewDeleteSnapshotRequest() *apis.DeleteSnapshotRequest {
 	req := &apis.DeleteSnapshotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteSnapshot 删除快照
-func (c *OpenAPIClient) DeleteSnapshot(req *apis.DeleteSnapshotRequest) (*apis.DeleteSnapshotResponse, error) {
+func (c *UCloudStackClient) DeleteSnapshot(req *apis.DeleteSnapshotRequest) (*apis.DeleteSnapshotResponse, error) {
 	var err error
 	var res apis.DeleteSnapshotResponse
 
@@ -3411,17 +3411,17 @@ func (c *OpenAPIClient) DeleteSnapshot(req *apis.DeleteSnapshotRequest) (*apis.D
 }
 
 // NewDescribeSnapshotRequest will create request of DescribeSnapshot action.
-func (c *OpenAPIClient) NewDescribeSnapshotRequest() *apis.DescribeSnapshotRequest {
+func (c *UCloudStackClient) NewDescribeSnapshotRequest() *apis.DescribeSnapshotRequest {
 	req := &apis.DescribeSnapshotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSnapshot 查询快照
-func (c *OpenAPIClient) DescribeSnapshot(req *apis.DescribeSnapshotRequest) (*apis.DescribeSnapshotResponse, error) {
+func (c *UCloudStackClient) DescribeSnapshot(req *apis.DescribeSnapshotRequest) (*apis.DescribeSnapshotResponse, error) {
 	var err error
 	var res apis.DescribeSnapshotResponse
 
@@ -3433,17 +3433,17 @@ func (c *OpenAPIClient) DescribeSnapshot(req *apis.DescribeSnapshotRequest) (*ap
 }
 
 // NewRollbackSnapshotRequest will create request of RollbackSnapshot action.
-func (c *OpenAPIClient) NewRollbackSnapshotRequest() *apis.RollbackSnapshotRequest {
+func (c *UCloudStackClient) NewRollbackSnapshotRequest() *apis.RollbackSnapshotRequest {
 	req := &apis.RollbackSnapshotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RollbackSnapshot 快照回滚
-func (c *OpenAPIClient) RollbackSnapshot(req *apis.RollbackSnapshotRequest) (*apis.RollbackSnapshotResponse, error) {
+func (c *UCloudStackClient) RollbackSnapshot(req *apis.RollbackSnapshotRequest) (*apis.RollbackSnapshotResponse, error) {
 	var err error
 	var res apis.RollbackSnapshotResponse
 
@@ -3455,17 +3455,17 @@ func (c *OpenAPIClient) RollbackSnapshot(req *apis.RollbackSnapshotRequest) (*ap
 }
 
 // NewDeleteComputeClassDRSRequest will create request of DeleteComputeClassDRS action.
-func (c *OpenAPIClient) NewDeleteComputeClassDRSRequest() *apis.DeleteComputeClassDRSRequest {
+func (c *UCloudStackClient) NewDeleteComputeClassDRSRequest() *apis.DeleteComputeClassDRSRequest {
 	req := &apis.DeleteComputeClassDRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteComputeClassDRS 删除计算集群DRS规则
-func (c *OpenAPIClient) DeleteComputeClassDRS(req *apis.DeleteComputeClassDRSRequest) (*apis.DeleteComputeClassDRSResponse, error) {
+func (c *UCloudStackClient) DeleteComputeClassDRS(req *apis.DeleteComputeClassDRSRequest) (*apis.DeleteComputeClassDRSResponse, error) {
 	var err error
 	var res apis.DeleteComputeClassDRSResponse
 
@@ -3477,17 +3477,17 @@ func (c *OpenAPIClient) DeleteComputeClassDRS(req *apis.DeleteComputeClassDRSReq
 }
 
 // NewDescribeComputeClassDRSRequest will create request of DescribeComputeClassDRS action.
-func (c *OpenAPIClient) NewDescribeComputeClassDRSRequest() *apis.DescribeComputeClassDRSRequest {
+func (c *UCloudStackClient) NewDescribeComputeClassDRSRequest() *apis.DescribeComputeClassDRSRequest {
 	req := &apis.DescribeComputeClassDRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeComputeClassDRS 查看计算集群DRS规则
-func (c *OpenAPIClient) DescribeComputeClassDRS(req *apis.DescribeComputeClassDRSRequest) (*apis.DescribeComputeClassDRSResponse, error) {
+func (c *UCloudStackClient) DescribeComputeClassDRS(req *apis.DescribeComputeClassDRSRequest) (*apis.DescribeComputeClassDRSResponse, error) {
 	var err error
 	var res apis.DescribeComputeClassDRSResponse
 
@@ -3499,17 +3499,17 @@ func (c *OpenAPIClient) DescribeComputeClassDRS(req *apis.DescribeComputeClassDR
 }
 
 // NewDescribeComputeClassDRSRecordsRequest will create request of DescribeComputeClassDRSRecords action.
-func (c *OpenAPIClient) NewDescribeComputeClassDRSRecordsRequest() *apis.DescribeComputeClassDRSRecordsRequest {
+func (c *UCloudStackClient) NewDescribeComputeClassDRSRecordsRequest() *apis.DescribeComputeClassDRSRecordsRequest {
 	req := &apis.DescribeComputeClassDRSRecordsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeComputeClassDRSRecords 查看计算集群DRS记录
-func (c *OpenAPIClient) DescribeComputeClassDRSRecords(req *apis.DescribeComputeClassDRSRecordsRequest) (*apis.DescribeComputeClassDRSRecordsResponse, error) {
+func (c *UCloudStackClient) DescribeComputeClassDRSRecords(req *apis.DescribeComputeClassDRSRecordsRequest) (*apis.DescribeComputeClassDRSRecordsResponse, error) {
 	var err error
 	var res apis.DescribeComputeClassDRSRecordsResponse
 
@@ -3521,17 +3521,17 @@ func (c *OpenAPIClient) DescribeComputeClassDRSRecords(req *apis.DescribeCompute
 }
 
 // NewDescribeComputeClassDRSScoreRequest will create request of DescribeComputeClassDRSScore action.
-func (c *OpenAPIClient) NewDescribeComputeClassDRSScoreRequest() *apis.DescribeComputeClassDRSScoreRequest {
+func (c *UCloudStackClient) NewDescribeComputeClassDRSScoreRequest() *apis.DescribeComputeClassDRSScoreRequest {
 	req := &apis.DescribeComputeClassDRSScoreRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeComputeClassDRSScore 查看计算集群DRS评分
-func (c *OpenAPIClient) DescribeComputeClassDRSScore(req *apis.DescribeComputeClassDRSScoreRequest) (*apis.DescribeComputeClassDRSScoreResponse, error) {
+func (c *UCloudStackClient) DescribeComputeClassDRSScore(req *apis.DescribeComputeClassDRSScoreRequest) (*apis.DescribeComputeClassDRSScoreResponse, error) {
 	var err error
 	var res apis.DescribeComputeClassDRSScoreResponse
 
@@ -3543,17 +3543,17 @@ func (c *OpenAPIClient) DescribeComputeClassDRSScore(req *apis.DescribeComputeCl
 }
 
 // NewDescribeComputeClassDRSSuggestionsRequest will create request of DescribeComputeClassDRSSuggestions action.
-func (c *OpenAPIClient) NewDescribeComputeClassDRSSuggestionsRequest() *apis.DescribeComputeClassDRSSuggestionsRequest {
+func (c *UCloudStackClient) NewDescribeComputeClassDRSSuggestionsRequest() *apis.DescribeComputeClassDRSSuggestionsRequest {
 	req := &apis.DescribeComputeClassDRSSuggestionsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeComputeClassDRSSuggestions 查看计算集群DRS建议
-func (c *OpenAPIClient) DescribeComputeClassDRSSuggestions(req *apis.DescribeComputeClassDRSSuggestionsRequest) (*apis.DescribeComputeClassDRSSuggestionsResponse, error) {
+func (c *UCloudStackClient) DescribeComputeClassDRSSuggestions(req *apis.DescribeComputeClassDRSSuggestionsRequest) (*apis.DescribeComputeClassDRSSuggestionsResponse, error) {
 	var err error
 	var res apis.DescribeComputeClassDRSSuggestionsResponse
 
@@ -3565,17 +3565,17 @@ func (c *OpenAPIClient) DescribeComputeClassDRSSuggestions(req *apis.DescribeCom
 }
 
 // NewDescribeComputeClassVMsAddToDRSRuleRequest will create request of DescribeComputeClassVMsAddToDRSRule action.
-func (c *OpenAPIClient) NewDescribeComputeClassVMsAddToDRSRuleRequest() *apis.DescribeComputeClassVMsAddToDRSRuleRequest {
+func (c *UCloudStackClient) NewDescribeComputeClassVMsAddToDRSRuleRequest() *apis.DescribeComputeClassVMsAddToDRSRuleRequest {
 	req := &apis.DescribeComputeClassVMsAddToDRSRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeComputeClassVMsAddToDRSRule 查看可加入计算集群规则的虚拟机
-func (c *OpenAPIClient) DescribeComputeClassVMsAddToDRSRule(req *apis.DescribeComputeClassVMsAddToDRSRuleRequest) (*apis.DescribeComputeClassVMsAddToDRSRuleResponse, error) {
+func (c *UCloudStackClient) DescribeComputeClassVMsAddToDRSRule(req *apis.DescribeComputeClassVMsAddToDRSRuleRequest) (*apis.DescribeComputeClassVMsAddToDRSRuleResponse, error) {
 	var err error
 	var res apis.DescribeComputeClassVMsAddToDRSRuleResponse
 
@@ -3587,17 +3587,17 @@ func (c *OpenAPIClient) DescribeComputeClassVMsAddToDRSRule(req *apis.DescribeCo
 }
 
 // NewSetComputeClassDRSRequest will create request of SetComputeClassDRS action.
-func (c *OpenAPIClient) NewSetComputeClassDRSRequest() *apis.SetComputeClassDRSRequest {
+func (c *UCloudStackClient) NewSetComputeClassDRSRequest() *apis.SetComputeClassDRSRequest {
 	req := &apis.SetComputeClassDRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetComputeClassDRS 设置计算集群DRS规则
-func (c *OpenAPIClient) SetComputeClassDRS(req *apis.SetComputeClassDRSRequest) (*apis.SetComputeClassDRSResponse, error) {
+func (c *UCloudStackClient) SetComputeClassDRS(req *apis.SetComputeClassDRSRequest) (*apis.SetComputeClassDRSResponse, error) {
 	var err error
 	var res apis.SetComputeClassDRSResponse
 
@@ -3609,17 +3609,17 @@ func (c *OpenAPIClient) SetComputeClassDRS(req *apis.SetComputeClassDRSRequest) 
 }
 
 // NewSetComputeClassDRSSuspendRequest will create request of SetComputeClassDRSSuspend action.
-func (c *OpenAPIClient) NewSetComputeClassDRSSuspendRequest() *apis.SetComputeClassDRSSuspendRequest {
+func (c *UCloudStackClient) NewSetComputeClassDRSSuspendRequest() *apis.SetComputeClassDRSSuspendRequest {
 	req := &apis.SetComputeClassDRSSuspendRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetComputeClassDRSSuspend 设置计算集群DRS是否暂停
-func (c *OpenAPIClient) SetComputeClassDRSSuspend(req *apis.SetComputeClassDRSSuspendRequest) (*apis.SetComputeClassDRSSuspendResponse, error) {
+func (c *UCloudStackClient) SetComputeClassDRSSuspend(req *apis.SetComputeClassDRSSuspendRequest) (*apis.SetComputeClassDRSSuspendResponse, error) {
 	var err error
 	var res apis.SetComputeClassDRSSuspendResponse
 
@@ -3631,17 +3631,17 @@ func (c *OpenAPIClient) SetComputeClassDRSSuspend(req *apis.SetComputeClassDRSSu
 }
 
 // NewSetComputeClassDRSVMRuleRequest will create request of SetComputeClassDRSVMRule action.
-func (c *OpenAPIClient) NewSetComputeClassDRSVMRuleRequest() *apis.SetComputeClassDRSVMRuleRequest {
+func (c *UCloudStackClient) NewSetComputeClassDRSVMRuleRequest() *apis.SetComputeClassDRSVMRuleRequest {
 	req := &apis.SetComputeClassDRSVMRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetComputeClassDRSVMRule 设置计算集群DRS虚拟机规则
-func (c *OpenAPIClient) SetComputeClassDRSVMRule(req *apis.SetComputeClassDRSVMRuleRequest) (*apis.SetComputeClassDRSVMRuleResponse, error) {
+func (c *UCloudStackClient) SetComputeClassDRSVMRule(req *apis.SetComputeClassDRSVMRuleRequest) (*apis.SetComputeClassDRSVMRuleResponse, error) {
 	var err error
 	var res apis.SetComputeClassDRSVMRuleResponse
 
@@ -3653,17 +3653,17 @@ func (c *OpenAPIClient) SetComputeClassDRSVMRule(req *apis.SetComputeClassDRSVMR
 }
 
 // NewTriggerDRSOnceRequest will create request of TriggerDRSOnce action.
-func (c *OpenAPIClient) NewTriggerDRSOnceRequest() *apis.TriggerDRSOnceRequest {
+func (c *UCloudStackClient) NewTriggerDRSOnceRequest() *apis.TriggerDRSOnceRequest {
 	req := &apis.TriggerDRSOnceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // TriggerDRSOnce 触发一次drs任务
-func (c *OpenAPIClient) TriggerDRSOnce(req *apis.TriggerDRSOnceRequest) (*apis.TriggerDRSOnceResponse, error) {
+func (c *UCloudStackClient) TriggerDRSOnce(req *apis.TriggerDRSOnceRequest) (*apis.TriggerDRSOnceResponse, error) {
 	var err error
 	var res apis.TriggerDRSOnceResponse
 
@@ -3675,17 +3675,17 @@ func (c *OpenAPIClient) TriggerDRSOnce(req *apis.TriggerDRSOnceRequest) (*apis.T
 }
 
 // NewCreateDTSTaskRequest will create request of CreateDTSTask action.
-func (c *OpenAPIClient) NewCreateDTSTaskRequest() *apis.CreateDTSTaskRequest {
+func (c *UCloudStackClient) NewCreateDTSTaskRequest() *apis.CreateDTSTaskRequest {
 	req := &apis.CreateDTSTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateDTSTask 创建数据传输任务
-func (c *OpenAPIClient) CreateDTSTask(req *apis.CreateDTSTaskRequest) (*apis.CreateDTSTaskResponse, error) {
+func (c *UCloudStackClient) CreateDTSTask(req *apis.CreateDTSTaskRequest) (*apis.CreateDTSTaskResponse, error) {
 	var err error
 	var res apis.CreateDTSTaskResponse
 
@@ -3697,17 +3697,17 @@ func (c *OpenAPIClient) CreateDTSTask(req *apis.CreateDTSTaskRequest) (*apis.Cre
 }
 
 // NewCreateDataCheckTaskRequest will create request of CreateDataCheckTask action.
-func (c *OpenAPIClient) NewCreateDataCheckTaskRequest() *apis.CreateDataCheckTaskRequest {
+func (c *UCloudStackClient) NewCreateDataCheckTaskRequest() *apis.CreateDataCheckTaskRequest {
 	req := &apis.CreateDataCheckTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateDataCheckTask 创建数据校验任务
-func (c *OpenAPIClient) CreateDataCheckTask(req *apis.CreateDataCheckTaskRequest) (*apis.CreateDataCheckTaskResponse, error) {
+func (c *UCloudStackClient) CreateDataCheckTask(req *apis.CreateDataCheckTaskRequest) (*apis.CreateDataCheckTaskResponse, error) {
 	var err error
 	var res apis.CreateDataCheckTaskResponse
 
@@ -3719,17 +3719,17 @@ func (c *OpenAPIClient) CreateDataCheckTask(req *apis.CreateDataCheckTaskRequest
 }
 
 // NewDeleteDTSTaskRequest will create request of DeleteDTSTask action.
-func (c *OpenAPIClient) NewDeleteDTSTaskRequest() *apis.DeleteDTSTaskRequest {
+func (c *UCloudStackClient) NewDeleteDTSTaskRequest() *apis.DeleteDTSTaskRequest {
 	req := &apis.DeleteDTSTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteDTSTask 删除 DTS 任务
-func (c *OpenAPIClient) DeleteDTSTask(req *apis.DeleteDTSTaskRequest) (*apis.DeleteDTSTaskResponse, error) {
+func (c *UCloudStackClient) DeleteDTSTask(req *apis.DeleteDTSTaskRequest) (*apis.DeleteDTSTaskResponse, error) {
 	var err error
 	var res apis.DeleteDTSTaskResponse
 
@@ -3741,17 +3741,17 @@ func (c *OpenAPIClient) DeleteDTSTask(req *apis.DeleteDTSTaskRequest) (*apis.Del
 }
 
 // NewDescribeDTSLogRequest will create request of DescribeDTSLog action.
-func (c *OpenAPIClient) NewDescribeDTSLogRequest() *apis.DescribeDTSLogRequest {
+func (c *UCloudStackClient) NewDescribeDTSLogRequest() *apis.DescribeDTSLogRequest {
 	req := &apis.DescribeDTSLogRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDTSLog 获取任务日志
-func (c *OpenAPIClient) DescribeDTSLog(req *apis.DescribeDTSLogRequest) (*apis.DescribeDTSLogResponse, error) {
+func (c *UCloudStackClient) DescribeDTSLog(req *apis.DescribeDTSLogRequest) (*apis.DescribeDTSLogResponse, error) {
 	var err error
 	var res apis.DescribeDTSLogResponse
 
@@ -3763,17 +3763,17 @@ func (c *OpenAPIClient) DescribeDTSLog(req *apis.DescribeDTSLogRequest) (*apis.D
 }
 
 // NewDescribeDTSTaskRequest will create request of DescribeDTSTask action.
-func (c *OpenAPIClient) NewDescribeDTSTaskRequest() *apis.DescribeDTSTaskRequest {
+func (c *UCloudStackClient) NewDescribeDTSTaskRequest() *apis.DescribeDTSTaskRequest {
 	req := &apis.DescribeDTSTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDTSTask 获取传输任务列表
-func (c *OpenAPIClient) DescribeDTSTask(req *apis.DescribeDTSTaskRequest) (*apis.DescribeDTSTaskResponse, error) {
+func (c *UCloudStackClient) DescribeDTSTask(req *apis.DescribeDTSTaskRequest) (*apis.DescribeDTSTaskResponse, error) {
 	var err error
 	var res apis.DescribeDTSTaskResponse
 
@@ -3785,17 +3785,17 @@ func (c *OpenAPIClient) DescribeDTSTask(req *apis.DescribeDTSTaskRequest) (*apis
 }
 
 // NewDescribeDataCheckTaskRequest will create request of DescribeDataCheckTask action.
-func (c *OpenAPIClient) NewDescribeDataCheckTaskRequest() *apis.DescribeDataCheckTaskRequest {
+func (c *UCloudStackClient) NewDescribeDataCheckTaskRequest() *apis.DescribeDataCheckTaskRequest {
 	req := &apis.DescribeDataCheckTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDataCheckTask 获取数据校验任务列表
-func (c *OpenAPIClient) DescribeDataCheckTask(req *apis.DescribeDataCheckTaskRequest) (*apis.DescribeDataCheckTaskResponse, error) {
+func (c *UCloudStackClient) DescribeDataCheckTask(req *apis.DescribeDataCheckTaskRequest) (*apis.DescribeDataCheckTaskResponse, error) {
 	var err error
 	var res apis.DescribeDataCheckTaskResponse
 
@@ -3807,17 +3807,17 @@ func (c *OpenAPIClient) DescribeDataCheckTask(req *apis.DescribeDataCheckTaskReq
 }
 
 // NewGetDTSPriceRequest will create request of GetDTSPrice action.
-func (c *OpenAPIClient) NewGetDTSPriceRequest() *apis.GetDTSPriceRequest {
+func (c *UCloudStackClient) NewGetDTSPriceRequest() *apis.GetDTSPriceRequest {
 	req := &apis.GetDTSPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetDTSPrice 获取数据传输任务价格
-func (c *OpenAPIClient) GetDTSPrice(req *apis.GetDTSPriceRequest) (*apis.GetDTSPriceResponse, error) {
+func (c *UCloudStackClient) GetDTSPrice(req *apis.GetDTSPriceRequest) (*apis.GetDTSPriceResponse, error) {
 	var err error
 	var res apis.GetDTSPriceResponse
 
@@ -3829,17 +3829,17 @@ func (c *OpenAPIClient) GetDTSPrice(req *apis.GetDTSPriceRequest) (*apis.GetDTSP
 }
 
 // NewGetDTSTaskConfigureRequest will create request of GetDTSTaskConfigure action.
-func (c *OpenAPIClient) NewGetDTSTaskConfigureRequest() *apis.GetDTSTaskConfigureRequest {
+func (c *UCloudStackClient) NewGetDTSTaskConfigureRequest() *apis.GetDTSTaskConfigureRequest {
 	req := &apis.GetDTSTaskConfigureRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetDTSTaskConfigure 获取传输任务配置
-func (c *OpenAPIClient) GetDTSTaskConfigure(req *apis.GetDTSTaskConfigureRequest) (*apis.GetDTSTaskConfigureResponse, error) {
+func (c *UCloudStackClient) GetDTSTaskConfigure(req *apis.GetDTSTaskConfigureRequest) (*apis.GetDTSTaskConfigureResponse, error) {
 	var err error
 	var res apis.GetDTSTaskConfigureResponse
 
@@ -3851,17 +3851,17 @@ func (c *OpenAPIClient) GetDTSTaskConfigure(req *apis.GetDTSTaskConfigureRequest
 }
 
 // NewGetDataCheckTaskResultRequest will create request of GetDataCheckTaskResult action.
-func (c *OpenAPIClient) NewGetDataCheckTaskResultRequest() *apis.GetDataCheckTaskResultRequest {
+func (c *UCloudStackClient) NewGetDataCheckTaskResultRequest() *apis.GetDataCheckTaskResultRequest {
 	req := &apis.GetDataCheckTaskResultRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetDataCheckTaskResult 获取数据校验任务详细结果
-func (c *OpenAPIClient) GetDataCheckTaskResult(req *apis.GetDataCheckTaskResultRequest) (*apis.GetDataCheckTaskResultResponse, error) {
+func (c *UCloudStackClient) GetDataCheckTaskResult(req *apis.GetDataCheckTaskResultRequest) (*apis.GetDataCheckTaskResultResponse, error) {
 	var err error
 	var res apis.GetDataCheckTaskResultResponse
 
@@ -3873,17 +3873,17 @@ func (c *OpenAPIClient) GetDataCheckTaskResult(req *apis.GetDataCheckTaskResultR
 }
 
 // NewRunDTSPrecheckRequest will create request of RunDTSPrecheck action.
-func (c *OpenAPIClient) NewRunDTSPrecheckRequest() *apis.RunDTSPrecheckRequest {
+func (c *UCloudStackClient) NewRunDTSPrecheckRequest() *apis.RunDTSPrecheckRequest {
 	req := &apis.RunDTSPrecheckRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RunDTSPrecheck 执行数据传输预检查
-func (c *OpenAPIClient) RunDTSPrecheck(req *apis.RunDTSPrecheckRequest) (*apis.RunDTSPrecheckResponse, error) {
+func (c *UCloudStackClient) RunDTSPrecheck(req *apis.RunDTSPrecheckRequest) (*apis.RunDTSPrecheckResponse, error) {
 	var err error
 	var res apis.RunDTSPrecheckResponse
 
@@ -3895,17 +3895,17 @@ func (c *OpenAPIClient) RunDTSPrecheck(req *apis.RunDTSPrecheckRequest) (*apis.R
 }
 
 // NewStartDTSTaskRequest will create request of StartDTSTask action.
-func (c *OpenAPIClient) NewStartDTSTaskRequest() *apis.StartDTSTaskRequest {
+func (c *UCloudStackClient) NewStartDTSTaskRequest() *apis.StartDTSTaskRequest {
 	req := &apis.StartDTSTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // StartDTSTask 启动 DTS 任务
-func (c *OpenAPIClient) StartDTSTask(req *apis.StartDTSTaskRequest) (*apis.StartDTSTaskResponse, error) {
+func (c *UCloudStackClient) StartDTSTask(req *apis.StartDTSTaskRequest) (*apis.StartDTSTaskResponse, error) {
 	var err error
 	var res apis.StartDTSTaskResponse
 
@@ -3917,17 +3917,17 @@ func (c *OpenAPIClient) StartDTSTask(req *apis.StartDTSTaskRequest) (*apis.Start
 }
 
 // NewSuspendDTSTaskRequest will create request of SuspendDTSTask action.
-func (c *OpenAPIClient) NewSuspendDTSTaskRequest() *apis.SuspendDTSTaskRequest {
+func (c *UCloudStackClient) NewSuspendDTSTaskRequest() *apis.SuspendDTSTaskRequest {
 	req := &apis.SuspendDTSTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SuspendDTSTask 暂停 DTS 任务
-func (c *OpenAPIClient) SuspendDTSTask(req *apis.SuspendDTSTaskRequest) (*apis.SuspendDTSTaskResponse, error) {
+func (c *UCloudStackClient) SuspendDTSTask(req *apis.SuspendDTSTaskRequest) (*apis.SuspendDTSTaskResponse, error) {
 	var err error
 	var res apis.SuspendDTSTaskResponse
 
@@ -3939,17 +3939,17 @@ func (c *OpenAPIClient) SuspendDTSTask(req *apis.SuspendDTSTaskRequest) (*apis.S
 }
 
 // NewUpdateDTSInstanceSpecRequest will create request of UpdateDTSInstanceSpec action.
-func (c *OpenAPIClient) NewUpdateDTSInstanceSpecRequest() *apis.UpdateDTSInstanceSpecRequest {
+func (c *UCloudStackClient) NewUpdateDTSInstanceSpecRequest() *apis.UpdateDTSInstanceSpecRequest {
 	req := &apis.UpdateDTSInstanceSpecRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDTSInstanceSpec 更新 DTS 实例规格
-func (c *OpenAPIClient) UpdateDTSInstanceSpec(req *apis.UpdateDTSInstanceSpecRequest) (*apis.UpdateDTSInstanceSpecResponse, error) {
+func (c *UCloudStackClient) UpdateDTSInstanceSpec(req *apis.UpdateDTSInstanceSpecRequest) (*apis.UpdateDTSInstanceSpecResponse, error) {
 	var err error
 	var res apis.UpdateDTSInstanceSpecResponse
 
@@ -3961,17 +3961,17 @@ func (c *OpenAPIClient) UpdateDTSInstanceSpec(req *apis.UpdateDTSInstanceSpecReq
 }
 
 // NewUpdateDTSTaskConfigureRequest will create request of UpdateDTSTaskConfigure action.
-func (c *OpenAPIClient) NewUpdateDTSTaskConfigureRequest() *apis.UpdateDTSTaskConfigureRequest {
+func (c *UCloudStackClient) NewUpdateDTSTaskConfigureRequest() *apis.UpdateDTSTaskConfigureRequest {
 	req := &apis.UpdateDTSTaskConfigureRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDTSTaskConfigure 更新数据传输任务配置
-func (c *OpenAPIClient) UpdateDTSTaskConfigure(req *apis.UpdateDTSTaskConfigureRequest) (*apis.UpdateDTSTaskConfigureResponse, error) {
+func (c *UCloudStackClient) UpdateDTSTaskConfigure(req *apis.UpdateDTSTaskConfigureRequest) (*apis.UpdateDTSTaskConfigureResponse, error) {
 	var err error
 	var res apis.UpdateDTSTaskConfigureResponse
 
@@ -3983,17 +3983,17 @@ func (c *OpenAPIClient) UpdateDTSTaskConfigure(req *apis.UpdateDTSTaskConfigureR
 }
 
 // NewCreateFlatNetworkRequest will create request of CreateFlatNetwork action.
-func (c *OpenAPIClient) NewCreateFlatNetworkRequest() *apis.CreateFlatNetworkRequest {
+func (c *UCloudStackClient) NewCreateFlatNetworkRequest() *apis.CreateFlatNetworkRequest {
 	req := &apis.CreateFlatNetworkRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateFlatNetwork 创建扁平网络
-func (c *OpenAPIClient) CreateFlatNetwork(req *apis.CreateFlatNetworkRequest) (*apis.CreateFlatNetworkResponse, error) {
+func (c *UCloudStackClient) CreateFlatNetwork(req *apis.CreateFlatNetworkRequest) (*apis.CreateFlatNetworkResponse, error) {
 	var err error
 	var res apis.CreateFlatNetworkResponse
 
@@ -4005,17 +4005,17 @@ func (c *OpenAPIClient) CreateFlatNetwork(req *apis.CreateFlatNetworkRequest) (*
 }
 
 // NewCreateFlatNetworkRouteRequest will create request of CreateFlatNetworkRoute action.
-func (c *OpenAPIClient) NewCreateFlatNetworkRouteRequest() *apis.CreateFlatNetworkRouteRequest {
+func (c *UCloudStackClient) NewCreateFlatNetworkRouteRequest() *apis.CreateFlatNetworkRouteRequest {
 	req := &apis.CreateFlatNetworkRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateFlatNetworkRoute 创建扁平网络路由
-func (c *OpenAPIClient) CreateFlatNetworkRoute(req *apis.CreateFlatNetworkRouteRequest) (*apis.CreateFlatNetworkRouteResponse, error) {
+func (c *UCloudStackClient) CreateFlatNetworkRoute(req *apis.CreateFlatNetworkRouteRequest) (*apis.CreateFlatNetworkRouteResponse, error) {
 	var err error
 	var res apis.CreateFlatNetworkRouteResponse
 
@@ -4027,17 +4027,17 @@ func (c *OpenAPIClient) CreateFlatNetworkRoute(req *apis.CreateFlatNetworkRouteR
 }
 
 // NewDeleteFlatNetworkRequest will create request of DeleteFlatNetwork action.
-func (c *OpenAPIClient) NewDeleteFlatNetworkRequest() *apis.DeleteFlatNetworkRequest {
+func (c *UCloudStackClient) NewDeleteFlatNetworkRequest() *apis.DeleteFlatNetworkRequest {
 	req := &apis.DeleteFlatNetworkRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteFlatNetwork 删除扁平网络
-func (c *OpenAPIClient) DeleteFlatNetwork(req *apis.DeleteFlatNetworkRequest) (*apis.DeleteFlatNetworkResponse, error) {
+func (c *UCloudStackClient) DeleteFlatNetwork(req *apis.DeleteFlatNetworkRequest) (*apis.DeleteFlatNetworkResponse, error) {
 	var err error
 	var res apis.DeleteFlatNetworkResponse
 
@@ -4049,17 +4049,17 @@ func (c *OpenAPIClient) DeleteFlatNetwork(req *apis.DeleteFlatNetworkRequest) (*
 }
 
 // NewDeleteFlatNetworkRouteRequest will create request of DeleteFlatNetworkRoute action.
-func (c *OpenAPIClient) NewDeleteFlatNetworkRouteRequest() *apis.DeleteFlatNetworkRouteRequest {
+func (c *UCloudStackClient) NewDeleteFlatNetworkRouteRequest() *apis.DeleteFlatNetworkRouteRequest {
 	req := &apis.DeleteFlatNetworkRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteFlatNetworkRoute 删除扁平网络路由
-func (c *OpenAPIClient) DeleteFlatNetworkRoute(req *apis.DeleteFlatNetworkRouteRequest) (*apis.DeleteFlatNetworkRouteResponse, error) {
+func (c *UCloudStackClient) DeleteFlatNetworkRoute(req *apis.DeleteFlatNetworkRouteRequest) (*apis.DeleteFlatNetworkRouteResponse, error) {
 	var err error
 	var res apis.DeleteFlatNetworkRouteResponse
 
@@ -4071,17 +4071,17 @@ func (c *OpenAPIClient) DeleteFlatNetworkRoute(req *apis.DeleteFlatNetworkRouteR
 }
 
 // NewDescribeFlatNetworkRequest will create request of DescribeFlatNetwork action.
-func (c *OpenAPIClient) NewDescribeFlatNetworkRequest() *apis.DescribeFlatNetworkRequest {
+func (c *UCloudStackClient) NewDescribeFlatNetworkRequest() *apis.DescribeFlatNetworkRequest {
 	req := &apis.DescribeFlatNetworkRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeFlatNetwork 查询扁平网络
-func (c *OpenAPIClient) DescribeFlatNetwork(req *apis.DescribeFlatNetworkRequest) (*apis.DescribeFlatNetworkResponse, error) {
+func (c *UCloudStackClient) DescribeFlatNetwork(req *apis.DescribeFlatNetworkRequest) (*apis.DescribeFlatNetworkResponse, error) {
 	var err error
 	var res apis.DescribeFlatNetworkResponse
 
@@ -4093,17 +4093,17 @@ func (c *OpenAPIClient) DescribeFlatNetwork(req *apis.DescribeFlatNetworkRequest
 }
 
 // NewDescribeFlatNetworkRouteRequest will create request of DescribeFlatNetworkRoute action.
-func (c *OpenAPIClient) NewDescribeFlatNetworkRouteRequest() *apis.DescribeFlatNetworkRouteRequest {
+func (c *UCloudStackClient) NewDescribeFlatNetworkRouteRequest() *apis.DescribeFlatNetworkRouteRequest {
 	req := &apis.DescribeFlatNetworkRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeFlatNetworkRoute 查询扁平网络路由
-func (c *OpenAPIClient) DescribeFlatNetworkRoute(req *apis.DescribeFlatNetworkRouteRequest) (*apis.DescribeFlatNetworkRouteResponse, error) {
+func (c *UCloudStackClient) DescribeFlatNetworkRoute(req *apis.DescribeFlatNetworkRouteRequest) (*apis.DescribeFlatNetworkRouteResponse, error) {
 	var err error
 	var res apis.DescribeFlatNetworkRouteResponse
 
@@ -4115,17 +4115,17 @@ func (c *OpenAPIClient) DescribeFlatNetworkRoute(req *apis.DescribeFlatNetworkRo
 }
 
 // NewUpdateFlatNetworkRequest will create request of UpdateFlatNetwork action.
-func (c *OpenAPIClient) NewUpdateFlatNetworkRequest() *apis.UpdateFlatNetworkRequest {
+func (c *UCloudStackClient) NewUpdateFlatNetworkRequest() *apis.UpdateFlatNetworkRequest {
 	req := &apis.UpdateFlatNetworkRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateFlatNetwork 更新扁平网络
-func (c *OpenAPIClient) UpdateFlatNetwork(req *apis.UpdateFlatNetworkRequest) (*apis.UpdateFlatNetworkResponse, error) {
+func (c *UCloudStackClient) UpdateFlatNetwork(req *apis.UpdateFlatNetworkRequest) (*apis.UpdateFlatNetworkResponse, error) {
 	var err error
 	var res apis.UpdateFlatNetworkResponse
 
@@ -4137,17 +4137,17 @@ func (c *OpenAPIClient) UpdateFlatNetwork(req *apis.UpdateFlatNetworkRequest) (*
 }
 
 // NewUpdateFlatNetworkRouteRequest will create request of UpdateFlatNetworkRoute action.
-func (c *OpenAPIClient) NewUpdateFlatNetworkRouteRequest() *apis.UpdateFlatNetworkRouteRequest {
+func (c *UCloudStackClient) NewUpdateFlatNetworkRouteRequest() *apis.UpdateFlatNetworkRouteRequest {
 	req := &apis.UpdateFlatNetworkRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateFlatNetworkRoute 更新扁平网络路由
-func (c *OpenAPIClient) UpdateFlatNetworkRoute(req *apis.UpdateFlatNetworkRouteRequest) (*apis.UpdateFlatNetworkRouteResponse, error) {
+func (c *UCloudStackClient) UpdateFlatNetworkRoute(req *apis.UpdateFlatNetworkRouteRequest) (*apis.UpdateFlatNetworkRouteResponse, error) {
 	var err error
 	var res apis.UpdateFlatNetworkRouteResponse
 
@@ -4159,17 +4159,17 @@ func (c *OpenAPIClient) UpdateFlatNetworkRoute(req *apis.UpdateFlatNetworkRouteR
 }
 
 // NewCreateFSRequest will create request of CreateFS action.
-func (c *OpenAPIClient) NewCreateFSRequest() *apis.CreateFSRequest {
+func (c *UCloudStackClient) NewCreateFSRequest() *apis.CreateFSRequest {
 	req := &apis.CreateFSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateFS 创建文件存储服务
-func (c *OpenAPIClient) CreateFS(req *apis.CreateFSRequest) (*apis.CreateFSResponse, error) {
+func (c *UCloudStackClient) CreateFS(req *apis.CreateFSRequest) (*apis.CreateFSResponse, error) {
 	var err error
 	var res apis.CreateFSResponse
 
@@ -4181,17 +4181,17 @@ func (c *OpenAPIClient) CreateFS(req *apis.CreateFSRequest) (*apis.CreateFSRespo
 }
 
 // NewCreateFSDirRequest will create request of CreateFSDir action.
-func (c *OpenAPIClient) NewCreateFSDirRequest() *apis.CreateFSDirRequest {
+func (c *UCloudStackClient) NewCreateFSDirRequest() *apis.CreateFSDirRequest {
 	req := &apis.CreateFSDirRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateFSDir 创建目录
-func (c *OpenAPIClient) CreateFSDir(req *apis.CreateFSDirRequest) (*apis.CreateFSDirResponse, error) {
+func (c *UCloudStackClient) CreateFSDir(req *apis.CreateFSDirRequest) (*apis.CreateFSDirResponse, error) {
 	var err error
 	var res apis.CreateFSDirResponse
 
@@ -4203,17 +4203,17 @@ func (c *OpenAPIClient) CreateFSDir(req *apis.CreateFSDirRequest) (*apis.CreateF
 }
 
 // NewDeleteFSRequest will create request of DeleteFS action.
-func (c *OpenAPIClient) NewDeleteFSRequest() *apis.DeleteFSRequest {
+func (c *UCloudStackClient) NewDeleteFSRequest() *apis.DeleteFSRequest {
 	req := &apis.DeleteFSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteFS 删除文件存储服务
-func (c *OpenAPIClient) DeleteFS(req *apis.DeleteFSRequest) (*apis.DeleteFSResponse, error) {
+func (c *UCloudStackClient) DeleteFS(req *apis.DeleteFSRequest) (*apis.DeleteFSResponse, error) {
 	var err error
 	var res apis.DeleteFSResponse
 
@@ -4225,17 +4225,17 @@ func (c *OpenAPIClient) DeleteFS(req *apis.DeleteFSRequest) (*apis.DeleteFSRespo
 }
 
 // NewDeleteFSFileRequest will create request of DeleteFSFile action.
-func (c *OpenAPIClient) NewDeleteFSFileRequest() *apis.DeleteFSFileRequest {
+func (c *UCloudStackClient) NewDeleteFSFileRequest() *apis.DeleteFSFileRequest {
 	req := &apis.DeleteFSFileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteFSFile 删除文件存储目录文件
-func (c *OpenAPIClient) DeleteFSFile(req *apis.DeleteFSFileRequest) (*apis.DeleteFSFileResponse, error) {
+func (c *UCloudStackClient) DeleteFSFile(req *apis.DeleteFSFileRequest) (*apis.DeleteFSFileResponse, error) {
 	var err error
 	var res apis.DeleteFSFileResponse
 
@@ -4247,17 +4247,17 @@ func (c *OpenAPIClient) DeleteFSFile(req *apis.DeleteFSFileRequest) (*apis.Delet
 }
 
 // NewDescribeFSRequest will create request of DescribeFS action.
-func (c *OpenAPIClient) NewDescribeFSRequest() *apis.DescribeFSRequest {
+func (c *UCloudStackClient) NewDescribeFSRequest() *apis.DescribeFSRequest {
 	req := &apis.DescribeFSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeFS 获取文件存储列表
-func (c *OpenAPIClient) DescribeFS(req *apis.DescribeFSRequest) (*apis.DescribeFSResponse, error) {
+func (c *UCloudStackClient) DescribeFS(req *apis.DescribeFSRequest) (*apis.DescribeFSResponse, error) {
 	var err error
 	var res apis.DescribeFSResponse
 
@@ -4269,17 +4269,17 @@ func (c *OpenAPIClient) DescribeFS(req *apis.DescribeFSRequest) (*apis.DescribeF
 }
 
 // NewDescribeFSFileRequest will create request of DescribeFSFile action.
-func (c *OpenAPIClient) NewDescribeFSFileRequest() *apis.DescribeFSFileRequest {
+func (c *UCloudStackClient) NewDescribeFSFileRequest() *apis.DescribeFSFileRequest {
 	req := &apis.DescribeFSFileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeFSFile 获取文件存储目录文件
-func (c *OpenAPIClient) DescribeFSFile(req *apis.DescribeFSFileRequest) (*apis.DescribeFSFileResponse, error) {
+func (c *UCloudStackClient) DescribeFSFile(req *apis.DescribeFSFileRequest) (*apis.DescribeFSFileResponse, error) {
 	var err error
 	var res apis.DescribeFSFileResponse
 
@@ -4291,17 +4291,17 @@ func (c *OpenAPIClient) DescribeFSFile(req *apis.DescribeFSFileRequest) (*apis.D
 }
 
 // NewFSLoginRequest will create request of FSLogin action.
-func (c *OpenAPIClient) NewFSLoginRequest() *apis.FSLoginRequest {
+func (c *UCloudStackClient) NewFSLoginRequest() *apis.FSLoginRequest {
 	req := &apis.FSLoginRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // FSLogin 创建文件存储会话
-func (c *OpenAPIClient) FSLogin(req *apis.FSLoginRequest) (*apis.FSLoginResponse, error) {
+func (c *UCloudStackClient) FSLogin(req *apis.FSLoginRequest) (*apis.FSLoginResponse, error) {
 	var err error
 	var res apis.FSLoginResponse
 
@@ -4313,17 +4313,17 @@ func (c *OpenAPIClient) FSLogin(req *apis.FSLoginRequest) (*apis.FSLoginResponse
 }
 
 // NewGetFSPriceRequest will create request of GetFSPrice action.
-func (c *OpenAPIClient) NewGetFSPriceRequest() *apis.GetFSPriceRequest {
+func (c *UCloudStackClient) NewGetFSPriceRequest() *apis.GetFSPriceRequest {
 	req := &apis.GetFSPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetFSPrice 获取文件存储价格
-func (c *OpenAPIClient) GetFSPrice(req *apis.GetFSPriceRequest) (*apis.GetFSPriceResponse, error) {
+func (c *UCloudStackClient) GetFSPrice(req *apis.GetFSPriceRequest) (*apis.GetFSPriceResponse, error) {
 	var err error
 	var res apis.GetFSPriceResponse
 
@@ -4335,17 +4335,17 @@ func (c *OpenAPIClient) GetFSPrice(req *apis.GetFSPriceRequest) (*apis.GetFSPric
 }
 
 // NewUpgradeFSRequest will create request of UpgradeFS action.
-func (c *OpenAPIClient) NewUpgradeFSRequest() *apis.UpgradeFSRequest {
+func (c *UCloudStackClient) NewUpgradeFSRequest() *apis.UpgradeFSRequest {
 	req := &apis.UpgradeFSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeFS 文件存储扩容
-func (c *OpenAPIClient) UpgradeFS(req *apis.UpgradeFSRequest) (*apis.UpgradeFSResponse, error) {
+func (c *UCloudStackClient) UpgradeFS(req *apis.UpgradeFSRequest) (*apis.UpgradeFSResponse, error) {
 	var err error
 	var res apis.UpgradeFSResponse
 
@@ -4357,17 +4357,17 @@ func (c *OpenAPIClient) UpgradeFS(req *apis.UpgradeFSRequest) (*apis.UpgradeFSRe
 }
 
 // NewAbortMigrateVMInstanceRequest will create request of AbortMigrateVMInstance action.
-func (c *OpenAPIClient) NewAbortMigrateVMInstanceRequest() *apis.AbortMigrateVMInstanceRequest {
+func (c *UCloudStackClient) NewAbortMigrateVMInstanceRequest() *apis.AbortMigrateVMInstanceRequest {
 	req := &apis.AbortMigrateVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AbortMigrateVMInstance 取消虚机迁移
-func (c *OpenAPIClient) AbortMigrateVMInstance(req *apis.AbortMigrateVMInstanceRequest) (*apis.AbortMigrateVMInstanceResponse, error) {
+func (c *UCloudStackClient) AbortMigrateVMInstance(req *apis.AbortMigrateVMInstanceRequest) (*apis.AbortMigrateVMInstanceResponse, error) {
 	var err error
 	var res apis.AbortMigrateVMInstanceResponse
 
@@ -4379,17 +4379,17 @@ func (c *OpenAPIClient) AbortMigrateVMInstance(req *apis.AbortMigrateVMInstanceR
 }
 
 // NewCloseHostNUMAScheduleRequest will create request of CloseHostNUMASchedule action.
-func (c *OpenAPIClient) NewCloseHostNUMAScheduleRequest() *apis.CloseHostNUMAScheduleRequest {
+func (c *UCloudStackClient) NewCloseHostNUMAScheduleRequest() *apis.CloseHostNUMAScheduleRequest {
 	req := &apis.CloseHostNUMAScheduleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CloseHostNUMASchedule 关闭节点NUMA调度
-func (c *OpenAPIClient) CloseHostNUMASchedule(req *apis.CloseHostNUMAScheduleRequest) (*apis.CloseHostNUMAScheduleResponse, error) {
+func (c *UCloudStackClient) CloseHostNUMASchedule(req *apis.CloseHostNUMAScheduleRequest) (*apis.CloseHostNUMAScheduleResponse, error) {
 	var err error
 	var res apis.CloseHostNUMAScheduleResponse
 
@@ -4401,17 +4401,17 @@ func (c *OpenAPIClient) CloseHostNUMASchedule(req *apis.CloseHostNUMAScheduleReq
 }
 
 // NewDescribeHostPodsRequest will create request of DescribeHostPods action.
-func (c *OpenAPIClient) NewDescribeHostPodsRequest() *apis.DescribeHostPodsRequest {
+func (c *UCloudStackClient) NewDescribeHostPodsRequest() *apis.DescribeHostPodsRequest {
 	req := &apis.DescribeHostPodsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeHostPods 获取物理机上Pod信息
-func (c *OpenAPIClient) DescribeHostPods(req *apis.DescribeHostPodsRequest) (*apis.DescribeHostPodsResponse, error) {
+func (c *UCloudStackClient) DescribeHostPods(req *apis.DescribeHostPodsRequest) (*apis.DescribeHostPodsResponse, error) {
 	var err error
 	var res apis.DescribeHostPodsResponse
 
@@ -4423,17 +4423,17 @@ func (c *OpenAPIClient) DescribeHostPods(req *apis.DescribeHostPodsRequest) (*ap
 }
 
 // NewDescribeHostVMInstanceRequest will create request of DescribeHostVMInstance action.
-func (c *OpenAPIClient) NewDescribeHostVMInstanceRequest() *apis.DescribeHostVMInstanceRequest {
+func (c *UCloudStackClient) NewDescribeHostVMInstanceRequest() *apis.DescribeHostVMInstanceRequest {
 	req := &apis.DescribeHostVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeHostVMInstance 获取物理机上虚拟机信息
-func (c *OpenAPIClient) DescribeHostVMInstance(req *apis.DescribeHostVMInstanceRequest) (*apis.DescribeHostVMInstanceResponse, error) {
+func (c *UCloudStackClient) DescribeHostVMInstance(req *apis.DescribeHostVMInstanceRequest) (*apis.DescribeHostVMInstanceResponse, error) {
 	var err error
 	var res apis.DescribeHostVMInstanceResponse
 
@@ -4445,17 +4445,17 @@ func (c *OpenAPIClient) DescribeHostVMInstance(req *apis.DescribeHostVMInstanceR
 }
 
 // NewDescribeNodeRequest will create request of DescribeNode action.
-func (c *OpenAPIClient) NewDescribeNodeRequest() *apis.DescribeNodeRequest {
+func (c *UCloudStackClient) NewDescribeNodeRequest() *apis.DescribeNodeRequest {
 	req := &apis.DescribeNodeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNode 获取物理机节点信息
-func (c *OpenAPIClient) DescribeNode(req *apis.DescribeNodeRequest) (*apis.DescribeNodeResponse, error) {
+func (c *UCloudStackClient) DescribeNode(req *apis.DescribeNodeRequest) (*apis.DescribeNodeResponse, error) {
 	var err error
 	var res apis.DescribeNodeResponse
 
@@ -4467,17 +4467,17 @@ func (c *OpenAPIClient) DescribeNode(req *apis.DescribeNodeRequest) (*apis.Descr
 }
 
 // NewDescribeNodeNUMAInfoRequest will create request of DescribeNodeNUMAInfo action.
-func (c *OpenAPIClient) NewDescribeNodeNUMAInfoRequest() *apis.DescribeNodeNUMAInfoRequest {
+func (c *UCloudStackClient) NewDescribeNodeNUMAInfoRequest() *apis.DescribeNodeNUMAInfoRequest {
 	req := &apis.DescribeNodeNUMAInfoRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNodeNUMAInfo 获取节点NUMANode信息
-func (c *OpenAPIClient) DescribeNodeNUMAInfo(req *apis.DescribeNodeNUMAInfoRequest) (*apis.DescribeNodeNUMAInfoResponse, error) {
+func (c *UCloudStackClient) DescribeNodeNUMAInfo(req *apis.DescribeNodeNUMAInfoRequest) (*apis.DescribeNodeNUMAInfoResponse, error) {
 	var err error
 	var res apis.DescribeNodeNUMAInfoResponse
 
@@ -4489,17 +4489,17 @@ func (c *OpenAPIClient) DescribeNodeNUMAInfo(req *apis.DescribeNodeNUMAInfoReque
 }
 
 // NewDescribeVMHostRequest will create request of DescribeVMHost action.
-func (c *OpenAPIClient) NewDescribeVMHostRequest() *apis.DescribeVMHostRequest {
+func (c *UCloudStackClient) NewDescribeVMHostRequest() *apis.DescribeVMHostRequest {
 	req := &apis.DescribeVMHostRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVMHost 获取虚拟机物理机信息
-func (c *OpenAPIClient) DescribeVMHost(req *apis.DescribeVMHostRequest) (*apis.DescribeVMHostResponse, error) {
+func (c *UCloudStackClient) DescribeVMHost(req *apis.DescribeVMHostRequest) (*apis.DescribeVMHostResponse, error) {
 	var err error
 	var res apis.DescribeVMHostResponse
 
@@ -4511,17 +4511,17 @@ func (c *OpenAPIClient) DescribeVMHost(req *apis.DescribeVMHostRequest) (*apis.D
 }
 
 // NewDiskLightOffRequest will create request of DiskLightOff action.
-func (c *OpenAPIClient) NewDiskLightOffRequest() *apis.DiskLightOffRequest {
+func (c *UCloudStackClient) NewDiskLightOffRequest() *apis.DiskLightOffRequest {
 	req := &apis.DiskLightOffRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DiskLightOff 磁盘关灯
-func (c *OpenAPIClient) DiskLightOff(req *apis.DiskLightOffRequest) (*apis.DiskLightOffResponse, error) {
+func (c *UCloudStackClient) DiskLightOff(req *apis.DiskLightOffRequest) (*apis.DiskLightOffResponse, error) {
 	var err error
 	var res apis.DiskLightOffResponse
 
@@ -4533,17 +4533,17 @@ func (c *OpenAPIClient) DiskLightOff(req *apis.DiskLightOffRequest) (*apis.DiskL
 }
 
 // NewDiskLightOnRequest will create request of DiskLightOn action.
-func (c *OpenAPIClient) NewDiskLightOnRequest() *apis.DiskLightOnRequest {
+func (c *UCloudStackClient) NewDiskLightOnRequest() *apis.DiskLightOnRequest {
 	req := &apis.DiskLightOnRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DiskLightOn 磁盘点灯
-func (c *OpenAPIClient) DiskLightOn(req *apis.DiskLightOnRequest) (*apis.DiskLightOnResponse, error) {
+func (c *UCloudStackClient) DiskLightOn(req *apis.DiskLightOnRequest) (*apis.DiskLightOnResponse, error) {
 	var err error
 	var res apis.DiskLightOnResponse
 
@@ -4555,17 +4555,17 @@ func (c *OpenAPIClient) DiskLightOn(req *apis.DiskLightOnRequest) (*apis.DiskLig
 }
 
 // NewGetNodeCPUGovernorRequest will create request of GetNodeCPUGovernor action.
-func (c *OpenAPIClient) NewGetNodeCPUGovernorRequest() *apis.GetNodeCPUGovernorRequest {
+func (c *UCloudStackClient) NewGetNodeCPUGovernorRequest() *apis.GetNodeCPUGovernorRequest {
 	req := &apis.GetNodeCPUGovernorRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetNodeCPUGovernor 获取节点 CPU 电源模式
-func (c *OpenAPIClient) GetNodeCPUGovernor(req *apis.GetNodeCPUGovernorRequest) (*apis.GetNodeCPUGovernorResponse, error) {
+func (c *UCloudStackClient) GetNodeCPUGovernor(req *apis.GetNodeCPUGovernorRequest) (*apis.GetNodeCPUGovernorResponse, error) {
 	var err error
 	var res apis.GetNodeCPUGovernorResponse
 
@@ -4577,17 +4577,17 @@ func (c *OpenAPIClient) GetNodeCPUGovernor(req *apis.GetNodeCPUGovernorRequest) 
 }
 
 // NewListGPUsRequest will create request of ListGPUs action.
-func (c *OpenAPIClient) NewListGPUsRequest() *apis.ListGPUsRequest {
+func (c *UCloudStackClient) NewListGPUsRequest() *apis.ListGPUsRequest {
 	req := &apis.ListGPUsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListGPUs 获取GPU信息列表
-func (c *OpenAPIClient) ListGPUs(req *apis.ListGPUsRequest) (*apis.ListGPUsResponse, error) {
+func (c *UCloudStackClient) ListGPUs(req *apis.ListGPUsRequest) (*apis.ListGPUsResponse, error) {
 	var err error
 	var res apis.ListGPUsResponse
 
@@ -4599,17 +4599,17 @@ func (c *OpenAPIClient) ListGPUs(req *apis.ListGPUsRequest) (*apis.ListGPUsRespo
 }
 
 // NewLockHostRequest will create request of LockHost action.
-func (c *OpenAPIClient) NewLockHostRequest() *apis.LockHostRequest {
+func (c *UCloudStackClient) NewLockHostRequest() *apis.LockHostRequest {
 	req := &apis.LockHostRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // LockHost 锁定物理机
-func (c *OpenAPIClient) LockHost(req *apis.LockHostRequest) (*apis.LockHostResponse, error) {
+func (c *UCloudStackClient) LockHost(req *apis.LockHostRequest) (*apis.LockHostResponse, error) {
 	var err error
 	var res apis.LockHostResponse
 
@@ -4621,17 +4621,17 @@ func (c *OpenAPIClient) LockHost(req *apis.LockHostRequest) (*apis.LockHostRespo
 }
 
 // NewMigrateVMInstanceRequest will create request of MigrateVMInstance action.
-func (c *OpenAPIClient) NewMigrateVMInstanceRequest() *apis.MigrateVMInstanceRequest {
+func (c *UCloudStackClient) NewMigrateVMInstanceRequest() *apis.MigrateVMInstanceRequest {
 	req := &apis.MigrateVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // MigrateVMInstance 虚机迁移
-func (c *OpenAPIClient) MigrateVMInstance(req *apis.MigrateVMInstanceRequest) (*apis.MigrateVMInstanceResponse, error) {
+func (c *UCloudStackClient) MigrateVMInstance(req *apis.MigrateVMInstanceRequest) (*apis.MigrateVMInstanceResponse, error) {
 	var err error
 	var res apis.MigrateVMInstanceResponse
 
@@ -4643,17 +4643,17 @@ func (c *OpenAPIClient) MigrateVMInstance(req *apis.MigrateVMInstanceRequest) (*
 }
 
 // NewOpenHostNUMAScheduleRequest will create request of OpenHostNUMASchedule action.
-func (c *OpenAPIClient) NewOpenHostNUMAScheduleRequest() *apis.OpenHostNUMAScheduleRequest {
+func (c *UCloudStackClient) NewOpenHostNUMAScheduleRequest() *apis.OpenHostNUMAScheduleRequest {
 	req := &apis.OpenHostNUMAScheduleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // OpenHostNUMASchedule 开启节点NUMA调度
-func (c *OpenAPIClient) OpenHostNUMASchedule(req *apis.OpenHostNUMAScheduleRequest) (*apis.OpenHostNUMAScheduleResponse, error) {
+func (c *UCloudStackClient) OpenHostNUMASchedule(req *apis.OpenHostNUMAScheduleRequest) (*apis.OpenHostNUMAScheduleResponse, error) {
 	var err error
 	var res apis.OpenHostNUMAScheduleResponse
 
@@ -4665,17 +4665,17 @@ func (c *OpenAPIClient) OpenHostNUMASchedule(req *apis.OpenHostNUMAScheduleReque
 }
 
 // NewUnlockHostRequest will create request of UnlockHost action.
-func (c *OpenAPIClient) NewUnlockHostRequest() *apis.UnlockHostRequest {
+func (c *UCloudStackClient) NewUnlockHostRequest() *apis.UnlockHostRequest {
 	req := &apis.UnlockHostRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnlockHost 解锁物理机
-func (c *OpenAPIClient) UnlockHost(req *apis.UnlockHostRequest) (*apis.UnlockHostResponse, error) {
+func (c *UCloudStackClient) UnlockHost(req *apis.UnlockHostRequest) (*apis.UnlockHostResponse, error) {
 	var err error
 	var res apis.UnlockHostResponse
 
@@ -4687,17 +4687,17 @@ func (c *OpenAPIClient) UnlockHost(req *apis.UnlockHostRequest) (*apis.UnlockHos
 }
 
 // NewUpdateNodeCPUGovernorRequest will create request of UpdateNodeCPUGovernor action.
-func (c *OpenAPIClient) NewUpdateNodeCPUGovernorRequest() *apis.UpdateNodeCPUGovernorRequest {
+func (c *UCloudStackClient) NewUpdateNodeCPUGovernorRequest() *apis.UpdateNodeCPUGovernorRequest {
 	req := &apis.UpdateNodeCPUGovernorRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNodeCPUGovernor 更新节点 CPU 电源模式
-func (c *OpenAPIClient) UpdateNodeCPUGovernor(req *apis.UpdateNodeCPUGovernorRequest) (*apis.UpdateNodeCPUGovernorResponse, error) {
+func (c *UCloudStackClient) UpdateNodeCPUGovernor(req *apis.UpdateNodeCPUGovernorRequest) (*apis.UpdateNodeCPUGovernorResponse, error) {
 	var err error
 	var res apis.UpdateNodeCPUGovernorResponse
 
@@ -4709,17 +4709,17 @@ func (c *OpenAPIClient) UpdateNodeCPUGovernor(req *apis.UpdateNodeCPUGovernorReq
 }
 
 // NewUpdateVFLogicCountRequest will create request of UpdateVFLogicCount action.
-func (c *OpenAPIClient) NewUpdateVFLogicCountRequest() *apis.UpdateVFLogicCountRequest {
+func (c *UCloudStackClient) NewUpdateVFLogicCountRequest() *apis.UpdateVFLogicCountRequest {
 	req := &apis.UpdateVFLogicCountRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVFLogicCount 调整逻辑VF数量限制
-func (c *OpenAPIClient) UpdateVFLogicCount(req *apis.UpdateVFLogicCountRequest) (*apis.UpdateVFLogicCountResponse, error) {
+func (c *UCloudStackClient) UpdateVFLogicCount(req *apis.UpdateVFLogicCountRequest) (*apis.UpdateVFLogicCountResponse, error) {
 	var err error
 	var res apis.UpdateVFLogicCountResponse
 
@@ -4731,17 +4731,17 @@ func (c *OpenAPIClient) UpdateVFLogicCount(req *apis.UpdateVFLogicCountRequest) 
 }
 
 // NewAllocateNodeHostDeviceRequest will create request of AllocateNodeHostDevice action.
-func (c *OpenAPIClient) NewAllocateNodeHostDeviceRequest() *apis.AllocateNodeHostDeviceRequest {
+func (c *UCloudStackClient) NewAllocateNodeHostDeviceRequest() *apis.AllocateNodeHostDeviceRequest {
 	req := &apis.AllocateNodeHostDeviceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateNodeHostDevice 分配外置设备给租户
-func (c *OpenAPIClient) AllocateNodeHostDevice(req *apis.AllocateNodeHostDeviceRequest) (*apis.AllocateNodeHostDeviceResponse, error) {
+func (c *UCloudStackClient) AllocateNodeHostDevice(req *apis.AllocateNodeHostDeviceRequest) (*apis.AllocateNodeHostDeviceResponse, error) {
 	var err error
 	var res apis.AllocateNodeHostDeviceResponse
 
@@ -4753,17 +4753,17 @@ func (c *OpenAPIClient) AllocateNodeHostDevice(req *apis.AllocateNodeHostDeviceR
 }
 
 // NewCreateNodeHostDeviceRequest will create request of CreateNodeHostDevice action.
-func (c *OpenAPIClient) NewCreateNodeHostDeviceRequest() *apis.CreateNodeHostDeviceRequest {
+func (c *UCloudStackClient) NewCreateNodeHostDeviceRequest() *apis.CreateNodeHostDeviceRequest {
 	req := &apis.CreateNodeHostDeviceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateNodeHostDevice 创建外置设备
-func (c *OpenAPIClient) CreateNodeHostDevice(req *apis.CreateNodeHostDeviceRequest) (*apis.CreateNodeHostDeviceResponse, error) {
+func (c *UCloudStackClient) CreateNodeHostDevice(req *apis.CreateNodeHostDeviceRequest) (*apis.CreateNodeHostDeviceResponse, error) {
 	var err error
 	var res apis.CreateNodeHostDeviceResponse
 
@@ -4775,17 +4775,17 @@ func (c *OpenAPIClient) CreateNodeHostDevice(req *apis.CreateNodeHostDeviceReque
 }
 
 // NewDeleteNodeHostDeviceRequest will create request of DeleteNodeHostDevice action.
-func (c *OpenAPIClient) NewDeleteNodeHostDeviceRequest() *apis.DeleteNodeHostDeviceRequest {
+func (c *UCloudStackClient) NewDeleteNodeHostDeviceRequest() *apis.DeleteNodeHostDeviceRequest {
 	req := &apis.DeleteNodeHostDeviceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteNodeHostDevice 弹出/删除外置设备
-func (c *OpenAPIClient) DeleteNodeHostDevice(req *apis.DeleteNodeHostDeviceRequest) (*apis.DeleteNodeHostDeviceResponse, error) {
+func (c *UCloudStackClient) DeleteNodeHostDevice(req *apis.DeleteNodeHostDeviceRequest) (*apis.DeleteNodeHostDeviceResponse, error) {
 	var err error
 	var res apis.DeleteNodeHostDeviceResponse
 
@@ -4797,17 +4797,17 @@ func (c *OpenAPIClient) DeleteNodeHostDevice(req *apis.DeleteNodeHostDeviceReque
 }
 
 // NewDescribeNodeHostDeviceRequest will create request of DescribeNodeHostDevice action.
-func (c *OpenAPIClient) NewDescribeNodeHostDeviceRequest() *apis.DescribeNodeHostDeviceRequest {
+func (c *UCloudStackClient) NewDescribeNodeHostDeviceRequest() *apis.DescribeNodeHostDeviceRequest {
 	req := &apis.DescribeNodeHostDeviceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNodeHostDevice 扫描外置设备
-func (c *OpenAPIClient) DescribeNodeHostDevice(req *apis.DescribeNodeHostDeviceRequest) (*apis.DescribeNodeHostDeviceResponse, error) {
+func (c *UCloudStackClient) DescribeNodeHostDevice(req *apis.DescribeNodeHostDeviceRequest) (*apis.DescribeNodeHostDeviceResponse, error) {
 	var err error
 	var res apis.DescribeNodeHostDeviceResponse
 
@@ -4819,17 +4819,17 @@ func (c *OpenAPIClient) DescribeNodeHostDevice(req *apis.DescribeNodeHostDeviceR
 }
 
 // NewAbortCustomImageRequest will create request of AbortCustomImage action.
-func (c *OpenAPIClient) NewAbortCustomImageRequest() *apis.AbortCustomImageRequest {
+func (c *UCloudStackClient) NewAbortCustomImageRequest() *apis.AbortCustomImageRequest {
 	req := &apis.AbortCustomImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AbortCustomImage 取消制作虚拟机镜像
-func (c *OpenAPIClient) AbortCustomImage(req *apis.AbortCustomImageRequest) (*apis.AbortCustomImageResponse, error) {
+func (c *UCloudStackClient) AbortCustomImage(req *apis.AbortCustomImageRequest) (*apis.AbortCustomImageResponse, error) {
 	var err error
 	var res apis.AbortCustomImageResponse
 
@@ -4841,17 +4841,17 @@ func (c *OpenAPIClient) AbortCustomImage(req *apis.AbortCustomImageRequest) (*ap
 }
 
 // NewAbortImageMultipartUploadRequest will create request of AbortImageMultipartUpload action.
-func (c *OpenAPIClient) NewAbortImageMultipartUploadRequest() *apis.AbortImageMultipartUploadRequest {
+func (c *UCloudStackClient) NewAbortImageMultipartUploadRequest() *apis.AbortImageMultipartUploadRequest {
 	req := &apis.AbortImageMultipartUploadRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AbortImageMultipartUpload 取消本地上传镜像
-func (c *OpenAPIClient) AbortImageMultipartUpload(req *apis.AbortImageMultipartUploadRequest) (*apis.AbortImageMultipartUploadResponse, error) {
+func (c *UCloudStackClient) AbortImageMultipartUpload(req *apis.AbortImageMultipartUploadRequest) (*apis.AbortImageMultipartUploadResponse, error) {
 	var err error
 	var res apis.AbortImageMultipartUploadResponse
 
@@ -4863,17 +4863,17 @@ func (c *OpenAPIClient) AbortImageMultipartUpload(req *apis.AbortImageMultipartU
 }
 
 // NewCloneCustomImageToBaseImageRequest will create request of CloneCustomImageToBaseImage action.
-func (c *OpenAPIClient) NewCloneCustomImageToBaseImageRequest() *apis.CloneCustomImageToBaseImageRequest {
+func (c *UCloudStackClient) NewCloneCustomImageToBaseImageRequest() *apis.CloneCustomImageToBaseImageRequest {
 	req := &apis.CloneCustomImageToBaseImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CloneCustomImageToBaseImage 自制镜像复制成基础镜像
-func (c *OpenAPIClient) CloneCustomImageToBaseImage(req *apis.CloneCustomImageToBaseImageRequest) (*apis.CloneCustomImageToBaseImageResponse, error) {
+func (c *UCloudStackClient) CloneCustomImageToBaseImage(req *apis.CloneCustomImageToBaseImageRequest) (*apis.CloneCustomImageToBaseImageResponse, error) {
 	var err error
 	var res apis.CloneCustomImageToBaseImageResponse
 
@@ -4885,17 +4885,17 @@ func (c *OpenAPIClient) CloneCustomImageToBaseImage(req *apis.CloneCustomImageTo
 }
 
 // NewCompleteImageMultipartUploadRequest will create request of CompleteImageMultipartUpload action.
-func (c *OpenAPIClient) NewCompleteImageMultipartUploadRequest() *apis.CompleteImageMultipartUploadRequest {
+func (c *UCloudStackClient) NewCompleteImageMultipartUploadRequest() *apis.CompleteImageMultipartUploadRequest {
 	req := &apis.CompleteImageMultipartUploadRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CompleteImageMultipartUpload 合并本地上传镜像分片
-func (c *OpenAPIClient) CompleteImageMultipartUpload(req *apis.CompleteImageMultipartUploadRequest) (*apis.CompleteImageMultipartUploadResponse, error) {
+func (c *UCloudStackClient) CompleteImageMultipartUpload(req *apis.CompleteImageMultipartUploadRequest) (*apis.CompleteImageMultipartUploadResponse, error) {
 	var err error
 	var res apis.CompleteImageMultipartUploadResponse
 
@@ -4907,17 +4907,17 @@ func (c *OpenAPIClient) CompleteImageMultipartUpload(req *apis.CompleteImageMult
 }
 
 // NewCreateCustomImageRequest will create request of CreateCustomImage action.
-func (c *OpenAPIClient) NewCreateCustomImageRequest() *apis.CreateCustomImageRequest {
+func (c *UCloudStackClient) NewCreateCustomImageRequest() *apis.CreateCustomImageRequest {
 	req := &apis.CreateCustomImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateCustomImage 制作虚拟机镜像
-func (c *OpenAPIClient) CreateCustomImage(req *apis.CreateCustomImageRequest) (*apis.CreateCustomImageResponse, error) {
+func (c *UCloudStackClient) CreateCustomImage(req *apis.CreateCustomImageRequest) (*apis.CreateCustomImageResponse, error) {
 	var err error
 	var res apis.CreateCustomImageResponse
 
@@ -4929,17 +4929,17 @@ func (c *OpenAPIClient) CreateCustomImage(req *apis.CreateCustomImageRequest) (*
 }
 
 // NewDeleteBaseImageRequest will create request of DeleteBaseImage action.
-func (c *OpenAPIClient) NewDeleteBaseImageRequest() *apis.DeleteBaseImageRequest {
+func (c *UCloudStackClient) NewDeleteBaseImageRequest() *apis.DeleteBaseImageRequest {
 	req := &apis.DeleteBaseImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteBaseImage 删除基础镜像
-func (c *OpenAPIClient) DeleteBaseImage(req *apis.DeleteBaseImageRequest) (*apis.DeleteBaseImageResponse, error) {
+func (c *UCloudStackClient) DeleteBaseImage(req *apis.DeleteBaseImageRequest) (*apis.DeleteBaseImageResponse, error) {
 	var err error
 	var res apis.DeleteBaseImageResponse
 
@@ -4951,17 +4951,17 @@ func (c *OpenAPIClient) DeleteBaseImage(req *apis.DeleteBaseImageRequest) (*apis
 }
 
 // NewDeleteCustomImageRequest will create request of DeleteCustomImage action.
-func (c *OpenAPIClient) NewDeleteCustomImageRequest() *apis.DeleteCustomImageRequest {
+func (c *UCloudStackClient) NewDeleteCustomImageRequest() *apis.DeleteCustomImageRequest {
 	req := &apis.DeleteCustomImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteCustomImage 删除主机镜像
-func (c *OpenAPIClient) DeleteCustomImage(req *apis.DeleteCustomImageRequest) (*apis.DeleteCustomImageResponse, error) {
+func (c *UCloudStackClient) DeleteCustomImage(req *apis.DeleteCustomImageRequest) (*apis.DeleteCustomImageResponse, error) {
 	var err error
 	var res apis.DeleteCustomImageResponse
 
@@ -4973,17 +4973,17 @@ func (c *OpenAPIClient) DeleteCustomImage(req *apis.DeleteCustomImageRequest) (*
 }
 
 // NewDescribeBaseImageRequest will create request of DescribeBaseImage action.
-func (c *OpenAPIClient) NewDescribeBaseImageRequest() *apis.DescribeBaseImageRequest {
+func (c *UCloudStackClient) NewDescribeBaseImageRequest() *apis.DescribeBaseImageRequest {
 	req := &apis.DescribeBaseImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeBaseImage 获取基础镜像权限信息
-func (c *OpenAPIClient) DescribeBaseImage(req *apis.DescribeBaseImageRequest) (*apis.DescribeBaseImageResponse, error) {
+func (c *UCloudStackClient) DescribeBaseImage(req *apis.DescribeBaseImageRequest) (*apis.DescribeBaseImageResponse, error) {
 	var err error
 	var res apis.DescribeBaseImageResponse
 
@@ -4995,17 +4995,17 @@ func (c *OpenAPIClient) DescribeBaseImage(req *apis.DescribeBaseImageRequest) (*
 }
 
 // NewDescribeImageRequest will create request of DescribeImage action.
-func (c *OpenAPIClient) NewDescribeImageRequest() *apis.DescribeImageRequest {
+func (c *UCloudStackClient) NewDescribeImageRequest() *apis.DescribeImageRequest {
 	req := &apis.DescribeImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeImage 获取镜像
-func (c *OpenAPIClient) DescribeImage(req *apis.DescribeImageRequest) (*apis.DescribeImageResponse, error) {
+func (c *UCloudStackClient) DescribeImage(req *apis.DescribeImageRequest) (*apis.DescribeImageResponse, error) {
 	var err error
 	var res apis.DescribeImageResponse
 
@@ -5017,17 +5017,17 @@ func (c *OpenAPIClient) DescribeImage(req *apis.DescribeImageRequest) (*apis.Des
 }
 
 // NewDescribeImageOSVersionsRequest will create request of DescribeImageOSVersions action.
-func (c *OpenAPIClient) NewDescribeImageOSVersionsRequest() *apis.DescribeImageOSVersionsRequest {
+func (c *UCloudStackClient) NewDescribeImageOSVersionsRequest() *apis.DescribeImageOSVersionsRequest {
 	req := &apis.DescribeImageOSVersionsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeImageOSVersions 查询镜像系统规格
-func (c *OpenAPIClient) DescribeImageOSVersions(req *apis.DescribeImageOSVersionsRequest) (*apis.DescribeImageOSVersionsResponse, error) {
+func (c *UCloudStackClient) DescribeImageOSVersions(req *apis.DescribeImageOSVersionsRequest) (*apis.DescribeImageOSVersionsResponse, error) {
 	var err error
 	var res apis.DescribeImageOSVersionsResponse
 
@@ -5039,17 +5039,17 @@ func (c *OpenAPIClient) DescribeImageOSVersions(req *apis.DescribeImageOSVersion
 }
 
 // NewGetImageDownloadURLRequest will create request of GetImageDownloadURL action.
-func (c *OpenAPIClient) NewGetImageDownloadURLRequest() *apis.GetImageDownloadURLRequest {
+func (c *UCloudStackClient) NewGetImageDownloadURLRequest() *apis.GetImageDownloadURLRequest {
 	req := &apis.GetImageDownloadURLRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetImageDownloadURL 获取镜像下载地址
-func (c *OpenAPIClient) GetImageDownloadURL(req *apis.GetImageDownloadURLRequest) (*apis.GetImageDownloadURLResponse, error) {
+func (c *UCloudStackClient) GetImageDownloadURL(req *apis.GetImageDownloadURLRequest) (*apis.GetImageDownloadURLResponse, error) {
 	var err error
 	var res apis.GetImageDownloadURLResponse
 
@@ -5061,17 +5061,17 @@ func (c *OpenAPIClient) GetImageDownloadURL(req *apis.GetImageDownloadURLRequest
 }
 
 // NewImportImageRequest will create request of ImportImage action.
-func (c *OpenAPIClient) NewImportImageRequest() *apis.ImportImageRequest {
+func (c *UCloudStackClient) NewImportImageRequest() *apis.ImportImageRequest {
 	req := &apis.ImportImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ImportImage 上传镜像
-func (c *OpenAPIClient) ImportImage(req *apis.ImportImageRequest) (*apis.ImportImageResponse, error) {
+func (c *UCloudStackClient) ImportImage(req *apis.ImportImageRequest) (*apis.ImportImageResponse, error) {
 	var err error
 	var res apis.ImportImageResponse
 
@@ -5083,17 +5083,17 @@ func (c *OpenAPIClient) ImportImage(req *apis.ImportImageRequest) (*apis.ImportI
 }
 
 // NewUpdateImageRequest will create request of UpdateImage action.
-func (c *OpenAPIClient) NewUpdateImageRequest() *apis.UpdateImageRequest {
+func (c *UCloudStackClient) NewUpdateImageRequest() *apis.UpdateImageRequest {
 	req := &apis.UpdateImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateImage 修改镜像属性
-func (c *OpenAPIClient) UpdateImage(req *apis.UpdateImageRequest) (*apis.UpdateImageResponse, error) {
+func (c *UCloudStackClient) UpdateImage(req *apis.UpdateImageRequest) (*apis.UpdateImageResponse, error) {
 	var err error
 	var res apis.UpdateImageResponse
 
@@ -5105,17 +5105,17 @@ func (c *OpenAPIClient) UpdateImage(req *apis.UpdateImageRequest) (*apis.UpdateI
 }
 
 // NewCountTenantResourceByStatusRequest will create request of CountTenantResourceByStatus action.
-func (c *OpenAPIClient) NewCountTenantResourceByStatusRequest() *apis.CountTenantResourceByStatusRequest {
+func (c *UCloudStackClient) NewCountTenantResourceByStatusRequest() *apis.CountTenantResourceByStatusRequest {
 	req := &apis.CountTenantResourceByStatusRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CountTenantResourceByStatus 获取资源状态统计图表
-func (c *OpenAPIClient) CountTenantResourceByStatus(req *apis.CountTenantResourceByStatusRequest) (*apis.CountTenantResourceByStatusResponse, error) {
+func (c *UCloudStackClient) CountTenantResourceByStatus(req *apis.CountTenantResourceByStatusRequest) (*apis.CountTenantResourceByStatusResponse, error) {
 	var err error
 	var res apis.CountTenantResourceByStatusResponse
 
@@ -5127,17 +5127,17 @@ func (c *OpenAPIClient) CountTenantResourceByStatus(req *apis.CountTenantResourc
 }
 
 // NewCreateOnSiteInspectionRequest will create request of CreateOnSiteInspection action.
-func (c *OpenAPIClient) NewCreateOnSiteInspectionRequest() *apis.CreateOnSiteInspectionRequest {
+func (c *UCloudStackClient) NewCreateOnSiteInspectionRequest() *apis.CreateOnSiteInspectionRequest {
 	req := &apis.CreateOnSiteInspectionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateOnSiteInspection 创建一键巡检报告
-func (c *OpenAPIClient) CreateOnSiteInspection(req *apis.CreateOnSiteInspectionRequest) (*apis.CreateOnSiteInspectionResponse, error) {
+func (c *UCloudStackClient) CreateOnSiteInspection(req *apis.CreateOnSiteInspectionRequest) (*apis.CreateOnSiteInspectionResponse, error) {
 	var err error
 	var res apis.CreateOnSiteInspectionResponse
 
@@ -5149,17 +5149,17 @@ func (c *OpenAPIClient) CreateOnSiteInspection(req *apis.CreateOnSiteInspectionR
 }
 
 // NewCreateResourceUsageRequest will create request of CreateResourceUsage action.
-func (c *OpenAPIClient) NewCreateResourceUsageRequest() *apis.CreateResourceUsageRequest {
+func (c *UCloudStackClient) NewCreateResourceUsageRequest() *apis.CreateResourceUsageRequest {
 	req := &apis.CreateResourceUsageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateResourceUsage 创建资源使用情况报告
-func (c *OpenAPIClient) CreateResourceUsage(req *apis.CreateResourceUsageRequest) (*apis.CreateResourceUsageResponse, error) {
+func (c *UCloudStackClient) CreateResourceUsage(req *apis.CreateResourceUsageRequest) (*apis.CreateResourceUsageResponse, error) {
 	var err error
 	var res apis.CreateResourceUsageResponse
 
@@ -5171,17 +5171,17 @@ func (c *OpenAPIClient) CreateResourceUsage(req *apis.CreateResourceUsageRequest
 }
 
 // NewDeleteOnSiteInspectionRequest will create request of DeleteOnSiteInspection action.
-func (c *OpenAPIClient) NewDeleteOnSiteInspectionRequest() *apis.DeleteOnSiteInspectionRequest {
+func (c *UCloudStackClient) NewDeleteOnSiteInspectionRequest() *apis.DeleteOnSiteInspectionRequest {
 	req := &apis.DeleteOnSiteInspectionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteOnSiteInspection 删除一键巡检报告
-func (c *OpenAPIClient) DeleteOnSiteInspection(req *apis.DeleteOnSiteInspectionRequest) (*apis.DeleteOnSiteInspectionResponse, error) {
+func (c *UCloudStackClient) DeleteOnSiteInspection(req *apis.DeleteOnSiteInspectionRequest) (*apis.DeleteOnSiteInspectionResponse, error) {
 	var err error
 	var res apis.DeleteOnSiteInspectionResponse
 
@@ -5193,17 +5193,17 @@ func (c *OpenAPIClient) DeleteOnSiteInspection(req *apis.DeleteOnSiteInspectionR
 }
 
 // NewDeleteResourceUsageRequest will create request of DeleteResourceUsage action.
-func (c *OpenAPIClient) NewDeleteResourceUsageRequest() *apis.DeleteResourceUsageRequest {
+func (c *UCloudStackClient) NewDeleteResourceUsageRequest() *apis.DeleteResourceUsageRequest {
 	req := &apis.DeleteResourceUsageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteResourceUsage 删除资源使用情况报告
-func (c *OpenAPIClient) DeleteResourceUsage(req *apis.DeleteResourceUsageRequest) (*apis.DeleteResourceUsageResponse, error) {
+func (c *UCloudStackClient) DeleteResourceUsage(req *apis.DeleteResourceUsageRequest) (*apis.DeleteResourceUsageResponse, error) {
 	var err error
 	var res apis.DeleteResourceUsageResponse
 
@@ -5215,17 +5215,17 @@ func (c *OpenAPIClient) DeleteResourceUsage(req *apis.DeleteResourceUsageRequest
 }
 
 // NewDescribeNetworkTopologyRequest will create request of DescribeNetworkTopology action.
-func (c *OpenAPIClient) NewDescribeNetworkTopologyRequest() *apis.DescribeNetworkTopologyRequest {
+func (c *UCloudStackClient) NewDescribeNetworkTopologyRequest() *apis.DescribeNetworkTopologyRequest {
 	req := &apis.DescribeNetworkTopologyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNetworkTopology 获取网络拓扑信息
-func (c *OpenAPIClient) DescribeNetworkTopology(req *apis.DescribeNetworkTopologyRequest) (*apis.DescribeNetworkTopologyResponse, error) {
+func (c *UCloudStackClient) DescribeNetworkTopology(req *apis.DescribeNetworkTopologyRequest) (*apis.DescribeNetworkTopologyResponse, error) {
 	var err error
 	var res apis.DescribeNetworkTopologyResponse
 
@@ -5237,17 +5237,17 @@ func (c *OpenAPIClient) DescribeNetworkTopology(req *apis.DescribeNetworkTopolog
 }
 
 // NewDescribeResourceChartRequest will create request of DescribeResourceChart action.
-func (c *OpenAPIClient) NewDescribeResourceChartRequest() *apis.DescribeResourceChartRequest {
+func (c *UCloudStackClient) NewDescribeResourceChartRequest() *apis.DescribeResourceChartRequest {
 	req := &apis.DescribeResourceChartRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeResourceChart 获取资源用量图表
-func (c *OpenAPIClient) DescribeResourceChart(req *apis.DescribeResourceChartRequest) (*apis.DescribeResourceChartResponse, error) {
+func (c *UCloudStackClient) DescribeResourceChart(req *apis.DescribeResourceChartRequest) (*apis.DescribeResourceChartResponse, error) {
 	var err error
 	var res apis.DescribeResourceChartResponse
 
@@ -5259,17 +5259,17 @@ func (c *OpenAPIClient) DescribeResourceChart(req *apis.DescribeResourceChartReq
 }
 
 // NewDescribeResourceConditionRequest will create request of DescribeResourceCondition action.
-func (c *OpenAPIClient) NewDescribeResourceConditionRequest() *apis.DescribeResourceConditionRequest {
+func (c *UCloudStackClient) NewDescribeResourceConditionRequest() *apis.DescribeResourceConditionRequest {
 	req := &apis.DescribeResourceConditionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeResourceCondition 获取资源事件状态
-func (c *OpenAPIClient) DescribeResourceCondition(req *apis.DescribeResourceConditionRequest) (*apis.DescribeResourceConditionResponse, error) {
+func (c *UCloudStackClient) DescribeResourceCondition(req *apis.DescribeResourceConditionRequest) (*apis.DescribeResourceConditionResponse, error) {
 	var err error
 	var res apis.DescribeResourceConditionResponse
 
@@ -5281,17 +5281,17 @@ func (c *OpenAPIClient) DescribeResourceCondition(req *apis.DescribeResourceCond
 }
 
 // NewDescribeResourceEventRequest will create request of DescribeResourceEvent action.
-func (c *OpenAPIClient) NewDescribeResourceEventRequest() *apis.DescribeResourceEventRequest {
+func (c *UCloudStackClient) NewDescribeResourceEventRequest() *apis.DescribeResourceEventRequest {
 	req := &apis.DescribeResourceEventRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeResourceEvent 获取资源事件
-func (c *OpenAPIClient) DescribeResourceEvent(req *apis.DescribeResourceEventRequest) (*apis.DescribeResourceEventResponse, error) {
+func (c *UCloudStackClient) DescribeResourceEvent(req *apis.DescribeResourceEventRequest) (*apis.DescribeResourceEventResponse, error) {
 	var err error
 	var res apis.DescribeResourceEventResponse
 
@@ -5303,17 +5303,17 @@ func (c *OpenAPIClient) DescribeResourceEvent(req *apis.DescribeResourceEventReq
 }
 
 // NewGetOnSiteInspectionRequest will create request of GetOnSiteInspection action.
-func (c *OpenAPIClient) NewGetOnSiteInspectionRequest() *apis.GetOnSiteInspectionRequest {
+func (c *UCloudStackClient) NewGetOnSiteInspectionRequest() *apis.GetOnSiteInspectionRequest {
 	req := &apis.GetOnSiteInspectionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetOnSiteInspection 获取巡检报告详情
-func (c *OpenAPIClient) GetOnSiteInspection(req *apis.GetOnSiteInspectionRequest) (*apis.GetOnSiteInspectionResponse, error) {
+func (c *UCloudStackClient) GetOnSiteInspection(req *apis.GetOnSiteInspectionRequest) (*apis.GetOnSiteInspectionResponse, error) {
 	var err error
 	var res apis.GetOnSiteInspectionResponse
 
@@ -5325,17 +5325,17 @@ func (c *OpenAPIClient) GetOnSiteInspection(req *apis.GetOnSiteInspectionRequest
 }
 
 // NewGetResourceUsageRequest will create request of GetResourceUsage action.
-func (c *OpenAPIClient) NewGetResourceUsageRequest() *apis.GetResourceUsageRequest {
+func (c *UCloudStackClient) NewGetResourceUsageRequest() *apis.GetResourceUsageRequest {
 	req := &apis.GetResourceUsageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetResourceUsage 获取资源使用情况详细信息
-func (c *OpenAPIClient) GetResourceUsage(req *apis.GetResourceUsageRequest) (*apis.GetResourceUsageResponse, error) {
+func (c *UCloudStackClient) GetResourceUsage(req *apis.GetResourceUsageRequest) (*apis.GetResourceUsageResponse, error) {
 	var err error
 	var res apis.GetResourceUsageResponse
 
@@ -5347,17 +5347,17 @@ func (c *OpenAPIClient) GetResourceUsage(req *apis.GetResourceUsageRequest) (*ap
 }
 
 // NewListExpiredResourcesRequest will create request of ListExpiredResources action.
-func (c *OpenAPIClient) NewListExpiredResourcesRequest() *apis.ListExpiredResourcesRequest {
+func (c *UCloudStackClient) NewListExpiredResourcesRequest() *apis.ListExpiredResourcesRequest {
 	req := &apis.ListExpiredResourcesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListExpiredResources 查询过期资源，根据资源类型过滤，排除销毁、销毁中和已删除的资源
-func (c *OpenAPIClient) ListExpiredResources(req *apis.ListExpiredResourcesRequest) (*apis.ListExpiredResourcesResponse, error) {
+func (c *UCloudStackClient) ListExpiredResources(req *apis.ListExpiredResourcesRequest) (*apis.ListExpiredResourcesResponse, error) {
 	var err error
 	var res apis.ListExpiredResourcesResponse
 
@@ -5369,17 +5369,17 @@ func (c *OpenAPIClient) ListExpiredResources(req *apis.ListExpiredResourcesReque
 }
 
 // NewListOnSiteInspectionsRequest will create request of ListOnSiteInspections action.
-func (c *OpenAPIClient) NewListOnSiteInspectionsRequest() *apis.ListOnSiteInspectionsRequest {
+func (c *UCloudStackClient) NewListOnSiteInspectionsRequest() *apis.ListOnSiteInspectionsRequest {
 	req := &apis.ListOnSiteInspectionsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListOnSiteInspections 获取巡检报告列表
-func (c *OpenAPIClient) ListOnSiteInspections(req *apis.ListOnSiteInspectionsRequest) (*apis.ListOnSiteInspectionsResponse, error) {
+func (c *UCloudStackClient) ListOnSiteInspections(req *apis.ListOnSiteInspectionsRequest) (*apis.ListOnSiteInspectionsResponse, error) {
 	var err error
 	var res apis.ListOnSiteInspectionsResponse
 
@@ -5391,17 +5391,17 @@ func (c *OpenAPIClient) ListOnSiteInspections(req *apis.ListOnSiteInspectionsReq
 }
 
 // NewListResourceUsagesRequest will create request of ListResourceUsages action.
-func (c *OpenAPIClient) NewListResourceUsagesRequest() *apis.ListResourceUsagesRequest {
+func (c *UCloudStackClient) NewListResourceUsagesRequest() *apis.ListResourceUsagesRequest {
 	req := &apis.ListResourceUsagesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListResourceUsages 获取资源使用情况列表
-func (c *OpenAPIClient) ListResourceUsages(req *apis.ListResourceUsagesRequest) (*apis.ListResourceUsagesResponse, error) {
+func (c *UCloudStackClient) ListResourceUsages(req *apis.ListResourceUsagesRequest) (*apis.ListResourceUsagesResponse, error) {
 	var err error
 	var res apis.ListResourceUsagesResponse
 
@@ -5413,17 +5413,17 @@ func (c *OpenAPIClient) ListResourceUsages(req *apis.ListResourceUsagesRequest) 
 }
 
 // NewRetryResourceUsageRequest will create request of RetryResourceUsage action.
-func (c *OpenAPIClient) NewRetryResourceUsageRequest() *apis.RetryResourceUsageRequest {
+func (c *UCloudStackClient) NewRetryResourceUsageRequest() *apis.RetryResourceUsageRequest {
 	req := &apis.RetryResourceUsageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RetryResourceUsage 重试重新生成资源使用情况报告
-func (c *OpenAPIClient) RetryResourceUsage(req *apis.RetryResourceUsageRequest) (*apis.RetryResourceUsageResponse, error) {
+func (c *UCloudStackClient) RetryResourceUsage(req *apis.RetryResourceUsageRequest) (*apis.RetryResourceUsageResponse, error) {
 	var err error
 	var res apis.RetryResourceUsageResponse
 
@@ -5435,17 +5435,17 @@ func (c *OpenAPIClient) RetryResourceUsage(req *apis.RetryResourceUsageRequest) 
 }
 
 // NewAllocateEIPRequest will create request of AllocateEIP action.
-func (c *OpenAPIClient) NewAllocateEIPRequest() *apis.AllocateEIPRequest {
+func (c *UCloudStackClient) NewAllocateEIPRequest() *apis.AllocateEIPRequest {
 	req := &apis.AllocateEIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateEIP 申请弹性IP
-func (c *OpenAPIClient) AllocateEIP(req *apis.AllocateEIPRequest) (*apis.AllocateEIPResponse, error) {
+func (c *UCloudStackClient) AllocateEIP(req *apis.AllocateEIPRequest) (*apis.AllocateEIPResponse, error) {
 	var err error
 	var res apis.AllocateEIPResponse
 
@@ -5457,17 +5457,17 @@ func (c *OpenAPIClient) AllocateEIP(req *apis.AllocateEIPRequest) (*apis.Allocat
 }
 
 // NewBindEIPRequest will create request of BindEIP action.
-func (c *OpenAPIClient) NewBindEIPRequest() *apis.BindEIPRequest {
+func (c *UCloudStackClient) NewBindEIPRequest() *apis.BindEIPRequest {
 	req := &apis.BindEIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // BindEIP 绑定弹性IP
-func (c *OpenAPIClient) BindEIP(req *apis.BindEIPRequest) (*apis.BindEIPResponse, error) {
+func (c *UCloudStackClient) BindEIP(req *apis.BindEIPRequest) (*apis.BindEIPResponse, error) {
 	var err error
 	var res apis.BindEIPResponse
 
@@ -5479,17 +5479,17 @@ func (c *OpenAPIClient) BindEIP(req *apis.BindEIPRequest) (*apis.BindEIPResponse
 }
 
 // NewCheckIPInuseRequest will create request of CheckIPInuse action.
-func (c *OpenAPIClient) NewCheckIPInuseRequest() *apis.CheckIPInuseRequest {
+func (c *UCloudStackClient) NewCheckIPInuseRequest() *apis.CheckIPInuseRequest {
 	req := &apis.CheckIPInuseRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CheckIPInuse 查询IP是否使用中
-func (c *OpenAPIClient) CheckIPInuse(req *apis.CheckIPInuseRequest) (*apis.CheckIPInuseResponse, error) {
+func (c *UCloudStackClient) CheckIPInuse(req *apis.CheckIPInuseRequest) (*apis.CheckIPInuseResponse, error) {
 	var err error
 	var res apis.CheckIPInuseResponse
 
@@ -5501,17 +5501,17 @@ func (c *OpenAPIClient) CheckIPInuse(req *apis.CheckIPInuseRequest) (*apis.Check
 }
 
 // NewDescribeEIPRequest will create request of DescribeEIP action.
-func (c *OpenAPIClient) NewDescribeEIPRequest() *apis.DescribeEIPRequest {
+func (c *UCloudStackClient) NewDescribeEIPRequest() *apis.DescribeEIPRequest {
 	req := &apis.DescribeEIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeEIP 获取弹性IP
-func (c *OpenAPIClient) DescribeEIP(req *apis.DescribeEIPRequest) (*apis.DescribeEIPResponse, error) {
+func (c *UCloudStackClient) DescribeEIP(req *apis.DescribeEIPRequest) (*apis.DescribeEIPResponse, error) {
 	var err error
 	var res apis.DescribeEIPResponse
 
@@ -5523,17 +5523,17 @@ func (c *OpenAPIClient) DescribeEIP(req *apis.DescribeEIPRequest) (*apis.Describ
 }
 
 // NewGetEIPDiffPriceRequest will create request of GetEIPDiffPrice action.
-func (c *OpenAPIClient) NewGetEIPDiffPriceRequest() *apis.GetEIPDiffPriceRequest {
+func (c *UCloudStackClient) NewGetEIPDiffPriceRequest() *apis.GetEIPDiffPriceRequest {
 	req := &apis.GetEIPDiffPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetEIPDiffPrice 获取EIP差价
-func (c *OpenAPIClient) GetEIPDiffPrice(req *apis.GetEIPDiffPriceRequest) (*apis.GetEIPDiffPriceResponse, error) {
+func (c *UCloudStackClient) GetEIPDiffPrice(req *apis.GetEIPDiffPriceRequest) (*apis.GetEIPDiffPriceResponse, error) {
 	var err error
 	var res apis.GetEIPDiffPriceResponse
 
@@ -5545,17 +5545,17 @@ func (c *OpenAPIClient) GetEIPDiffPrice(req *apis.GetEIPDiffPriceRequest) (*apis
 }
 
 // NewGetEIPPriceRequest will create request of GetEIPPrice action.
-func (c *OpenAPIClient) NewGetEIPPriceRequest() *apis.GetEIPPriceRequest {
+func (c *UCloudStackClient) NewGetEIPPriceRequest() *apis.GetEIPPriceRequest {
 	req := &apis.GetEIPPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetEIPPrice 获取弹性IP价格
-func (c *OpenAPIClient) GetEIPPrice(req *apis.GetEIPPriceRequest) (*apis.GetEIPPriceResponse, error) {
+func (c *UCloudStackClient) GetEIPPrice(req *apis.GetEIPPriceRequest) (*apis.GetEIPPriceResponse, error) {
 	var err error
 	var res apis.GetEIPPriceResponse
 
@@ -5567,17 +5567,17 @@ func (c *OpenAPIClient) GetEIPPrice(req *apis.GetEIPPriceRequest) (*apis.GetEIPP
 }
 
 // NewModifyEIPBandwidthRequest will create request of ModifyEIPBandwidth action.
-func (c *OpenAPIClient) NewModifyEIPBandwidthRequest() *apis.ModifyEIPBandwidthRequest {
+func (c *UCloudStackClient) NewModifyEIPBandwidthRequest() *apis.ModifyEIPBandwidthRequest {
 	req := &apis.ModifyEIPBandwidthRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ModifyEIPBandwidth 调整带宽
-func (c *OpenAPIClient) ModifyEIPBandwidth(req *apis.ModifyEIPBandwidthRequest) (*apis.ModifyEIPBandwidthResponse, error) {
+func (c *UCloudStackClient) ModifyEIPBandwidth(req *apis.ModifyEIPBandwidthRequest) (*apis.ModifyEIPBandwidthResponse, error) {
 	var err error
 	var res apis.ModifyEIPBandwidthResponse
 
@@ -5589,17 +5589,17 @@ func (c *OpenAPIClient) ModifyEIPBandwidth(req *apis.ModifyEIPBandwidthRequest) 
 }
 
 // NewReleaseEIPRequest will create request of ReleaseEIP action.
-func (c *OpenAPIClient) NewReleaseEIPRequest() *apis.ReleaseEIPRequest {
+func (c *UCloudStackClient) NewReleaseEIPRequest() *apis.ReleaseEIPRequest {
 	req := &apis.ReleaseEIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ReleaseEIP 释放弹性IP
-func (c *OpenAPIClient) ReleaseEIP(req *apis.ReleaseEIPRequest) (*apis.ReleaseEIPResponse, error) {
+func (c *UCloudStackClient) ReleaseEIP(req *apis.ReleaseEIPRequest) (*apis.ReleaseEIPResponse, error) {
 	var err error
 	var res apis.ReleaseEIPResponse
 
@@ -5611,17 +5611,17 @@ func (c *OpenAPIClient) ReleaseEIP(req *apis.ReleaseEIPRequest) (*apis.ReleaseEI
 }
 
 // NewUnBindEIPRequest will create request of UnBindEIP action.
-func (c *OpenAPIClient) NewUnBindEIPRequest() *apis.UnBindEIPRequest {
+func (c *UCloudStackClient) NewUnBindEIPRequest() *apis.UnBindEIPRequest {
 	req := &apis.UnBindEIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnBindEIP 解绑弹性IP
-func (c *OpenAPIClient) UnBindEIP(req *apis.UnBindEIPRequest) (*apis.UnBindEIPResponse, error) {
+func (c *UCloudStackClient) UnBindEIP(req *apis.UnBindEIPRequest) (*apis.UnBindEIPResponse, error) {
 	var err error
 	var res apis.UnBindEIPResponse
 
@@ -5633,17 +5633,17 @@ func (c *OpenAPIClient) UnBindEIP(req *apis.UnBindEIPRequest) (*apis.UnBindEIPRe
 }
 
 // NewAddNodesToIsolationGroupRequest will create request of AddNodesToIsolationGroup action.
-func (c *OpenAPIClient) NewAddNodesToIsolationGroupRequest() *apis.AddNodesToIsolationGroupRequest {
+func (c *UCloudStackClient) NewAddNodesToIsolationGroupRequest() *apis.AddNodesToIsolationGroupRequest {
 	req := &apis.AddNodesToIsolationGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AddNodesToIsolationGroup 添加节点到隔离组
-func (c *OpenAPIClient) AddNodesToIsolationGroup(req *apis.AddNodesToIsolationGroupRequest) (*apis.AddNodesToIsolationGroupResponse, error) {
+func (c *UCloudStackClient) AddNodesToIsolationGroup(req *apis.AddNodesToIsolationGroupRequest) (*apis.AddNodesToIsolationGroupResponse, error) {
 	var err error
 	var res apis.AddNodesToIsolationGroupResponse
 
@@ -5655,17 +5655,17 @@ func (c *OpenAPIClient) AddNodesToIsolationGroup(req *apis.AddNodesToIsolationGr
 }
 
 // NewAddVMToIsolationGroupRequest will create request of AddVMToIsolationGroup action.
-func (c *OpenAPIClient) NewAddVMToIsolationGroupRequest() *apis.AddVMToIsolationGroupRequest {
+func (c *UCloudStackClient) NewAddVMToIsolationGroupRequest() *apis.AddVMToIsolationGroupRequest {
 	req := &apis.AddVMToIsolationGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AddVMToIsolationGroup 添加VM到隔离组
-func (c *OpenAPIClient) AddVMToIsolationGroup(req *apis.AddVMToIsolationGroupRequest) (*apis.AddVMToIsolationGroupResponse, error) {
+func (c *UCloudStackClient) AddVMToIsolationGroup(req *apis.AddVMToIsolationGroupRequest) (*apis.AddVMToIsolationGroupResponse, error) {
 	var err error
 	var res apis.AddVMToIsolationGroupResponse
 
@@ -5677,17 +5677,17 @@ func (c *OpenAPIClient) AddVMToIsolationGroup(req *apis.AddVMToIsolationGroupReq
 }
 
 // NewCreateIsolationGroupRequest will create request of CreateIsolationGroup action.
-func (c *OpenAPIClient) NewCreateIsolationGroupRequest() *apis.CreateIsolationGroupRequest {
+func (c *UCloudStackClient) NewCreateIsolationGroupRequest() *apis.CreateIsolationGroupRequest {
 	req := &apis.CreateIsolationGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateIsolationGroup 创建隔离组
-func (c *OpenAPIClient) CreateIsolationGroup(req *apis.CreateIsolationGroupRequest) (*apis.CreateIsolationGroupResponse, error) {
+func (c *UCloudStackClient) CreateIsolationGroup(req *apis.CreateIsolationGroupRequest) (*apis.CreateIsolationGroupResponse, error) {
 	var err error
 	var res apis.CreateIsolationGroupResponse
 
@@ -5699,17 +5699,17 @@ func (c *OpenAPIClient) CreateIsolationGroup(req *apis.CreateIsolationGroupReque
 }
 
 // NewDeleteIsolationGroupRequest will create request of DeleteIsolationGroup action.
-func (c *OpenAPIClient) NewDeleteIsolationGroupRequest() *apis.DeleteIsolationGroupRequest {
+func (c *UCloudStackClient) NewDeleteIsolationGroupRequest() *apis.DeleteIsolationGroupRequest {
 	req := &apis.DeleteIsolationGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteIsolationGroup 删除隔离组
-func (c *OpenAPIClient) DeleteIsolationGroup(req *apis.DeleteIsolationGroupRequest) (*apis.DeleteIsolationGroupResponse, error) {
+func (c *UCloudStackClient) DeleteIsolationGroup(req *apis.DeleteIsolationGroupRequest) (*apis.DeleteIsolationGroupResponse, error) {
 	var err error
 	var res apis.DeleteIsolationGroupResponse
 
@@ -5721,17 +5721,17 @@ func (c *OpenAPIClient) DeleteIsolationGroup(req *apis.DeleteIsolationGroupReque
 }
 
 // NewDescribeIsolationGroupsRequest will create request of DescribeIsolationGroups action.
-func (c *OpenAPIClient) NewDescribeIsolationGroupsRequest() *apis.DescribeIsolationGroupsRequest {
+func (c *UCloudStackClient) NewDescribeIsolationGroupsRequest() *apis.DescribeIsolationGroupsRequest {
 	req := &apis.DescribeIsolationGroupsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeIsolationGroups 获取隔离组信息
-func (c *OpenAPIClient) DescribeIsolationGroups(req *apis.DescribeIsolationGroupsRequest) (*apis.DescribeIsolationGroupsResponse, error) {
+func (c *UCloudStackClient) DescribeIsolationGroups(req *apis.DescribeIsolationGroupsRequest) (*apis.DescribeIsolationGroupsResponse, error) {
 	var err error
 	var res apis.DescribeIsolationGroupsResponse
 
@@ -5743,17 +5743,17 @@ func (c *OpenAPIClient) DescribeIsolationGroups(req *apis.DescribeIsolationGroup
 }
 
 // NewDescribeVMAddToVMGroupRequest will create request of DescribeVMAddToVMGroup action.
-func (c *OpenAPIClient) NewDescribeVMAddToVMGroupRequest() *apis.DescribeVMAddToVMGroupRequest {
+func (c *UCloudStackClient) NewDescribeVMAddToVMGroupRequest() *apis.DescribeVMAddToVMGroupRequest {
 	req := &apis.DescribeVMAddToVMGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVMAddToVMGroup 获取可加入隔离组的虚拟机信息
-func (c *OpenAPIClient) DescribeVMAddToVMGroup(req *apis.DescribeVMAddToVMGroupRequest) (*apis.DescribeVMAddToVMGroupResponse, error) {
+func (c *UCloudStackClient) DescribeVMAddToVMGroup(req *apis.DescribeVMAddToVMGroupRequest) (*apis.DescribeVMAddToVMGroupResponse, error) {
 	var err error
 	var res apis.DescribeVMAddToVMGroupResponse
 
@@ -5765,17 +5765,17 @@ func (c *OpenAPIClient) DescribeVMAddToVMGroup(req *apis.DescribeVMAddToVMGroupR
 }
 
 // NewRemoveNodesFromIsolationGroupRequest will create request of RemoveNodesFromIsolationGroup action.
-func (c *OpenAPIClient) NewRemoveNodesFromIsolationGroupRequest() *apis.RemoveNodesFromIsolationGroupRequest {
+func (c *UCloudStackClient) NewRemoveNodesFromIsolationGroupRequest() *apis.RemoveNodesFromIsolationGroupRequest {
 	req := &apis.RemoveNodesFromIsolationGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RemoveNodesFromIsolationGroup 从隔离组移除节点
-func (c *OpenAPIClient) RemoveNodesFromIsolationGroup(req *apis.RemoveNodesFromIsolationGroupRequest) (*apis.RemoveNodesFromIsolationGroupResponse, error) {
+func (c *UCloudStackClient) RemoveNodesFromIsolationGroup(req *apis.RemoveNodesFromIsolationGroupRequest) (*apis.RemoveNodesFromIsolationGroupResponse, error) {
 	var err error
 	var res apis.RemoveNodesFromIsolationGroupResponse
 
@@ -5787,17 +5787,17 @@ func (c *OpenAPIClient) RemoveNodesFromIsolationGroup(req *apis.RemoveNodesFromI
 }
 
 // NewRemoveVMFromIsolationGroupRequest will create request of RemoveVMFromIsolationGroup action.
-func (c *OpenAPIClient) NewRemoveVMFromIsolationGroupRequest() *apis.RemoveVMFromIsolationGroupRequest {
+func (c *UCloudStackClient) NewRemoveVMFromIsolationGroupRequest() *apis.RemoveVMFromIsolationGroupRequest {
 	req := &apis.RemoveVMFromIsolationGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RemoveVMFromIsolationGroup 从隔离组移除VM
-func (c *OpenAPIClient) RemoveVMFromIsolationGroup(req *apis.RemoveVMFromIsolationGroupRequest) (*apis.RemoveVMFromIsolationGroupResponse, error) {
+func (c *UCloudStackClient) RemoveVMFromIsolationGroup(req *apis.RemoveVMFromIsolationGroupRequest) (*apis.RemoveVMFromIsolationGroupResponse, error) {
 	var err error
 	var res apis.RemoveVMFromIsolationGroupResponse
 
@@ -5809,17 +5809,17 @@ func (c *OpenAPIClient) RemoveVMFromIsolationGroup(req *apis.RemoveVMFromIsolati
 }
 
 // NewUpdateIsolationGroupRequest will create request of UpdateIsolationGroup action.
-func (c *OpenAPIClient) NewUpdateIsolationGroupRequest() *apis.UpdateIsolationGroupRequest {
+func (c *UCloudStackClient) NewUpdateIsolationGroupRequest() *apis.UpdateIsolationGroupRequest {
 	req := &apis.UpdateIsolationGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateIsolationGroup 更新隔离组
-func (c *OpenAPIClient) UpdateIsolationGroup(req *apis.UpdateIsolationGroupRequest) (*apis.UpdateIsolationGroupResponse, error) {
+func (c *UCloudStackClient) UpdateIsolationGroup(req *apis.UpdateIsolationGroupRequest) (*apis.UpdateIsolationGroupResponse, error) {
 	var err error
 	var res apis.UpdateIsolationGroupResponse
 
@@ -5831,17 +5831,17 @@ func (c *OpenAPIClient) UpdateIsolationGroup(req *apis.UpdateIsolationGroupReque
 }
 
 // NewAllocateK8SSessionRequest will create request of AllocateK8SSession action.
-func (c *OpenAPIClient) NewAllocateK8SSessionRequest() *apis.AllocateK8SSessionRequest {
+func (c *UCloudStackClient) NewAllocateK8SSessionRequest() *apis.AllocateK8SSessionRequest {
 	req := &apis.AllocateK8SSessionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateK8SSession 申请console会话
-func (c *OpenAPIClient) AllocateK8SSession(req *apis.AllocateK8SSessionRequest) (*apis.AllocateK8SSessionResponse, error) {
+func (c *UCloudStackClient) AllocateK8SSession(req *apis.AllocateK8SSessionRequest) (*apis.AllocateK8SSessionResponse, error) {
 	var err error
 	var res apis.AllocateK8SSessionResponse
 
@@ -5853,17 +5853,17 @@ func (c *OpenAPIClient) AllocateK8SSession(req *apis.AllocateK8SSessionRequest) 
 }
 
 // NewAllocateK8STerminalRequest will create request of AllocateK8STerminal action.
-func (c *OpenAPIClient) NewAllocateK8STerminalRequest() *apis.AllocateK8STerminalRequest {
+func (c *UCloudStackClient) NewAllocateK8STerminalRequest() *apis.AllocateK8STerminalRequest {
 	req := &apis.AllocateK8STerminalRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateK8STerminal 申请console会话
-func (c *OpenAPIClient) AllocateK8STerminal(req *apis.AllocateK8STerminalRequest) (*apis.AllocateK8STerminalResponse, error) {
+func (c *UCloudStackClient) AllocateK8STerminal(req *apis.AllocateK8STerminalRequest) (*apis.AllocateK8STerminalResponse, error) {
 	var err error
 	var res apis.AllocateK8STerminalResponse
 
@@ -5875,17 +5875,17 @@ func (c *OpenAPIClient) AllocateK8STerminal(req *apis.AllocateK8STerminalRequest
 }
 
 // NewAllocateNativeNodeSSHSessionRequest will create request of AllocateNativeNodeSSHSession action.
-func (c *OpenAPIClient) NewAllocateNativeNodeSSHSessionRequest() *apis.AllocateNativeNodeSSHSessionRequest {
+func (c *UCloudStackClient) NewAllocateNativeNodeSSHSessionRequest() *apis.AllocateNativeNodeSSHSessionRequest {
 	req := &apis.AllocateNativeNodeSSHSessionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateNativeNodeSSHSession 申请原生节点SSH会话
-func (c *OpenAPIClient) AllocateNativeNodeSSHSession(req *apis.AllocateNativeNodeSSHSessionRequest) (*apis.AllocateNativeNodeSSHSessionResponse, error) {
+func (c *UCloudStackClient) AllocateNativeNodeSSHSession(req *apis.AllocateNativeNodeSSHSessionRequest) (*apis.AllocateNativeNodeSSHSessionResponse, error) {
 	var err error
 	var res apis.AllocateNativeNodeSSHSessionResponse
 
@@ -5897,17 +5897,17 @@ func (c *OpenAPIClient) AllocateNativeNodeSSHSession(req *apis.AllocateNativeNod
 }
 
 // NewAllocateNativeNodeVNCSessionRequest will create request of AllocateNativeNodeVNCSession action.
-func (c *OpenAPIClient) NewAllocateNativeNodeVNCSessionRequest() *apis.AllocateNativeNodeVNCSessionRequest {
+func (c *UCloudStackClient) NewAllocateNativeNodeVNCSessionRequest() *apis.AllocateNativeNodeVNCSessionRequest {
 	req := &apis.AllocateNativeNodeVNCSessionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateNativeNodeVNCSession 申请原生节点VNC会话
-func (c *OpenAPIClient) AllocateNativeNodeVNCSession(req *apis.AllocateNativeNodeVNCSessionRequest) (*apis.AllocateNativeNodeVNCSessionResponse, error) {
+func (c *UCloudStackClient) AllocateNativeNodeVNCSession(req *apis.AllocateNativeNodeVNCSessionRequest) (*apis.AllocateNativeNodeVNCSessionResponse, error) {
 	var err error
 	var res apis.AllocateNativeNodeVNCSessionResponse
 
@@ -5919,17 +5919,17 @@ func (c *OpenAPIClient) AllocateNativeNodeVNCSession(req *apis.AllocateNativeNod
 }
 
 // NewAttachClusterEIPRequest will create request of AttachClusterEIP action.
-func (c *OpenAPIClient) NewAttachClusterEIPRequest() *apis.AttachClusterEIPRequest {
+func (c *UCloudStackClient) NewAttachClusterEIPRequest() *apis.AttachClusterEIPRequest {
 	req := &apis.AttachClusterEIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AttachClusterEIP 绑定k8s集群外网IP
-func (c *OpenAPIClient) AttachClusterEIP(req *apis.AttachClusterEIPRequest) (*apis.AttachClusterEIPResponse, error) {
+func (c *UCloudStackClient) AttachClusterEIP(req *apis.AttachClusterEIPRequest) (*apis.AttachClusterEIPResponse, error) {
 	var err error
 	var res apis.AttachClusterEIPResponse
 
@@ -5941,17 +5941,17 @@ func (c *OpenAPIClient) AttachClusterEIP(req *apis.AttachClusterEIPRequest) (*ap
 }
 
 // NewCreateClusterRequest will create request of CreateCluster action.
-func (c *OpenAPIClient) NewCreateClusterRequest() *apis.CreateClusterRequest {
+func (c *UCloudStackClient) NewCreateClusterRequest() *apis.CreateClusterRequest {
 	req := &apis.CreateClusterRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateCluster 创建k8s集群
-func (c *OpenAPIClient) CreateCluster(req *apis.CreateClusterRequest) (*apis.CreateClusterResponse, error) {
+func (c *UCloudStackClient) CreateCluster(req *apis.CreateClusterRequest) (*apis.CreateClusterResponse, error) {
 	var err error
 	var res apis.CreateClusterResponse
 
@@ -5963,17 +5963,17 @@ func (c *OpenAPIClient) CreateCluster(req *apis.CreateClusterRequest) (*apis.Cre
 }
 
 // NewCreateNativeNodeRequest will create request of CreateNativeNode action.
-func (c *OpenAPIClient) NewCreateNativeNodeRequest() *apis.CreateNativeNodeRequest {
+func (c *UCloudStackClient) NewCreateNativeNodeRequest() *apis.CreateNativeNodeRequest {
 	req := &apis.CreateNativeNodeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateNativeNode 创建k8s集群原生节点
-func (c *OpenAPIClient) CreateNativeNode(req *apis.CreateNativeNodeRequest) (*apis.CreateNativeNodeResponse, error) {
+func (c *UCloudStackClient) CreateNativeNode(req *apis.CreateNativeNodeRequest) (*apis.CreateNativeNodeResponse, error) {
 	var err error
 	var res apis.CreateNativeNodeResponse
 
@@ -5985,17 +5985,17 @@ func (c *OpenAPIClient) CreateNativeNode(req *apis.CreateNativeNodeRequest) (*ap
 }
 
 // NewDeleteClusterRequest will create request of DeleteCluster action.
-func (c *OpenAPIClient) NewDeleteClusterRequest() *apis.DeleteClusterRequest {
+func (c *UCloudStackClient) NewDeleteClusterRequest() *apis.DeleteClusterRequest {
 	req := &apis.DeleteClusterRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteCluster 删除k8s集群
-func (c *OpenAPIClient) DeleteCluster(req *apis.DeleteClusterRequest) (*apis.DeleteClusterResponse, error) {
+func (c *UCloudStackClient) DeleteCluster(req *apis.DeleteClusterRequest) (*apis.DeleteClusterResponse, error) {
 	var err error
 	var res apis.DeleteClusterResponse
 
@@ -6007,17 +6007,17 @@ func (c *OpenAPIClient) DeleteCluster(req *apis.DeleteClusterRequest) (*apis.Del
 }
 
 // NewDeleteNativeNodeRequest will create request of DeleteNativeNode action.
-func (c *OpenAPIClient) NewDeleteNativeNodeRequest() *apis.DeleteNativeNodeRequest {
+func (c *UCloudStackClient) NewDeleteNativeNodeRequest() *apis.DeleteNativeNodeRequest {
 	req := &apis.DeleteNativeNodeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteNativeNode 删除k8s集群原生节点
-func (c *OpenAPIClient) DeleteNativeNode(req *apis.DeleteNativeNodeRequest) (*apis.DeleteNativeNodeResponse, error) {
+func (c *UCloudStackClient) DeleteNativeNode(req *apis.DeleteNativeNodeRequest) (*apis.DeleteNativeNodeResponse, error) {
 	var err error
 	var res apis.DeleteNativeNodeResponse
 
@@ -6029,17 +6029,17 @@ func (c *OpenAPIClient) DeleteNativeNode(req *apis.DeleteNativeNodeRequest) (*ap
 }
 
 // NewDescribeClusterRequest will create request of DescribeCluster action.
-func (c *OpenAPIClient) NewDescribeClusterRequest() *apis.DescribeClusterRequest {
+func (c *UCloudStackClient) NewDescribeClusterRequest() *apis.DescribeClusterRequest {
 	req := &apis.DescribeClusterRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeCluster 查询k8s集群
-func (c *OpenAPIClient) DescribeCluster(req *apis.DescribeClusterRequest) (*apis.DescribeClusterResponse, error) {
+func (c *UCloudStackClient) DescribeCluster(req *apis.DescribeClusterRequest) (*apis.DescribeClusterResponse, error) {
 	var err error
 	var res apis.DescribeClusterResponse
 
@@ -6051,17 +6051,17 @@ func (c *OpenAPIClient) DescribeCluster(req *apis.DescribeClusterRequest) (*apis
 }
 
 // NewDescribeNativeNodeRequest will create request of DescribeNativeNode action.
-func (c *OpenAPIClient) NewDescribeNativeNodeRequest() *apis.DescribeNativeNodeRequest {
+func (c *UCloudStackClient) NewDescribeNativeNodeRequest() *apis.DescribeNativeNodeRequest {
 	req := &apis.DescribeNativeNodeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNativeNode 查询k8s集群原生节点
-func (c *OpenAPIClient) DescribeNativeNode(req *apis.DescribeNativeNodeRequest) (*apis.DescribeNativeNodeResponse, error) {
+func (c *UCloudStackClient) DescribeNativeNode(req *apis.DescribeNativeNodeRequest) (*apis.DescribeNativeNodeResponse, error) {
 	var err error
 	var res apis.DescribeNativeNodeResponse
 
@@ -6073,17 +6073,17 @@ func (c *OpenAPIClient) DescribeNativeNode(req *apis.DescribeNativeNodeRequest) 
 }
 
 // NewDetachClusterEIPRequest will create request of DetachClusterEIP action.
-func (c *OpenAPIClient) NewDetachClusterEIPRequest() *apis.DetachClusterEIPRequest {
+func (c *UCloudStackClient) NewDetachClusterEIPRequest() *apis.DetachClusterEIPRequest {
 	req := &apis.DetachClusterEIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DetachClusterEIP 解绑k8s集群外网IP
-func (c *OpenAPIClient) DetachClusterEIP(req *apis.DetachClusterEIPRequest) (*apis.DetachClusterEIPResponse, error) {
+func (c *UCloudStackClient) DetachClusterEIP(req *apis.DetachClusterEIPRequest) (*apis.DetachClusterEIPResponse, error) {
 	var err error
 	var res apis.DetachClusterEIPResponse
 
@@ -6095,17 +6095,17 @@ func (c *OpenAPIClient) DetachClusterEIP(req *apis.DetachClusterEIPRequest) (*ap
 }
 
 // NewForwardClusterRequest will create request of ForwardCluster action.
-func (c *OpenAPIClient) NewForwardClusterRequest() *apis.ForwardClusterRequest {
+func (c *UCloudStackClient) NewForwardClusterRequest() *apis.ForwardClusterRequest {
 	req := &apis.ForwardClusterRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ForwardCluster 代理k8s集群请求
-func (c *OpenAPIClient) ForwardCluster(req *apis.ForwardClusterRequest) (*apis.ForwardClusterResponse, error) {
+func (c *UCloudStackClient) ForwardCluster(req *apis.ForwardClusterRequest) (*apis.ForwardClusterResponse, error) {
 	var err error
 	var res apis.ForwardClusterResponse
 
@@ -6117,17 +6117,17 @@ func (c *OpenAPIClient) ForwardCluster(req *apis.ForwardClusterRequest) (*apis.F
 }
 
 // NewGetClusterPaymentOfPremiumRequest will create request of GetClusterPaymentOfPremium action.
-func (c *OpenAPIClient) NewGetClusterPaymentOfPremiumRequest() *apis.GetClusterPaymentOfPremiumRequest {
+func (c *UCloudStackClient) NewGetClusterPaymentOfPremiumRequest() *apis.GetClusterPaymentOfPremiumRequest {
 	req := &apis.GetClusterPaymentOfPremiumRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetClusterPaymentOfPremium 获取K8S修改配置后的差价
-func (c *OpenAPIClient) GetClusterPaymentOfPremium(req *apis.GetClusterPaymentOfPremiumRequest) (*apis.GetClusterPaymentOfPremiumResponse, error) {
+func (c *UCloudStackClient) GetClusterPaymentOfPremium(req *apis.GetClusterPaymentOfPremiumRequest) (*apis.GetClusterPaymentOfPremiumResponse, error) {
 	var err error
 	var res apis.GetClusterPaymentOfPremiumResponse
 
@@ -6139,17 +6139,17 @@ func (c *OpenAPIClient) GetClusterPaymentOfPremium(req *apis.GetClusterPaymentOf
 }
 
 // NewGetClusterPriceRequest will create request of GetClusterPrice action.
-func (c *OpenAPIClient) NewGetClusterPriceRequest() *apis.GetClusterPriceRequest {
+func (c *UCloudStackClient) NewGetClusterPriceRequest() *apis.GetClusterPriceRequest {
 	req := &apis.GetClusterPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetClusterPrice 获取K8S价格
-func (c *OpenAPIClient) GetClusterPrice(req *apis.GetClusterPriceRequest) (*apis.GetClusterPriceResponse, error) {
+func (c *UCloudStackClient) GetClusterPrice(req *apis.GetClusterPriceRequest) (*apis.GetClusterPriceResponse, error) {
 	var err error
 	var res apis.GetClusterPriceResponse
 
@@ -6161,17 +6161,17 @@ func (c *OpenAPIClient) GetClusterPrice(req *apis.GetClusterPriceRequest) (*apis
 }
 
 // NewGetContainerLogsRequest will create request of GetContainerLogs action.
-func (c *OpenAPIClient) NewGetContainerLogsRequest() *apis.GetContainerLogsRequest {
+func (c *UCloudStackClient) NewGetContainerLogsRequest() *apis.GetContainerLogsRequest {
 	req := &apis.GetContainerLogsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetContainerLogs 查询容器日志
-func (c *OpenAPIClient) GetContainerLogs(req *apis.GetContainerLogsRequest) (*apis.GetContainerLogsResponse, error) {
+func (c *UCloudStackClient) GetContainerLogs(req *apis.GetContainerLogsRequest) (*apis.GetContainerLogsResponse, error) {
 	var err error
 	var res apis.GetContainerLogsResponse
 
@@ -6183,17 +6183,17 @@ func (c *OpenAPIClient) GetContainerLogs(req *apis.GetContainerLogsRequest) (*ap
 }
 
 // NewGetNativeNodePriceRequest will create request of GetNativeNodePrice action.
-func (c *OpenAPIClient) NewGetNativeNodePriceRequest() *apis.GetNativeNodePriceRequest {
+func (c *UCloudStackClient) NewGetNativeNodePriceRequest() *apis.GetNativeNodePriceRequest {
 	req := &apis.GetNativeNodePriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetNativeNodePrice 获取K8S原生节点价格
-func (c *OpenAPIClient) GetNativeNodePrice(req *apis.GetNativeNodePriceRequest) (*apis.GetNativeNodePriceResponse, error) {
+func (c *UCloudStackClient) GetNativeNodePrice(req *apis.GetNativeNodePriceRequest) (*apis.GetNativeNodePriceResponse, error) {
 	var err error
 	var res apis.GetNativeNodePriceResponse
 
@@ -6205,17 +6205,17 @@ func (c *OpenAPIClient) GetNativeNodePrice(req *apis.GetNativeNodePriceRequest) 
 }
 
 // NewUpdateClusterRequest will create request of UpdateCluster action.
-func (c *OpenAPIClient) NewUpdateClusterRequest() *apis.UpdateClusterRequest {
+func (c *UCloudStackClient) NewUpdateClusterRequest() *apis.UpdateClusterRequest {
 	req := &apis.UpdateClusterRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateCluster 更新k8s集群
-func (c *OpenAPIClient) UpdateCluster(req *apis.UpdateClusterRequest) (*apis.UpdateClusterResponse, error) {
+func (c *UCloudStackClient) UpdateCluster(req *apis.UpdateClusterRequest) (*apis.UpdateClusterResponse, error) {
 	var err error
 	var res apis.UpdateClusterResponse
 
@@ -6227,17 +6227,17 @@ func (c *OpenAPIClient) UpdateCluster(req *apis.UpdateClusterRequest) (*apis.Upd
 }
 
 // NewUpdateClusterCapacityRequest will create request of UpdateClusterCapacity action.
-func (c *OpenAPIClient) NewUpdateClusterCapacityRequest() *apis.UpdateClusterCapacityRequest {
+func (c *UCloudStackClient) NewUpdateClusterCapacityRequest() *apis.UpdateClusterCapacityRequest {
 	req := &apis.UpdateClusterCapacityRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateClusterCapacity 更新k8s集群容量配额
-func (c *OpenAPIClient) UpdateClusterCapacity(req *apis.UpdateClusterCapacityRequest) (*apis.UpdateClusterCapacityResponse, error) {
+func (c *UCloudStackClient) UpdateClusterCapacity(req *apis.UpdateClusterCapacityRequest) (*apis.UpdateClusterCapacityResponse, error) {
 	var err error
 	var res apis.UpdateClusterCapacityResponse
 
@@ -6249,17 +6249,17 @@ func (c *OpenAPIClient) UpdateClusterCapacity(req *apis.UpdateClusterCapacityReq
 }
 
 // NewUpdateNativeNodeInstanceStatusRequest will create request of UpdateNativeNodeInstanceStatus action.
-func (c *OpenAPIClient) NewUpdateNativeNodeInstanceStatusRequest() *apis.UpdateNativeNodeInstanceStatusRequest {
+func (c *UCloudStackClient) NewUpdateNativeNodeInstanceStatusRequest() *apis.UpdateNativeNodeInstanceStatusRequest {
 	req := &apis.UpdateNativeNodeInstanceStatusRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNativeNodeInstanceStatus 更新k8s集群NativeNode实例状态
-func (c *OpenAPIClient) UpdateNativeNodeInstanceStatus(req *apis.UpdateNativeNodeInstanceStatusRequest) (*apis.UpdateNativeNodeInstanceStatusResponse, error) {
+func (c *UCloudStackClient) UpdateNativeNodeInstanceStatus(req *apis.UpdateNativeNodeInstanceStatusRequest) (*apis.UpdateNativeNodeInstanceStatusResponse, error) {
 	var err error
 	var res apis.UpdateNativeNodeInstanceStatusResponse
 
@@ -6271,17 +6271,17 @@ func (c *OpenAPIClient) UpdateNativeNodeInstanceStatus(req *apis.UpdateNativeNod
 }
 
 // NewUpdateNativeNodeWANRequest will create request of UpdateNativeNodeWAN action.
-func (c *OpenAPIClient) NewUpdateNativeNodeWANRequest() *apis.UpdateNativeNodeWANRequest {
+func (c *UCloudStackClient) NewUpdateNativeNodeWANRequest() *apis.UpdateNativeNodeWANRequest {
 	req := &apis.UpdateNativeNodeWANRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNativeNodeWAN 更新k8s集群NativeNode外网
-func (c *OpenAPIClient) UpdateNativeNodeWAN(req *apis.UpdateNativeNodeWANRequest) (*apis.UpdateNativeNodeWANResponse, error) {
+func (c *UCloudStackClient) UpdateNativeNodeWAN(req *apis.UpdateNativeNodeWANRequest) (*apis.UpdateNativeNodeWANResponse, error) {
 	var err error
 	var res apis.UpdateNativeNodeWANResponse
 
@@ -6293,17 +6293,17 @@ func (c *OpenAPIClient) UpdateNativeNodeWAN(req *apis.UpdateNativeNodeWANRequest
 }
 
 // NewBindEIPToLBRequest will create request of BindEIPToLB action.
-func (c *OpenAPIClient) NewBindEIPToLBRequest() *apis.BindEIPToLBRequest {
+func (c *UCloudStackClient) NewBindEIPToLBRequest() *apis.BindEIPToLBRequest {
 	req := &apis.BindEIPToLBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // BindEIPToLB 绑定 eip 到 LB
-func (c *OpenAPIClient) BindEIPToLB(req *apis.BindEIPToLBRequest) (*apis.BindEIPToLBResponse, error) {
+func (c *UCloudStackClient) BindEIPToLB(req *apis.BindEIPToLBRequest) (*apis.BindEIPToLBResponse, error) {
 	var err error
 	var res apis.BindEIPToLBResponse
 
@@ -6315,17 +6315,17 @@ func (c *OpenAPIClient) BindEIPToLB(req *apis.BindEIPToLBRequest) (*apis.BindEIP
 }
 
 // NewCreateCertificateRequest will create request of CreateCertificate action.
-func (c *OpenAPIClient) NewCreateCertificateRequest() *apis.CreateCertificateRequest {
+func (c *UCloudStackClient) NewCreateCertificateRequest() *apis.CreateCertificateRequest {
 	req := &apis.CreateCertificateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateCertificate 创建证书
-func (c *OpenAPIClient) CreateCertificate(req *apis.CreateCertificateRequest) (*apis.CreateCertificateResponse, error) {
+func (c *UCloudStackClient) CreateCertificate(req *apis.CreateCertificateRequest) (*apis.CreateCertificateResponse, error) {
 	var err error
 	var res apis.CreateCertificateResponse
 
@@ -6337,17 +6337,17 @@ func (c *OpenAPIClient) CreateCertificate(req *apis.CreateCertificateRequest) (*
 }
 
 // NewCreateLBRequest will create request of CreateLB action.
-func (c *OpenAPIClient) NewCreateLBRequest() *apis.CreateLBRequest {
+func (c *UCloudStackClient) NewCreateLBRequest() *apis.CreateLBRequest {
 	req := &apis.CreateLBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateLB 创建负载均衡
-func (c *OpenAPIClient) CreateLB(req *apis.CreateLBRequest) (*apis.CreateLBResponse, error) {
+func (c *UCloudStackClient) CreateLB(req *apis.CreateLBRequest) (*apis.CreateLBResponse, error) {
 	var err error
 	var res apis.CreateLBResponse
 
@@ -6359,17 +6359,17 @@ func (c *OpenAPIClient) CreateLB(req *apis.CreateLBRequest) (*apis.CreateLBRespo
 }
 
 // NewCreateRSRequest will create request of CreateRS action.
-func (c *OpenAPIClient) NewCreateRSRequest() *apis.CreateRSRequest {
+func (c *UCloudStackClient) NewCreateRSRequest() *apis.CreateRSRequest {
 	req := &apis.CreateRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateRS 添加服务节点
-func (c *OpenAPIClient) CreateRS(req *apis.CreateRSRequest) (*apis.CreateRSResponse, error) {
+func (c *UCloudStackClient) CreateRS(req *apis.CreateRSRequest) (*apis.CreateRSResponse, error) {
 	var err error
 	var res apis.CreateRSResponse
 
@@ -6381,17 +6381,17 @@ func (c *OpenAPIClient) CreateRS(req *apis.CreateRSRequest) (*apis.CreateRSRespo
 }
 
 // NewCreateVSRequest will create request of CreateVS action.
-func (c *OpenAPIClient) NewCreateVSRequest() *apis.CreateVSRequest {
+func (c *UCloudStackClient) NewCreateVSRequest() *apis.CreateVSRequest {
 	req := &apis.CreateVSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateVS 创建VS
-func (c *OpenAPIClient) CreateVS(req *apis.CreateVSRequest) (*apis.CreateVSResponse, error) {
+func (c *UCloudStackClient) CreateVS(req *apis.CreateVSRequest) (*apis.CreateVSResponse, error) {
 	var err error
 	var res apis.CreateVSResponse
 
@@ -6403,17 +6403,17 @@ func (c *OpenAPIClient) CreateVS(req *apis.CreateVSRequest) (*apis.CreateVSRespo
 }
 
 // NewCreateVSPolicyRequest will create request of CreateVSPolicy action.
-func (c *OpenAPIClient) NewCreateVSPolicyRequest() *apis.CreateVSPolicyRequest {
+func (c *UCloudStackClient) NewCreateVSPolicyRequest() *apis.CreateVSPolicyRequest {
 	req := &apis.CreateVSPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateVSPolicy 创建转发规则
-func (c *OpenAPIClient) CreateVSPolicy(req *apis.CreateVSPolicyRequest) (*apis.CreateVSPolicyResponse, error) {
+func (c *UCloudStackClient) CreateVSPolicy(req *apis.CreateVSPolicyRequest) (*apis.CreateVSPolicyResponse, error) {
 	var err error
 	var res apis.CreateVSPolicyResponse
 
@@ -6425,17 +6425,17 @@ func (c *OpenAPIClient) CreateVSPolicy(req *apis.CreateVSPolicyRequest) (*apis.C
 }
 
 // NewDeleteCertificateRequest will create request of DeleteCertificate action.
-func (c *OpenAPIClient) NewDeleteCertificateRequest() *apis.DeleteCertificateRequest {
+func (c *UCloudStackClient) NewDeleteCertificateRequest() *apis.DeleteCertificateRequest {
 	req := &apis.DeleteCertificateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteCertificate 删除证书
-func (c *OpenAPIClient) DeleteCertificate(req *apis.DeleteCertificateRequest) (*apis.DeleteCertificateResponse, error) {
+func (c *UCloudStackClient) DeleteCertificate(req *apis.DeleteCertificateRequest) (*apis.DeleteCertificateResponse, error) {
 	var err error
 	var res apis.DeleteCertificateResponse
 
@@ -6447,17 +6447,17 @@ func (c *OpenAPIClient) DeleteCertificate(req *apis.DeleteCertificateRequest) (*
 }
 
 // NewDeleteLBRequest will create request of DeleteLB action.
-func (c *OpenAPIClient) NewDeleteLBRequest() *apis.DeleteLBRequest {
+func (c *UCloudStackClient) NewDeleteLBRequest() *apis.DeleteLBRequest {
 	req := &apis.DeleteLBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteLB 删除负载均衡
-func (c *OpenAPIClient) DeleteLB(req *apis.DeleteLBRequest) (*apis.DeleteLBResponse, error) {
+func (c *UCloudStackClient) DeleteLB(req *apis.DeleteLBRequest) (*apis.DeleteLBResponse, error) {
 	var err error
 	var res apis.DeleteLBResponse
 
@@ -6469,17 +6469,17 @@ func (c *OpenAPIClient) DeleteLB(req *apis.DeleteLBRequest) (*apis.DeleteLBRespo
 }
 
 // NewDeleteRSRequest will create request of DeleteRS action.
-func (c *OpenAPIClient) NewDeleteRSRequest() *apis.DeleteRSRequest {
+func (c *UCloudStackClient) NewDeleteRSRequest() *apis.DeleteRSRequest {
 	req := &apis.DeleteRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteRS 删除服务节点
-func (c *OpenAPIClient) DeleteRS(req *apis.DeleteRSRequest) (*apis.DeleteRSResponse, error) {
+func (c *UCloudStackClient) DeleteRS(req *apis.DeleteRSRequest) (*apis.DeleteRSResponse, error) {
 	var err error
 	var res apis.DeleteRSResponse
 
@@ -6491,17 +6491,17 @@ func (c *OpenAPIClient) DeleteRS(req *apis.DeleteRSRequest) (*apis.DeleteRSRespo
 }
 
 // NewDeleteVSRequest will create request of DeleteVS action.
-func (c *OpenAPIClient) NewDeleteVSRequest() *apis.DeleteVSRequest {
+func (c *UCloudStackClient) NewDeleteVSRequest() *apis.DeleteVSRequest {
 	req := &apis.DeleteVSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVS 删除VS
-func (c *OpenAPIClient) DeleteVS(req *apis.DeleteVSRequest) (*apis.DeleteVSResponse, error) {
+func (c *UCloudStackClient) DeleteVS(req *apis.DeleteVSRequest) (*apis.DeleteVSResponse, error) {
 	var err error
 	var res apis.DeleteVSResponse
 
@@ -6513,17 +6513,17 @@ func (c *OpenAPIClient) DeleteVS(req *apis.DeleteVSRequest) (*apis.DeleteVSRespo
 }
 
 // NewDeleteVSPolicyRequest will create request of DeleteVSPolicy action.
-func (c *OpenAPIClient) NewDeleteVSPolicyRequest() *apis.DeleteVSPolicyRequest {
+func (c *UCloudStackClient) NewDeleteVSPolicyRequest() *apis.DeleteVSPolicyRequest {
 	req := &apis.DeleteVSPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVSPolicy 删除转发规则
-func (c *OpenAPIClient) DeleteVSPolicy(req *apis.DeleteVSPolicyRequest) (*apis.DeleteVSPolicyResponse, error) {
+func (c *UCloudStackClient) DeleteVSPolicy(req *apis.DeleteVSPolicyRequest) (*apis.DeleteVSPolicyResponse, error) {
 	var err error
 	var res apis.DeleteVSPolicyResponse
 
@@ -6535,17 +6535,17 @@ func (c *OpenAPIClient) DeleteVSPolicy(req *apis.DeleteVSPolicyRequest) (*apis.D
 }
 
 // NewDescribeCertificateRequest will create request of DescribeCertificate action.
-func (c *OpenAPIClient) NewDescribeCertificateRequest() *apis.DescribeCertificateRequest {
+func (c *UCloudStackClient) NewDescribeCertificateRequest() *apis.DescribeCertificateRequest {
 	req := &apis.DescribeCertificateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeCertificate 查询证书
-func (c *OpenAPIClient) DescribeCertificate(req *apis.DescribeCertificateRequest) (*apis.DescribeCertificateResponse, error) {
+func (c *UCloudStackClient) DescribeCertificate(req *apis.DescribeCertificateRequest) (*apis.DescribeCertificateResponse, error) {
 	var err error
 	var res apis.DescribeCertificateResponse
 
@@ -6557,17 +6557,17 @@ func (c *OpenAPIClient) DescribeCertificate(req *apis.DescribeCertificateRequest
 }
 
 // NewDescribeLBRequest will create request of DescribeLB action.
-func (c *OpenAPIClient) NewDescribeLBRequest() *apis.DescribeLBRequest {
+func (c *UCloudStackClient) NewDescribeLBRequest() *apis.DescribeLBRequest {
 	req := &apis.DescribeLBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeLB 获取负载均衡信息
-func (c *OpenAPIClient) DescribeLB(req *apis.DescribeLBRequest) (*apis.DescribeLBResponse, error) {
+func (c *UCloudStackClient) DescribeLB(req *apis.DescribeLBRequest) (*apis.DescribeLBResponse, error) {
 	var err error
 	var res apis.DescribeLBResponse
 
@@ -6579,17 +6579,17 @@ func (c *OpenAPIClient) DescribeLB(req *apis.DescribeLBRequest) (*apis.DescribeL
 }
 
 // NewDescribeRSRequest will create request of DescribeRS action.
-func (c *OpenAPIClient) NewDescribeRSRequest() *apis.DescribeRSRequest {
+func (c *UCloudStackClient) NewDescribeRSRequest() *apis.DescribeRSRequest {
 	req := &apis.DescribeRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRS 获取RS信息
-func (c *OpenAPIClient) DescribeRS(req *apis.DescribeRSRequest) (*apis.DescribeRSResponse, error) {
+func (c *UCloudStackClient) DescribeRS(req *apis.DescribeRSRequest) (*apis.DescribeRSResponse, error) {
 	var err error
 	var res apis.DescribeRSResponse
 
@@ -6601,17 +6601,17 @@ func (c *OpenAPIClient) DescribeRS(req *apis.DescribeRSRequest) (*apis.DescribeR
 }
 
 // NewDescribeVSRequest will create request of DescribeVS action.
-func (c *OpenAPIClient) NewDescribeVSRequest() *apis.DescribeVSRequest {
+func (c *UCloudStackClient) NewDescribeVSRequest() *apis.DescribeVSRequest {
 	req := &apis.DescribeVSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVS 获取VS信息
-func (c *OpenAPIClient) DescribeVS(req *apis.DescribeVSRequest) (*apis.DescribeVSResponse, error) {
+func (c *UCloudStackClient) DescribeVS(req *apis.DescribeVSRequest) (*apis.DescribeVSResponse, error) {
 	var err error
 	var res apis.DescribeVSResponse
 
@@ -6623,17 +6623,17 @@ func (c *OpenAPIClient) DescribeVS(req *apis.DescribeVSRequest) (*apis.DescribeV
 }
 
 // NewDescribeVSPolicyRequest will create request of DescribeVSPolicy action.
-func (c *OpenAPIClient) NewDescribeVSPolicyRequest() *apis.DescribeVSPolicyRequest {
+func (c *UCloudStackClient) NewDescribeVSPolicyRequest() *apis.DescribeVSPolicyRequest {
 	req := &apis.DescribeVSPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVSPolicy 查询转发规则
-func (c *OpenAPIClient) DescribeVSPolicy(req *apis.DescribeVSPolicyRequest) (*apis.DescribeVSPolicyResponse, error) {
+func (c *UCloudStackClient) DescribeVSPolicy(req *apis.DescribeVSPolicyRequest) (*apis.DescribeVSPolicyResponse, error) {
 	var err error
 	var res apis.DescribeVSPolicyResponse
 
@@ -6645,17 +6645,17 @@ func (c *OpenAPIClient) DescribeVSPolicy(req *apis.DescribeVSPolicyRequest) (*ap
 }
 
 // NewDisableRSRequest will create request of DisableRS action.
-func (c *OpenAPIClient) NewDisableRSRequest() *apis.DisableRSRequest {
+func (c *UCloudStackClient) NewDisableRSRequest() *apis.DisableRSRequest {
 	req := &apis.DisableRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DisableRS 禁用节点
-func (c *OpenAPIClient) DisableRS(req *apis.DisableRSRequest) (*apis.DisableRSResponse, error) {
+func (c *UCloudStackClient) DisableRS(req *apis.DisableRSRequest) (*apis.DisableRSResponse, error) {
 	var err error
 	var res apis.DisableRSResponse
 
@@ -6667,17 +6667,17 @@ func (c *OpenAPIClient) DisableRS(req *apis.DisableRSRequest) (*apis.DisableRSRe
 }
 
 // NewDowngradeLBRequest will create request of DowngradeLB action.
-func (c *OpenAPIClient) NewDowngradeLBRequest() *apis.DowngradeLBRequest {
+func (c *UCloudStackClient) NewDowngradeLBRequest() *apis.DowngradeLBRequest {
 	req := &apis.DowngradeLBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DowngradeLB 降级LB
-func (c *OpenAPIClient) DowngradeLB(req *apis.DowngradeLBRequest) (*apis.DowngradeLBResponse, error) {
+func (c *UCloudStackClient) DowngradeLB(req *apis.DowngradeLBRequest) (*apis.DowngradeLBResponse, error) {
 	var err error
 	var res apis.DowngradeLBResponse
 
@@ -6689,17 +6689,17 @@ func (c *OpenAPIClient) DowngradeLB(req *apis.DowngradeLBRequest) (*apis.Downgra
 }
 
 // NewEnableRSRequest will create request of EnableRS action.
-func (c *OpenAPIClient) NewEnableRSRequest() *apis.EnableRSRequest {
+func (c *UCloudStackClient) NewEnableRSRequest() *apis.EnableRSRequest {
 	req := &apis.EnableRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // EnableRS 启用节点
-func (c *OpenAPIClient) EnableRS(req *apis.EnableRSRequest) (*apis.EnableRSResponse, error) {
+func (c *UCloudStackClient) EnableRS(req *apis.EnableRSRequest) (*apis.EnableRSResponse, error) {
 	var err error
 	var res apis.EnableRSResponse
 
@@ -6711,17 +6711,17 @@ func (c *OpenAPIClient) EnableRS(req *apis.EnableRSRequest) (*apis.EnableRSRespo
 }
 
 // NewGetLBPriceRequest will create request of GetLBPrice action.
-func (c *OpenAPIClient) NewGetLBPriceRequest() *apis.GetLBPriceRequest {
+func (c *UCloudStackClient) NewGetLBPriceRequest() *apis.GetLBPriceRequest {
 	req := &apis.GetLBPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetLBPrice 获取负载均衡价格
-func (c *OpenAPIClient) GetLBPrice(req *apis.GetLBPriceRequest) (*apis.GetLBPriceResponse, error) {
+func (c *UCloudStackClient) GetLBPrice(req *apis.GetLBPriceRequest) (*apis.GetLBPriceResponse, error) {
 	var err error
 	var res apis.GetLBPriceResponse
 
@@ -6733,17 +6733,17 @@ func (c *OpenAPIClient) GetLBPrice(req *apis.GetLBPriceRequest) (*apis.GetLBPric
 }
 
 // NewUnbindEIPFromLBRequest will create request of UnbindEIPFromLB action.
-func (c *OpenAPIClient) NewUnbindEIPFromLBRequest() *apis.UnbindEIPFromLBRequest {
+func (c *UCloudStackClient) NewUnbindEIPFromLBRequest() *apis.UnbindEIPFromLBRequest {
 	req := &apis.UnbindEIPFromLBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnbindEIPFromLB 从 LB 解绑 eip
-func (c *OpenAPIClient) UnbindEIPFromLB(req *apis.UnbindEIPFromLBRequest) (*apis.UnbindEIPFromLBResponse, error) {
+func (c *UCloudStackClient) UnbindEIPFromLB(req *apis.UnbindEIPFromLBRequest) (*apis.UnbindEIPFromLBResponse, error) {
 	var err error
 	var res apis.UnbindEIPFromLBResponse
 
@@ -6755,17 +6755,17 @@ func (c *OpenAPIClient) UnbindEIPFromLB(req *apis.UnbindEIPFromLBRequest) (*apis
 }
 
 // NewUpdateLBAccessLogForLiveRequest will create request of UpdateLBAccessLogForLive action.
-func (c *OpenAPIClient) NewUpdateLBAccessLogForLiveRequest() *apis.UpdateLBAccessLogForLiveRequest {
+func (c *UCloudStackClient) NewUpdateLBAccessLogForLiveRequest() *apis.UpdateLBAccessLogForLiveRequest {
 	req := &apis.UpdateLBAccessLogForLiveRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateLBAccessLogForLive 负载均衡日志实时查看开关
-func (c *OpenAPIClient) UpdateLBAccessLogForLive(req *apis.UpdateLBAccessLogForLiveRequest) (*apis.UpdateLBAccessLogForLiveResponse, error) {
+func (c *UCloudStackClient) UpdateLBAccessLogForLive(req *apis.UpdateLBAccessLogForLiveRequest) (*apis.UpdateLBAccessLogForLiveResponse, error) {
 	var err error
 	var res apis.UpdateLBAccessLogForLiveResponse
 
@@ -6777,17 +6777,17 @@ func (c *OpenAPIClient) UpdateLBAccessLogForLive(req *apis.UpdateLBAccessLogForL
 }
 
 // NewUpdateLBLogRequest will create request of UpdateLBLog action.
-func (c *OpenAPIClient) NewUpdateLBLogRequest() *apis.UpdateLBLogRequest {
+func (c *UCloudStackClient) NewUpdateLBLogRequest() *apis.UpdateLBLogRequest {
 	req := &apis.UpdateLBLogRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateLBLog 更新负载均衡
-func (c *OpenAPIClient) UpdateLBLog(req *apis.UpdateLBLogRequest) (*apis.UpdateLBLogResponse, error) {
+func (c *UCloudStackClient) UpdateLBLog(req *apis.UpdateLBLogRequest) (*apis.UpdateLBLogResponse, error) {
 	var err error
 	var res apis.UpdateLBLogResponse
 
@@ -6799,17 +6799,17 @@ func (c *OpenAPIClient) UpdateLBLog(req *apis.UpdateLBLogRequest) (*apis.UpdateL
 }
 
 // NewUpdateRSRequest will create request of UpdateRS action.
-func (c *OpenAPIClient) NewUpdateRSRequest() *apis.UpdateRSRequest {
+func (c *UCloudStackClient) NewUpdateRSRequest() *apis.UpdateRSRequest {
 	req := &apis.UpdateRSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateRS 更改RS
-func (c *OpenAPIClient) UpdateRS(req *apis.UpdateRSRequest) (*apis.UpdateRSResponse, error) {
+func (c *UCloudStackClient) UpdateRS(req *apis.UpdateRSRequest) (*apis.UpdateRSResponse, error) {
 	var err error
 	var res apis.UpdateRSResponse
 
@@ -6821,17 +6821,17 @@ func (c *OpenAPIClient) UpdateRS(req *apis.UpdateRSRequest) (*apis.UpdateRSRespo
 }
 
 // NewUpdateSGFromLBRequest will create request of UpdateSGFromLB action.
-func (c *OpenAPIClient) NewUpdateSGFromLBRequest() *apis.UpdateSGFromLBRequest {
+func (c *UCloudStackClient) NewUpdateSGFromLBRequest() *apis.UpdateSGFromLBRequest {
 	req := &apis.UpdateSGFromLBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateSGFromLB 新增/更新 SG 到 LB
-func (c *OpenAPIClient) UpdateSGFromLB(req *apis.UpdateSGFromLBRequest) (*apis.UpdateSGFromLBResponse, error) {
+func (c *UCloudStackClient) UpdateSGFromLB(req *apis.UpdateSGFromLBRequest) (*apis.UpdateSGFromLBResponse, error) {
 	var err error
 	var res apis.UpdateSGFromLBResponse
 
@@ -6843,17 +6843,17 @@ func (c *OpenAPIClient) UpdateSGFromLB(req *apis.UpdateSGFromLBRequest) (*apis.U
 }
 
 // NewUpdateVSRequest will create request of UpdateVS action.
-func (c *OpenAPIClient) NewUpdateVSRequest() *apis.UpdateVSRequest {
+func (c *UCloudStackClient) NewUpdateVSRequest() *apis.UpdateVSRequest {
 	req := &apis.UpdateVSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVS 更新VS
-func (c *OpenAPIClient) UpdateVS(req *apis.UpdateVSRequest) (*apis.UpdateVSResponse, error) {
+func (c *UCloudStackClient) UpdateVS(req *apis.UpdateVSRequest) (*apis.UpdateVSResponse, error) {
 	var err error
 	var res apis.UpdateVSResponse
 
@@ -6865,17 +6865,17 @@ func (c *OpenAPIClient) UpdateVS(req *apis.UpdateVSRequest) (*apis.UpdateVSRespo
 }
 
 // NewUpdateVSPolicyRequest will create request of UpdateVSPolicy action.
-func (c *OpenAPIClient) NewUpdateVSPolicyRequest() *apis.UpdateVSPolicyRequest {
+func (c *UCloudStackClient) NewUpdateVSPolicyRequest() *apis.UpdateVSPolicyRequest {
 	req := &apis.UpdateVSPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVSPolicy 更新VS转发规则
-func (c *OpenAPIClient) UpdateVSPolicy(req *apis.UpdateVSPolicyRequest) (*apis.UpdateVSPolicyResponse, error) {
+func (c *UCloudStackClient) UpdateVSPolicy(req *apis.UpdateVSPolicyRequest) (*apis.UpdateVSPolicyResponse, error) {
 	var err error
 	var res apis.UpdateVSPolicyResponse
 
@@ -6887,17 +6887,17 @@ func (c *OpenAPIClient) UpdateVSPolicy(req *apis.UpdateVSPolicyRequest) (*apis.U
 }
 
 // NewUpgradeLBRequest will create request of UpgradeLB action.
-func (c *OpenAPIClient) NewUpgradeLBRequest() *apis.UpgradeLBRequest {
+func (c *UCloudStackClient) NewUpgradeLBRequest() *apis.UpgradeLBRequest {
 	req := &apis.UpgradeLBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeLB 升级LB
-func (c *OpenAPIClient) UpgradeLB(req *apis.UpgradeLBRequest) (*apis.UpgradeLBResponse, error) {
+func (c *UCloudStackClient) UpgradeLB(req *apis.UpgradeLBRequest) (*apis.UpgradeLBResponse, error) {
 	var err error
 	var res apis.UpgradeLBResponse
 
@@ -6909,17 +6909,17 @@ func (c *OpenAPIClient) UpgradeLB(req *apis.UpgradeLBRequest) (*apis.UpgradeLBRe
 }
 
 // NewUpgradeLBToHARequest will create request of UpgradeLBToHA action.
-func (c *OpenAPIClient) NewUpgradeLBToHARequest() *apis.UpgradeLBToHARequest {
+func (c *UCloudStackClient) NewUpgradeLBToHARequest() *apis.UpgradeLBToHARequest {
 	req := &apis.UpgradeLBToHARequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeLBToHA 升级为高可用版本
-func (c *OpenAPIClient) UpgradeLBToHA(req *apis.UpgradeLBToHARequest) (*apis.UpgradeLBToHAResponse, error) {
+func (c *UCloudStackClient) UpgradeLBToHA(req *apis.UpgradeLBToHARequest) (*apis.UpgradeLBToHAResponse, error) {
 	var err error
 	var res apis.UpgradeLBToHAResponse
 
@@ -6931,17 +6931,17 @@ func (c *OpenAPIClient) UpgradeLBToHA(req *apis.UpgradeLBToHARequest) (*apis.Upg
 }
 
 // NewDescribeOPLogsRequest will create request of DescribeOPLogs action.
-func (c *OpenAPIClient) NewDescribeOPLogsRequest() *apis.DescribeOPLogsRequest {
+func (c *UCloudStackClient) NewDescribeOPLogsRequest() *apis.DescribeOPLogsRequest {
 	req := &apis.DescribeOPLogsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeOPLogs 获取操作日志
-func (c *OpenAPIClient) DescribeOPLogs(req *apis.DescribeOPLogsRequest) (*apis.DescribeOPLogsResponse, error) {
+func (c *UCloudStackClient) DescribeOPLogs(req *apis.DescribeOPLogsRequest) (*apis.DescribeOPLogsResponse, error) {
 	var err error
 	var res apis.DescribeOPLogsResponse
 
@@ -6953,17 +6953,17 @@ func (c *OpenAPIClient) DescribeOPLogs(req *apis.DescribeOPLogsRequest) (*apis.D
 }
 
 // NewChangeMemberPasswordRequest will create request of ChangeMemberPassword action.
-func (c *OpenAPIClient) NewChangeMemberPasswordRequest() *apis.ChangeMemberPasswordRequest {
+func (c *UCloudStackClient) NewChangeMemberPasswordRequest() *apis.ChangeMemberPasswordRequest {
 	req := &apis.ChangeMemberPasswordRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ChangeMemberPassword 由管理员为子账号更改密码
-func (c *OpenAPIClient) ChangeMemberPassword(req *apis.ChangeMemberPasswordRequest) (*apis.ChangeMemberPasswordResponse, error) {
+func (c *UCloudStackClient) ChangeMemberPassword(req *apis.ChangeMemberPasswordRequest) (*apis.ChangeMemberPasswordResponse, error) {
 	var err error
 	var res apis.ChangeMemberPasswordResponse
 
@@ -6975,17 +6975,17 @@ func (c *OpenAPIClient) ChangeMemberPassword(req *apis.ChangeMemberPasswordReque
 }
 
 // NewCreateAdminRequest will create request of CreateAdmin action.
-func (c *OpenAPIClient) NewCreateAdminRequest() *apis.CreateAdminRequest {
+func (c *UCloudStackClient) NewCreateAdminRequest() *apis.CreateAdminRequest {
 	req := &apis.CreateAdminRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateAdmin 创建管理员
-func (c *OpenAPIClient) CreateAdmin(req *apis.CreateAdminRequest) (*apis.CreateAdminResponse, error) {
+func (c *UCloudStackClient) CreateAdmin(req *apis.CreateAdminRequest) (*apis.CreateAdminResponse, error) {
 	var err error
 	var res apis.CreateAdminResponse
 
@@ -6997,17 +6997,17 @@ func (c *OpenAPIClient) CreateAdmin(req *apis.CreateAdminRequest) (*apis.CreateA
 }
 
 // NewCreateSubMemberRequest will create request of CreateSubMember action.
-func (c *OpenAPIClient) NewCreateSubMemberRequest() *apis.CreateSubMemberRequest {
+func (c *UCloudStackClient) NewCreateSubMemberRequest() *apis.CreateSubMemberRequest {
 	req := &apis.CreateSubMemberRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSubMember 创建用户
-func (c *OpenAPIClient) CreateSubMember(req *apis.CreateSubMemberRequest) (*apis.CreateSubMemberResponse, error) {
+func (c *UCloudStackClient) CreateSubMember(req *apis.CreateSubMemberRequest) (*apis.CreateSubMemberResponse, error) {
 	var err error
 	var res apis.CreateSubMemberResponse
 
@@ -7019,17 +7019,17 @@ func (c *OpenAPIClient) CreateSubMember(req *apis.CreateSubMemberRequest) (*apis
 }
 
 // NewDeleteAdminRequest will create request of DeleteAdmin action.
-func (c *OpenAPIClient) NewDeleteAdminRequest() *apis.DeleteAdminRequest {
+func (c *UCloudStackClient) NewDeleteAdminRequest() *apis.DeleteAdminRequest {
 	req := &apis.DeleteAdminRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteAdmin 删除管理员
-func (c *OpenAPIClient) DeleteAdmin(req *apis.DeleteAdminRequest) (*apis.DeleteAdminResponse, error) {
+func (c *UCloudStackClient) DeleteAdmin(req *apis.DeleteAdminRequest) (*apis.DeleteAdminResponse, error) {
 	var err error
 	var res apis.DeleteAdminResponse
 
@@ -7041,17 +7041,17 @@ func (c *OpenAPIClient) DeleteAdmin(req *apis.DeleteAdminRequest) (*apis.DeleteA
 }
 
 // NewDeleteMemberRequest will create request of DeleteMember action.
-func (c *OpenAPIClient) NewDeleteMemberRequest() *apis.DeleteMemberRequest {
+func (c *UCloudStackClient) NewDeleteMemberRequest() *apis.DeleteMemberRequest {
 	req := &apis.DeleteMemberRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteMember 删除用户
-func (c *OpenAPIClient) DeleteMember(req *apis.DeleteMemberRequest) (*apis.DeleteMemberResponse, error) {
+func (c *UCloudStackClient) DeleteMember(req *apis.DeleteMemberRequest) (*apis.DeleteMemberResponse, error) {
 	var err error
 	var res apis.DeleteMemberResponse
 
@@ -7063,17 +7063,17 @@ func (c *OpenAPIClient) DeleteMember(req *apis.DeleteMemberRequest) (*apis.Delet
 }
 
 // NewDescribeMemberRequest will create request of DescribeMember action.
-func (c *OpenAPIClient) NewDescribeMemberRequest() *apis.DescribeMemberRequest {
+func (c *UCloudStackClient) NewDescribeMemberRequest() *apis.DescribeMemberRequest {
 	req := &apis.DescribeMemberRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMember 获取账号列表
-func (c *OpenAPIClient) DescribeMember(req *apis.DescribeMemberRequest) (*apis.DescribeMemberResponse, error) {
+func (c *UCloudStackClient) DescribeMember(req *apis.DescribeMemberRequest) (*apis.DescribeMemberResponse, error) {
 	var err error
 	var res apis.DescribeMemberResponse
 
@@ -7085,17 +7085,17 @@ func (c *OpenAPIClient) DescribeMember(req *apis.DescribeMemberRequest) (*apis.D
 }
 
 // NewDescribePermissionRequest will create request of DescribePermission action.
-func (c *OpenAPIClient) NewDescribePermissionRequest() *apis.DescribePermissionRequest {
+func (c *UCloudStackClient) NewDescribePermissionRequest() *apis.DescribePermissionRequest {
 	req := &apis.DescribePermissionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribePermission 获取用户访问控制接口信息
-func (c *OpenAPIClient) DescribePermission(req *apis.DescribePermissionRequest) (*apis.DescribePermissionResponse, error) {
+func (c *UCloudStackClient) DescribePermission(req *apis.DescribePermissionRequest) (*apis.DescribePermissionResponse, error) {
 	var err error
 	var res apis.DescribePermissionResponse
 
@@ -7107,17 +7107,17 @@ func (c *OpenAPIClient) DescribePermission(req *apis.DescribePermissionRequest) 
 }
 
 // NewFreezeSubMemberRequest will create request of FreezeSubMember action.
-func (c *OpenAPIClient) NewFreezeSubMemberRequest() *apis.FreezeSubMemberRequest {
+func (c *UCloudStackClient) NewFreezeSubMemberRequest() *apis.FreezeSubMemberRequest {
 	req := &apis.FreezeSubMemberRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // FreezeSubMember 冻结子账号
-func (c *OpenAPIClient) FreezeSubMember(req *apis.FreezeSubMemberRequest) (*apis.FreezeSubMemberResponse, error) {
+func (c *UCloudStackClient) FreezeSubMember(req *apis.FreezeSubMemberRequest) (*apis.FreezeSubMemberResponse, error) {
 	var err error
 	var res apis.FreezeSubMemberResponse
 
@@ -7129,17 +7129,17 @@ func (c *OpenAPIClient) FreezeSubMember(req *apis.FreezeSubMemberRequest) (*apis
 }
 
 // NewGetMemberInfoRequest will create request of GetMemberInfo action.
-func (c *OpenAPIClient) NewGetMemberInfoRequest() *apis.GetMemberInfoRequest {
+func (c *UCloudStackClient) NewGetMemberInfoRequest() *apis.GetMemberInfoRequest {
 	req := &apis.GetMemberInfoRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetMemberInfo 获取用户访问控制信息
-func (c *OpenAPIClient) GetMemberInfo(req *apis.GetMemberInfoRequest) (*apis.GetMemberInfoResponse, error) {
+func (c *UCloudStackClient) GetMemberInfo(req *apis.GetMemberInfoRequest) (*apis.GetMemberInfoResponse, error) {
 	var err error
 	var res apis.GetMemberInfoResponse
 
@@ -7151,17 +7151,17 @@ func (c *OpenAPIClient) GetMemberInfo(req *apis.GetMemberInfoRequest) (*apis.Get
 }
 
 // NewListAdminRequest will create request of ListAdmin action.
-func (c *OpenAPIClient) NewListAdminRequest() *apis.ListAdminRequest {
+func (c *UCloudStackClient) NewListAdminRequest() *apis.ListAdminRequest {
 	req := &apis.ListAdminRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListAdmin 列出管理员
-func (c *OpenAPIClient) ListAdmin(req *apis.ListAdminRequest) (*apis.ListAdminResponse, error) {
+func (c *UCloudStackClient) ListAdmin(req *apis.ListAdminRequest) (*apis.ListAdminResponse, error) {
 	var err error
 	var res apis.ListAdminResponse
 
@@ -7173,17 +7173,17 @@ func (c *OpenAPIClient) ListAdmin(req *apis.ListAdminRequest) (*apis.ListAdminRe
 }
 
 // NewLoginByPasswordRequest will create request of LoginByPassword action.
-func (c *OpenAPIClient) NewLoginByPasswordRequest() *apis.LoginByPasswordRequest {
+func (c *UCloudStackClient) NewLoginByPasswordRequest() *apis.LoginByPasswordRequest {
 	req := &apis.LoginByPasswordRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // LoginByPassword 密码登录
-func (c *OpenAPIClient) LoginByPassword(req *apis.LoginByPasswordRequest) (*apis.LoginByPasswordResponse, error) {
+func (c *UCloudStackClient) LoginByPassword(req *apis.LoginByPasswordRequest) (*apis.LoginByPasswordResponse, error) {
 	var err error
 	var res apis.LoginByPasswordResponse
 
@@ -7195,17 +7195,17 @@ func (c *OpenAPIClient) LoginByPassword(req *apis.LoginByPasswordRequest) (*apis
 }
 
 // NewLogoutTokenRequest will create request of LogoutToken action.
-func (c *OpenAPIClient) NewLogoutTokenRequest() *apis.LogoutTokenRequest {
+func (c *UCloudStackClient) NewLogoutTokenRequest() *apis.LogoutTokenRequest {
 	req := &apis.LogoutTokenRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // LogoutToken 登出
-func (c *OpenAPIClient) LogoutToken(req *apis.LogoutTokenRequest) (*apis.LogoutTokenResponse, error) {
+func (c *UCloudStackClient) LogoutToken(req *apis.LogoutTokenRequest) (*apis.LogoutTokenResponse, error) {
 	var err error
 	var res apis.LogoutTokenResponse
 
@@ -7217,17 +7217,17 @@ func (c *OpenAPIClient) LogoutToken(req *apis.LogoutTokenRequest) (*apis.LogoutT
 }
 
 // NewUnFreezeSubMemberRequest will create request of UnFreezeSubMember action.
-func (c *OpenAPIClient) NewUnFreezeSubMemberRequest() *apis.UnFreezeSubMemberRequest {
+func (c *UCloudStackClient) NewUnFreezeSubMemberRequest() *apis.UnFreezeSubMemberRequest {
 	req := &apis.UnFreezeSubMemberRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnFreezeSubMember 解冻子账号
-func (c *OpenAPIClient) UnFreezeSubMember(req *apis.UnFreezeSubMemberRequest) (*apis.UnFreezeSubMemberResponse, error) {
+func (c *UCloudStackClient) UnFreezeSubMember(req *apis.UnFreezeSubMemberRequest) (*apis.UnFreezeSubMemberResponse, error) {
 	var err error
 	var res apis.UnFreezeSubMemberResponse
 
@@ -7239,17 +7239,17 @@ func (c *OpenAPIClient) UnFreezeSubMember(req *apis.UnFreezeSubMemberRequest) (*
 }
 
 // NewUpdateDigitalCertRequest will create request of UpdateDigitalCert action.
-func (c *OpenAPIClient) NewUpdateDigitalCertRequest() *apis.UpdateDigitalCertRequest {
+func (c *UCloudStackClient) NewUpdateDigitalCertRequest() *apis.UpdateDigitalCertRequest {
 	req := &apis.UpdateDigitalCertRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDigitalCert 更新数字证书
-func (c *OpenAPIClient) UpdateDigitalCert(req *apis.UpdateDigitalCertRequest) (*apis.UpdateDigitalCertResponse, error) {
+func (c *UCloudStackClient) UpdateDigitalCert(req *apis.UpdateDigitalCertRequest) (*apis.UpdateDigitalCertResponse, error) {
 	var err error
 	var res apis.UpdateDigitalCertResponse
 
@@ -7261,17 +7261,17 @@ func (c *OpenAPIClient) UpdateDigitalCert(req *apis.UpdateDigitalCertRequest) (*
 }
 
 // NewUpdateMemberEmailRequest will create request of UpdateMemberEmail action.
-func (c *OpenAPIClient) NewUpdateMemberEmailRequest() *apis.UpdateMemberEmailRequest {
+func (c *UCloudStackClient) NewUpdateMemberEmailRequest() *apis.UpdateMemberEmailRequest {
 	req := &apis.UpdateMemberEmailRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateMemberEmail 修改账号邮箱
-func (c *OpenAPIClient) UpdateMemberEmail(req *apis.UpdateMemberEmailRequest) (*apis.UpdateMemberEmailResponse, error) {
+func (c *UCloudStackClient) UpdateMemberEmail(req *apis.UpdateMemberEmailRequest) (*apis.UpdateMemberEmailResponse, error) {
 	var err error
 	var res apis.UpdateMemberEmailResponse
 
@@ -7283,17 +7283,17 @@ func (c *OpenAPIClient) UpdateMemberEmail(req *apis.UpdateMemberEmailRequest) (*
 }
 
 // NewUpdateMemberNameRequest will create request of UpdateMemberName action.
-func (c *OpenAPIClient) NewUpdateMemberNameRequest() *apis.UpdateMemberNameRequest {
+func (c *UCloudStackClient) NewUpdateMemberNameRequest() *apis.UpdateMemberNameRequest {
 	req := &apis.UpdateMemberNameRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateMemberName 修改账号名称
-func (c *OpenAPIClient) UpdateMemberName(req *apis.UpdateMemberNameRequest) (*apis.UpdateMemberNameResponse, error) {
+func (c *UCloudStackClient) UpdateMemberName(req *apis.UpdateMemberNameRequest) (*apis.UpdateMemberNameResponse, error) {
 	var err error
 	var res apis.UpdateMemberNameResponse
 
@@ -7305,17 +7305,17 @@ func (c *OpenAPIClient) UpdateMemberName(req *apis.UpdateMemberNameRequest) (*ap
 }
 
 // NewUpdateMemberOAuth2UniqueIDRequest will create request of UpdateMemberOAuth2UniqueID action.
-func (c *OpenAPIClient) NewUpdateMemberOAuth2UniqueIDRequest() *apis.UpdateMemberOAuth2UniqueIDRequest {
+func (c *UCloudStackClient) NewUpdateMemberOAuth2UniqueIDRequest() *apis.UpdateMemberOAuth2UniqueIDRequest {
 	req := &apis.UpdateMemberOAuth2UniqueIDRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateMemberOAuth2UniqueID 修改账号OAuth2唯一标识ID
-func (c *OpenAPIClient) UpdateMemberOAuth2UniqueID(req *apis.UpdateMemberOAuth2UniqueIDRequest) (*apis.UpdateMemberOAuth2UniqueIDResponse, error) {
+func (c *UCloudStackClient) UpdateMemberOAuth2UniqueID(req *apis.UpdateMemberOAuth2UniqueIDRequest) (*apis.UpdateMemberOAuth2UniqueIDResponse, error) {
 	var err error
 	var res apis.UpdateMemberOAuth2UniqueIDResponse
 
@@ -7327,17 +7327,17 @@ func (c *OpenAPIClient) UpdateMemberOAuth2UniqueID(req *apis.UpdateMemberOAuth2U
 }
 
 // NewUpdateMemberPhoneRequest will create request of UpdateMemberPhone action.
-func (c *OpenAPIClient) NewUpdateMemberPhoneRequest() *apis.UpdateMemberPhoneRequest {
+func (c *UCloudStackClient) NewUpdateMemberPhoneRequest() *apis.UpdateMemberPhoneRequest {
 	req := &apis.UpdateMemberPhoneRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateMemberPhone 修改账号安全手机
-func (c *OpenAPIClient) UpdateMemberPhone(req *apis.UpdateMemberPhoneRequest) (*apis.UpdateMemberPhoneResponse, error) {
+func (c *UCloudStackClient) UpdateMemberPhone(req *apis.UpdateMemberPhoneRequest) (*apis.UpdateMemberPhoneResponse, error) {
 	var err error
 	var res apis.UpdateMemberPhoneResponse
 
@@ -7349,17 +7349,17 @@ func (c *OpenAPIClient) UpdateMemberPhone(req *apis.UpdateMemberPhoneRequest) (*
 }
 
 // NewCreateMulticastGroupRequest will create request of CreateMulticastGroup action.
-func (c *OpenAPIClient) NewCreateMulticastGroupRequest() *apis.CreateMulticastGroupRequest {
+func (c *UCloudStackClient) NewCreateMulticastGroupRequest() *apis.CreateMulticastGroupRequest {
 	req := &apis.CreateMulticastGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateMulticastGroup 创建组播组
-func (c *OpenAPIClient) CreateMulticastGroup(req *apis.CreateMulticastGroupRequest) (*apis.CreateMulticastGroupResponse, error) {
+func (c *UCloudStackClient) CreateMulticastGroup(req *apis.CreateMulticastGroupRequest) (*apis.CreateMulticastGroupResponse, error) {
 	var err error
 	var res apis.CreateMulticastGroupResponse
 
@@ -7371,17 +7371,17 @@ func (c *OpenAPIClient) CreateMulticastGroup(req *apis.CreateMulticastGroupReque
 }
 
 // NewDeleteMulticastGroupRequest will create request of DeleteMulticastGroup action.
-func (c *OpenAPIClient) NewDeleteMulticastGroupRequest() *apis.DeleteMulticastGroupRequest {
+func (c *UCloudStackClient) NewDeleteMulticastGroupRequest() *apis.DeleteMulticastGroupRequest {
 	req := &apis.DeleteMulticastGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteMulticastGroup 删除组播组
-func (c *OpenAPIClient) DeleteMulticastGroup(req *apis.DeleteMulticastGroupRequest) (*apis.DeleteMulticastGroupResponse, error) {
+func (c *UCloudStackClient) DeleteMulticastGroup(req *apis.DeleteMulticastGroupRequest) (*apis.DeleteMulticastGroupResponse, error) {
 	var err error
 	var res apis.DeleteMulticastGroupResponse
 
@@ -7393,17 +7393,17 @@ func (c *OpenAPIClient) DeleteMulticastGroup(req *apis.DeleteMulticastGroupReque
 }
 
 // NewDescribeMulticastGroupRequest will create request of DescribeMulticastGroup action.
-func (c *OpenAPIClient) NewDescribeMulticastGroupRequest() *apis.DescribeMulticastGroupRequest {
+func (c *UCloudStackClient) NewDescribeMulticastGroupRequest() *apis.DescribeMulticastGroupRequest {
 	req := &apis.DescribeMulticastGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMulticastGroup 获取组播组列表
-func (c *OpenAPIClient) DescribeMulticastGroup(req *apis.DescribeMulticastGroupRequest) (*apis.DescribeMulticastGroupResponse, error) {
+func (c *UCloudStackClient) DescribeMulticastGroup(req *apis.DescribeMulticastGroupRequest) (*apis.DescribeMulticastGroupResponse, error) {
 	var err error
 	var res apis.DescribeMulticastGroupResponse
 
@@ -7415,17 +7415,17 @@ func (c *OpenAPIClient) DescribeMulticastGroup(req *apis.DescribeMulticastGroupR
 }
 
 // NewUpdateMulticastGroupRequest will create request of UpdateMulticastGroup action.
-func (c *OpenAPIClient) NewUpdateMulticastGroupRequest() *apis.UpdateMulticastGroupRequest {
+func (c *UCloudStackClient) NewUpdateMulticastGroupRequest() *apis.UpdateMulticastGroupRequest {
 	req := &apis.UpdateMulticastGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateMulticastGroup 更新组播组
-func (c *OpenAPIClient) UpdateMulticastGroup(req *apis.UpdateMulticastGroupRequest) (*apis.UpdateMulticastGroupResponse, error) {
+func (c *UCloudStackClient) UpdateMulticastGroup(req *apis.UpdateMulticastGroupRequest) (*apis.UpdateMulticastGroupResponse, error) {
 	var err error
 	var res apis.UpdateMulticastGroupResponse
 
@@ -7437,17 +7437,17 @@ func (c *OpenAPIClient) UpdateMulticastGroup(req *apis.UpdateMulticastGroupReque
 }
 
 // NewApplyMySQLParamTplRequest will create request of ApplyMySQLParamTpl action.
-func (c *OpenAPIClient) NewApplyMySQLParamTplRequest() *apis.ApplyMySQLParamTplRequest {
+func (c *UCloudStackClient) NewApplyMySQLParamTplRequest() *apis.ApplyMySQLParamTplRequest {
 	req := &apis.ApplyMySQLParamTplRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ApplyMySQLParamTpl 应用MySQL参数模板
-func (c *OpenAPIClient) ApplyMySQLParamTpl(req *apis.ApplyMySQLParamTplRequest) (*apis.ApplyMySQLParamTplResponse, error) {
+func (c *UCloudStackClient) ApplyMySQLParamTpl(req *apis.ApplyMySQLParamTplRequest) (*apis.ApplyMySQLParamTplResponse, error) {
 	var err error
 	var res apis.ApplyMySQLParamTplResponse
 
@@ -7459,17 +7459,17 @@ func (c *OpenAPIClient) ApplyMySQLParamTpl(req *apis.ApplyMySQLParamTplRequest) 
 }
 
 // NewCreateMySQLRequest will create request of CreateMySQL action.
-func (c *OpenAPIClient) NewCreateMySQLRequest() *apis.CreateMySQLRequest {
+func (c *UCloudStackClient) NewCreateMySQLRequest() *apis.CreateMySQLRequest {
 	req := &apis.CreateMySQLRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateMySQL 创建MySQL
-func (c *OpenAPIClient) CreateMySQL(req *apis.CreateMySQLRequest) (*apis.CreateMySQLResponse, error) {
+func (c *UCloudStackClient) CreateMySQL(req *apis.CreateMySQLRequest) (*apis.CreateMySQLResponse, error) {
 	var err error
 	var res apis.CreateMySQLResponse
 
@@ -7481,17 +7481,17 @@ func (c *OpenAPIClient) CreateMySQL(req *apis.CreateMySQLRequest) (*apis.CreateM
 }
 
 // NewCreateMySQLParamTplRequest will create request of CreateMySQLParamTpl action.
-func (c *OpenAPIClient) NewCreateMySQLParamTplRequest() *apis.CreateMySQLParamTplRequest {
+func (c *UCloudStackClient) NewCreateMySQLParamTplRequest() *apis.CreateMySQLParamTplRequest {
 	req := &apis.CreateMySQLParamTplRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateMySQLParamTpl 创建MySQL参数模板
-func (c *OpenAPIClient) CreateMySQLParamTpl(req *apis.CreateMySQLParamTplRequest) (*apis.CreateMySQLParamTplResponse, error) {
+func (c *UCloudStackClient) CreateMySQLParamTpl(req *apis.CreateMySQLParamTplRequest) (*apis.CreateMySQLParamTplResponse, error) {
 	var err error
 	var res apis.CreateMySQLParamTplResponse
 
@@ -7503,17 +7503,17 @@ func (c *OpenAPIClient) CreateMySQLParamTpl(req *apis.CreateMySQLParamTplRequest
 }
 
 // NewCreateMySQLSlaveRequest will create request of CreateMySQLSlave action.
-func (c *OpenAPIClient) NewCreateMySQLSlaveRequest() *apis.CreateMySQLSlaveRequest {
+func (c *UCloudStackClient) NewCreateMySQLSlaveRequest() *apis.CreateMySQLSlaveRequest {
 	req := &apis.CreateMySQLSlaveRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateMySQLSlave 创建MySQL从库
-func (c *OpenAPIClient) CreateMySQLSlave(req *apis.CreateMySQLSlaveRequest) (*apis.CreateMySQLSlaveResponse, error) {
+func (c *UCloudStackClient) CreateMySQLSlave(req *apis.CreateMySQLSlaveRequest) (*apis.CreateMySQLSlaveResponse, error) {
 	var err error
 	var res apis.CreateMySQLSlaveResponse
 
@@ -7525,17 +7525,17 @@ func (c *OpenAPIClient) CreateMySQLSlave(req *apis.CreateMySQLSlaveRequest) (*ap
 }
 
 // NewDeleteMySQLRequest will create request of DeleteMySQL action.
-func (c *OpenAPIClient) NewDeleteMySQLRequest() *apis.DeleteMySQLRequest {
+func (c *UCloudStackClient) NewDeleteMySQLRequest() *apis.DeleteMySQLRequest {
 	req := &apis.DeleteMySQLRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteMySQL 删除MySQL
-func (c *OpenAPIClient) DeleteMySQL(req *apis.DeleteMySQLRequest) (*apis.DeleteMySQLResponse, error) {
+func (c *UCloudStackClient) DeleteMySQL(req *apis.DeleteMySQLRequest) (*apis.DeleteMySQLResponse, error) {
 	var err error
 	var res apis.DeleteMySQLResponse
 
@@ -7547,17 +7547,17 @@ func (c *OpenAPIClient) DeleteMySQL(req *apis.DeleteMySQLRequest) (*apis.DeleteM
 }
 
 // NewDeleteMySQLParamTplRequest will create request of DeleteMySQLParamTpl action.
-func (c *OpenAPIClient) NewDeleteMySQLParamTplRequest() *apis.DeleteMySQLParamTplRequest {
+func (c *UCloudStackClient) NewDeleteMySQLParamTplRequest() *apis.DeleteMySQLParamTplRequest {
 	req := &apis.DeleteMySQLParamTplRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteMySQLParamTpl 删除MySQL参数模板
-func (c *OpenAPIClient) DeleteMySQLParamTpl(req *apis.DeleteMySQLParamTplRequest) (*apis.DeleteMySQLParamTplResponse, error) {
+func (c *UCloudStackClient) DeleteMySQLParamTpl(req *apis.DeleteMySQLParamTplRequest) (*apis.DeleteMySQLParamTplResponse, error) {
 	var err error
 	var res apis.DeleteMySQLParamTplResponse
 
@@ -7569,17 +7569,17 @@ func (c *OpenAPIClient) DeleteMySQLParamTpl(req *apis.DeleteMySQLParamTplRequest
 }
 
 // NewDescribeMySQLRequest will create request of DescribeMySQL action.
-func (c *OpenAPIClient) NewDescribeMySQLRequest() *apis.DescribeMySQLRequest {
+func (c *UCloudStackClient) NewDescribeMySQLRequest() *apis.DescribeMySQLRequest {
 	req := &apis.DescribeMySQLRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMySQL 查询MySQL信息
-func (c *OpenAPIClient) DescribeMySQL(req *apis.DescribeMySQLRequest) (*apis.DescribeMySQLResponse, error) {
+func (c *UCloudStackClient) DescribeMySQL(req *apis.DescribeMySQLRequest) (*apis.DescribeMySQLResponse, error) {
 	var err error
 	var res apis.DescribeMySQLResponse
 
@@ -7591,17 +7591,17 @@ func (c *OpenAPIClient) DescribeMySQL(req *apis.DescribeMySQLRequest) (*apis.Des
 }
 
 // NewDescribeMySQLConfigParamRequest will create request of DescribeMySQLConfigParam action.
-func (c *OpenAPIClient) NewDescribeMySQLConfigParamRequest() *apis.DescribeMySQLConfigParamRequest {
+func (c *UCloudStackClient) NewDescribeMySQLConfigParamRequest() *apis.DescribeMySQLConfigParamRequest {
 	req := &apis.DescribeMySQLConfigParamRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMySQLConfigParam 获取MySQL配置参数
-func (c *OpenAPIClient) DescribeMySQLConfigParam(req *apis.DescribeMySQLConfigParamRequest) (*apis.DescribeMySQLConfigParamResponse, error) {
+func (c *UCloudStackClient) DescribeMySQLConfigParam(req *apis.DescribeMySQLConfigParamRequest) (*apis.DescribeMySQLConfigParamResponse, error) {
 	var err error
 	var res apis.DescribeMySQLConfigParamResponse
 
@@ -7613,17 +7613,17 @@ func (c *OpenAPIClient) DescribeMySQLConfigParam(req *apis.DescribeMySQLConfigPa
 }
 
 // NewDescribeMySQLErrorLogsRequest will create request of DescribeMySQLErrorLogs action.
-func (c *OpenAPIClient) NewDescribeMySQLErrorLogsRequest() *apis.DescribeMySQLErrorLogsRequest {
+func (c *UCloudStackClient) NewDescribeMySQLErrorLogsRequest() *apis.DescribeMySQLErrorLogsRequest {
 	req := &apis.DescribeMySQLErrorLogsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMySQLErrorLogs 查询 MySQL 错误日志
-func (c *OpenAPIClient) DescribeMySQLErrorLogs(req *apis.DescribeMySQLErrorLogsRequest) (*apis.DescribeMySQLErrorLogsResponse, error) {
+func (c *UCloudStackClient) DescribeMySQLErrorLogs(req *apis.DescribeMySQLErrorLogsRequest) (*apis.DescribeMySQLErrorLogsResponse, error) {
 	var err error
 	var res apis.DescribeMySQLErrorLogsResponse
 
@@ -7635,17 +7635,17 @@ func (c *OpenAPIClient) DescribeMySQLErrorLogs(req *apis.DescribeMySQLErrorLogsR
 }
 
 // NewDescribeMySQLParamTplRequest will create request of DescribeMySQLParamTpl action.
-func (c *OpenAPIClient) NewDescribeMySQLParamTplRequest() *apis.DescribeMySQLParamTplRequest {
+func (c *UCloudStackClient) NewDescribeMySQLParamTplRequest() *apis.DescribeMySQLParamTplRequest {
 	req := &apis.DescribeMySQLParamTplRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMySQLParamTpl 查询MySQL参数模板详细信息
-func (c *OpenAPIClient) DescribeMySQLParamTpl(req *apis.DescribeMySQLParamTplRequest) (*apis.DescribeMySQLParamTplResponse, error) {
+func (c *UCloudStackClient) DescribeMySQLParamTpl(req *apis.DescribeMySQLParamTplRequest) (*apis.DescribeMySQLParamTplResponse, error) {
 	var err error
 	var res apis.DescribeMySQLParamTplResponse
 
@@ -7657,17 +7657,17 @@ func (c *OpenAPIClient) DescribeMySQLParamTpl(req *apis.DescribeMySQLParamTplReq
 }
 
 // NewDescribeMySQLParamTplsRequest will create request of DescribeMySQLParamTpls action.
-func (c *OpenAPIClient) NewDescribeMySQLParamTplsRequest() *apis.DescribeMySQLParamTplsRequest {
+func (c *UCloudStackClient) NewDescribeMySQLParamTplsRequest() *apis.DescribeMySQLParamTplsRequest {
 	req := &apis.DescribeMySQLParamTplsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMySQLParamTpls 查询MySQL参数模板列表
-func (c *OpenAPIClient) DescribeMySQLParamTpls(req *apis.DescribeMySQLParamTplsRequest) (*apis.DescribeMySQLParamTplsResponse, error) {
+func (c *UCloudStackClient) DescribeMySQLParamTpls(req *apis.DescribeMySQLParamTplsRequest) (*apis.DescribeMySQLParamTplsResponse, error) {
 	var err error
 	var res apis.DescribeMySQLParamTplsResponse
 
@@ -7679,17 +7679,17 @@ func (c *OpenAPIClient) DescribeMySQLParamTpls(req *apis.DescribeMySQLParamTplsR
 }
 
 // NewDescribeMySQLSlowLogRecordsRequest will create request of DescribeMySQLSlowLogRecords action.
-func (c *OpenAPIClient) NewDescribeMySQLSlowLogRecordsRequest() *apis.DescribeMySQLSlowLogRecordsRequest {
+func (c *UCloudStackClient) NewDescribeMySQLSlowLogRecordsRequest() *apis.DescribeMySQLSlowLogRecordsRequest {
 	req := &apis.DescribeMySQLSlowLogRecordsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeMySQLSlowLogRecords 查询 MySQL 慢日志记录
-func (c *OpenAPIClient) DescribeMySQLSlowLogRecords(req *apis.DescribeMySQLSlowLogRecordsRequest) (*apis.DescribeMySQLSlowLogRecordsResponse, error) {
+func (c *UCloudStackClient) DescribeMySQLSlowLogRecords(req *apis.DescribeMySQLSlowLogRecordsRequest) (*apis.DescribeMySQLSlowLogRecordsResponse, error) {
 	var err error
 	var res apis.DescribeMySQLSlowLogRecordsResponse
 
@@ -7701,17 +7701,17 @@ func (c *OpenAPIClient) DescribeMySQLSlowLogRecords(req *apis.DescribeMySQLSlowL
 }
 
 // NewDescribePMAURLRequest will create request of DescribePMAURL action.
-func (c *OpenAPIClient) NewDescribePMAURLRequest() *apis.DescribePMAURLRequest {
+func (c *UCloudStackClient) NewDescribePMAURLRequest() *apis.DescribePMAURLRequest {
 	req := &apis.DescribePMAURLRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribePMAURL 获取 PMA URL
-func (c *OpenAPIClient) DescribePMAURL(req *apis.DescribePMAURLRequest) (*apis.DescribePMAURLResponse, error) {
+func (c *UCloudStackClient) DescribePMAURL(req *apis.DescribePMAURLRequest) (*apis.DescribePMAURLResponse, error) {
 	var err error
 	var res apis.DescribePMAURLResponse
 
@@ -7723,17 +7723,17 @@ func (c *OpenAPIClient) DescribePMAURL(req *apis.DescribePMAURLRequest) (*apis.D
 }
 
 // NewDowngradeMySQLRequest will create request of DowngradeMySQL action.
-func (c *OpenAPIClient) NewDowngradeMySQLRequest() *apis.DowngradeMySQLRequest {
+func (c *UCloudStackClient) NewDowngradeMySQLRequest() *apis.DowngradeMySQLRequest {
 	req := &apis.DowngradeMySQLRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DowngradeMySQL 降级MySQL
-func (c *OpenAPIClient) DowngradeMySQL(req *apis.DowngradeMySQLRequest) (*apis.DowngradeMySQLResponse, error) {
+func (c *UCloudStackClient) DowngradeMySQL(req *apis.DowngradeMySQLRequest) (*apis.DowngradeMySQLResponse, error) {
 	var err error
 	var res apis.DowngradeMySQLResponse
 
@@ -7745,17 +7745,17 @@ func (c *OpenAPIClient) DowngradeMySQL(req *apis.DowngradeMySQLRequest) (*apis.D
 }
 
 // NewGetMySQLPriceRequest will create request of GetMySQLPrice action.
-func (c *OpenAPIClient) NewGetMySQLPriceRequest() *apis.GetMySQLPriceRequest {
+func (c *UCloudStackClient) NewGetMySQLPriceRequest() *apis.GetMySQLPriceRequest {
 	req := &apis.GetMySQLPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetMySQLPrice 查询MySQL价格
-func (c *OpenAPIClient) GetMySQLPrice(req *apis.GetMySQLPriceRequest) (*apis.GetMySQLPriceResponse, error) {
+func (c *UCloudStackClient) GetMySQLPrice(req *apis.GetMySQLPriceRequest) (*apis.GetMySQLPriceResponse, error) {
 	var err error
 	var res apis.GetMySQLPriceResponse
 
@@ -7767,17 +7767,17 @@ func (c *OpenAPIClient) GetMySQLPrice(req *apis.GetMySQLPriceRequest) (*apis.Get
 }
 
 // NewResetMySQLPasswordRequest will create request of ResetMySQLPassword action.
-func (c *OpenAPIClient) NewResetMySQLPasswordRequest() *apis.ResetMySQLPasswordRequest {
+func (c *UCloudStackClient) NewResetMySQLPasswordRequest() *apis.ResetMySQLPasswordRequest {
 	req := &apis.ResetMySQLPasswordRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ResetMySQLPassword 修改MySQL密码
-func (c *OpenAPIClient) ResetMySQLPassword(req *apis.ResetMySQLPasswordRequest) (*apis.ResetMySQLPasswordResponse, error) {
+func (c *UCloudStackClient) ResetMySQLPassword(req *apis.ResetMySQLPasswordRequest) (*apis.ResetMySQLPasswordResponse, error) {
 	var err error
 	var res apis.ResetMySQLPasswordResponse
 
@@ -7789,17 +7789,17 @@ func (c *OpenAPIClient) ResetMySQLPassword(req *apis.ResetMySQLPasswordRequest) 
 }
 
 // NewRestartMySQLInstanceRequest will create request of RestartMySQLInstance action.
-func (c *OpenAPIClient) NewRestartMySQLInstanceRequest() *apis.RestartMySQLInstanceRequest {
+func (c *UCloudStackClient) NewRestartMySQLInstanceRequest() *apis.RestartMySQLInstanceRequest {
 	req := &apis.RestartMySQLInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RestartMySQLInstance 重启 MySQL 实例
-func (c *OpenAPIClient) RestartMySQLInstance(req *apis.RestartMySQLInstanceRequest) (*apis.RestartMySQLInstanceResponse, error) {
+func (c *UCloudStackClient) RestartMySQLInstance(req *apis.RestartMySQLInstanceRequest) (*apis.RestartMySQLInstanceResponse, error) {
 	var err error
 	var res apis.RestartMySQLInstanceResponse
 
@@ -7811,17 +7811,17 @@ func (c *OpenAPIClient) RestartMySQLInstance(req *apis.RestartMySQLInstanceReque
 }
 
 // NewUpdateMySQLConfigParamRequest will create request of UpdateMySQLConfigParam action.
-func (c *OpenAPIClient) NewUpdateMySQLConfigParamRequest() *apis.UpdateMySQLConfigParamRequest {
+func (c *UCloudStackClient) NewUpdateMySQLConfigParamRequest() *apis.UpdateMySQLConfigParamRequest {
 	req := &apis.UpdateMySQLConfigParamRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateMySQLConfigParam 更新MySQL配置参数
-func (c *OpenAPIClient) UpdateMySQLConfigParam(req *apis.UpdateMySQLConfigParamRequest) (*apis.UpdateMySQLConfigParamResponse, error) {
+func (c *UCloudStackClient) UpdateMySQLConfigParam(req *apis.UpdateMySQLConfigParamRequest) (*apis.UpdateMySQLConfigParamResponse, error) {
 	var err error
 	var res apis.UpdateMySQLConfigParamResponse
 
@@ -7833,17 +7833,17 @@ func (c *OpenAPIClient) UpdateMySQLConfigParam(req *apis.UpdateMySQLConfigParamR
 }
 
 // NewUpdateMySQLParamTplRequest will create request of UpdateMySQLParamTpl action.
-func (c *OpenAPIClient) NewUpdateMySQLParamTplRequest() *apis.UpdateMySQLParamTplRequest {
+func (c *UCloudStackClient) NewUpdateMySQLParamTplRequest() *apis.UpdateMySQLParamTplRequest {
 	req := &apis.UpdateMySQLParamTplRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateMySQLParamTpl 更新MySQL参数模板
-func (c *OpenAPIClient) UpdateMySQLParamTpl(req *apis.UpdateMySQLParamTplRequest) (*apis.UpdateMySQLParamTplResponse, error) {
+func (c *UCloudStackClient) UpdateMySQLParamTpl(req *apis.UpdateMySQLParamTplRequest) (*apis.UpdateMySQLParamTplResponse, error) {
 	var err error
 	var res apis.UpdateMySQLParamTplResponse
 
@@ -7855,17 +7855,17 @@ func (c *OpenAPIClient) UpdateMySQLParamTpl(req *apis.UpdateMySQLParamTplRequest
 }
 
 // NewUpgradeMySQLRequest will create request of UpgradeMySQL action.
-func (c *OpenAPIClient) NewUpgradeMySQLRequest() *apis.UpgradeMySQLRequest {
+func (c *UCloudStackClient) NewUpgradeMySQLRequest() *apis.UpgradeMySQLRequest {
 	req := &apis.UpgradeMySQLRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeMySQL 升级MySQL
-func (c *OpenAPIClient) UpgradeMySQL(req *apis.UpgradeMySQLRequest) (*apis.UpgradeMySQLResponse, error) {
+func (c *UCloudStackClient) UpgradeMySQL(req *apis.UpgradeMySQLRequest) (*apis.UpgradeMySQLResponse, error) {
 	var err error
 	var res apis.UpgradeMySQLResponse
 
@@ -7877,17 +7877,17 @@ func (c *OpenAPIClient) UpgradeMySQL(req *apis.UpgradeMySQLRequest) (*apis.Upgra
 }
 
 // NewUpgradeMySQLToHARequest will create request of UpgradeMySQLToHA action.
-func (c *OpenAPIClient) NewUpgradeMySQLToHARequest() *apis.UpgradeMySQLToHARequest {
+func (c *UCloudStackClient) NewUpgradeMySQLToHARequest() *apis.UpgradeMySQLToHARequest {
 	req := &apis.UpgradeMySQLToHARequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeMySQLToHA 升级为高可用版本
-func (c *OpenAPIClient) UpgradeMySQLToHA(req *apis.UpgradeMySQLToHARequest) (*apis.UpgradeMySQLToHAResponse, error) {
+func (c *UCloudStackClient) UpgradeMySQLToHA(req *apis.UpgradeMySQLToHARequest) (*apis.UpgradeMySQLToHAResponse, error) {
 	var err error
 	var res apis.UpgradeMySQLToHAResponse
 
@@ -7899,17 +7899,17 @@ func (c *OpenAPIClient) UpgradeMySQLToHA(req *apis.UpgradeMySQLToHARequest) (*ap
 }
 
 // NewBindEIPToNATGWRequest will create request of BindEIPToNATGW action.
-func (c *OpenAPIClient) NewBindEIPToNATGWRequest() *apis.BindEIPToNATGWRequest {
+func (c *UCloudStackClient) NewBindEIPToNATGWRequest() *apis.BindEIPToNATGWRequest {
 	req := &apis.BindEIPToNATGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // BindEIPToNATGW 绑定EIP到NAT网关
-func (c *OpenAPIClient) BindEIPToNATGW(req *apis.BindEIPToNATGWRequest) (*apis.BindEIPToNATGWResponse, error) {
+func (c *UCloudStackClient) BindEIPToNATGW(req *apis.BindEIPToNATGWRequest) (*apis.BindEIPToNATGWResponse, error) {
 	var err error
 	var res apis.BindEIPToNATGWResponse
 
@@ -7921,17 +7921,17 @@ func (c *OpenAPIClient) BindEIPToNATGW(req *apis.BindEIPToNATGWRequest) (*apis.B
 }
 
 // NewCreateNATGWRequest will create request of CreateNATGW action.
-func (c *OpenAPIClient) NewCreateNATGWRequest() *apis.CreateNATGWRequest {
+func (c *UCloudStackClient) NewCreateNATGWRequest() *apis.CreateNATGWRequest {
 	req := &apis.CreateNATGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateNATGW 创建NAT网关
-func (c *OpenAPIClient) CreateNATGW(req *apis.CreateNATGWRequest) (*apis.CreateNATGWResponse, error) {
+func (c *UCloudStackClient) CreateNATGW(req *apis.CreateNATGWRequest) (*apis.CreateNATGWResponse, error) {
 	var err error
 	var res apis.CreateNATGWResponse
 
@@ -7943,17 +7943,17 @@ func (c *OpenAPIClient) CreateNATGW(req *apis.CreateNATGWRequest) (*apis.CreateN
 }
 
 // NewCreateNATGWPolicyRequest will create request of CreateNATGWPolicy action.
-func (c *OpenAPIClient) NewCreateNATGWPolicyRequest() *apis.CreateNATGWPolicyRequest {
+func (c *UCloudStackClient) NewCreateNATGWPolicyRequest() *apis.CreateNATGWPolicyRequest {
 	req := &apis.CreateNATGWPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateNATGWPolicy 创建端口转发
-func (c *OpenAPIClient) CreateNATGWPolicy(req *apis.CreateNATGWPolicyRequest) (*apis.CreateNATGWPolicyResponse, error) {
+func (c *UCloudStackClient) CreateNATGWPolicy(req *apis.CreateNATGWPolicyRequest) (*apis.CreateNATGWPolicyResponse, error) {
 	var err error
 	var res apis.CreateNATGWPolicyResponse
 
@@ -7965,17 +7965,17 @@ func (c *OpenAPIClient) CreateNATGWPolicy(req *apis.CreateNATGWPolicyRequest) (*
 }
 
 // NewCreateNATGWRuleRequest will create request of CreateNATGWRule action.
-func (c *OpenAPIClient) NewCreateNATGWRuleRequest() *apis.CreateNATGWRuleRequest {
+func (c *UCloudStackClient) NewCreateNATGWRuleRequest() *apis.CreateNATGWRuleRequest {
 	req := &apis.CreateNATGWRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateNATGWRule 添加NAT网关规则
-func (c *OpenAPIClient) CreateNATGWRule(req *apis.CreateNATGWRuleRequest) (*apis.CreateNATGWRuleResponse, error) {
+func (c *UCloudStackClient) CreateNATGWRule(req *apis.CreateNATGWRuleRequest) (*apis.CreateNATGWRuleResponse, error) {
 	var err error
 	var res apis.CreateNATGWRuleResponse
 
@@ -7987,17 +7987,17 @@ func (c *OpenAPIClient) CreateNATGWRule(req *apis.CreateNATGWRuleRequest) (*apis
 }
 
 // NewDeleteNATGWRequest will create request of DeleteNATGW action.
-func (c *OpenAPIClient) NewDeleteNATGWRequest() *apis.DeleteNATGWRequest {
+func (c *UCloudStackClient) NewDeleteNATGWRequest() *apis.DeleteNATGWRequest {
 	req := &apis.DeleteNATGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteNATGW 删除NAT网关
-func (c *OpenAPIClient) DeleteNATGW(req *apis.DeleteNATGWRequest) (*apis.DeleteNATGWResponse, error) {
+func (c *UCloudStackClient) DeleteNATGW(req *apis.DeleteNATGWRequest) (*apis.DeleteNATGWResponse, error) {
 	var err error
 	var res apis.DeleteNATGWResponse
 
@@ -8009,17 +8009,17 @@ func (c *OpenAPIClient) DeleteNATGW(req *apis.DeleteNATGWRequest) (*apis.DeleteN
 }
 
 // NewDeleteNATGWPolicyRequest will create request of DeleteNATGWPolicy action.
-func (c *OpenAPIClient) NewDeleteNATGWPolicyRequest() *apis.DeleteNATGWPolicyRequest {
+func (c *UCloudStackClient) NewDeleteNATGWPolicyRequest() *apis.DeleteNATGWPolicyRequest {
 	req := &apis.DeleteNATGWPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteNATGWPolicy 删除端口转发
-func (c *OpenAPIClient) DeleteNATGWPolicy(req *apis.DeleteNATGWPolicyRequest) (*apis.DeleteNATGWPolicyResponse, error) {
+func (c *UCloudStackClient) DeleteNATGWPolicy(req *apis.DeleteNATGWPolicyRequest) (*apis.DeleteNATGWPolicyResponse, error) {
 	var err error
 	var res apis.DeleteNATGWPolicyResponse
 
@@ -8031,17 +8031,17 @@ func (c *OpenAPIClient) DeleteNATGWPolicy(req *apis.DeleteNATGWPolicyRequest) (*
 }
 
 // NewDeleteNATGWRuleRequest will create request of DeleteNATGWRule action.
-func (c *OpenAPIClient) NewDeleteNATGWRuleRequest() *apis.DeleteNATGWRuleRequest {
+func (c *UCloudStackClient) NewDeleteNATGWRuleRequest() *apis.DeleteNATGWRuleRequest {
 	req := &apis.DeleteNATGWRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteNATGWRule 删除NAT网关规则
-func (c *OpenAPIClient) DeleteNATGWRule(req *apis.DeleteNATGWRuleRequest) (*apis.DeleteNATGWRuleResponse, error) {
+func (c *UCloudStackClient) DeleteNATGWRule(req *apis.DeleteNATGWRuleRequest) (*apis.DeleteNATGWRuleResponse, error) {
 	var err error
 	var res apis.DeleteNATGWRuleResponse
 
@@ -8053,17 +8053,17 @@ func (c *OpenAPIClient) DeleteNATGWRule(req *apis.DeleteNATGWRuleRequest) (*apis
 }
 
 // NewDescribeNATGWRequest will create request of DescribeNATGW action.
-func (c *OpenAPIClient) NewDescribeNATGWRequest() *apis.DescribeNATGWRequest {
+func (c *UCloudStackClient) NewDescribeNATGWRequest() *apis.DescribeNATGWRequest {
 	req := &apis.DescribeNATGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNATGW 获取NAT网关
-func (c *OpenAPIClient) DescribeNATGW(req *apis.DescribeNATGWRequest) (*apis.DescribeNATGWResponse, error) {
+func (c *UCloudStackClient) DescribeNATGW(req *apis.DescribeNATGWRequest) (*apis.DescribeNATGWResponse, error) {
 	var err error
 	var res apis.DescribeNATGWResponse
 
@@ -8075,17 +8075,17 @@ func (c *OpenAPIClient) DescribeNATGW(req *apis.DescribeNATGWRequest) (*apis.Des
 }
 
 // NewDescribeNATGWPolicyRequest will create request of DescribeNATGWPolicy action.
-func (c *OpenAPIClient) NewDescribeNATGWPolicyRequest() *apis.DescribeNATGWPolicyRequest {
+func (c *UCloudStackClient) NewDescribeNATGWPolicyRequest() *apis.DescribeNATGWPolicyRequest {
 	req := &apis.DescribeNATGWPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNATGWPolicy 查询端口转发
-func (c *OpenAPIClient) DescribeNATGWPolicy(req *apis.DescribeNATGWPolicyRequest) (*apis.DescribeNATGWPolicyResponse, error) {
+func (c *UCloudStackClient) DescribeNATGWPolicy(req *apis.DescribeNATGWPolicyRequest) (*apis.DescribeNATGWPolicyResponse, error) {
 	var err error
 	var res apis.DescribeNATGWPolicyResponse
 
@@ -8097,17 +8097,17 @@ func (c *OpenAPIClient) DescribeNATGWPolicy(req *apis.DescribeNATGWPolicyRequest
 }
 
 // NewDescribeNATGWRuleRequest will create request of DescribeNATGWRule action.
-func (c *OpenAPIClient) NewDescribeNATGWRuleRequest() *apis.DescribeNATGWRuleRequest {
+func (c *UCloudStackClient) NewDescribeNATGWRuleRequest() *apis.DescribeNATGWRuleRequest {
 	req := &apis.DescribeNATGWRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNATGWRule 获取NAT网关规则
-func (c *OpenAPIClient) DescribeNATGWRule(req *apis.DescribeNATGWRuleRequest) (*apis.DescribeNATGWRuleResponse, error) {
+func (c *UCloudStackClient) DescribeNATGWRule(req *apis.DescribeNATGWRuleRequest) (*apis.DescribeNATGWRuleResponse, error) {
 	var err error
 	var res apis.DescribeNATGWRuleResponse
 
@@ -8119,17 +8119,17 @@ func (c *OpenAPIClient) DescribeNATGWRule(req *apis.DescribeNATGWRuleRequest) (*
 }
 
 // NewGetNATGWPriceRequest will create request of GetNATGWPrice action.
-func (c *OpenAPIClient) NewGetNATGWPriceRequest() *apis.GetNATGWPriceRequest {
+func (c *UCloudStackClient) NewGetNATGWPriceRequest() *apis.GetNATGWPriceRequest {
 	req := &apis.GetNATGWPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetNATGWPrice 获取NAT网关价格
-func (c *OpenAPIClient) GetNATGWPrice(req *apis.GetNATGWPriceRequest) (*apis.GetNATGWPriceResponse, error) {
+func (c *UCloudStackClient) GetNATGWPrice(req *apis.GetNATGWPriceRequest) (*apis.GetNATGWPriceResponse, error) {
 	var err error
 	var res apis.GetNATGWPriceResponse
 
@@ -8141,17 +8141,17 @@ func (c *OpenAPIClient) GetNATGWPrice(req *apis.GetNATGWPriceRequest) (*apis.Get
 }
 
 // NewUnbindEIPFromNATGWRequest will create request of UnbindEIPFromNATGW action.
-func (c *OpenAPIClient) NewUnbindEIPFromNATGWRequest() *apis.UnbindEIPFromNATGWRequest {
+func (c *UCloudStackClient) NewUnbindEIPFromNATGWRequest() *apis.UnbindEIPFromNATGWRequest {
 	req := &apis.UnbindEIPFromNATGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnbindEIPFromNATGW 从NAT网关上解绑EIP
-func (c *OpenAPIClient) UnbindEIPFromNATGW(req *apis.UnbindEIPFromNATGWRequest) (*apis.UnbindEIPFromNATGWResponse, error) {
+func (c *UCloudStackClient) UnbindEIPFromNATGW(req *apis.UnbindEIPFromNATGWRequest) (*apis.UnbindEIPFromNATGWResponse, error) {
 	var err error
 	var res apis.UnbindEIPFromNATGWResponse
 
@@ -8163,17 +8163,17 @@ func (c *OpenAPIClient) UnbindEIPFromNATGW(req *apis.UnbindEIPFromNATGWRequest) 
 }
 
 // NewUpdateNATGWPolicyRequest will create request of UpdateNATGWPolicy action.
-func (c *OpenAPIClient) NewUpdateNATGWPolicyRequest() *apis.UpdateNATGWPolicyRequest {
+func (c *UCloudStackClient) NewUpdateNATGWPolicyRequest() *apis.UpdateNATGWPolicyRequest {
 	req := &apis.UpdateNATGWPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNATGWPolicy 更新端口转发
-func (c *OpenAPIClient) UpdateNATGWPolicy(req *apis.UpdateNATGWPolicyRequest) (*apis.UpdateNATGWPolicyResponse, error) {
+func (c *UCloudStackClient) UpdateNATGWPolicy(req *apis.UpdateNATGWPolicyRequest) (*apis.UpdateNATGWPolicyResponse, error) {
 	var err error
 	var res apis.UpdateNATGWPolicyResponse
 
@@ -8185,17 +8185,17 @@ func (c *OpenAPIClient) UpdateNATGWPolicy(req *apis.UpdateNATGWPolicyRequest) (*
 }
 
 // NewUpdateNATGWRuleRequest will create request of UpdateNATGWRule action.
-func (c *OpenAPIClient) NewUpdateNATGWRuleRequest() *apis.UpdateNATGWRuleRequest {
+func (c *UCloudStackClient) NewUpdateNATGWRuleRequest() *apis.UpdateNATGWRuleRequest {
 	req := &apis.UpdateNATGWRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNATGWRule 修改NAT网关规则
-func (c *OpenAPIClient) UpdateNATGWRule(req *apis.UpdateNATGWRuleRequest) (*apis.UpdateNATGWRuleResponse, error) {
+func (c *UCloudStackClient) UpdateNATGWRule(req *apis.UpdateNATGWRuleRequest) (*apis.UpdateNATGWRuleResponse, error) {
 	var err error
 	var res apis.UpdateNATGWRuleResponse
 
@@ -8207,17 +8207,17 @@ func (c *OpenAPIClient) UpdateNATGWRule(req *apis.UpdateNATGWRuleRequest) (*apis
 }
 
 // NewUpdateSGFromNATGWRequest will create request of UpdateSGFromNATGW action.
-func (c *OpenAPIClient) NewUpdateSGFromNATGWRequest() *apis.UpdateSGFromNATGWRequest {
+func (c *UCloudStackClient) NewUpdateSGFromNATGWRequest() *apis.UpdateSGFromNATGWRequest {
 	req := &apis.UpdateSGFromNATGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateSGFromNATGW 修改NAT网关的安全组
-func (c *OpenAPIClient) UpdateSGFromNATGW(req *apis.UpdateSGFromNATGWRequest) (*apis.UpdateSGFromNATGWResponse, error) {
+func (c *UCloudStackClient) UpdateSGFromNATGW(req *apis.UpdateSGFromNATGWRequest) (*apis.UpdateSGFromNATGWResponse, error) {
 	var err error
 	var res apis.UpdateSGFromNATGWResponse
 
@@ -8229,17 +8229,17 @@ func (c *OpenAPIClient) UpdateSGFromNATGW(req *apis.UpdateSGFromNATGWRequest) (*
 }
 
 // NewUpgradeNATGWToHARequest will create request of UpgradeNATGWToHA action.
-func (c *OpenAPIClient) NewUpgradeNATGWToHARequest() *apis.UpgradeNATGWToHARequest {
+func (c *UCloudStackClient) NewUpgradeNATGWToHARequest() *apis.UpgradeNATGWToHARequest {
 	req := &apis.UpgradeNATGWToHARequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeNATGWToHA 升级为高可用版本
-func (c *OpenAPIClient) UpgradeNATGWToHA(req *apis.UpgradeNATGWToHARequest) (*apis.UpgradeNATGWToHAResponse, error) {
+func (c *UCloudStackClient) UpgradeNATGWToHA(req *apis.UpgradeNATGWToHARequest) (*apis.UpgradeNATGWToHAResponse, error) {
 	var err error
 	var res apis.UpgradeNATGWToHAResponse
 
@@ -8251,17 +8251,17 @@ func (c *OpenAPIClient) UpgradeNATGWToHA(req *apis.UpgradeNATGWToHARequest) (*ap
 }
 
 // NewAttachNICRequest will create request of AttachNIC action.
-func (c *OpenAPIClient) NewAttachNICRequest() *apis.AttachNICRequest {
+func (c *UCloudStackClient) NewAttachNICRequest() *apis.AttachNICRequest {
 	req := &apis.AttachNICRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AttachNIC 绑定网卡
-func (c *OpenAPIClient) AttachNIC(req *apis.AttachNICRequest) (*apis.AttachNICResponse, error) {
+func (c *UCloudStackClient) AttachNIC(req *apis.AttachNICRequest) (*apis.AttachNICResponse, error) {
 	var err error
 	var res apis.AttachNICResponse
 
@@ -8273,17 +8273,17 @@ func (c *OpenAPIClient) AttachNIC(req *apis.AttachNICRequest) (*apis.AttachNICRe
 }
 
 // NewCheckMACInUseRequest will create request of CheckMACInUse action.
-func (c *OpenAPIClient) NewCheckMACInUseRequest() *apis.CheckMACInUseRequest {
+func (c *UCloudStackClient) NewCheckMACInUseRequest() *apis.CheckMACInUseRequest {
 	req := &apis.CheckMACInUseRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CheckMACInUse 查询MAC是否使用中
-func (c *OpenAPIClient) CheckMACInUse(req *apis.CheckMACInUseRequest) (*apis.CheckMACInUseResponse, error) {
+func (c *UCloudStackClient) CheckMACInUse(req *apis.CheckMACInUseRequest) (*apis.CheckMACInUseResponse, error) {
 	var err error
 	var res apis.CheckMACInUseResponse
 
@@ -8295,17 +8295,17 @@ func (c *OpenAPIClient) CheckMACInUse(req *apis.CheckMACInUseRequest) (*apis.Che
 }
 
 // NewCreateNICRequest will create request of CreateNIC action.
-func (c *OpenAPIClient) NewCreateNICRequest() *apis.CreateNICRequest {
+func (c *UCloudStackClient) NewCreateNICRequest() *apis.CreateNICRequest {
 	req := &apis.CreateNICRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateNIC 创建弹性网卡
-func (c *OpenAPIClient) CreateNIC(req *apis.CreateNICRequest) (*apis.CreateNICResponse, error) {
+func (c *UCloudStackClient) CreateNIC(req *apis.CreateNICRequest) (*apis.CreateNICResponse, error) {
 	var err error
 	var res apis.CreateNICResponse
 
@@ -8317,17 +8317,17 @@ func (c *OpenAPIClient) CreateNIC(req *apis.CreateNICRequest) (*apis.CreateNICRe
 }
 
 // NewDeleteNICRequest will create request of DeleteNIC action.
-func (c *OpenAPIClient) NewDeleteNICRequest() *apis.DeleteNICRequest {
+func (c *UCloudStackClient) NewDeleteNICRequest() *apis.DeleteNICRequest {
 	req := &apis.DeleteNICRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteNIC 删除弹性网卡
-func (c *OpenAPIClient) DeleteNIC(req *apis.DeleteNICRequest) (*apis.DeleteNICResponse, error) {
+func (c *UCloudStackClient) DeleteNIC(req *apis.DeleteNICRequest) (*apis.DeleteNICResponse, error) {
 	var err error
 	var res apis.DeleteNICResponse
 
@@ -8339,17 +8339,17 @@ func (c *OpenAPIClient) DeleteNIC(req *apis.DeleteNICRequest) (*apis.DeleteNICRe
 }
 
 // NewDescribeNICRequest will create request of DescribeNIC action.
-func (c *OpenAPIClient) NewDescribeNICRequest() *apis.DescribeNICRequest {
+func (c *UCloudStackClient) NewDescribeNICRequest() *apis.DescribeNICRequest {
 	req := &apis.DescribeNICRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeNIC 查询弹性网卡信息,如果指定资源查询就是查询资源绑定的所有网卡
-func (c *OpenAPIClient) DescribeNIC(req *apis.DescribeNICRequest) (*apis.DescribeNICResponse, error) {
+func (c *UCloudStackClient) DescribeNIC(req *apis.DescribeNICRequest) (*apis.DescribeNICResponse, error) {
 	var err error
 	var res apis.DescribeNICResponse
 
@@ -8361,17 +8361,17 @@ func (c *OpenAPIClient) DescribeNIC(req *apis.DescribeNICRequest) (*apis.Describ
 }
 
 // NewDetachNICRequest will create request of DetachNIC action.
-func (c *OpenAPIClient) NewDetachNICRequest() *apis.DetachNICRequest {
+func (c *UCloudStackClient) NewDetachNICRequest() *apis.DetachNICRequest {
 	req := &apis.DetachNICRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DetachNIC 解绑网卡
-func (c *OpenAPIClient) DetachNIC(req *apis.DetachNICRequest) (*apis.DetachNICResponse, error) {
+func (c *UCloudStackClient) DetachNIC(req *apis.DetachNICRequest) (*apis.DetachNICResponse, error) {
 	var err error
 	var res apis.DetachNICResponse
 
@@ -8383,17 +8383,17 @@ func (c *OpenAPIClient) DetachNIC(req *apis.DetachNICRequest) (*apis.DetachNICRe
 }
 
 // NewGetCreateNICPriceRequest will create request of GetCreateNICPrice action.
-func (c *OpenAPIClient) NewGetCreateNICPriceRequest() *apis.GetCreateNICPriceRequest {
+func (c *UCloudStackClient) NewGetCreateNICPriceRequest() *apis.GetCreateNICPriceRequest {
 	req := &apis.GetCreateNICPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetCreateNICPrice 获取弹性IP价格
-func (c *OpenAPIClient) GetCreateNICPrice(req *apis.GetCreateNICPriceRequest) (*apis.GetCreateNICPriceResponse, error) {
+func (c *UCloudStackClient) GetCreateNICPrice(req *apis.GetCreateNICPriceRequest) (*apis.GetCreateNICPriceResponse, error) {
 	var err error
 	var res apis.GetCreateNICPriceResponse
 
@@ -8405,17 +8405,17 @@ func (c *OpenAPIClient) GetCreateNICPrice(req *apis.GetCreateNICPriceRequest) (*
 }
 
 // NewGetUpdateNICPriceRequest will create request of GetUpdateNICPrice action.
-func (c *OpenAPIClient) NewGetUpdateNICPriceRequest() *apis.GetUpdateNICPriceRequest {
+func (c *UCloudStackClient) NewGetUpdateNICPriceRequest() *apis.GetUpdateNICPriceRequest {
 	req := &apis.GetUpdateNICPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetUpdateNICPrice 获取更新弹性网卡价格
-func (c *OpenAPIClient) GetUpdateNICPrice(req *apis.GetUpdateNICPriceRequest) (*apis.GetUpdateNICPriceResponse, error) {
+func (c *UCloudStackClient) GetUpdateNICPrice(req *apis.GetUpdateNICPriceRequest) (*apis.GetUpdateNICPriceResponse, error) {
 	var err error
 	var res apis.GetUpdateNICPriceResponse
 
@@ -8427,17 +8427,17 @@ func (c *OpenAPIClient) GetUpdateNICPrice(req *apis.GetUpdateNICPriceRequest) (*
 }
 
 // NewUpdateNICIPRequest will create request of UpdateNICIP action.
-func (c *OpenAPIClient) NewUpdateNICIPRequest() *apis.UpdateNICIPRequest {
+func (c *UCloudStackClient) NewUpdateNICIPRequest() *apis.UpdateNICIPRequest {
 	req := &apis.UpdateNICIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNICIP 更新网卡的IP
-func (c *OpenAPIClient) UpdateNICIP(req *apis.UpdateNICIPRequest) (*apis.UpdateNICIPResponse, error) {
+func (c *UCloudStackClient) UpdateNICIP(req *apis.UpdateNICIPRequest) (*apis.UpdateNICIPResponse, error) {
 	var err error
 	var res apis.UpdateNICIPResponse
 
@@ -8449,17 +8449,17 @@ func (c *OpenAPIClient) UpdateNICIP(req *apis.UpdateNICIPRequest) (*apis.UpdateN
 }
 
 // NewUpdateNICIPBandwidthRequest will create request of UpdateNICIPBandwidth action.
-func (c *OpenAPIClient) NewUpdateNICIPBandwidthRequest() *apis.UpdateNICIPBandwidthRequest {
+func (c *UCloudStackClient) NewUpdateNICIPBandwidthRequest() *apis.UpdateNICIPBandwidthRequest {
 	req := &apis.UpdateNICIPBandwidthRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNICIPBandwidth 修改弹性外网网卡的IP带宽
-func (c *OpenAPIClient) UpdateNICIPBandwidth(req *apis.UpdateNICIPBandwidthRequest) (*apis.UpdateNICIPBandwidthResponse, error) {
+func (c *UCloudStackClient) UpdateNICIPBandwidth(req *apis.UpdateNICIPBandwidthRequest) (*apis.UpdateNICIPBandwidthResponse, error) {
 	var err error
 	var res apis.UpdateNICIPBandwidthResponse
 
@@ -8471,17 +8471,17 @@ func (c *OpenAPIClient) UpdateNICIPBandwidth(req *apis.UpdateNICIPBandwidthReque
 }
 
 // NewUpdateNICMACRequest will create request of UpdateNICMAC action.
-func (c *OpenAPIClient) NewUpdateNICMACRequest() *apis.UpdateNICMACRequest {
+func (c *UCloudStackClient) NewUpdateNICMACRequest() *apis.UpdateNICMACRequest {
 	req := &apis.UpdateNICMACRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNICMAC 修改网卡的MAC
-func (c *OpenAPIClient) UpdateNICMAC(req *apis.UpdateNICMACRequest) (*apis.UpdateNICMACResponse, error) {
+func (c *UCloudStackClient) UpdateNICMAC(req *apis.UpdateNICMACRequest) (*apis.UpdateNICMACResponse, error) {
 	var err error
 	var res apis.UpdateNICMACResponse
 
@@ -8493,17 +8493,17 @@ func (c *OpenAPIClient) UpdateNICMAC(req *apis.UpdateNICMACRequest) (*apis.Updat
 }
 
 // NewUpdateNICPFRequest will create request of UpdateNICPF action.
-func (c *OpenAPIClient) NewUpdateNICPFRequest() *apis.UpdateNICPFRequest {
+func (c *UCloudStackClient) NewUpdateNICPFRequest() *apis.UpdateNICPFRequest {
 	req := &apis.UpdateNICPFRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNICPF 修改网卡的物理型号
-func (c *OpenAPIClient) UpdateNICPF(req *apis.UpdateNICPFRequest) (*apis.UpdateNICPFResponse, error) {
+func (c *UCloudStackClient) UpdateNICPF(req *apis.UpdateNICPFRequest) (*apis.UpdateNICPFResponse, error) {
 	var err error
 	var res apis.UpdateNICPFResponse
 
@@ -8515,17 +8515,17 @@ func (c *OpenAPIClient) UpdateNICPF(req *apis.UpdateNICPFRequest) (*apis.UpdateN
 }
 
 // NewUpdateNICTrafficShapingRequest will create request of UpdateNICTrafficShaping action.
-func (c *OpenAPIClient) NewUpdateNICTrafficShapingRequest() *apis.UpdateNICTrafficShapingRequest {
+func (c *UCloudStackClient) NewUpdateNICTrafficShapingRequest() *apis.UpdateNICTrafficShapingRequest {
 	req := &apis.UpdateNICTrafficShapingRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateNICTrafficShaping 更新网卡流量整形信息
-func (c *OpenAPIClient) UpdateNICTrafficShaping(req *apis.UpdateNICTrafficShapingRequest) (*apis.UpdateNICTrafficShapingResponse, error) {
+func (c *UCloudStackClient) UpdateNICTrafficShaping(req *apis.UpdateNICTrafficShapingRequest) (*apis.UpdateNICTrafficShapingResponse, error) {
 	var err error
 	var res apis.UpdateNICTrafficShapingResponse
 
@@ -8537,17 +8537,17 @@ func (c *OpenAPIClient) UpdateNICTrafficShaping(req *apis.UpdateNICTrafficShapin
 }
 
 // NewAbortMigratePaaSInstanceRequest will create request of AbortMigratePaaSInstance action.
-func (c *OpenAPIClient) NewAbortMigratePaaSInstanceRequest() *apis.AbortMigratePaaSInstanceRequest {
+func (c *UCloudStackClient) NewAbortMigratePaaSInstanceRequest() *apis.AbortMigratePaaSInstanceRequest {
 	req := &apis.AbortMigratePaaSInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AbortMigratePaaSInstance PaaS 取消计算迁移
-func (c *OpenAPIClient) AbortMigratePaaSInstance(req *apis.AbortMigratePaaSInstanceRequest) (*apis.AbortMigratePaaSInstanceResponse, error) {
+func (c *UCloudStackClient) AbortMigratePaaSInstance(req *apis.AbortMigratePaaSInstanceRequest) (*apis.AbortMigratePaaSInstanceResponse, error) {
 	var err error
 	var res apis.AbortMigratePaaSInstanceResponse
 
@@ -8559,17 +8559,17 @@ func (c *OpenAPIClient) AbortMigratePaaSInstance(req *apis.AbortMigratePaaSInsta
 }
 
 // NewDescribeAuditLogRequest will create request of DescribeAuditLog action.
-func (c *OpenAPIClient) NewDescribeAuditLogRequest() *apis.DescribeAuditLogRequest {
+func (c *UCloudStackClient) NewDescribeAuditLogRequest() *apis.DescribeAuditLogRequest {
 	req := &apis.DescribeAuditLogRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeAuditLog 获取审计日志
-func (c *OpenAPIClient) DescribeAuditLog(req *apis.DescribeAuditLogRequest) (*apis.DescribeAuditLogResponse, error) {
+func (c *UCloudStackClient) DescribeAuditLog(req *apis.DescribeAuditLogRequest) (*apis.DescribeAuditLogResponse, error) {
 	var err error
 	var res apis.DescribeAuditLogResponse
 
@@ -8581,17 +8581,17 @@ func (c *OpenAPIClient) DescribeAuditLog(req *apis.DescribeAuditLogRequest) (*ap
 }
 
 // NewDescribePaaSInstanceRequest will create request of DescribePaaSInstance action.
-func (c *OpenAPIClient) NewDescribePaaSInstanceRequest() *apis.DescribePaaSInstanceRequest {
+func (c *UCloudStackClient) NewDescribePaaSInstanceRequest() *apis.DescribePaaSInstanceRequest {
 	req := &apis.DescribePaaSInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribePaaSInstance 获取 PaaS 实例信息
-func (c *OpenAPIClient) DescribePaaSInstance(req *apis.DescribePaaSInstanceRequest) (*apis.DescribePaaSInstanceResponse, error) {
+func (c *UCloudStackClient) DescribePaaSInstance(req *apis.DescribePaaSInstanceRequest) (*apis.DescribePaaSInstanceResponse, error) {
 	var err error
 	var res apis.DescribePaaSInstanceResponse
 
@@ -8603,17 +8603,17 @@ func (c *OpenAPIClient) DescribePaaSInstance(req *apis.DescribePaaSInstanceReque
 }
 
 // NewDescribeParametersHistoriesRequest will create request of DescribeParametersHistories action.
-func (c *OpenAPIClient) NewDescribeParametersHistoriesRequest() *apis.DescribeParametersHistoriesRequest {
+func (c *UCloudStackClient) NewDescribeParametersHistoriesRequest() *apis.DescribeParametersHistoriesRequest {
 	req := &apis.DescribeParametersHistoriesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeParametersHistories 查询参数修改记录
-func (c *OpenAPIClient) DescribeParametersHistories(req *apis.DescribeParametersHistoriesRequest) (*apis.DescribeParametersHistoriesResponse, error) {
+func (c *UCloudStackClient) DescribeParametersHistories(req *apis.DescribeParametersHistoriesRequest) (*apis.DescribeParametersHistoriesResponse, error) {
 	var err error
 	var res apis.DescribeParametersHistoriesResponse
 
@@ -8625,17 +8625,17 @@ func (c *OpenAPIClient) DescribeParametersHistories(req *apis.DescribeParameters
 }
 
 // NewGetConnectionInfoRequest will create request of GetConnectionInfo action.
-func (c *OpenAPIClient) NewGetConnectionInfoRequest() *apis.GetConnectionInfoRequest {
+func (c *UCloudStackClient) NewGetConnectionInfoRequest() *apis.GetConnectionInfoRequest {
 	req := &apis.GetConnectionInfoRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetConnectionInfo 获取连接信息
-func (c *OpenAPIClient) GetConnectionInfo(req *apis.GetConnectionInfoRequest) (*apis.GetConnectionInfoResponse, error) {
+func (c *UCloudStackClient) GetConnectionInfo(req *apis.GetConnectionInfoRequest) (*apis.GetConnectionInfoResponse, error) {
 	var err error
 	var res apis.GetConnectionInfoResponse
 
@@ -8647,17 +8647,17 @@ func (c *OpenAPIClient) GetConnectionInfo(req *apis.GetConnectionInfoRequest) (*
 }
 
 // NewGetMigratePaaSInstancePriceRequest will create request of GetMigratePaaSInstancePrice action.
-func (c *OpenAPIClient) NewGetMigratePaaSInstancePriceRequest() *apis.GetMigratePaaSInstancePriceRequest {
+func (c *UCloudStackClient) NewGetMigratePaaSInstancePriceRequest() *apis.GetMigratePaaSInstancePriceRequest {
 	req := &apis.GetMigratePaaSInstancePriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetMigratePaaSInstancePrice 获取PaaS 计算迁移差价
-func (c *OpenAPIClient) GetMigratePaaSInstancePrice(req *apis.GetMigratePaaSInstancePriceRequest) (*apis.GetMigratePaaSInstancePriceResponse, error) {
+func (c *UCloudStackClient) GetMigratePaaSInstancePrice(req *apis.GetMigratePaaSInstancePriceRequest) (*apis.GetMigratePaaSInstancePriceResponse, error) {
 	var err error
 	var res apis.GetMigratePaaSInstancePriceResponse
 
@@ -8669,17 +8669,17 @@ func (c *OpenAPIClient) GetMigratePaaSInstancePrice(req *apis.GetMigratePaaSInst
 }
 
 // NewGetMigratePaaSStoragePriceRequest will create request of GetMigratePaaSStoragePrice action.
-func (c *OpenAPIClient) NewGetMigratePaaSStoragePriceRequest() *apis.GetMigratePaaSStoragePriceRequest {
+func (c *UCloudStackClient) NewGetMigratePaaSStoragePriceRequest() *apis.GetMigratePaaSStoragePriceRequest {
 	req := &apis.GetMigratePaaSStoragePriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetMigratePaaSStoragePrice 获取PaaS产品存储热迁移差价
-func (c *OpenAPIClient) GetMigratePaaSStoragePrice(req *apis.GetMigratePaaSStoragePriceRequest) (*apis.GetMigratePaaSStoragePriceResponse, error) {
+func (c *UCloudStackClient) GetMigratePaaSStoragePrice(req *apis.GetMigratePaaSStoragePriceRequest) (*apis.GetMigratePaaSStoragePriceResponse, error) {
 	var err error
 	var res apis.GetMigratePaaSStoragePriceResponse
 
@@ -8691,17 +8691,17 @@ func (c *OpenAPIClient) GetMigratePaaSStoragePrice(req *apis.GetMigratePaaSStora
 }
 
 // NewMigratePaaSInstanceRequest will create request of MigratePaaSInstance action.
-func (c *OpenAPIClient) NewMigratePaaSInstanceRequest() *apis.MigratePaaSInstanceRequest {
+func (c *UCloudStackClient) NewMigratePaaSInstanceRequest() *apis.MigratePaaSInstanceRequest {
 	req := &apis.MigratePaaSInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // MigratePaaSInstance PaaS 计算迁移
-func (c *OpenAPIClient) MigratePaaSInstance(req *apis.MigratePaaSInstanceRequest) (*apis.MigratePaaSInstanceResponse, error) {
+func (c *UCloudStackClient) MigratePaaSInstance(req *apis.MigratePaaSInstanceRequest) (*apis.MigratePaaSInstanceResponse, error) {
 	var err error
 	var res apis.MigratePaaSInstanceResponse
 
@@ -8713,17 +8713,17 @@ func (c *OpenAPIClient) MigratePaaSInstance(req *apis.MigratePaaSInstanceRequest
 }
 
 // NewMigratePaaSStorageRequest will create request of MigratePaaSStorage action.
-func (c *OpenAPIClient) NewMigratePaaSStorageRequest() *apis.MigratePaaSStorageRequest {
+func (c *UCloudStackClient) NewMigratePaaSStorageRequest() *apis.MigratePaaSStorageRequest {
 	req := &apis.MigratePaaSStorageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // MigratePaaSStorage PaaS产品存储热迁移
-func (c *OpenAPIClient) MigratePaaSStorage(req *apis.MigratePaaSStorageRequest) (*apis.MigratePaaSStorageResponse, error) {
+func (c *UCloudStackClient) MigratePaaSStorage(req *apis.MigratePaaSStorageRequest) (*apis.MigratePaaSStorageResponse, error) {
 	var err error
 	var res apis.MigratePaaSStorageResponse
 
@@ -8735,17 +8735,17 @@ func (c *OpenAPIClient) MigratePaaSStorage(req *apis.MigratePaaSStorageRequest) 
 }
 
 // NewRecoverPaaSConfigRequest will create request of RecoverPaaSConfig action.
-func (c *OpenAPIClient) NewRecoverPaaSConfigRequest() *apis.RecoverPaaSConfigRequest {
+func (c *UCloudStackClient) NewRecoverPaaSConfigRequest() *apis.RecoverPaaSConfigRequest {
 	req := &apis.RecoverPaaSConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RecoverPaaSConfig 恢复 PaaS 产品配置
-func (c *OpenAPIClient) RecoverPaaSConfig(req *apis.RecoverPaaSConfigRequest) (*apis.RecoverPaaSConfigResponse, error) {
+func (c *UCloudStackClient) RecoverPaaSConfig(req *apis.RecoverPaaSConfigRequest) (*apis.RecoverPaaSConfigResponse, error) {
 	var err error
 	var res apis.RecoverPaaSConfigResponse
 
@@ -8757,17 +8757,17 @@ func (c *OpenAPIClient) RecoverPaaSConfig(req *apis.RecoverPaaSConfigRequest) (*
 }
 
 // NewStartPaaSInstanceRequest will create request of StartPaaSInstance action.
-func (c *OpenAPIClient) NewStartPaaSInstanceRequest() *apis.StartPaaSInstanceRequest {
+func (c *UCloudStackClient) NewStartPaaSInstanceRequest() *apis.StartPaaSInstanceRequest {
 	req := &apis.StartPaaSInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // StartPaaSInstance Paas 实例开机
-func (c *OpenAPIClient) StartPaaSInstance(req *apis.StartPaaSInstanceRequest) (*apis.StartPaaSInstanceResponse, error) {
+func (c *UCloudStackClient) StartPaaSInstance(req *apis.StartPaaSInstanceRequest) (*apis.StartPaaSInstanceResponse, error) {
 	var err error
 	var res apis.StartPaaSInstanceResponse
 
@@ -8779,17 +8779,17 @@ func (c *OpenAPIClient) StartPaaSInstance(req *apis.StartPaaSInstanceRequest) (*
 }
 
 // NewStopPaaSInstanceRequest will create request of StopPaaSInstance action.
-func (c *OpenAPIClient) NewStopPaaSInstanceRequest() *apis.StopPaaSInstanceRequest {
+func (c *UCloudStackClient) NewStopPaaSInstanceRequest() *apis.StopPaaSInstanceRequest {
 	req := &apis.StopPaaSInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // StopPaaSInstance Paas 实例关机
-func (c *OpenAPIClient) StopPaaSInstance(req *apis.StopPaaSInstanceRequest) (*apis.StopPaaSInstanceResponse, error) {
+func (c *UCloudStackClient) StopPaaSInstance(req *apis.StopPaaSInstanceRequest) (*apis.StopPaaSInstanceResponse, error) {
 	var err error
 	var res apis.StopPaaSInstanceResponse
 
@@ -8801,17 +8801,17 @@ func (c *OpenAPIClient) StopPaaSInstance(req *apis.StopPaaSInstanceRequest) (*ap
 }
 
 // NewUpdateAuditLogRequest will create request of UpdateAuditLog action.
-func (c *OpenAPIClient) NewUpdateAuditLogRequest() *apis.UpdateAuditLogRequest {
+func (c *UCloudStackClient) NewUpdateAuditLogRequest() *apis.UpdateAuditLogRequest {
 	req := &apis.UpdateAuditLogRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateAuditLog 开关数据库审计
-func (c *OpenAPIClient) UpdateAuditLog(req *apis.UpdateAuditLogRequest) (*apis.UpdateAuditLogResponse, error) {
+func (c *UCloudStackClient) UpdateAuditLog(req *apis.UpdateAuditLogRequest) (*apis.UpdateAuditLogResponse, error) {
 	var err error
 	var res apis.UpdateAuditLogResponse
 
@@ -8823,17 +8823,17 @@ func (c *OpenAPIClient) UpdateAuditLog(req *apis.UpdateAuditLogRequest) (*apis.U
 }
 
 // NewUpdatePaaSDiskQoSRequest will create request of UpdatePaaSDiskQoS action.
-func (c *OpenAPIClient) NewUpdatePaaSDiskQoSRequest() *apis.UpdatePaaSDiskQoSRequest {
+func (c *UCloudStackClient) NewUpdatePaaSDiskQoSRequest() *apis.UpdatePaaSDiskQoSRequest {
 	req := &apis.UpdatePaaSDiskQoSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdatePaaSDiskQoS 设置PaaS产品硬盘QoS
-func (c *OpenAPIClient) UpdatePaaSDiskQoS(req *apis.UpdatePaaSDiskQoSRequest) (*apis.UpdatePaaSDiskQoSResponse, error) {
+func (c *UCloudStackClient) UpdatePaaSDiskQoS(req *apis.UpdatePaaSDiskQoSRequest) (*apis.UpdatePaaSDiskQoSResponse, error) {
 	var err error
 	var res apis.UpdatePaaSDiskQoSResponse
 
@@ -8845,17 +8845,17 @@ func (c *OpenAPIClient) UpdatePaaSDiskQoS(req *apis.UpdatePaaSDiskQoSRequest) (*
 }
 
 // NewUpdateTerminationPolicyRequest will create request of UpdateTerminationPolicy action.
-func (c *OpenAPIClient) NewUpdateTerminationPolicyRequest() *apis.UpdateTerminationPolicyRequest {
+func (c *UCloudStackClient) NewUpdateTerminationPolicyRequest() *apis.UpdateTerminationPolicyRequest {
 	req := &apis.UpdateTerminationPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateTerminationPolicy 修改 PaaS产品 删除保护
-func (c *OpenAPIClient) UpdateTerminationPolicy(req *apis.UpdateTerminationPolicyRequest) (*apis.UpdateTerminationPolicyResponse, error) {
+func (c *UCloudStackClient) UpdateTerminationPolicy(req *apis.UpdateTerminationPolicyRequest) (*apis.UpdateTerminationPolicyResponse, error) {
 	var err error
 	var res apis.UpdateTerminationPolicyResponse
 
@@ -8867,17 +8867,17 @@ func (c *OpenAPIClient) UpdateTerminationPolicy(req *apis.UpdateTerminationPolic
 }
 
 // NewCreateOrchTaskRequest will create request of CreateOrchTask action.
-func (c *OpenAPIClient) NewCreateOrchTaskRequest() *apis.CreateOrchTaskRequest {
+func (c *UCloudStackClient) NewCreateOrchTaskRequest() *apis.CreateOrchTaskRequest {
 	req := &apis.CreateOrchTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateOrchTask 创建编排任务
-func (c *OpenAPIClient) CreateOrchTask(req *apis.CreateOrchTaskRequest) (*apis.CreateOrchTaskResponse, error) {
+func (c *UCloudStackClient) CreateOrchTask(req *apis.CreateOrchTaskRequest) (*apis.CreateOrchTaskResponse, error) {
 	var err error
 	var res apis.CreateOrchTaskResponse
 
@@ -8889,17 +8889,17 @@ func (c *OpenAPIClient) CreateOrchTask(req *apis.CreateOrchTaskRequest) (*apis.C
 }
 
 // NewDeleteOrchTaskRequest will create request of DeleteOrchTask action.
-func (c *OpenAPIClient) NewDeleteOrchTaskRequest() *apis.DeleteOrchTaskRequest {
+func (c *UCloudStackClient) NewDeleteOrchTaskRequest() *apis.DeleteOrchTaskRequest {
 	req := &apis.DeleteOrchTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteOrchTask 删除编排任务
-func (c *OpenAPIClient) DeleteOrchTask(req *apis.DeleteOrchTaskRequest) (*apis.DeleteOrchTaskResponse, error) {
+func (c *UCloudStackClient) DeleteOrchTask(req *apis.DeleteOrchTaskRequest) (*apis.DeleteOrchTaskResponse, error) {
 	var err error
 	var res apis.DeleteOrchTaskResponse
 
@@ -8911,17 +8911,17 @@ func (c *OpenAPIClient) DeleteOrchTask(req *apis.DeleteOrchTaskRequest) (*apis.D
 }
 
 // NewDescribeOrchTaskRequest will create request of DescribeOrchTask action.
-func (c *OpenAPIClient) NewDescribeOrchTaskRequest() *apis.DescribeOrchTaskRequest {
+func (c *UCloudStackClient) NewDescribeOrchTaskRequest() *apis.DescribeOrchTaskRequest {
 	req := &apis.DescribeOrchTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeOrchTask 查询编排任务
-func (c *OpenAPIClient) DescribeOrchTask(req *apis.DescribeOrchTaskRequest) (*apis.DescribeOrchTaskResponse, error) {
+func (c *UCloudStackClient) DescribeOrchTask(req *apis.DescribeOrchTaskRequest) (*apis.DescribeOrchTaskResponse, error) {
 	var err error
 	var res apis.DescribeOrchTaskResponse
 
@@ -8933,17 +8933,17 @@ func (c *OpenAPIClient) DescribeOrchTask(req *apis.DescribeOrchTaskRequest) (*ap
 }
 
 // NewDescribeOrchTaskTypeRequest will create request of DescribeOrchTaskType action.
-func (c *OpenAPIClient) NewDescribeOrchTaskTypeRequest() *apis.DescribeOrchTaskTypeRequest {
+func (c *UCloudStackClient) NewDescribeOrchTaskTypeRequest() *apis.DescribeOrchTaskTypeRequest {
 	req := &apis.DescribeOrchTaskTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeOrchTaskType 查询支持的编排任务
-func (c *OpenAPIClient) DescribeOrchTaskType(req *apis.DescribeOrchTaskTypeRequest) (*apis.DescribeOrchTaskTypeResponse, error) {
+func (c *UCloudStackClient) DescribeOrchTaskType(req *apis.DescribeOrchTaskTypeRequest) (*apis.DescribeOrchTaskTypeResponse, error) {
 	var err error
 	var res apis.DescribeOrchTaskTypeResponse
 
@@ -8955,17 +8955,17 @@ func (c *OpenAPIClient) DescribeOrchTaskType(req *apis.DescribeOrchTaskTypeReque
 }
 
 // NewOperateOrchTaskRequest will create request of OperateOrchTask action.
-func (c *OpenAPIClient) NewOperateOrchTaskRequest() *apis.OperateOrchTaskRequest {
+func (c *UCloudStackClient) NewOperateOrchTaskRequest() *apis.OperateOrchTaskRequest {
 	req := &apis.OperateOrchTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // OperateOrchTask 操作编排任务
-func (c *OpenAPIClient) OperateOrchTask(req *apis.OperateOrchTaskRequest) (*apis.OperateOrchTaskResponse, error) {
+func (c *UCloudStackClient) OperateOrchTask(req *apis.OperateOrchTaskRequest) (*apis.OperateOrchTaskResponse, error) {
 	var err error
 	var res apis.OperateOrchTaskResponse
 
@@ -8977,17 +8977,17 @@ func (c *OpenAPIClient) OperateOrchTask(req *apis.OperateOrchTaskRequest) (*apis
 }
 
 // NewUpdateOrchTaskRequest will create request of UpdateOrchTask action.
-func (c *OpenAPIClient) NewUpdateOrchTaskRequest() *apis.UpdateOrchTaskRequest {
+func (c *UCloudStackClient) NewUpdateOrchTaskRequest() *apis.UpdateOrchTaskRequest {
 	req := &apis.UpdateOrchTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateOrchTask 更新编排任务
-func (c *OpenAPIClient) UpdateOrchTask(req *apis.UpdateOrchTaskRequest) (*apis.UpdateOrchTaskResponse, error) {
+func (c *UCloudStackClient) UpdateOrchTask(req *apis.UpdateOrchTaskRequest) (*apis.UpdateOrchTaskResponse, error) {
 	var err error
 	var res apis.UpdateOrchTaskResponse
 
@@ -8999,17 +8999,17 @@ func (c *OpenAPIClient) UpdateOrchTask(req *apis.UpdateOrchTaskRequest) (*apis.U
 }
 
 // NewCreateOSSRequest will create request of CreateOSS action.
-func (c *OpenAPIClient) NewCreateOSSRequest() *apis.CreateOSSRequest {
+func (c *UCloudStackClient) NewCreateOSSRequest() *apis.CreateOSSRequest {
 	req := &apis.CreateOSSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateOSS 创建对象存储服务
-func (c *OpenAPIClient) CreateOSS(req *apis.CreateOSSRequest) (*apis.CreateOSSResponse, error) {
+func (c *UCloudStackClient) CreateOSS(req *apis.CreateOSSRequest) (*apis.CreateOSSResponse, error) {
 	var err error
 	var res apis.CreateOSSResponse
 
@@ -9021,17 +9021,17 @@ func (c *OpenAPIClient) CreateOSS(req *apis.CreateOSSRequest) (*apis.CreateOSSRe
 }
 
 // NewDeleteOSSRequest will create request of DeleteOSS action.
-func (c *OpenAPIClient) NewDeleteOSSRequest() *apis.DeleteOSSRequest {
+func (c *UCloudStackClient) NewDeleteOSSRequest() *apis.DeleteOSSRequest {
 	req := &apis.DeleteOSSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteOSS 删除对象存储服务
-func (c *OpenAPIClient) DeleteOSS(req *apis.DeleteOSSRequest) (*apis.DeleteOSSResponse, error) {
+func (c *UCloudStackClient) DeleteOSS(req *apis.DeleteOSSRequest) (*apis.DeleteOSSResponse, error) {
 	var err error
 	var res apis.DeleteOSSResponse
 
@@ -9043,17 +9043,17 @@ func (c *OpenAPIClient) DeleteOSS(req *apis.DeleteOSSRequest) (*apis.DeleteOSSRe
 }
 
 // NewDescribeOSSRequest will create request of DescribeOSS action.
-func (c *OpenAPIClient) NewDescribeOSSRequest() *apis.DescribeOSSRequest {
+func (c *UCloudStackClient) NewDescribeOSSRequest() *apis.DescribeOSSRequest {
 	req := &apis.DescribeOSSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeOSS 获取对象存储列表
-func (c *OpenAPIClient) DescribeOSS(req *apis.DescribeOSSRequest) (*apis.DescribeOSSResponse, error) {
+func (c *UCloudStackClient) DescribeOSS(req *apis.DescribeOSSRequest) (*apis.DescribeOSSResponse, error) {
 	var err error
 	var res apis.DescribeOSSResponse
 
@@ -9065,17 +9065,17 @@ func (c *OpenAPIClient) DescribeOSS(req *apis.DescribeOSSRequest) (*apis.Describ
 }
 
 // NewDowngradeOSSRequest will create request of DowngradeOSS action.
-func (c *OpenAPIClient) NewDowngradeOSSRequest() *apis.DowngradeOSSRequest {
+func (c *UCloudStackClient) NewDowngradeOSSRequest() *apis.DowngradeOSSRequest {
 	req := &apis.DowngradeOSSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DowngradeOSS 对象存储降配
-func (c *OpenAPIClient) DowngradeOSS(req *apis.DowngradeOSSRequest) (*apis.DowngradeOSSResponse, error) {
+func (c *UCloudStackClient) DowngradeOSS(req *apis.DowngradeOSSRequest) (*apis.DowngradeOSSResponse, error) {
 	var err error
 	var res apis.DowngradeOSSResponse
 
@@ -9087,17 +9087,17 @@ func (c *OpenAPIClient) DowngradeOSS(req *apis.DowngradeOSSRequest) (*apis.Downg
 }
 
 // NewGetOSSPriceRequest will create request of GetOSSPrice action.
-func (c *OpenAPIClient) NewGetOSSPriceRequest() *apis.GetOSSPriceRequest {
+func (c *UCloudStackClient) NewGetOSSPriceRequest() *apis.GetOSSPriceRequest {
 	req := &apis.GetOSSPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetOSSPrice 获取对象存储价格
-func (c *OpenAPIClient) GetOSSPrice(req *apis.GetOSSPriceRequest) (*apis.GetOSSPriceResponse, error) {
+func (c *UCloudStackClient) GetOSSPrice(req *apis.GetOSSPriceRequest) (*apis.GetOSSPriceResponse, error) {
 	var err error
 	var res apis.GetOSSPriceResponse
 
@@ -9109,17 +9109,17 @@ func (c *OpenAPIClient) GetOSSPrice(req *apis.GetOSSPriceRequest) (*apis.GetOSSP
 }
 
 // NewResetOSSPasswordRequest will create request of ResetOSSPassword action.
-func (c *OpenAPIClient) NewResetOSSPasswordRequest() *apis.ResetOSSPasswordRequest {
+func (c *UCloudStackClient) NewResetOSSPasswordRequest() *apis.ResetOSSPasswordRequest {
 	req := &apis.ResetOSSPasswordRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ResetOSSPassword 重置对象存储密码
-func (c *OpenAPIClient) ResetOSSPassword(req *apis.ResetOSSPasswordRequest) (*apis.ResetOSSPasswordResponse, error) {
+func (c *UCloudStackClient) ResetOSSPassword(req *apis.ResetOSSPasswordRequest) (*apis.ResetOSSPasswordResponse, error) {
 	var err error
 	var res apis.ResetOSSPasswordResponse
 
@@ -9131,17 +9131,17 @@ func (c *OpenAPIClient) ResetOSSPassword(req *apis.ResetOSSPasswordRequest) (*ap
 }
 
 // NewUpgradeOSSRequest will create request of UpgradeOSS action.
-func (c *OpenAPIClient) NewUpgradeOSSRequest() *apis.UpgradeOSSRequest {
+func (c *UCloudStackClient) NewUpgradeOSSRequest() *apis.UpgradeOSSRequest {
 	req := &apis.UpgradeOSSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeOSS 对象存储升级
-func (c *OpenAPIClient) UpgradeOSS(req *apis.UpgradeOSSRequest) (*apis.UpgradeOSSResponse, error) {
+func (c *UCloudStackClient) UpgradeOSS(req *apis.UpgradeOSSRequest) (*apis.UpgradeOSSResponse, error) {
 	var err error
 	var res apis.UpgradeOSSResponse
 
@@ -9153,17 +9153,17 @@ func (c *OpenAPIClient) UpgradeOSS(req *apis.UpgradeOSSRequest) (*apis.UpgradeOS
 }
 
 // NewAttachPlatformStorageDiskRequest will create request of AttachPlatformStorageDisk action.
-func (c *OpenAPIClient) NewAttachPlatformStorageDiskRequest() *apis.AttachPlatformStorageDiskRequest {
+func (c *UCloudStackClient) NewAttachPlatformStorageDiskRequest() *apis.AttachPlatformStorageDiskRequest {
 	req := &apis.AttachPlatformStorageDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AttachPlatformStorageDisk 绑定平台通用存储云盘
-func (c *OpenAPIClient) AttachPlatformStorageDisk(req *apis.AttachPlatformStorageDiskRequest) (*apis.AttachPlatformStorageDiskResponse, error) {
+func (c *UCloudStackClient) AttachPlatformStorageDisk(req *apis.AttachPlatformStorageDiskRequest) (*apis.AttachPlatformStorageDiskResponse, error) {
 	var err error
 	var res apis.AttachPlatformStorageDiskResponse
 
@@ -9175,17 +9175,17 @@ func (c *OpenAPIClient) AttachPlatformStorageDisk(req *apis.AttachPlatformStorag
 }
 
 // NewCreatePlatformStorageDiskRequest will create request of CreatePlatformStorageDisk action.
-func (c *OpenAPIClient) NewCreatePlatformStorageDiskRequest() *apis.CreatePlatformStorageDiskRequest {
+func (c *UCloudStackClient) NewCreatePlatformStorageDiskRequest() *apis.CreatePlatformStorageDiskRequest {
 	req := &apis.CreatePlatformStorageDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreatePlatformStorageDisk 创建平台通用存储云盘
-func (c *OpenAPIClient) CreatePlatformStorageDisk(req *apis.CreatePlatformStorageDiskRequest) (*apis.CreatePlatformStorageDiskResponse, error) {
+func (c *UCloudStackClient) CreatePlatformStorageDisk(req *apis.CreatePlatformStorageDiskRequest) (*apis.CreatePlatformStorageDiskResponse, error) {
 	var err error
 	var res apis.CreatePlatformStorageDiskResponse
 
@@ -9197,17 +9197,17 @@ func (c *OpenAPIClient) CreatePlatformStorageDisk(req *apis.CreatePlatformStorag
 }
 
 // NewDeletePlatformStorageDiskRequest will create request of DeletePlatformStorageDisk action.
-func (c *OpenAPIClient) NewDeletePlatformStorageDiskRequest() *apis.DeletePlatformStorageDiskRequest {
+func (c *UCloudStackClient) NewDeletePlatformStorageDiskRequest() *apis.DeletePlatformStorageDiskRequest {
 	req := &apis.DeletePlatformStorageDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeletePlatformStorageDisk 删除平台通用存储云盘
-func (c *OpenAPIClient) DeletePlatformStorageDisk(req *apis.DeletePlatformStorageDiskRequest) (*apis.DeletePlatformStorageDiskResponse, error) {
+func (c *UCloudStackClient) DeletePlatformStorageDisk(req *apis.DeletePlatformStorageDiskRequest) (*apis.DeletePlatformStorageDiskResponse, error) {
 	var err error
 	var res apis.DeletePlatformStorageDiskResponse
 
@@ -9219,17 +9219,17 @@ func (c *OpenAPIClient) DeletePlatformStorageDisk(req *apis.DeletePlatformStorag
 }
 
 // NewDescribePlatformStorageRequest will create request of DescribePlatformStorage action.
-func (c *OpenAPIClient) NewDescribePlatformStorageRequest() *apis.DescribePlatformStorageRequest {
+func (c *UCloudStackClient) NewDescribePlatformStorageRequest() *apis.DescribePlatformStorageRequest {
 	req := &apis.DescribePlatformStorageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribePlatformStorage 查询平台通用存储状态
-func (c *OpenAPIClient) DescribePlatformStorage(req *apis.DescribePlatformStorageRequest) (*apis.DescribePlatformStorageResponse, error) {
+func (c *UCloudStackClient) DescribePlatformStorage(req *apis.DescribePlatformStorageRequest) (*apis.DescribePlatformStorageResponse, error) {
 	var err error
 	var res apis.DescribePlatformStorageResponse
 
@@ -9241,17 +9241,17 @@ func (c *OpenAPIClient) DescribePlatformStorage(req *apis.DescribePlatformStorag
 }
 
 // NewDescribePlatformStorageDiskRequest will create request of DescribePlatformStorageDisk action.
-func (c *OpenAPIClient) NewDescribePlatformStorageDiskRequest() *apis.DescribePlatformStorageDiskRequest {
+func (c *UCloudStackClient) NewDescribePlatformStorageDiskRequest() *apis.DescribePlatformStorageDiskRequest {
 	req := &apis.DescribePlatformStorageDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribePlatformStorageDisk 查询平台通用存储云盘
-func (c *OpenAPIClient) DescribePlatformStorageDisk(req *apis.DescribePlatformStorageDiskRequest) (*apis.DescribePlatformStorageDiskResponse, error) {
+func (c *UCloudStackClient) DescribePlatformStorageDisk(req *apis.DescribePlatformStorageDiskRequest) (*apis.DescribePlatformStorageDiskResponse, error) {
 	var err error
 	var res apis.DescribePlatformStorageDiskResponse
 
@@ -9263,17 +9263,17 @@ func (c *OpenAPIClient) DescribePlatformStorageDisk(req *apis.DescribePlatformSt
 }
 
 // NewResizePlatformStorageDiskRequest will create request of ResizePlatformStorageDisk action.
-func (c *OpenAPIClient) NewResizePlatformStorageDiskRequest() *apis.ResizePlatformStorageDiskRequest {
+func (c *UCloudStackClient) NewResizePlatformStorageDiskRequest() *apis.ResizePlatformStorageDiskRequest {
 	req := &apis.ResizePlatformStorageDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ResizePlatformStorageDisk 扩容平台通用存储云盘
-func (c *OpenAPIClient) ResizePlatformStorageDisk(req *apis.ResizePlatformStorageDiskRequest) (*apis.ResizePlatformStorageDiskResponse, error) {
+func (c *UCloudStackClient) ResizePlatformStorageDisk(req *apis.ResizePlatformStorageDiskRequest) (*apis.ResizePlatformStorageDiskResponse, error) {
 	var err error
 	var res apis.ResizePlatformStorageDiskResponse
 
@@ -9285,17 +9285,17 @@ func (c *OpenAPIClient) ResizePlatformStorageDisk(req *apis.ResizePlatformStorag
 }
 
 // NewAllocatePMRequest will create request of AllocatePM action.
-func (c *OpenAPIClient) NewAllocatePMRequest() *apis.AllocatePMRequest {
+func (c *UCloudStackClient) NewAllocatePMRequest() *apis.AllocatePMRequest {
 	req := &apis.AllocatePMRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocatePM 分配裸金属给租户
-func (c *OpenAPIClient) AllocatePM(req *apis.AllocatePMRequest) (*apis.AllocatePMResponse, error) {
+func (c *UCloudStackClient) AllocatePM(req *apis.AllocatePMRequest) (*apis.AllocatePMResponse, error) {
 	var err error
 	var res apis.AllocatePMResponse
 
@@ -9307,17 +9307,17 @@ func (c *OpenAPIClient) AllocatePM(req *apis.AllocatePMRequest) (*apis.AllocateP
 }
 
 // NewAllocatePMVNCSessionRequest will create request of AllocatePMVNCSession action.
-func (c *OpenAPIClient) NewAllocatePMVNCSessionRequest() *apis.AllocatePMVNCSessionRequest {
+func (c *UCloudStackClient) NewAllocatePMVNCSessionRequest() *apis.AllocatePMVNCSessionRequest {
 	req := &apis.AllocatePMVNCSessionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocatePMVNCSession 申请裸金属VNC远程控制会话
-func (c *OpenAPIClient) AllocatePMVNCSession(req *apis.AllocatePMVNCSessionRequest) (*apis.AllocatePMVNCSessionResponse, error) {
+func (c *UCloudStackClient) AllocatePMVNCSession(req *apis.AllocatePMVNCSessionRequest) (*apis.AllocatePMVNCSessionResponse, error) {
 	var err error
 	var res apis.AllocatePMVNCSessionResponse
 
@@ -9329,17 +9329,17 @@ func (c *OpenAPIClient) AllocatePMVNCSession(req *apis.AllocatePMVNCSessionReque
 }
 
 // NewCancelInstallTaskV2Request will create request of CancelInstallTaskV2 action.
-func (c *OpenAPIClient) NewCancelInstallTaskV2Request() *apis.CancelInstallTaskV2Request {
+func (c *UCloudStackClient) NewCancelInstallTaskV2Request() *apis.CancelInstallTaskV2Request {
 	req := &apis.CancelInstallTaskV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CancelInstallTaskV2 取消装机任务
-func (c *OpenAPIClient) CancelInstallTaskV2(req *apis.CancelInstallTaskV2Request) (*apis.CancelInstallTaskV2Response, error) {
+func (c *UCloudStackClient) CancelInstallTaskV2(req *apis.CancelInstallTaskV2Request) (*apis.CancelInstallTaskV2Response, error) {
 	var err error
 	var res apis.CancelInstallTaskV2Response
 
@@ -9351,17 +9351,17 @@ func (c *OpenAPIClient) CancelInstallTaskV2(req *apis.CancelInstallTaskV2Request
 }
 
 // NewCleanPXERequest will create request of CleanPXE action.
-func (c *OpenAPIClient) NewCleanPXERequest() *apis.CleanPXERequest {
+func (c *UCloudStackClient) NewCleanPXERequest() *apis.CleanPXERequest {
 	req := &apis.CleanPXERequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CleanPXE 清理PXE环境
-func (c *OpenAPIClient) CleanPXE(req *apis.CleanPXERequest) (*apis.CleanPXEResponse, error) {
+func (c *UCloudStackClient) CleanPXE(req *apis.CleanPXERequest) (*apis.CleanPXEResponse, error) {
 	var err error
 	var res apis.CleanPXEResponse
 
@@ -9373,17 +9373,17 @@ func (c *OpenAPIClient) CleanPXE(req *apis.CleanPXERequest) (*apis.CleanPXERespo
 }
 
 // NewCloneBMCTypeRequest will create request of CloneBMCType action.
-func (c *OpenAPIClient) NewCloneBMCTypeRequest() *apis.CloneBMCTypeRequest {
+func (c *UCloudStackClient) NewCloneBMCTypeRequest() *apis.CloneBMCTypeRequest {
 	req := &apis.CloneBMCTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CloneBMCType 克隆BMC类型
-func (c *OpenAPIClient) CloneBMCType(req *apis.CloneBMCTypeRequest) (*apis.CloneBMCTypeResponse, error) {
+func (c *UCloudStackClient) CloneBMCType(req *apis.CloneBMCTypeRequest) (*apis.CloneBMCTypeResponse, error) {
 	var err error
 	var res apis.CloneBMCTypeResponse
 
@@ -9395,17 +9395,17 @@ func (c *OpenAPIClient) CloneBMCType(req *apis.CloneBMCTypeRequest) (*apis.Clone
 }
 
 // NewCloneKickstartTemplateRequest will create request of CloneKickstartTemplate action.
-func (c *OpenAPIClient) NewCloneKickstartTemplateRequest() *apis.CloneKickstartTemplateRequest {
+func (c *UCloudStackClient) NewCloneKickstartTemplateRequest() *apis.CloneKickstartTemplateRequest {
 	req := &apis.CloneKickstartTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CloneKickstartTemplate 克隆Kickstart模板
-func (c *OpenAPIClient) CloneKickstartTemplate(req *apis.CloneKickstartTemplateRequest) (*apis.CloneKickstartTemplateResponse, error) {
+func (c *UCloudStackClient) CloneKickstartTemplate(req *apis.CloneKickstartTemplateRequest) (*apis.CloneKickstartTemplateResponse, error) {
 	var err error
 	var res apis.CloneKickstartTemplateResponse
 
@@ -9417,17 +9417,17 @@ func (c *OpenAPIClient) CloneKickstartTemplate(req *apis.CloneKickstartTemplateR
 }
 
 // NewClonePartitionTemplateRequest will create request of ClonePartitionTemplate action.
-func (c *OpenAPIClient) NewClonePartitionTemplateRequest() *apis.ClonePartitionTemplateRequest {
+func (c *UCloudStackClient) NewClonePartitionTemplateRequest() *apis.ClonePartitionTemplateRequest {
 	req := &apis.ClonePartitionTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ClonePartitionTemplate 克隆分区模板
-func (c *OpenAPIClient) ClonePartitionTemplate(req *apis.ClonePartitionTemplateRequest) (*apis.ClonePartitionTemplateResponse, error) {
+func (c *UCloudStackClient) ClonePartitionTemplate(req *apis.ClonePartitionTemplateRequest) (*apis.ClonePartitionTemplateResponse, error) {
 	var err error
 	var res apis.ClonePartitionTemplateResponse
 
@@ -9439,17 +9439,17 @@ func (c *OpenAPIClient) ClonePartitionTemplate(req *apis.ClonePartitionTemplateR
 }
 
 // NewCloseKVMSessionV2Request will create request of CloseKVMSessionV2 action.
-func (c *OpenAPIClient) NewCloseKVMSessionV2Request() *apis.CloseKVMSessionV2Request {
+func (c *UCloudStackClient) NewCloseKVMSessionV2Request() *apis.CloseKVMSessionV2Request {
 	req := &apis.CloseKVMSessionV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CloseKVMSessionV2 关闭KVM会话
-func (c *OpenAPIClient) CloseKVMSessionV2(req *apis.CloseKVMSessionV2Request) (*apis.CloseKVMSessionV2Response, error) {
+func (c *UCloudStackClient) CloseKVMSessionV2(req *apis.CloseKVMSessionV2Request) (*apis.CloseKVMSessionV2Response, error) {
 	var err error
 	var res apis.CloseKVMSessionV2Response
 
@@ -9461,17 +9461,17 @@ func (c *OpenAPIClient) CloseKVMSessionV2(req *apis.CloseKVMSessionV2Request) (*
 }
 
 // NewCreateBMCTypeRequest will create request of CreateBMCType action.
-func (c *OpenAPIClient) NewCreateBMCTypeRequest() *apis.CreateBMCTypeRequest {
+func (c *UCloudStackClient) NewCreateBMCTypeRequest() *apis.CreateBMCTypeRequest {
 	req := &apis.CreateBMCTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateBMCType 创建BMC类型
-func (c *OpenAPIClient) CreateBMCType(req *apis.CreateBMCTypeRequest) (*apis.CreateBMCTypeResponse, error) {
+func (c *UCloudStackClient) CreateBMCType(req *apis.CreateBMCTypeRequest) (*apis.CreateBMCTypeResponse, error) {
 	var err error
 	var res apis.CreateBMCTypeResponse
 
@@ -9483,17 +9483,17 @@ func (c *OpenAPIClient) CreateBMCType(req *apis.CreateBMCTypeRequest) (*apis.Cre
 }
 
 // NewCreateInstallProfileRequest will create request of CreateInstallProfile action.
-func (c *OpenAPIClient) NewCreateInstallProfileRequest() *apis.CreateInstallProfileRequest {
+func (c *UCloudStackClient) NewCreateInstallProfileRequest() *apis.CreateInstallProfileRequest {
 	req := &apis.CreateInstallProfileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateInstallProfile 创建装机配置模板
-func (c *OpenAPIClient) CreateInstallProfile(req *apis.CreateInstallProfileRequest) (*apis.CreateInstallProfileResponse, error) {
+func (c *UCloudStackClient) CreateInstallProfile(req *apis.CreateInstallProfileRequest) (*apis.CreateInstallProfileResponse, error) {
 	var err error
 	var res apis.CreateInstallProfileResponse
 
@@ -9505,17 +9505,17 @@ func (c *OpenAPIClient) CreateInstallProfile(req *apis.CreateInstallProfileReque
 }
 
 // NewCreateInstallTaskV2Request will create request of CreateInstallTaskV2 action.
-func (c *OpenAPIClient) NewCreateInstallTaskV2Request() *apis.CreateInstallTaskV2Request {
+func (c *UCloudStackClient) NewCreateInstallTaskV2Request() *apis.CreateInstallTaskV2Request {
 	req := &apis.CreateInstallTaskV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateInstallTaskV2 创建装机任务
-func (c *OpenAPIClient) CreateInstallTaskV2(req *apis.CreateInstallTaskV2Request) (*apis.CreateInstallTaskV2Response, error) {
+func (c *UCloudStackClient) CreateInstallTaskV2(req *apis.CreateInstallTaskV2Request) (*apis.CreateInstallTaskV2Response, error) {
 	var err error
 	var res apis.CreateInstallTaskV2Response
 
@@ -9527,17 +9527,17 @@ func (c *OpenAPIClient) CreateInstallTaskV2(req *apis.CreateInstallTaskV2Request
 }
 
 // NewCreateKVMSessionV2Request will create request of CreateKVMSessionV2 action.
-func (c *OpenAPIClient) NewCreateKVMSessionV2Request() *apis.CreateKVMSessionV2Request {
+func (c *UCloudStackClient) NewCreateKVMSessionV2Request() *apis.CreateKVMSessionV2Request {
 	req := &apis.CreateKVMSessionV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateKVMSessionV2 创建KVM会话
-func (c *OpenAPIClient) CreateKVMSessionV2(req *apis.CreateKVMSessionV2Request) (*apis.CreateKVMSessionV2Response, error) {
+func (c *UCloudStackClient) CreateKVMSessionV2(req *apis.CreateKVMSessionV2Request) (*apis.CreateKVMSessionV2Response, error) {
 	var err error
 	var res apis.CreateKVMSessionV2Response
 
@@ -9549,17 +9549,17 @@ func (c *OpenAPIClient) CreateKVMSessionV2(req *apis.CreateKVMSessionV2Request) 
 }
 
 // NewCreateKickstartTemplateRequest will create request of CreateKickstartTemplate action.
-func (c *OpenAPIClient) NewCreateKickstartTemplateRequest() *apis.CreateKickstartTemplateRequest {
+func (c *UCloudStackClient) NewCreateKickstartTemplateRequest() *apis.CreateKickstartTemplateRequest {
 	req := &apis.CreateKickstartTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateKickstartTemplate 创建Kickstart模板
-func (c *OpenAPIClient) CreateKickstartTemplate(req *apis.CreateKickstartTemplateRequest) (*apis.CreateKickstartTemplateResponse, error) {
+func (c *UCloudStackClient) CreateKickstartTemplate(req *apis.CreateKickstartTemplateRequest) (*apis.CreateKickstartTemplateResponse, error) {
 	var err error
 	var res apis.CreateKickstartTemplateResponse
 
@@ -9571,17 +9571,17 @@ func (c *OpenAPIClient) CreateKickstartTemplate(req *apis.CreateKickstartTemplat
 }
 
 // NewCreateOSMediaV2Request will create request of CreateOSMediaV2 action.
-func (c *OpenAPIClient) NewCreateOSMediaV2Request() *apis.CreateOSMediaV2Request {
+func (c *UCloudStackClient) NewCreateOSMediaV2Request() *apis.CreateOSMediaV2Request {
 	req := &apis.CreateOSMediaV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateOSMediaV2 创建系统镜像
-func (c *OpenAPIClient) CreateOSMediaV2(req *apis.CreateOSMediaV2Request) (*apis.CreateOSMediaV2Response, error) {
+func (c *UCloudStackClient) CreateOSMediaV2(req *apis.CreateOSMediaV2Request) (*apis.CreateOSMediaV2Response, error) {
 	var err error
 	var res apis.CreateOSMediaV2Response
 
@@ -9593,17 +9593,17 @@ func (c *OpenAPIClient) CreateOSMediaV2(req *apis.CreateOSMediaV2Request) (*apis
 }
 
 // NewCreatePMV2Request will create request of CreatePMV2 action.
-func (c *OpenAPIClient) NewCreatePMV2Request() *apis.CreatePMV2Request {
+func (c *UCloudStackClient) NewCreatePMV2Request() *apis.CreatePMV2Request {
 	req := &apis.CreatePMV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreatePMV2 创建裸金属
-func (c *OpenAPIClient) CreatePMV2(req *apis.CreatePMV2Request) (*apis.CreatePMV2Response, error) {
+func (c *UCloudStackClient) CreatePMV2(req *apis.CreatePMV2Request) (*apis.CreatePMV2Response, error) {
 	var err error
 	var res apis.CreatePMV2Response
 
@@ -9615,17 +9615,17 @@ func (c *OpenAPIClient) CreatePMV2(req *apis.CreatePMV2Request) (*apis.CreatePMV
 }
 
 // NewCreatePartitionTemplateRequest will create request of CreatePartitionTemplate action.
-func (c *OpenAPIClient) NewCreatePartitionTemplateRequest() *apis.CreatePartitionTemplateRequest {
+func (c *UCloudStackClient) NewCreatePartitionTemplateRequest() *apis.CreatePartitionTemplateRequest {
 	req := &apis.CreatePartitionTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreatePartitionTemplate 创建分区模板
-func (c *OpenAPIClient) CreatePartitionTemplate(req *apis.CreatePartitionTemplateRequest) (*apis.CreatePartitionTemplateResponse, error) {
+func (c *UCloudStackClient) CreatePartitionTemplate(req *apis.CreatePartitionTemplateRequest) (*apis.CreatePartitionTemplateResponse, error) {
 	var err error
 	var res apis.CreatePartitionTemplateResponse
 
@@ -9637,17 +9637,17 @@ func (c *OpenAPIClient) CreatePartitionTemplate(req *apis.CreatePartitionTemplat
 }
 
 // NewDeleteBMCTypeRequest will create request of DeleteBMCType action.
-func (c *OpenAPIClient) NewDeleteBMCTypeRequest() *apis.DeleteBMCTypeRequest {
+func (c *UCloudStackClient) NewDeleteBMCTypeRequest() *apis.DeleteBMCTypeRequest {
 	req := &apis.DeleteBMCTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteBMCType 删除BMC类型
-func (c *OpenAPIClient) DeleteBMCType(req *apis.DeleteBMCTypeRequest) (*apis.DeleteBMCTypeResponse, error) {
+func (c *UCloudStackClient) DeleteBMCType(req *apis.DeleteBMCTypeRequest) (*apis.DeleteBMCTypeResponse, error) {
 	var err error
 	var res apis.DeleteBMCTypeResponse
 
@@ -9659,17 +9659,17 @@ func (c *OpenAPIClient) DeleteBMCType(req *apis.DeleteBMCTypeRequest) (*apis.Del
 }
 
 // NewDeleteInstallProfileRequest will create request of DeleteInstallProfile action.
-func (c *OpenAPIClient) NewDeleteInstallProfileRequest() *apis.DeleteInstallProfileRequest {
+func (c *UCloudStackClient) NewDeleteInstallProfileRequest() *apis.DeleteInstallProfileRequest {
 	req := &apis.DeleteInstallProfileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteInstallProfile 删除装机配置模板
-func (c *OpenAPIClient) DeleteInstallProfile(req *apis.DeleteInstallProfileRequest) (*apis.DeleteInstallProfileResponse, error) {
+func (c *UCloudStackClient) DeleteInstallProfile(req *apis.DeleteInstallProfileRequest) (*apis.DeleteInstallProfileResponse, error) {
 	var err error
 	var res apis.DeleteInstallProfileResponse
 
@@ -9681,17 +9681,17 @@ func (c *OpenAPIClient) DeleteInstallProfile(req *apis.DeleteInstallProfileReque
 }
 
 // NewDeleteInstallTaskV2Request will create request of DeleteInstallTaskV2 action.
-func (c *OpenAPIClient) NewDeleteInstallTaskV2Request() *apis.DeleteInstallTaskV2Request {
+func (c *UCloudStackClient) NewDeleteInstallTaskV2Request() *apis.DeleteInstallTaskV2Request {
 	req := &apis.DeleteInstallTaskV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteInstallTaskV2 删除装机任务
-func (c *OpenAPIClient) DeleteInstallTaskV2(req *apis.DeleteInstallTaskV2Request) (*apis.DeleteInstallTaskV2Response, error) {
+func (c *UCloudStackClient) DeleteInstallTaskV2(req *apis.DeleteInstallTaskV2Request) (*apis.DeleteInstallTaskV2Response, error) {
 	var err error
 	var res apis.DeleteInstallTaskV2Response
 
@@ -9703,17 +9703,17 @@ func (c *OpenAPIClient) DeleteInstallTaskV2(req *apis.DeleteInstallTaskV2Request
 }
 
 // NewDeleteKickstartTemplateRequest will create request of DeleteKickstartTemplate action.
-func (c *OpenAPIClient) NewDeleteKickstartTemplateRequest() *apis.DeleteKickstartTemplateRequest {
+func (c *UCloudStackClient) NewDeleteKickstartTemplateRequest() *apis.DeleteKickstartTemplateRequest {
 	req := &apis.DeleteKickstartTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteKickstartTemplate 删除Kickstart模板
-func (c *OpenAPIClient) DeleteKickstartTemplate(req *apis.DeleteKickstartTemplateRequest) (*apis.DeleteKickstartTemplateResponse, error) {
+func (c *UCloudStackClient) DeleteKickstartTemplate(req *apis.DeleteKickstartTemplateRequest) (*apis.DeleteKickstartTemplateResponse, error) {
 	var err error
 	var res apis.DeleteKickstartTemplateResponse
 
@@ -9725,17 +9725,17 @@ func (c *OpenAPIClient) DeleteKickstartTemplate(req *apis.DeleteKickstartTemplat
 }
 
 // NewDeleteOSMediaV2Request will create request of DeleteOSMediaV2 action.
-func (c *OpenAPIClient) NewDeleteOSMediaV2Request() *apis.DeleteOSMediaV2Request {
+func (c *UCloudStackClient) NewDeleteOSMediaV2Request() *apis.DeleteOSMediaV2Request {
 	req := &apis.DeleteOSMediaV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteOSMediaV2 删除系统镜像
-func (c *OpenAPIClient) DeleteOSMediaV2(req *apis.DeleteOSMediaV2Request) (*apis.DeleteOSMediaV2Response, error) {
+func (c *UCloudStackClient) DeleteOSMediaV2(req *apis.DeleteOSMediaV2Request) (*apis.DeleteOSMediaV2Response, error) {
 	var err error
 	var res apis.DeleteOSMediaV2Response
 
@@ -9747,17 +9747,17 @@ func (c *OpenAPIClient) DeleteOSMediaV2(req *apis.DeleteOSMediaV2Request) (*apis
 }
 
 // NewDeletePMV2Request will create request of DeletePMV2 action.
-func (c *OpenAPIClient) NewDeletePMV2Request() *apis.DeletePMV2Request {
+func (c *UCloudStackClient) NewDeletePMV2Request() *apis.DeletePMV2Request {
 	req := &apis.DeletePMV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeletePMV2 删除裸金属
-func (c *OpenAPIClient) DeletePMV2(req *apis.DeletePMV2Request) (*apis.DeletePMV2Response, error) {
+func (c *UCloudStackClient) DeletePMV2(req *apis.DeletePMV2Request) (*apis.DeletePMV2Response, error) {
 	var err error
 	var res apis.DeletePMV2Response
 
@@ -9769,17 +9769,17 @@ func (c *OpenAPIClient) DeletePMV2(req *apis.DeletePMV2Request) (*apis.DeletePMV
 }
 
 // NewDeletePartitionTemplateRequest will create request of DeletePartitionTemplate action.
-func (c *OpenAPIClient) NewDeletePartitionTemplateRequest() *apis.DeletePartitionTemplateRequest {
+func (c *UCloudStackClient) NewDeletePartitionTemplateRequest() *apis.DeletePartitionTemplateRequest {
 	req := &apis.DeletePartitionTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeletePartitionTemplate 删除分区模板
-func (c *OpenAPIClient) DeletePartitionTemplate(req *apis.DeletePartitionTemplateRequest) (*apis.DeletePartitionTemplateResponse, error) {
+func (c *UCloudStackClient) DeletePartitionTemplate(req *apis.DeletePartitionTemplateRequest) (*apis.DeletePartitionTemplateResponse, error) {
 	var err error
 	var res apis.DeletePartitionTemplateResponse
 
@@ -9791,17 +9791,17 @@ func (c *OpenAPIClient) DeletePartitionTemplate(req *apis.DeletePartitionTemplat
 }
 
 // NewDetectBMCTypeV2Request will create request of DetectBMCTypeV2 action.
-func (c *OpenAPIClient) NewDetectBMCTypeV2Request() *apis.DetectBMCTypeV2Request {
+func (c *UCloudStackClient) NewDetectBMCTypeV2Request() *apis.DetectBMCTypeV2Request {
 	req := &apis.DetectBMCTypeV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DetectBMCTypeV2 检测BMC类型
-func (c *OpenAPIClient) DetectBMCTypeV2(req *apis.DetectBMCTypeV2Request) (*apis.DetectBMCTypeV2Response, error) {
+func (c *UCloudStackClient) DetectBMCTypeV2(req *apis.DetectBMCTypeV2Request) (*apis.DetectBMCTypeV2Response, error) {
 	var err error
 	var res apis.DetectBMCTypeV2Response
 
@@ -9813,17 +9813,17 @@ func (c *OpenAPIClient) DetectBMCTypeV2(req *apis.DetectBMCTypeV2Request) (*apis
 }
 
 // NewDiscoverDHCPServersRequest will create request of DiscoverDHCPServers action.
-func (c *OpenAPIClient) NewDiscoverDHCPServersRequest() *apis.DiscoverDHCPServersRequest {
+func (c *UCloudStackClient) NewDiscoverDHCPServersRequest() *apis.DiscoverDHCPServersRequest {
 	req := &apis.DiscoverDHCPServersRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DiscoverDHCPServers 发现DHCP服务器
-func (c *OpenAPIClient) DiscoverDHCPServers(req *apis.DiscoverDHCPServersRequest) (*apis.DiscoverDHCPServersResponse, error) {
+func (c *UCloudStackClient) DiscoverDHCPServers(req *apis.DiscoverDHCPServersRequest) (*apis.DiscoverDHCPServersResponse, error) {
 	var err error
 	var res apis.DiscoverDHCPServersResponse
 
@@ -9835,17 +9835,17 @@ func (c *OpenAPIClient) DiscoverDHCPServers(req *apis.DiscoverDHCPServersRequest
 }
 
 // NewDiscoverPMHardwareV2Request will create request of DiscoverPMHardwareV2 action.
-func (c *OpenAPIClient) NewDiscoverPMHardwareV2Request() *apis.DiscoverPMHardwareV2Request {
+func (c *UCloudStackClient) NewDiscoverPMHardwareV2Request() *apis.DiscoverPMHardwareV2Request {
 	req := &apis.DiscoverPMHardwareV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DiscoverPMHardwareV2 硬件发现
-func (c *OpenAPIClient) DiscoverPMHardwareV2(req *apis.DiscoverPMHardwareV2Request) (*apis.DiscoverPMHardwareV2Response, error) {
+func (c *UCloudStackClient) DiscoverPMHardwareV2(req *apis.DiscoverPMHardwareV2Request) (*apis.DiscoverPMHardwareV2Response, error) {
 	var err error
 	var res apis.DiscoverPMHardwareV2Response
 
@@ -9857,17 +9857,17 @@ func (c *OpenAPIClient) DiscoverPMHardwareV2(req *apis.DiscoverPMHardwareV2Reque
 }
 
 // NewGetBMCTypeRequest will create request of GetBMCType action.
-func (c *OpenAPIClient) NewGetBMCTypeRequest() *apis.GetBMCTypeRequest {
+func (c *UCloudStackClient) NewGetBMCTypeRequest() *apis.GetBMCTypeRequest {
 	req := &apis.GetBMCTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetBMCType 获取BMC类型详情
-func (c *OpenAPIClient) GetBMCType(req *apis.GetBMCTypeRequest) (*apis.GetBMCTypeResponse, error) {
+func (c *UCloudStackClient) GetBMCType(req *apis.GetBMCTypeRequest) (*apis.GetBMCTypeResponse, error) {
 	var err error
 	var res apis.GetBMCTypeResponse
 
@@ -9879,17 +9879,17 @@ func (c *OpenAPIClient) GetBMCType(req *apis.GetBMCTypeRequest) (*apis.GetBMCTyp
 }
 
 // NewGetDHCPNetworkRequest will create request of GetDHCPNetwork action.
-func (c *OpenAPIClient) NewGetDHCPNetworkRequest() *apis.GetDHCPNetworkRequest {
+func (c *UCloudStackClient) NewGetDHCPNetworkRequest() *apis.GetDHCPNetworkRequest {
 	req := &apis.GetDHCPNetworkRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetDHCPNetwork 获取DHCP网络配置
-func (c *OpenAPIClient) GetDHCPNetwork(req *apis.GetDHCPNetworkRequest) (*apis.GetDHCPNetworkResponse, error) {
+func (c *UCloudStackClient) GetDHCPNetwork(req *apis.GetDHCPNetworkRequest) (*apis.GetDHCPNetworkResponse, error) {
 	var err error
 	var res apis.GetDHCPNetworkResponse
 
@@ -9901,17 +9901,17 @@ func (c *OpenAPIClient) GetDHCPNetwork(req *apis.GetDHCPNetworkRequest) (*apis.G
 }
 
 // NewGetDHCPServerStateRequest will create request of GetDHCPServerState action.
-func (c *OpenAPIClient) NewGetDHCPServerStateRequest() *apis.GetDHCPServerStateRequest {
+func (c *UCloudStackClient) NewGetDHCPServerStateRequest() *apis.GetDHCPServerStateRequest {
 	req := &apis.GetDHCPServerStateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetDHCPServerState 获取DHCP服务器状态
-func (c *OpenAPIClient) GetDHCPServerState(req *apis.GetDHCPServerStateRequest) (*apis.GetDHCPServerStateResponse, error) {
+func (c *UCloudStackClient) GetDHCPServerState(req *apis.GetDHCPServerStateRequest) (*apis.GetDHCPServerStateResponse, error) {
 	var err error
 	var res apis.GetDHCPServerStateResponse
 
@@ -9923,17 +9923,17 @@ func (c *OpenAPIClient) GetDHCPServerState(req *apis.GetDHCPServerStateRequest) 
 }
 
 // NewGetInstallLogsV2Request will create request of GetInstallLogsV2 action.
-func (c *OpenAPIClient) NewGetInstallLogsV2Request() *apis.GetInstallLogsV2Request {
+func (c *UCloudStackClient) NewGetInstallLogsV2Request() *apis.GetInstallLogsV2Request {
 	req := &apis.GetInstallLogsV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetInstallLogsV2 获取装机日志
-func (c *OpenAPIClient) GetInstallLogsV2(req *apis.GetInstallLogsV2Request) (*apis.GetInstallLogsV2Response, error) {
+func (c *UCloudStackClient) GetInstallLogsV2(req *apis.GetInstallLogsV2Request) (*apis.GetInstallLogsV2Response, error) {
 	var err error
 	var res apis.GetInstallLogsV2Response
 
@@ -9945,17 +9945,17 @@ func (c *OpenAPIClient) GetInstallLogsV2(req *apis.GetInstallLogsV2Request) (*ap
 }
 
 // NewGetInstallStatusByTaskIDV2Request will create request of GetInstallStatusByTaskIDV2 action.
-func (c *OpenAPIClient) NewGetInstallStatusByTaskIDV2Request() *apis.GetInstallStatusByTaskIDV2Request {
+func (c *UCloudStackClient) NewGetInstallStatusByTaskIDV2Request() *apis.GetInstallStatusByTaskIDV2Request {
 	req := &apis.GetInstallStatusByTaskIDV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetInstallStatusByTaskIDV2 按任务ID获取装机状态
-func (c *OpenAPIClient) GetInstallStatusByTaskIDV2(req *apis.GetInstallStatusByTaskIDV2Request) (*apis.GetInstallStatusByTaskIDV2Response, error) {
+func (c *UCloudStackClient) GetInstallStatusByTaskIDV2(req *apis.GetInstallStatusByTaskIDV2Request) (*apis.GetInstallStatusByTaskIDV2Response, error) {
 	var err error
 	var res apis.GetInstallStatusByTaskIDV2Response
 
@@ -9967,17 +9967,17 @@ func (c *OpenAPIClient) GetInstallStatusByTaskIDV2(req *apis.GetInstallStatusByT
 }
 
 // NewGetInstallTaskV2Request will create request of GetInstallTaskV2 action.
-func (c *OpenAPIClient) NewGetInstallTaskV2Request() *apis.GetInstallTaskV2Request {
+func (c *UCloudStackClient) NewGetInstallTaskV2Request() *apis.GetInstallTaskV2Request {
 	req := &apis.GetInstallTaskV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetInstallTaskV2 获取装机任务详情
-func (c *OpenAPIClient) GetInstallTaskV2(req *apis.GetInstallTaskV2Request) (*apis.GetInstallTaskV2Response, error) {
+func (c *UCloudStackClient) GetInstallTaskV2(req *apis.GetInstallTaskV2Request) (*apis.GetInstallTaskV2Response, error) {
 	var err error
 	var res apis.GetInstallTaskV2Response
 
@@ -9989,17 +9989,17 @@ func (c *OpenAPIClient) GetInstallTaskV2(req *apis.GetInstallTaskV2Request) (*ap
 }
 
 // NewGetKickstartTemplateRequest will create request of GetKickstartTemplate action.
-func (c *OpenAPIClient) NewGetKickstartTemplateRequest() *apis.GetKickstartTemplateRequest {
+func (c *UCloudStackClient) NewGetKickstartTemplateRequest() *apis.GetKickstartTemplateRequest {
 	req := &apis.GetKickstartTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetKickstartTemplate 获取Kickstart模板详情
-func (c *OpenAPIClient) GetKickstartTemplate(req *apis.GetKickstartTemplateRequest) (*apis.GetKickstartTemplateResponse, error) {
+func (c *UCloudStackClient) GetKickstartTemplate(req *apis.GetKickstartTemplateRequest) (*apis.GetKickstartTemplateResponse, error) {
 	var err error
 	var res apis.GetKickstartTemplateResponse
 
@@ -10011,17 +10011,17 @@ func (c *OpenAPIClient) GetKickstartTemplate(req *apis.GetKickstartTemplateReque
 }
 
 // NewGetLatestInstallConfigRequest will create request of GetLatestInstallConfig action.
-func (c *OpenAPIClient) NewGetLatestInstallConfigRequest() *apis.GetLatestInstallConfigRequest {
+func (c *UCloudStackClient) NewGetLatestInstallConfigRequest() *apis.GetLatestInstallConfigRequest {
 	req := &apis.GetLatestInstallConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetLatestInstallConfig 获取裸金属最近一次安装配置
-func (c *OpenAPIClient) GetLatestInstallConfig(req *apis.GetLatestInstallConfigRequest) (*apis.GetLatestInstallConfigResponse, error) {
+func (c *UCloudStackClient) GetLatestInstallConfig(req *apis.GetLatestInstallConfigRequest) (*apis.GetLatestInstallConfigResponse, error) {
 	var err error
 	var res apis.GetLatestInstallConfigResponse
 
@@ -10033,17 +10033,17 @@ func (c *OpenAPIClient) GetLatestInstallConfig(req *apis.GetLatestInstallConfigR
 }
 
 // NewGetOSMediaV2Request will create request of GetOSMediaV2 action.
-func (c *OpenAPIClient) NewGetOSMediaV2Request() *apis.GetOSMediaV2Request {
+func (c *UCloudStackClient) NewGetOSMediaV2Request() *apis.GetOSMediaV2Request {
 	req := &apis.GetOSMediaV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetOSMediaV2 获取系统镜像详情
-func (c *OpenAPIClient) GetOSMediaV2(req *apis.GetOSMediaV2Request) (*apis.GetOSMediaV2Response, error) {
+func (c *UCloudStackClient) GetOSMediaV2(req *apis.GetOSMediaV2Request) (*apis.GetOSMediaV2Response, error) {
 	var err error
 	var res apis.GetOSMediaV2Response
 
@@ -10055,17 +10055,17 @@ func (c *OpenAPIClient) GetOSMediaV2(req *apis.GetOSMediaV2Request) (*apis.GetOS
 }
 
 // NewGetPMHardwareV2Request will create request of GetPMHardwareV2 action.
-func (c *OpenAPIClient) NewGetPMHardwareV2Request() *apis.GetPMHardwareV2Request {
+func (c *UCloudStackClient) NewGetPMHardwareV2Request() *apis.GetPMHardwareV2Request {
 	req := &apis.GetPMHardwareV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetPMHardwareV2 获取硬件信息
-func (c *OpenAPIClient) GetPMHardwareV2(req *apis.GetPMHardwareV2Request) (*apis.GetPMHardwareV2Response, error) {
+func (c *UCloudStackClient) GetPMHardwareV2(req *apis.GetPMHardwareV2Request) (*apis.GetPMHardwareV2Response, error) {
 	var err error
 	var res apis.GetPMHardwareV2Response
 
@@ -10077,17 +10077,17 @@ func (c *OpenAPIClient) GetPMHardwareV2(req *apis.GetPMHardwareV2Request) (*apis
 }
 
 // NewGetPMJNLPFileV2Request will create request of GetPMJNLPFileV2 action.
-func (c *OpenAPIClient) NewGetPMJNLPFileV2Request() *apis.GetPMJNLPFileV2Request {
+func (c *UCloudStackClient) NewGetPMJNLPFileV2Request() *apis.GetPMJNLPFileV2Request {
 	req := &apis.GetPMJNLPFileV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetPMJNLPFileV2 获取JNLP文件
-func (c *OpenAPIClient) GetPMJNLPFileV2(req *apis.GetPMJNLPFileV2Request) (*apis.GetPMJNLPFileV2Response, error) {
+func (c *UCloudStackClient) GetPMJNLPFileV2(req *apis.GetPMJNLPFileV2Request) (*apis.GetPMJNLPFileV2Response, error) {
 	var err error
 	var res apis.GetPMJNLPFileV2Response
 
@@ -10099,17 +10099,17 @@ func (c *OpenAPIClient) GetPMJNLPFileV2(req *apis.GetPMJNLPFileV2Request) (*apis
 }
 
 // NewGetPMPowerStatusV2Request will create request of GetPMPowerStatusV2 action.
-func (c *OpenAPIClient) NewGetPMPowerStatusV2Request() *apis.GetPMPowerStatusV2Request {
+func (c *UCloudStackClient) NewGetPMPowerStatusV2Request() *apis.GetPMPowerStatusV2Request {
 	req := &apis.GetPMPowerStatusV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetPMPowerStatusV2 获取电源状态
-func (c *OpenAPIClient) GetPMPowerStatusV2(req *apis.GetPMPowerStatusV2Request) (*apis.GetPMPowerStatusV2Response, error) {
+func (c *UCloudStackClient) GetPMPowerStatusV2(req *apis.GetPMPowerStatusV2Request) (*apis.GetPMPowerStatusV2Response, error) {
 	var err error
 	var res apis.GetPMPowerStatusV2Response
 
@@ -10121,17 +10121,17 @@ func (c *OpenAPIClient) GetPMPowerStatusV2(req *apis.GetPMPowerStatusV2Request) 
 }
 
 // NewGetPartitionTemplateRequest will create request of GetPartitionTemplate action.
-func (c *OpenAPIClient) NewGetPartitionTemplateRequest() *apis.GetPartitionTemplateRequest {
+func (c *UCloudStackClient) NewGetPartitionTemplateRequest() *apis.GetPartitionTemplateRequest {
 	req := &apis.GetPartitionTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetPartitionTemplate 获取分区模板详情
-func (c *OpenAPIClient) GetPartitionTemplate(req *apis.GetPartitionTemplateRequest) (*apis.GetPartitionTemplateResponse, error) {
+func (c *UCloudStackClient) GetPartitionTemplate(req *apis.GetPartitionTemplateRequest) (*apis.GetPartitionTemplateResponse, error) {
 	var err error
 	var res apis.GetPartitionTemplateResponse
 
@@ -10143,17 +10143,17 @@ func (c *OpenAPIClient) GetPartitionTemplate(req *apis.GetPartitionTemplateReque
 }
 
 // NewListBMCTypesRequest will create request of ListBMCTypes action.
-func (c *OpenAPIClient) NewListBMCTypesRequest() *apis.ListBMCTypesRequest {
+func (c *UCloudStackClient) NewListBMCTypesRequest() *apis.ListBMCTypesRequest {
 	req := &apis.ListBMCTypesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListBMCTypes 获取BMC类型列表
-func (c *OpenAPIClient) ListBMCTypes(req *apis.ListBMCTypesRequest) (*apis.ListBMCTypesResponse, error) {
+func (c *UCloudStackClient) ListBMCTypes(req *apis.ListBMCTypesRequest) (*apis.ListBMCTypesResponse, error) {
 	var err error
 	var res apis.ListBMCTypesResponse
 
@@ -10165,17 +10165,17 @@ func (c *OpenAPIClient) ListBMCTypes(req *apis.ListBMCTypesRequest) (*apis.ListB
 }
 
 // NewListInstallProfilesRequest will create request of ListInstallProfiles action.
-func (c *OpenAPIClient) NewListInstallProfilesRequest() *apis.ListInstallProfilesRequest {
+func (c *UCloudStackClient) NewListInstallProfilesRequest() *apis.ListInstallProfilesRequest {
 	req := &apis.ListInstallProfilesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListInstallProfiles 获取装机配置模板列表
-func (c *OpenAPIClient) ListInstallProfiles(req *apis.ListInstallProfilesRequest) (*apis.ListInstallProfilesResponse, error) {
+func (c *UCloudStackClient) ListInstallProfiles(req *apis.ListInstallProfilesRequest) (*apis.ListInstallProfilesResponse, error) {
 	var err error
 	var res apis.ListInstallProfilesResponse
 
@@ -10187,17 +10187,17 @@ func (c *OpenAPIClient) ListInstallProfiles(req *apis.ListInstallProfilesRequest
 }
 
 // NewListInstallTasksV2Request will create request of ListInstallTasksV2 action.
-func (c *OpenAPIClient) NewListInstallTasksV2Request() *apis.ListInstallTasksV2Request {
+func (c *UCloudStackClient) NewListInstallTasksV2Request() *apis.ListInstallTasksV2Request {
 	req := &apis.ListInstallTasksV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListInstallTasksV2 获取装机任务列表
-func (c *OpenAPIClient) ListInstallTasksV2(req *apis.ListInstallTasksV2Request) (*apis.ListInstallTasksV2Response, error) {
+func (c *UCloudStackClient) ListInstallTasksV2(req *apis.ListInstallTasksV2Request) (*apis.ListInstallTasksV2Response, error) {
 	var err error
 	var res apis.ListInstallTasksV2Response
 
@@ -10209,17 +10209,17 @@ func (c *OpenAPIClient) ListInstallTasksV2(req *apis.ListInstallTasksV2Request) 
 }
 
 // NewListKVMSessionsV2Request will create request of ListKVMSessionsV2 action.
-func (c *OpenAPIClient) NewListKVMSessionsV2Request() *apis.ListKVMSessionsV2Request {
+func (c *UCloudStackClient) NewListKVMSessionsV2Request() *apis.ListKVMSessionsV2Request {
 	req := &apis.ListKVMSessionsV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListKVMSessionsV2 获取KVM会话列表
-func (c *OpenAPIClient) ListKVMSessionsV2(req *apis.ListKVMSessionsV2Request) (*apis.ListKVMSessionsV2Response, error) {
+func (c *UCloudStackClient) ListKVMSessionsV2(req *apis.ListKVMSessionsV2Request) (*apis.ListKVMSessionsV2Response, error) {
 	var err error
 	var res apis.ListKVMSessionsV2Response
 
@@ -10231,17 +10231,17 @@ func (c *OpenAPIClient) ListKVMSessionsV2(req *apis.ListKVMSessionsV2Request) (*
 }
 
 // NewListKickstartTemplatesRequest will create request of ListKickstartTemplates action.
-func (c *OpenAPIClient) NewListKickstartTemplatesRequest() *apis.ListKickstartTemplatesRequest {
+func (c *UCloudStackClient) NewListKickstartTemplatesRequest() *apis.ListKickstartTemplatesRequest {
 	req := &apis.ListKickstartTemplatesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListKickstartTemplates 获取Kickstart模板列表
-func (c *OpenAPIClient) ListKickstartTemplates(req *apis.ListKickstartTemplatesRequest) (*apis.ListKickstartTemplatesResponse, error) {
+func (c *UCloudStackClient) ListKickstartTemplates(req *apis.ListKickstartTemplatesRequest) (*apis.ListKickstartTemplatesResponse, error) {
 	var err error
 	var res apis.ListKickstartTemplatesResponse
 
@@ -10253,17 +10253,17 @@ func (c *OpenAPIClient) ListKickstartTemplates(req *apis.ListKickstartTemplatesR
 }
 
 // NewListOSMediaV2Request will create request of ListOSMediaV2 action.
-func (c *OpenAPIClient) NewListOSMediaV2Request() *apis.ListOSMediaV2Request {
+func (c *UCloudStackClient) NewListOSMediaV2Request() *apis.ListOSMediaV2Request {
 	req := &apis.ListOSMediaV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListOSMediaV2 获取系统镜像列表
-func (c *OpenAPIClient) ListOSMediaV2(req *apis.ListOSMediaV2Request) (*apis.ListOSMediaV2Response, error) {
+func (c *UCloudStackClient) ListOSMediaV2(req *apis.ListOSMediaV2Request) (*apis.ListOSMediaV2Response, error) {
 	var err error
 	var res apis.ListOSMediaV2Response
 
@@ -10275,17 +10275,17 @@ func (c *OpenAPIClient) ListOSMediaV2(req *apis.ListOSMediaV2Request) (*apis.Lis
 }
 
 // NewListPMV2Request will create request of ListPMV2 action.
-func (c *OpenAPIClient) NewListPMV2Request() *apis.ListPMV2Request {
+func (c *UCloudStackClient) NewListPMV2Request() *apis.ListPMV2Request {
 	req := &apis.ListPMV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListPMV2 获取裸金属列表
-func (c *OpenAPIClient) ListPMV2(req *apis.ListPMV2Request) (*apis.ListPMV2Response, error) {
+func (c *UCloudStackClient) ListPMV2(req *apis.ListPMV2Request) (*apis.ListPMV2Response, error) {
 	var err error
 	var res apis.ListPMV2Response
 
@@ -10297,17 +10297,17 @@ func (c *OpenAPIClient) ListPMV2(req *apis.ListPMV2Request) (*apis.ListPMV2Respo
 }
 
 // NewListPartitionTemplatesRequest will create request of ListPartitionTemplates action.
-func (c *OpenAPIClient) NewListPartitionTemplatesRequest() *apis.ListPartitionTemplatesRequest {
+func (c *UCloudStackClient) NewListPartitionTemplatesRequest() *apis.ListPartitionTemplatesRequest {
 	req := &apis.ListPartitionTemplatesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListPartitionTemplates 获取分区模板列表
-func (c *OpenAPIClient) ListPartitionTemplates(req *apis.ListPartitionTemplatesRequest) (*apis.ListPartitionTemplatesResponse, error) {
+func (c *UCloudStackClient) ListPartitionTemplates(req *apis.ListPartitionTemplatesRequest) (*apis.ListPartitionTemplatesResponse, error) {
 	var err error
 	var res apis.ListPartitionTemplatesResponse
 
@@ -10319,17 +10319,17 @@ func (c *OpenAPIClient) ListPartitionTemplates(req *apis.ListPartitionTemplatesR
 }
 
 // NewPowerControlPMV2Request will create request of PowerControlPMV2 action.
-func (c *OpenAPIClient) NewPowerControlPMV2Request() *apis.PowerControlPMV2Request {
+func (c *UCloudStackClient) NewPowerControlPMV2Request() *apis.PowerControlPMV2Request {
 	req := &apis.PowerControlPMV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // PowerControlPMV2 电源控制
-func (c *OpenAPIClient) PowerControlPMV2(req *apis.PowerControlPMV2Request) (*apis.PowerControlPMV2Response, error) {
+func (c *UCloudStackClient) PowerControlPMV2(req *apis.PowerControlPMV2Request) (*apis.PowerControlPMV2Response, error) {
 	var err error
 	var res apis.PowerControlPMV2Response
 
@@ -10341,17 +10341,17 @@ func (c *OpenAPIClient) PowerControlPMV2(req *apis.PowerControlPMV2Request) (*ap
 }
 
 // NewPreviewKickstartCommandsRequest will create request of PreviewKickstartCommands action.
-func (c *OpenAPIClient) NewPreviewKickstartCommandsRequest() *apis.PreviewKickstartCommandsRequest {
+func (c *UCloudStackClient) NewPreviewKickstartCommandsRequest() *apis.PreviewKickstartCommandsRequest {
 	req := &apis.PreviewKickstartCommandsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // PreviewKickstartCommands 预览Kickstart分区命令
-func (c *OpenAPIClient) PreviewKickstartCommands(req *apis.PreviewKickstartCommandsRequest) (*apis.PreviewKickstartCommandsResponse, error) {
+func (c *UCloudStackClient) PreviewKickstartCommands(req *apis.PreviewKickstartCommandsRequest) (*apis.PreviewKickstartCommandsResponse, error) {
 	var err error
 	var res apis.PreviewKickstartCommandsResponse
 
@@ -10363,17 +10363,17 @@ func (c *OpenAPIClient) PreviewKickstartCommands(req *apis.PreviewKickstartComma
 }
 
 // NewPreviewKickstartTemplateRequest will create request of PreviewKickstartTemplate action.
-func (c *OpenAPIClient) NewPreviewKickstartTemplateRequest() *apis.PreviewKickstartTemplateRequest {
+func (c *UCloudStackClient) NewPreviewKickstartTemplateRequest() *apis.PreviewKickstartTemplateRequest {
 	req := &apis.PreviewKickstartTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // PreviewKickstartTemplate 预览Kickstart模板渲染结果
-func (c *OpenAPIClient) PreviewKickstartTemplate(req *apis.PreviewKickstartTemplateRequest) (*apis.PreviewKickstartTemplateResponse, error) {
+func (c *UCloudStackClient) PreviewKickstartTemplate(req *apis.PreviewKickstartTemplateRequest) (*apis.PreviewKickstartTemplateResponse, error) {
 	var err error
 	var res apis.PreviewKickstartTemplateResponse
 
@@ -10385,17 +10385,17 @@ func (c *OpenAPIClient) PreviewKickstartTemplate(req *apis.PreviewKickstartTempl
 }
 
 // NewRecyclePMRequest will create request of RecyclePM action.
-func (c *OpenAPIClient) NewRecyclePMRequest() *apis.RecyclePMRequest {
+func (c *UCloudStackClient) NewRecyclePMRequest() *apis.RecyclePMRequest {
 	req := &apis.RecyclePMRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RecyclePM 从租户回收裸金属
-func (c *OpenAPIClient) RecyclePM(req *apis.RecyclePMRequest) (*apis.RecyclePMResponse, error) {
+func (c *UCloudStackClient) RecyclePM(req *apis.RecyclePMRequest) (*apis.RecyclePMResponse, error) {
 	var err error
 	var res apis.RecyclePMResponse
 
@@ -10407,17 +10407,17 @@ func (c *OpenAPIClient) RecyclePM(req *apis.RecyclePMRequest) (*apis.RecyclePMRe
 }
 
 // NewRetryInstallTaskV2Request will create request of RetryInstallTaskV2 action.
-func (c *OpenAPIClient) NewRetryInstallTaskV2Request() *apis.RetryInstallTaskV2Request {
+func (c *UCloudStackClient) NewRetryInstallTaskV2Request() *apis.RetryInstallTaskV2Request {
 	req := &apis.RetryInstallTaskV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RetryInstallTaskV2 重试装机任务
-func (c *OpenAPIClient) RetryInstallTaskV2(req *apis.RetryInstallTaskV2Request) (*apis.RetryInstallTaskV2Response, error) {
+func (c *UCloudStackClient) RetryInstallTaskV2(req *apis.RetryInstallTaskV2Request) (*apis.RetryInstallTaskV2Response, error) {
 	var err error
 	var res apis.RetryInstallTaskV2Response
 
@@ -10429,17 +10429,17 @@ func (c *OpenAPIClient) RetryInstallTaskV2(req *apis.RetryInstallTaskV2Request) 
 }
 
 // NewSetDHCPNetworkRequest will create request of SetDHCPNetwork action.
-func (c *OpenAPIClient) NewSetDHCPNetworkRequest() *apis.SetDHCPNetworkRequest {
+func (c *UCloudStackClient) NewSetDHCPNetworkRequest() *apis.SetDHCPNetworkRequest {
 	req := &apis.SetDHCPNetworkRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetDHCPNetwork 设置DHCP网络配置
-func (c *OpenAPIClient) SetDHCPNetwork(req *apis.SetDHCPNetworkRequest) (*apis.SetDHCPNetworkResponse, error) {
+func (c *UCloudStackClient) SetDHCPNetwork(req *apis.SetDHCPNetworkRequest) (*apis.SetDHCPNetworkResponse, error) {
 	var err error
 	var res apis.SetDHCPNetworkResponse
 
@@ -10451,17 +10451,17 @@ func (c *OpenAPIClient) SetDHCPNetwork(req *apis.SetDHCPNetworkRequest) (*apis.S
 }
 
 // NewSetDefaultPartitionTemplateRequest will create request of SetDefaultPartitionTemplate action.
-func (c *OpenAPIClient) NewSetDefaultPartitionTemplateRequest() *apis.SetDefaultPartitionTemplateRequest {
+func (c *UCloudStackClient) NewSetDefaultPartitionTemplateRequest() *apis.SetDefaultPartitionTemplateRequest {
 	req := &apis.SetDefaultPartitionTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetDefaultPartitionTemplate 设置默认分区模板
-func (c *OpenAPIClient) SetDefaultPartitionTemplate(req *apis.SetDefaultPartitionTemplateRequest) (*apis.SetDefaultPartitionTemplateResponse, error) {
+func (c *UCloudStackClient) SetDefaultPartitionTemplate(req *apis.SetDefaultPartitionTemplateRequest) (*apis.SetDefaultPartitionTemplateResponse, error) {
 	var err error
 	var res apis.SetDefaultPartitionTemplateResponse
 
@@ -10473,17 +10473,17 @@ func (c *OpenAPIClient) SetDefaultPartitionTemplate(req *apis.SetDefaultPartitio
 }
 
 // NewTestBMCTypeRequest will create request of TestBMCType action.
-func (c *OpenAPIClient) NewTestBMCTypeRequest() *apis.TestBMCTypeRequest {
+func (c *UCloudStackClient) NewTestBMCTypeRequest() *apis.TestBMCTypeRequest {
 	req := &apis.TestBMCTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // TestBMCType 测试BMC类型
-func (c *OpenAPIClient) TestBMCType(req *apis.TestBMCTypeRequest) (*apis.TestBMCTypeResponse, error) {
+func (c *UCloudStackClient) TestBMCType(req *apis.TestBMCTypeRequest) (*apis.TestBMCTypeResponse, error) {
 	var err error
 	var res apis.TestBMCTypeResponse
 
@@ -10495,17 +10495,17 @@ func (c *OpenAPIClient) TestBMCType(req *apis.TestBMCTypeRequest) (*apis.TestBMC
 }
 
 // NewTestPMIPMIV2Request will create request of TestPMIPMIV2 action.
-func (c *OpenAPIClient) NewTestPMIPMIV2Request() *apis.TestPMIPMIV2Request {
+func (c *UCloudStackClient) NewTestPMIPMIV2Request() *apis.TestPMIPMIV2Request {
 	req := &apis.TestPMIPMIV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // TestPMIPMIV2 测试IPMI连接
-func (c *OpenAPIClient) TestPMIPMIV2(req *apis.TestPMIPMIV2Request) (*apis.TestPMIPMIV2Response, error) {
+func (c *UCloudStackClient) TestPMIPMIV2(req *apis.TestPMIPMIV2Request) (*apis.TestPMIPMIV2Response, error) {
 	var err error
 	var res apis.TestPMIPMIV2Response
 
@@ -10517,17 +10517,17 @@ func (c *OpenAPIClient) TestPMIPMIV2(req *apis.TestPMIPMIV2Request) (*apis.TestP
 }
 
 // NewUpdateBMCTypeRequest will create request of UpdateBMCType action.
-func (c *OpenAPIClient) NewUpdateBMCTypeRequest() *apis.UpdateBMCTypeRequest {
+func (c *UCloudStackClient) NewUpdateBMCTypeRequest() *apis.UpdateBMCTypeRequest {
 	req := &apis.UpdateBMCTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateBMCType 更新BMC类型
-func (c *OpenAPIClient) UpdateBMCType(req *apis.UpdateBMCTypeRequest) (*apis.UpdateBMCTypeResponse, error) {
+func (c *UCloudStackClient) UpdateBMCType(req *apis.UpdateBMCTypeRequest) (*apis.UpdateBMCTypeResponse, error) {
 	var err error
 	var res apis.UpdateBMCTypeResponse
 
@@ -10539,17 +10539,17 @@ func (c *OpenAPIClient) UpdateBMCType(req *apis.UpdateBMCTypeRequest) (*apis.Upd
 }
 
 // NewUpdateInstallProfileRequest will create request of UpdateInstallProfile action.
-func (c *OpenAPIClient) NewUpdateInstallProfileRequest() *apis.UpdateInstallProfileRequest {
+func (c *UCloudStackClient) NewUpdateInstallProfileRequest() *apis.UpdateInstallProfileRequest {
 	req := &apis.UpdateInstallProfileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateInstallProfile 更新装机配置模板
-func (c *OpenAPIClient) UpdateInstallProfile(req *apis.UpdateInstallProfileRequest) (*apis.UpdateInstallProfileResponse, error) {
+func (c *UCloudStackClient) UpdateInstallProfile(req *apis.UpdateInstallProfileRequest) (*apis.UpdateInstallProfileResponse, error) {
 	var err error
 	var res apis.UpdateInstallProfileResponse
 
@@ -10561,17 +10561,17 @@ func (c *OpenAPIClient) UpdateInstallProfile(req *apis.UpdateInstallProfileReque
 }
 
 // NewUpdateKickstartTemplateRequest will create request of UpdateKickstartTemplate action.
-func (c *OpenAPIClient) NewUpdateKickstartTemplateRequest() *apis.UpdateKickstartTemplateRequest {
+func (c *UCloudStackClient) NewUpdateKickstartTemplateRequest() *apis.UpdateKickstartTemplateRequest {
 	req := &apis.UpdateKickstartTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateKickstartTemplate 更新Kickstart模板
-func (c *OpenAPIClient) UpdateKickstartTemplate(req *apis.UpdateKickstartTemplateRequest) (*apis.UpdateKickstartTemplateResponse, error) {
+func (c *UCloudStackClient) UpdateKickstartTemplate(req *apis.UpdateKickstartTemplateRequest) (*apis.UpdateKickstartTemplateResponse, error) {
 	var err error
 	var res apis.UpdateKickstartTemplateResponse
 
@@ -10583,17 +10583,17 @@ func (c *OpenAPIClient) UpdateKickstartTemplate(req *apis.UpdateKickstartTemplat
 }
 
 // NewUpdatePMV2Request will create request of UpdatePMV2 action.
-func (c *OpenAPIClient) NewUpdatePMV2Request() *apis.UpdatePMV2Request {
+func (c *UCloudStackClient) NewUpdatePMV2Request() *apis.UpdatePMV2Request {
 	req := &apis.UpdatePMV2Request{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdatePMV2 更新裸金属
-func (c *OpenAPIClient) UpdatePMV2(req *apis.UpdatePMV2Request) (*apis.UpdatePMV2Response, error) {
+func (c *UCloudStackClient) UpdatePMV2(req *apis.UpdatePMV2Request) (*apis.UpdatePMV2Response, error) {
 	var err error
 	var res apis.UpdatePMV2Response
 
@@ -10605,17 +10605,17 @@ func (c *OpenAPIClient) UpdatePMV2(req *apis.UpdatePMV2Request) (*apis.UpdatePMV
 }
 
 // NewUpdatePartitionTemplateRequest will create request of UpdatePartitionTemplate action.
-func (c *OpenAPIClient) NewUpdatePartitionTemplateRequest() *apis.UpdatePartitionTemplateRequest {
+func (c *UCloudStackClient) NewUpdatePartitionTemplateRequest() *apis.UpdatePartitionTemplateRequest {
 	req := &apis.UpdatePartitionTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdatePartitionTemplate 更新分区模板
-func (c *OpenAPIClient) UpdatePartitionTemplate(req *apis.UpdatePartitionTemplateRequest) (*apis.UpdatePartitionTemplateResponse, error) {
+func (c *UCloudStackClient) UpdatePartitionTemplate(req *apis.UpdatePartitionTemplateRequest) (*apis.UpdatePartitionTemplateResponse, error) {
 	var err error
 	var res apis.UpdatePartitionTemplateResponse
 
@@ -10627,17 +10627,17 @@ func (c *OpenAPIClient) UpdatePartitionTemplate(req *apis.UpdatePartitionTemplat
 }
 
 // NewValidateKickstartTemplateRequest will create request of ValidateKickstartTemplate action.
-func (c *OpenAPIClient) NewValidateKickstartTemplateRequest() *apis.ValidateKickstartTemplateRequest {
+func (c *UCloudStackClient) NewValidateKickstartTemplateRequest() *apis.ValidateKickstartTemplateRequest {
 	req := &apis.ValidateKickstartTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ValidateKickstartTemplate 验证Kickstart模板语法
-func (c *OpenAPIClient) ValidateKickstartTemplate(req *apis.ValidateKickstartTemplateRequest) (*apis.ValidateKickstartTemplateResponse, error) {
+func (c *UCloudStackClient) ValidateKickstartTemplate(req *apis.ValidateKickstartTemplateRequest) (*apis.ValidateKickstartTemplateResponse, error) {
 	var err error
 	var res apis.ValidateKickstartTemplateResponse
 
@@ -10649,17 +10649,17 @@ func (c *OpenAPIClient) ValidateKickstartTemplate(req *apis.ValidateKickstartTem
 }
 
 // NewValidatePartitionConfigRequest will create request of ValidatePartitionConfig action.
-func (c *OpenAPIClient) NewValidatePartitionConfigRequest() *apis.ValidatePartitionConfigRequest {
+func (c *UCloudStackClient) NewValidatePartitionConfigRequest() *apis.ValidatePartitionConfigRequest {
 	req := &apis.ValidatePartitionConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ValidatePartitionConfig 验证分区配置
-func (c *OpenAPIClient) ValidatePartitionConfig(req *apis.ValidatePartitionConfigRequest) (*apis.ValidatePartitionConfigResponse, error) {
+func (c *UCloudStackClient) ValidatePartitionConfig(req *apis.ValidatePartitionConfigRequest) (*apis.ValidatePartitionConfigResponse, error) {
 	var err error
 	var res apis.ValidatePartitionConfigResponse
 
@@ -10671,17 +10671,17 @@ func (c *OpenAPIClient) ValidatePartitionConfig(req *apis.ValidatePartitionConfi
 }
 
 // NewCreateMemberTagRequest will create request of CreateMemberTag action.
-func (c *OpenAPIClient) NewCreateMemberTagRequest() *apis.CreateMemberTagRequest {
+func (c *UCloudStackClient) NewCreateMemberTagRequest() *apis.CreateMemberTagRequest {
 	req := &apis.CreateMemberTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateMemberTag 添加角色授权
-func (c *OpenAPIClient) CreateMemberTag(req *apis.CreateMemberTagRequest) (*apis.CreateMemberTagResponse, error) {
+func (c *UCloudStackClient) CreateMemberTag(req *apis.CreateMemberTagRequest) (*apis.CreateMemberTagResponse, error) {
 	var err error
 	var res apis.CreateMemberTagResponse
 
@@ -10693,17 +10693,17 @@ func (c *OpenAPIClient) CreateMemberTag(req *apis.CreateMemberTagRequest) (*apis
 }
 
 // NewCreateProjectRequest will create request of CreateProject action.
-func (c *OpenAPIClient) NewCreateProjectRequest() *apis.CreateProjectRequest {
+func (c *UCloudStackClient) NewCreateProjectRequest() *apis.CreateProjectRequest {
 	req := &apis.CreateProjectRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateProject 创建项目
-func (c *OpenAPIClient) CreateProject(req *apis.CreateProjectRequest) (*apis.CreateProjectResponse, error) {
+func (c *UCloudStackClient) CreateProject(req *apis.CreateProjectRequest) (*apis.CreateProjectResponse, error) {
 	var err error
 	var res apis.CreateProjectResponse
 
@@ -10715,17 +10715,17 @@ func (c *OpenAPIClient) CreateProject(req *apis.CreateProjectRequest) (*apis.Cre
 }
 
 // NewCreateRoleRequest will create request of CreateRole action.
-func (c *OpenAPIClient) NewCreateRoleRequest() *apis.CreateRoleRequest {
+func (c *UCloudStackClient) NewCreateRoleRequest() *apis.CreateRoleRequest {
 	req := &apis.CreateRoleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateRole 创建租户级自定义角色
-func (c *OpenAPIClient) CreateRole(req *apis.CreateRoleRequest) (*apis.CreateRoleResponse, error) {
+func (c *UCloudStackClient) CreateRole(req *apis.CreateRoleRequest) (*apis.CreateRoleResponse, error) {
 	var err error
 	var res apis.CreateRoleResponse
 
@@ -10737,17 +10737,17 @@ func (c *OpenAPIClient) CreateRole(req *apis.CreateRoleRequest) (*apis.CreateRol
 }
 
 // NewDeleteMemberTagRequest will create request of DeleteMemberTag action.
-func (c *OpenAPIClient) NewDeleteMemberTagRequest() *apis.DeleteMemberTagRequest {
+func (c *UCloudStackClient) NewDeleteMemberTagRequest() *apis.DeleteMemberTagRequest {
 	req := &apis.DeleteMemberTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteMemberTag 删除角色授权
-func (c *OpenAPIClient) DeleteMemberTag(req *apis.DeleteMemberTagRequest) (*apis.DeleteMemberTagResponse, error) {
+func (c *UCloudStackClient) DeleteMemberTag(req *apis.DeleteMemberTagRequest) (*apis.DeleteMemberTagResponse, error) {
 	var err error
 	var res apis.DeleteMemberTagResponse
 
@@ -10759,17 +10759,17 @@ func (c *OpenAPIClient) DeleteMemberTag(req *apis.DeleteMemberTagRequest) (*apis
 }
 
 // NewDeleteProjectRequest will create request of DeleteProject action.
-func (c *OpenAPIClient) NewDeleteProjectRequest() *apis.DeleteProjectRequest {
+func (c *UCloudStackClient) NewDeleteProjectRequest() *apis.DeleteProjectRequest {
 	req := &apis.DeleteProjectRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteProject 删除项目
-func (c *OpenAPIClient) DeleteProject(req *apis.DeleteProjectRequest) (*apis.DeleteProjectResponse, error) {
+func (c *UCloudStackClient) DeleteProject(req *apis.DeleteProjectRequest) (*apis.DeleteProjectResponse, error) {
 	var err error
 	var res apis.DeleteProjectResponse
 
@@ -10781,17 +10781,17 @@ func (c *OpenAPIClient) DeleteProject(req *apis.DeleteProjectRequest) (*apis.Del
 }
 
 // NewDeleteRoleRequest will create request of DeleteRole action.
-func (c *OpenAPIClient) NewDeleteRoleRequest() *apis.DeleteRoleRequest {
+func (c *UCloudStackClient) NewDeleteRoleRequest() *apis.DeleteRoleRequest {
 	req := &apis.DeleteRoleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteRole 删除租户级自定义角色
-func (c *OpenAPIClient) DeleteRole(req *apis.DeleteRoleRequest) (*apis.DeleteRoleResponse, error) {
+func (c *UCloudStackClient) DeleteRole(req *apis.DeleteRoleRequest) (*apis.DeleteRoleResponse, error) {
 	var err error
 	var res apis.DeleteRoleResponse
 
@@ -10803,17 +10803,17 @@ func (c *OpenAPIClient) DeleteRole(req *apis.DeleteRoleRequest) (*apis.DeleteRol
 }
 
 // NewDescribeProductRequest will create request of DescribeProduct action.
-func (c *OpenAPIClient) NewDescribeProductRequest() *apis.DescribeProductRequest {
+func (c *UCloudStackClient) NewDescribeProductRequest() *apis.DescribeProductRequest {
 	req := &apis.DescribeProductRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeProduct 获取产品类型
-func (c *OpenAPIClient) DescribeProduct(req *apis.DescribeProductRequest) (*apis.DescribeProductResponse, error) {
+func (c *UCloudStackClient) DescribeProduct(req *apis.DescribeProductRequest) (*apis.DescribeProductResponse, error) {
 	var err error
 	var res apis.DescribeProductResponse
 
@@ -10825,17 +10825,17 @@ func (c *OpenAPIClient) DescribeProduct(req *apis.DescribeProductRequest) (*apis
 }
 
 // NewDisableCompanyProductTypeRequest will create request of DisableCompanyProductType action.
-func (c *OpenAPIClient) NewDisableCompanyProductTypeRequest() *apis.DisableCompanyProductTypeRequest {
+func (c *UCloudStackClient) NewDisableCompanyProductTypeRequest() *apis.DisableCompanyProductTypeRequest {
 	req := &apis.DisableCompanyProductTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DisableCompanyProductType 租户关闭服务
-func (c *OpenAPIClient) DisableCompanyProductType(req *apis.DisableCompanyProductTypeRequest) (*apis.DisableCompanyProductTypeResponse, error) {
+func (c *UCloudStackClient) DisableCompanyProductType(req *apis.DisableCompanyProductTypeRequest) (*apis.DisableCompanyProductTypeResponse, error) {
 	var err error
 	var res apis.DisableCompanyProductTypeResponse
 
@@ -10847,17 +10847,17 @@ func (c *OpenAPIClient) DisableCompanyProductType(req *apis.DisableCompanyProduc
 }
 
 // NewEnableCompanyProductTypeRequest will create request of EnableCompanyProductType action.
-func (c *OpenAPIClient) NewEnableCompanyProductTypeRequest() *apis.EnableCompanyProductTypeRequest {
+func (c *UCloudStackClient) NewEnableCompanyProductTypeRequest() *apis.EnableCompanyProductTypeRequest {
 	req := &apis.EnableCompanyProductTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // EnableCompanyProductType 租户启用服务
-func (c *OpenAPIClient) EnableCompanyProductType(req *apis.EnableCompanyProductTypeRequest) (*apis.EnableCompanyProductTypeResponse, error) {
+func (c *UCloudStackClient) EnableCompanyProductType(req *apis.EnableCompanyProductTypeRequest) (*apis.EnableCompanyProductTypeResponse, error) {
 	var err error
 	var res apis.EnableCompanyProductTypeResponse
 
@@ -10869,17 +10869,17 @@ func (c *OpenAPIClient) EnableCompanyProductType(req *apis.EnableCompanyProductT
 }
 
 // NewGetProjectRequest will create request of GetProject action.
-func (c *OpenAPIClient) NewGetProjectRequest() *apis.GetProjectRequest {
+func (c *UCloudStackClient) NewGetProjectRequest() *apis.GetProjectRequest {
 	req := &apis.GetProjectRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetProject 获取项目详情
-func (c *OpenAPIClient) GetProject(req *apis.GetProjectRequest) (*apis.GetProjectResponse, error) {
+func (c *UCloudStackClient) GetProject(req *apis.GetProjectRequest) (*apis.GetProjectResponse, error) {
 	var err error
 	var res apis.GetProjectResponse
 
@@ -10891,17 +10891,17 @@ func (c *OpenAPIClient) GetProject(req *apis.GetProjectRequest) (*apis.GetProjec
 }
 
 // NewGetRoleRequest will create request of GetRole action.
-func (c *OpenAPIClient) NewGetRoleRequest() *apis.GetRoleRequest {
+func (c *UCloudStackClient) NewGetRoleRequest() *apis.GetRoleRequest {
 	req := &apis.GetRoleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetRole 查询角色详情
-func (c *OpenAPIClient) GetRole(req *apis.GetRoleRequest) (*apis.GetRoleResponse, error) {
+func (c *UCloudStackClient) GetRole(req *apis.GetRoleRequest) (*apis.GetRoleResponse, error) {
 	var err error
 	var res apis.GetRoleResponse
 
@@ -10913,17 +10913,17 @@ func (c *OpenAPIClient) GetRole(req *apis.GetRoleRequest) (*apis.GetRoleResponse
 }
 
 // NewListMemberTagsRequest will create request of ListMemberTags action.
-func (c *OpenAPIClient) NewListMemberTagsRequest() *apis.ListMemberTagsRequest {
+func (c *UCloudStackClient) NewListMemberTagsRequest() *apis.ListMemberTagsRequest {
 	req := &apis.ListMemberTagsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListMemberTags 查询角色授权列表
-func (c *OpenAPIClient) ListMemberTags(req *apis.ListMemberTagsRequest) (*apis.ListMemberTagsResponse, error) {
+func (c *UCloudStackClient) ListMemberTags(req *apis.ListMemberTagsRequest) (*apis.ListMemberTagsResponse, error) {
 	var err error
 	var res apis.ListMemberTagsResponse
 
@@ -10935,17 +10935,17 @@ func (c *OpenAPIClient) ListMemberTags(req *apis.ListMemberTagsRequest) (*apis.L
 }
 
 // NewListProductPermissionsRequest will create request of ListProductPermissions action.
-func (c *OpenAPIClient) NewListProductPermissionsRequest() *apis.ListProductPermissionsRequest {
+func (c *UCloudStackClient) NewListProductPermissionsRequest() *apis.ListProductPermissionsRequest {
 	req := &apis.ListProductPermissionsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListProductPermissions 获取租户可用接口
-func (c *OpenAPIClient) ListProductPermissions(req *apis.ListProductPermissionsRequest) (*apis.ListProductPermissionsResponse, error) {
+func (c *UCloudStackClient) ListProductPermissions(req *apis.ListProductPermissionsRequest) (*apis.ListProductPermissionsResponse, error) {
 	var err error
 	var res apis.ListProductPermissionsResponse
 
@@ -10957,17 +10957,17 @@ func (c *OpenAPIClient) ListProductPermissions(req *apis.ListProductPermissionsR
 }
 
 // NewListProductResourcesRequest will create request of ListProductResources action.
-func (c *OpenAPIClient) NewListProductResourcesRequest() *apis.ListProductResourcesRequest {
+func (c *UCloudStackClient) NewListProductResourcesRequest() *apis.ListProductResourcesRequest {
 	req := &apis.ListProductResourcesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListProductResources 获取产品资源关系
-func (c *OpenAPIClient) ListProductResources(req *apis.ListProductResourcesRequest) (*apis.ListProductResourcesResponse, error) {
+func (c *UCloudStackClient) ListProductResources(req *apis.ListProductResourcesRequest) (*apis.ListProductResourcesResponse, error) {
 	var err error
 	var res apis.ListProductResourcesResponse
 
@@ -10979,17 +10979,17 @@ func (c *OpenAPIClient) ListProductResources(req *apis.ListProductResourcesReque
 }
 
 // NewListProductTypeCompanysRequest will create request of ListProductTypeCompanys action.
-func (c *OpenAPIClient) NewListProductTypeCompanysRequest() *apis.ListProductTypeCompanysRequest {
+func (c *UCloudStackClient) NewListProductTypeCompanysRequest() *apis.ListProductTypeCompanysRequest {
 	req := &apis.ListProductTypeCompanysRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListProductTypeCompanys 获取某产品已授权的租户信息
-func (c *OpenAPIClient) ListProductTypeCompanys(req *apis.ListProductTypeCompanysRequest) (*apis.ListProductTypeCompanysResponse, error) {
+func (c *UCloudStackClient) ListProductTypeCompanys(req *apis.ListProductTypeCompanysRequest) (*apis.ListProductTypeCompanysResponse, error) {
 	var err error
 	var res apis.ListProductTypeCompanysResponse
 
@@ -11001,17 +11001,17 @@ func (c *OpenAPIClient) ListProductTypeCompanys(req *apis.ListProductTypeCompany
 }
 
 // NewListProjectsRequest will create request of ListProjects action.
-func (c *OpenAPIClient) NewListProjectsRequest() *apis.ListProjectsRequest {
+func (c *UCloudStackClient) NewListProjectsRequest() *apis.ListProjectsRequest {
 	req := &apis.ListProjectsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListProjects 查询项目列表
-func (c *OpenAPIClient) ListProjects(req *apis.ListProjectsRequest) (*apis.ListProjectsResponse, error) {
+func (c *UCloudStackClient) ListProjects(req *apis.ListProjectsRequest) (*apis.ListProjectsResponse, error) {
 	var err error
 	var res apis.ListProjectsResponse
 
@@ -11023,17 +11023,17 @@ func (c *OpenAPIClient) ListProjects(req *apis.ListProjectsRequest) (*apis.ListP
 }
 
 // NewListRolesRequest will create request of ListRoles action.
-func (c *OpenAPIClient) NewListRolesRequest() *apis.ListRolesRequest {
+func (c *UCloudStackClient) NewListRolesRequest() *apis.ListRolesRequest {
 	req := &apis.ListRolesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListRoles 查询租户级角色列表
-func (c *OpenAPIClient) ListRoles(req *apis.ListRolesRequest) (*apis.ListRolesResponse, error) {
+func (c *UCloudStackClient) ListRoles(req *apis.ListRolesRequest) (*apis.ListRolesResponse, error) {
 	var err error
 	var res apis.ListRolesResponse
 
@@ -11045,17 +11045,17 @@ func (c *OpenAPIClient) ListRoles(req *apis.ListRolesRequest) (*apis.ListRolesRe
 }
 
 // NewMoveProjectResourceRequest will create request of MoveProjectResource action.
-func (c *OpenAPIClient) NewMoveProjectResourceRequest() *apis.MoveProjectResourceRequest {
+func (c *UCloudStackClient) NewMoveProjectResourceRequest() *apis.MoveProjectResourceRequest {
 	req := &apis.MoveProjectResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // MoveProjectResource 修改资源所在的项目
-func (c *OpenAPIClient) MoveProjectResource(req *apis.MoveProjectResourceRequest) (*apis.MoveProjectResourceResponse, error) {
+func (c *UCloudStackClient) MoveProjectResource(req *apis.MoveProjectResourceRequest) (*apis.MoveProjectResourceResponse, error) {
 	var err error
 	var res apis.MoveProjectResourceResponse
 
@@ -11067,17 +11067,17 @@ func (c *OpenAPIClient) MoveProjectResource(req *apis.MoveProjectResourceRequest
 }
 
 // NewRenameProjectRequest will create request of RenameProject action.
-func (c *OpenAPIClient) NewRenameProjectRequest() *apis.RenameProjectRequest {
+func (c *UCloudStackClient) NewRenameProjectRequest() *apis.RenameProjectRequest {
 	req := &apis.RenameProjectRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RenameProject 重命名项目名称备注
-func (c *OpenAPIClient) RenameProject(req *apis.RenameProjectRequest) (*apis.RenameProjectResponse, error) {
+func (c *UCloudStackClient) RenameProject(req *apis.RenameProjectRequest) (*apis.RenameProjectResponse, error) {
 	var err error
 	var res apis.RenameProjectResponse
 
@@ -11089,17 +11089,17 @@ func (c *OpenAPIClient) RenameProject(req *apis.RenameProjectRequest) (*apis.Ren
 }
 
 // NewRenameRoleRequest will create request of RenameRole action.
-func (c *OpenAPIClient) NewRenameRoleRequest() *apis.RenameRoleRequest {
+func (c *UCloudStackClient) NewRenameRoleRequest() *apis.RenameRoleRequest {
 	req := &apis.RenameRoleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RenameRole 重命名角色名称备注
-func (c *OpenAPIClient) RenameRole(req *apis.RenameRoleRequest) (*apis.RenameRoleResponse, error) {
+func (c *UCloudStackClient) RenameRole(req *apis.RenameRoleRequest) (*apis.RenameRoleResponse, error) {
 	var err error
 	var res apis.RenameRoleResponse
 
@@ -11111,17 +11111,17 @@ func (c *OpenAPIClient) RenameRole(req *apis.RenameRoleRequest) (*apis.RenameRol
 }
 
 // NewUpdateRolePermissionRequest will create request of UpdateRolePermission action.
-func (c *OpenAPIClient) NewUpdateRolePermissionRequest() *apis.UpdateRolePermissionRequest {
+func (c *UCloudStackClient) NewUpdateRolePermissionRequest() *apis.UpdateRolePermissionRequest {
 	req := &apis.UpdateRolePermissionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateRolePermission 修改角色权限
-func (c *OpenAPIClient) UpdateRolePermission(req *apis.UpdateRolePermissionRequest) (*apis.UpdateRolePermissionResponse, error) {
+func (c *UCloudStackClient) UpdateRolePermission(req *apis.UpdateRolePermissionRequest) (*apis.UpdateRolePermissionResponse, error) {
 	var err error
 	var res apis.UpdateRolePermissionResponse
 
@@ -11133,17 +11133,17 @@ func (c *OpenAPIClient) UpdateRolePermission(req *apis.UpdateRolePermissionReque
 }
 
 // NewDescribeRecycledResourceRequest will create request of DescribeRecycledResource action.
-func (c *OpenAPIClient) NewDescribeRecycledResourceRequest() *apis.DescribeRecycledResourceRequest {
+func (c *UCloudStackClient) NewDescribeRecycledResourceRequest() *apis.DescribeRecycledResourceRequest {
 	req := &apis.DescribeRecycledResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRecycledResource 获取回收站资源
-func (c *OpenAPIClient) DescribeRecycledResource(req *apis.DescribeRecycledResourceRequest) (*apis.DescribeRecycledResourceResponse, error) {
+func (c *UCloudStackClient) DescribeRecycledResource(req *apis.DescribeRecycledResourceRequest) (*apis.DescribeRecycledResourceResponse, error) {
 	var err error
 	var res apis.DescribeRecycledResourceResponse
 
@@ -11155,17 +11155,17 @@ func (c *OpenAPIClient) DescribeRecycledResource(req *apis.DescribeRecycledResou
 }
 
 // NewRollbackResourceRequest will create request of RollbackResource action.
-func (c *OpenAPIClient) NewRollbackResourceRequest() *apis.RollbackResourceRequest {
+func (c *UCloudStackClient) NewRollbackResourceRequest() *apis.RollbackResourceRequest {
 	req := &apis.RollbackResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RollbackResource 恢复资源
-func (c *OpenAPIClient) RollbackResource(req *apis.RollbackResourceRequest) (*apis.RollbackResourceResponse, error) {
+func (c *UCloudStackClient) RollbackResource(req *apis.RollbackResourceRequest) (*apis.RollbackResourceResponse, error) {
 	var err error
 	var res apis.RollbackResourceResponse
 
@@ -11177,17 +11177,17 @@ func (c *OpenAPIClient) RollbackResource(req *apis.RollbackResourceRequest) (*ap
 }
 
 // NewTerminateResourceRequest will create request of TerminateResource action.
-func (c *OpenAPIClient) NewTerminateResourceRequest() *apis.TerminateResourceRequest {
+func (c *UCloudStackClient) NewTerminateResourceRequest() *apis.TerminateResourceRequest {
 	req := &apis.TerminateResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // TerminateResource 销毁资源
-func (c *OpenAPIClient) TerminateResource(req *apis.TerminateResourceRequest) (*apis.TerminateResourceResponse, error) {
+func (c *UCloudStackClient) TerminateResource(req *apis.TerminateResourceRequest) (*apis.TerminateResourceResponse, error) {
 	var err error
 	var res apis.TerminateResourceResponse
 
@@ -11199,17 +11199,17 @@ func (c *OpenAPIClient) TerminateResource(req *apis.TerminateResourceRequest) (*
 }
 
 // NewAllocateRedisConsoleSessionRequest will create request of AllocateRedisConsoleSession action.
-func (c *OpenAPIClient) NewAllocateRedisConsoleSessionRequest() *apis.AllocateRedisConsoleSessionRequest {
+func (c *UCloudStackClient) NewAllocateRedisConsoleSessionRequest() *apis.AllocateRedisConsoleSessionRequest {
 	req := &apis.AllocateRedisConsoleSessionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateRedisConsoleSession 申请redis控制台会话
-func (c *OpenAPIClient) AllocateRedisConsoleSession(req *apis.AllocateRedisConsoleSessionRequest) (*apis.AllocateRedisConsoleSessionResponse, error) {
+func (c *UCloudStackClient) AllocateRedisConsoleSession(req *apis.AllocateRedisConsoleSessionRequest) (*apis.AllocateRedisConsoleSessionResponse, error) {
 	var err error
 	var res apis.AllocateRedisConsoleSessionResponse
 
@@ -11221,17 +11221,17 @@ func (c *OpenAPIClient) AllocateRedisConsoleSession(req *apis.AllocateRedisConso
 }
 
 // NewApplyRedisConfigFileRequest will create request of ApplyRedisConfigFile action.
-func (c *OpenAPIClient) NewApplyRedisConfigFileRequest() *apis.ApplyRedisConfigFileRequest {
+func (c *UCloudStackClient) NewApplyRedisConfigFileRequest() *apis.ApplyRedisConfigFileRequest {
 	req := &apis.ApplyRedisConfigFileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ApplyRedisConfigFile 应用Redis参数模板
-func (c *OpenAPIClient) ApplyRedisConfigFile(req *apis.ApplyRedisConfigFileRequest) (*apis.ApplyRedisConfigFileResponse, error) {
+func (c *UCloudStackClient) ApplyRedisConfigFile(req *apis.ApplyRedisConfigFileRequest) (*apis.ApplyRedisConfigFileResponse, error) {
 	var err error
 	var res apis.ApplyRedisConfigFileResponse
 
@@ -11243,17 +11243,17 @@ func (c *OpenAPIClient) ApplyRedisConfigFile(req *apis.ApplyRedisConfigFileReque
 }
 
 // NewCreateRedisRequest will create request of CreateRedis action.
-func (c *OpenAPIClient) NewCreateRedisRequest() *apis.CreateRedisRequest {
+func (c *UCloudStackClient) NewCreateRedisRequest() *apis.CreateRedisRequest {
 	req := &apis.CreateRedisRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateRedis 创建redis实例
-func (c *OpenAPIClient) CreateRedis(req *apis.CreateRedisRequest) (*apis.CreateRedisResponse, error) {
+func (c *UCloudStackClient) CreateRedis(req *apis.CreateRedisRequest) (*apis.CreateRedisResponse, error) {
 	var err error
 	var res apis.CreateRedisResponse
 
@@ -11265,17 +11265,17 @@ func (c *OpenAPIClient) CreateRedis(req *apis.CreateRedisRequest) (*apis.CreateR
 }
 
 // NewCreateRedisConfigFileRequest will create request of CreateRedisConfigFile action.
-func (c *OpenAPIClient) NewCreateRedisConfigFileRequest() *apis.CreateRedisConfigFileRequest {
+func (c *UCloudStackClient) NewCreateRedisConfigFileRequest() *apis.CreateRedisConfigFileRequest {
 	req := &apis.CreateRedisConfigFileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateRedisConfigFile 创建配置文件
-func (c *OpenAPIClient) CreateRedisConfigFile(req *apis.CreateRedisConfigFileRequest) (*apis.CreateRedisConfigFileResponse, error) {
+func (c *UCloudStackClient) CreateRedisConfigFile(req *apis.CreateRedisConfigFileRequest) (*apis.CreateRedisConfigFileResponse, error) {
 	var err error
 	var res apis.CreateRedisConfigFileResponse
 
@@ -11287,17 +11287,17 @@ func (c *OpenAPIClient) CreateRedisConfigFile(req *apis.CreateRedisConfigFileReq
 }
 
 // NewCreateSlaveRedisRequest will create request of CreateSlaveRedis action.
-func (c *OpenAPIClient) NewCreateSlaveRedisRequest() *apis.CreateSlaveRedisRequest {
+func (c *UCloudStackClient) NewCreateSlaveRedisRequest() *apis.CreateSlaveRedisRequest {
 	req := &apis.CreateSlaveRedisRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSlaveRedis 创建Redis从库
-func (c *OpenAPIClient) CreateSlaveRedis(req *apis.CreateSlaveRedisRequest) (*apis.CreateSlaveRedisResponse, error) {
+func (c *UCloudStackClient) CreateSlaveRedis(req *apis.CreateSlaveRedisRequest) (*apis.CreateSlaveRedisResponse, error) {
 	var err error
 	var res apis.CreateSlaveRedisResponse
 
@@ -11309,17 +11309,17 @@ func (c *OpenAPIClient) CreateSlaveRedis(req *apis.CreateSlaveRedisRequest) (*ap
 }
 
 // NewDeleteRedisRequest will create request of DeleteRedis action.
-func (c *OpenAPIClient) NewDeleteRedisRequest() *apis.DeleteRedisRequest {
+func (c *UCloudStackClient) NewDeleteRedisRequest() *apis.DeleteRedisRequest {
 	req := &apis.DeleteRedisRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteRedis 删除redis实例
-func (c *OpenAPIClient) DeleteRedis(req *apis.DeleteRedisRequest) (*apis.DeleteRedisResponse, error) {
+func (c *UCloudStackClient) DeleteRedis(req *apis.DeleteRedisRequest) (*apis.DeleteRedisResponse, error) {
 	var err error
 	var res apis.DeleteRedisResponse
 
@@ -11331,17 +11331,17 @@ func (c *OpenAPIClient) DeleteRedis(req *apis.DeleteRedisRequest) (*apis.DeleteR
 }
 
 // NewDeleteRedisConfigFileRequest will create request of DeleteRedisConfigFile action.
-func (c *OpenAPIClient) NewDeleteRedisConfigFileRequest() *apis.DeleteRedisConfigFileRequest {
+func (c *UCloudStackClient) NewDeleteRedisConfigFileRequest() *apis.DeleteRedisConfigFileRequest {
 	req := &apis.DeleteRedisConfigFileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteRedisConfigFile 删除配置文件
-func (c *OpenAPIClient) DeleteRedisConfigFile(req *apis.DeleteRedisConfigFileRequest) (*apis.DeleteRedisConfigFileResponse, error) {
+func (c *UCloudStackClient) DeleteRedisConfigFile(req *apis.DeleteRedisConfigFileRequest) (*apis.DeleteRedisConfigFileResponse, error) {
 	var err error
 	var res apis.DeleteRedisConfigFileResponse
 
@@ -11353,17 +11353,17 @@ func (c *OpenAPIClient) DeleteRedisConfigFile(req *apis.DeleteRedisConfigFileReq
 }
 
 // NewDescribeRedisRequest will create request of DescribeRedis action.
-func (c *OpenAPIClient) NewDescribeRedisRequest() *apis.DescribeRedisRequest {
+func (c *UCloudStackClient) NewDescribeRedisRequest() *apis.DescribeRedisRequest {
 	req := &apis.DescribeRedisRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRedis 查询redis实例
-func (c *OpenAPIClient) DescribeRedis(req *apis.DescribeRedisRequest) (*apis.DescribeRedisResponse, error) {
+func (c *UCloudStackClient) DescribeRedis(req *apis.DescribeRedisRequest) (*apis.DescribeRedisResponse, error) {
 	var err error
 	var res apis.DescribeRedisResponse
 
@@ -11375,17 +11375,17 @@ func (c *OpenAPIClient) DescribeRedis(req *apis.DescribeRedisRequest) (*apis.Des
 }
 
 // NewDescribeRedisConfigFileRequest will create request of DescribeRedisConfigFile action.
-func (c *OpenAPIClient) NewDescribeRedisConfigFileRequest() *apis.DescribeRedisConfigFileRequest {
+func (c *UCloudStackClient) NewDescribeRedisConfigFileRequest() *apis.DescribeRedisConfigFileRequest {
 	req := &apis.DescribeRedisConfigFileRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRedisConfigFile 查询配置文件列表
-func (c *OpenAPIClient) DescribeRedisConfigFile(req *apis.DescribeRedisConfigFileRequest) (*apis.DescribeRedisConfigFileResponse, error) {
+func (c *UCloudStackClient) DescribeRedisConfigFile(req *apis.DescribeRedisConfigFileRequest) (*apis.DescribeRedisConfigFileResponse, error) {
 	var err error
 	var res apis.DescribeRedisConfigFileResponse
 
@@ -11397,17 +11397,17 @@ func (c *OpenAPIClient) DescribeRedisConfigFile(req *apis.DescribeRedisConfigFil
 }
 
 // NewDescribeRedisConfigParamsRequest will create request of DescribeRedisConfigParams action.
-func (c *OpenAPIClient) NewDescribeRedisConfigParamsRequest() *apis.DescribeRedisConfigParamsRequest {
+func (c *UCloudStackClient) NewDescribeRedisConfigParamsRequest() *apis.DescribeRedisConfigParamsRequest {
 	req := &apis.DescribeRedisConfigParamsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRedisConfigParams 查询配置文件详情
-func (c *OpenAPIClient) DescribeRedisConfigParams(req *apis.DescribeRedisConfigParamsRequest) (*apis.DescribeRedisConfigParamsResponse, error) {
+func (c *UCloudStackClient) DescribeRedisConfigParams(req *apis.DescribeRedisConfigParamsRequest) (*apis.DescribeRedisConfigParamsResponse, error) {
 	var err error
 	var res apis.DescribeRedisConfigParamsResponse
 
@@ -11419,17 +11419,17 @@ func (c *OpenAPIClient) DescribeRedisConfigParams(req *apis.DescribeRedisConfigP
 }
 
 // NewDescribeRedisSlowlogRequest will create request of DescribeRedisSlowlog action.
-func (c *OpenAPIClient) NewDescribeRedisSlowlogRequest() *apis.DescribeRedisSlowlogRequest {
+func (c *UCloudStackClient) NewDescribeRedisSlowlogRequest() *apis.DescribeRedisSlowlogRequest {
 	req := &apis.DescribeRedisSlowlogRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRedisSlowlog 慢日志查询
-func (c *OpenAPIClient) DescribeRedisSlowlog(req *apis.DescribeRedisSlowlogRequest) (*apis.DescribeRedisSlowlogResponse, error) {
+func (c *UCloudStackClient) DescribeRedisSlowlog(req *apis.DescribeRedisSlowlogRequest) (*apis.DescribeRedisSlowlogResponse, error) {
 	var err error
 	var res apis.DescribeRedisSlowlogResponse
 
@@ -11441,17 +11441,17 @@ func (c *OpenAPIClient) DescribeRedisSlowlog(req *apis.DescribeRedisSlowlogReque
 }
 
 // NewDowngradeRedisRequest will create request of DowngradeRedis action.
-func (c *OpenAPIClient) NewDowngradeRedisRequest() *apis.DowngradeRedisRequest {
+func (c *UCloudStackClient) NewDowngradeRedisRequest() *apis.DowngradeRedisRequest {
 	req := &apis.DowngradeRedisRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DowngradeRedis 降级redis内存
-func (c *OpenAPIClient) DowngradeRedis(req *apis.DowngradeRedisRequest) (*apis.DowngradeRedisResponse, error) {
+func (c *UCloudStackClient) DowngradeRedis(req *apis.DowngradeRedisRequest) (*apis.DowngradeRedisResponse, error) {
 	var err error
 	var res apis.DowngradeRedisResponse
 
@@ -11463,17 +11463,17 @@ func (c *OpenAPIClient) DowngradeRedis(req *apis.DowngradeRedisRequest) (*apis.D
 }
 
 // NewFlushRedisRequest will create request of FlushRedis action.
-func (c *OpenAPIClient) NewFlushRedisRequest() *apis.FlushRedisRequest {
+func (c *UCloudStackClient) NewFlushRedisRequest() *apis.FlushRedisRequest {
 	req := &apis.FlushRedisRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // FlushRedis 清空数据
-func (c *OpenAPIClient) FlushRedis(req *apis.FlushRedisRequest) (*apis.FlushRedisResponse, error) {
+func (c *UCloudStackClient) FlushRedis(req *apis.FlushRedisRequest) (*apis.FlushRedisResponse, error) {
 	var err error
 	var res apis.FlushRedisResponse
 
@@ -11485,17 +11485,17 @@ func (c *OpenAPIClient) FlushRedis(req *apis.FlushRedisRequest) (*apis.FlushRedi
 }
 
 // NewGetRedisPriceRequest will create request of GetRedisPrice action.
-func (c *OpenAPIClient) NewGetRedisPriceRequest() *apis.GetRedisPriceRequest {
+func (c *UCloudStackClient) NewGetRedisPriceRequest() *apis.GetRedisPriceRequest {
 	req := &apis.GetRedisPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetRedisPrice 获取redis创建升级价格
-func (c *OpenAPIClient) GetRedisPrice(req *apis.GetRedisPriceRequest) (*apis.GetRedisPriceResponse, error) {
+func (c *UCloudStackClient) GetRedisPrice(req *apis.GetRedisPriceRequest) (*apis.GetRedisPriceResponse, error) {
 	var err error
 	var res apis.GetRedisPriceResponse
 
@@ -11507,17 +11507,17 @@ func (c *OpenAPIClient) GetRedisPrice(req *apis.GetRedisPriceRequest) (*apis.Get
 }
 
 // NewUpdateRedisConfigParamsRequest will create request of UpdateRedisConfigParams action.
-func (c *OpenAPIClient) NewUpdateRedisConfigParamsRequest() *apis.UpdateRedisConfigParamsRequest {
+func (c *UCloudStackClient) NewUpdateRedisConfigParamsRequest() *apis.UpdateRedisConfigParamsRequest {
 	req := &apis.UpdateRedisConfigParamsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateRedisConfigParams 更新配置项
-func (c *OpenAPIClient) UpdateRedisConfigParams(req *apis.UpdateRedisConfigParamsRequest) (*apis.UpdateRedisConfigParamsResponse, error) {
+func (c *UCloudStackClient) UpdateRedisConfigParams(req *apis.UpdateRedisConfigParamsRequest) (*apis.UpdateRedisConfigParamsResponse, error) {
 	var err error
 	var res apis.UpdateRedisConfigParamsResponse
 
@@ -11529,17 +11529,17 @@ func (c *OpenAPIClient) UpdateRedisConfigParams(req *apis.UpdateRedisConfigParam
 }
 
 // NewUpdateRedisPasswordRequest will create request of UpdateRedisPassword action.
-func (c *OpenAPIClient) NewUpdateRedisPasswordRequest() *apis.UpdateRedisPasswordRequest {
+func (c *UCloudStackClient) NewUpdateRedisPasswordRequest() *apis.UpdateRedisPasswordRequest {
 	req := &apis.UpdateRedisPasswordRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateRedisPassword 更新redis密码
-func (c *OpenAPIClient) UpdateRedisPassword(req *apis.UpdateRedisPasswordRequest) (*apis.UpdateRedisPasswordResponse, error) {
+func (c *UCloudStackClient) UpdateRedisPassword(req *apis.UpdateRedisPasswordRequest) (*apis.UpdateRedisPasswordResponse, error) {
 	var err error
 	var res apis.UpdateRedisPasswordResponse
 
@@ -11551,17 +11551,17 @@ func (c *OpenAPIClient) UpdateRedisPassword(req *apis.UpdateRedisPasswordRequest
 }
 
 // NewUpgradeRedisRequest will create request of UpgradeRedis action.
-func (c *OpenAPIClient) NewUpgradeRedisRequest() *apis.UpgradeRedisRequest {
+func (c *UCloudStackClient) NewUpgradeRedisRequest() *apis.UpgradeRedisRequest {
 	req := &apis.UpgradeRedisRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeRedis 升级redis内存
-func (c *OpenAPIClient) UpgradeRedis(req *apis.UpgradeRedisRequest) (*apis.UpgradeRedisResponse, error) {
+func (c *UCloudStackClient) UpgradeRedis(req *apis.UpgradeRedisRequest) (*apis.UpgradeRedisResponse, error) {
 	var err error
 	var res apis.UpgradeRedisResponse
 
@@ -11573,17 +11573,17 @@ func (c *OpenAPIClient) UpgradeRedis(req *apis.UpgradeRedisRequest) (*apis.Upgra
 }
 
 // NewUpgradeRedisToHARequest will create request of UpgradeRedisToHA action.
-func (c *OpenAPIClient) NewUpgradeRedisToHARequest() *apis.UpgradeRedisToHARequest {
+func (c *UCloudStackClient) NewUpgradeRedisToHARequest() *apis.UpgradeRedisToHARequest {
 	req := &apis.UpgradeRedisToHARequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeRedisToHA 升级至主备版本
-func (c *OpenAPIClient) UpgradeRedisToHA(req *apis.UpgradeRedisToHARequest) (*apis.UpgradeRedisToHAResponse, error) {
+func (c *UCloudStackClient) UpgradeRedisToHA(req *apis.UpgradeRedisToHARequest) (*apis.UpgradeRedisToHAResponse, error) {
 	var err error
 	var res apis.UpgradeRedisToHAResponse
 
@@ -11595,17 +11595,17 @@ func (c *OpenAPIClient) UpgradeRedisToHA(req *apis.UpgradeRedisToHARequest) (*ap
 }
 
 // NewAddRegionRequest will create request of AddRegion action.
-func (c *OpenAPIClient) NewAddRegionRequest() *apis.AddRegionRequest {
+func (c *UCloudStackClient) NewAddRegionRequest() *apis.AddRegionRequest {
 	req := &apis.AddRegionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AddRegion 纳管新地域
-func (c *OpenAPIClient) AddRegion(req *apis.AddRegionRequest) (*apis.AddRegionResponse, error) {
+func (c *UCloudStackClient) AddRegion(req *apis.AddRegionRequest) (*apis.AddRegionResponse, error) {
 	var err error
 	var res apis.AddRegionResponse
 
@@ -11617,17 +11617,17 @@ func (c *OpenAPIClient) AddRegion(req *apis.AddRegionRequest) (*apis.AddRegionRe
 }
 
 // NewDescribeRegionRequest will create request of DescribeRegion action.
-func (c *OpenAPIClient) NewDescribeRegionRequest() *apis.DescribeRegionRequest {
+func (c *UCloudStackClient) NewDescribeRegionRequest() *apis.DescribeRegionRequest {
 	req := &apis.DescribeRegionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRegion 获取租户已授权地域
-func (c *OpenAPIClient) DescribeRegion(req *apis.DescribeRegionRequest) (*apis.DescribeRegionResponse, error) {
+func (c *UCloudStackClient) DescribeRegion(req *apis.DescribeRegionRequest) (*apis.DescribeRegionResponse, error) {
 	var err error
 	var res apis.DescribeRegionResponse
 
@@ -11639,17 +11639,17 @@ func (c *OpenAPIClient) DescribeRegion(req *apis.DescribeRegionRequest) (*apis.D
 }
 
 // NewModifyNameAndRemarkRequest will create request of ModifyNameAndRemark action.
-func (c *OpenAPIClient) NewModifyNameAndRemarkRequest() *apis.ModifyNameAndRemarkRequest {
+func (c *UCloudStackClient) NewModifyNameAndRemarkRequest() *apis.ModifyNameAndRemarkRequest {
 	req := &apis.ModifyNameAndRemarkRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ModifyNameAndRemark 修改地域下资源名称和备注
-func (c *OpenAPIClient) ModifyNameAndRemark(req *apis.ModifyNameAndRemarkRequest) (*apis.ModifyNameAndRemarkResponse, error) {
+func (c *UCloudStackClient) ModifyNameAndRemark(req *apis.ModifyNameAndRemarkRequest) (*apis.ModifyNameAndRemarkResponse, error) {
 	var err error
 	var res apis.ModifyNameAndRemarkResponse
 
@@ -11661,17 +11661,17 @@ func (c *OpenAPIClient) ModifyNameAndRemark(req *apis.ModifyNameAndRemarkRequest
 }
 
 // NewUpdateAdminRegionRequest will create request of UpdateAdminRegion action.
-func (c *OpenAPIClient) NewUpdateAdminRegionRequest() *apis.UpdateAdminRegionRequest {
+func (c *UCloudStackClient) NewUpdateAdminRegionRequest() *apis.UpdateAdminRegionRequest {
 	req := &apis.UpdateAdminRegionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateAdminRegion 修改管理员地域授权
-func (c *OpenAPIClient) UpdateAdminRegion(req *apis.UpdateAdminRegionRequest) (*apis.UpdateAdminRegionResponse, error) {
+func (c *UCloudStackClient) UpdateAdminRegion(req *apis.UpdateAdminRegionRequest) (*apis.UpdateAdminRegionResponse, error) {
 	var err error
 	var res apis.UpdateAdminRegionResponse
 
@@ -11683,17 +11683,17 @@ func (c *OpenAPIClient) UpdateAdminRegion(req *apis.UpdateAdminRegionRequest) (*
 }
 
 // NewUpdateCompanyRegionRequest will create request of UpdateCompanyRegion action.
-func (c *OpenAPIClient) NewUpdateCompanyRegionRequest() *apis.UpdateCompanyRegionRequest {
+func (c *UCloudStackClient) NewUpdateCompanyRegionRequest() *apis.UpdateCompanyRegionRequest {
 	req := &apis.UpdateCompanyRegionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateCompanyRegion 修改租户地域授权
-func (c *OpenAPIClient) UpdateCompanyRegion(req *apis.UpdateCompanyRegionRequest) (*apis.UpdateCompanyRegionResponse, error) {
+func (c *UCloudStackClient) UpdateCompanyRegion(req *apis.UpdateCompanyRegionRequest) (*apis.UpdateCompanyRegionResponse, error) {
 	var err error
 	var res apis.UpdateCompanyRegionResponse
 
@@ -11705,17 +11705,17 @@ func (c *OpenAPIClient) UpdateCompanyRegion(req *apis.UpdateCompanyRegionRequest
 }
 
 // NewUpdateRegionRequest will create request of UpdateRegion action.
-func (c *OpenAPIClient) NewUpdateRegionRequest() *apis.UpdateRegionRequest {
+func (c *UCloudStackClient) NewUpdateRegionRequest() *apis.UpdateRegionRequest {
 	req := &apis.UpdateRegionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateRegion 更新地域
-func (c *OpenAPIClient) UpdateRegion(req *apis.UpdateRegionRequest) (*apis.UpdateRegionResponse, error) {
+func (c *UCloudStackClient) UpdateRegion(req *apis.UpdateRegionRequest) (*apis.UpdateRegionResponse, error) {
 	var err error
 	var res apis.UpdateRegionResponse
 
@@ -11727,17 +11727,17 @@ func (c *OpenAPIClient) UpdateRegion(req *apis.UpdateRegionRequest) (*apis.Updat
 }
 
 // NewCreateResourceFromTemplateRequest will create request of CreateResourceFromTemplate action.
-func (c *OpenAPIClient) NewCreateResourceFromTemplateRequest() *apis.CreateResourceFromTemplateRequest {
+func (c *UCloudStackClient) NewCreateResourceFromTemplateRequest() *apis.CreateResourceFromTemplateRequest {
 	req := &apis.CreateResourceFromTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateResourceFromTemplate 通过模板创建资源
-func (c *OpenAPIClient) CreateResourceFromTemplate(req *apis.CreateResourceFromTemplateRequest) (*apis.CreateResourceFromTemplateResponse, error) {
+func (c *UCloudStackClient) CreateResourceFromTemplate(req *apis.CreateResourceFromTemplateRequest) (*apis.CreateResourceFromTemplateResponse, error) {
 	var err error
 	var res apis.CreateResourceFromTemplateResponse
 
@@ -11749,17 +11749,17 @@ func (c *OpenAPIClient) CreateResourceFromTemplate(req *apis.CreateResourceFromT
 }
 
 // NewCreateResourceTemplateRequest will create request of CreateResourceTemplate action.
-func (c *OpenAPIClient) NewCreateResourceTemplateRequest() *apis.CreateResourceTemplateRequest {
+func (c *UCloudStackClient) NewCreateResourceTemplateRequest() *apis.CreateResourceTemplateRequest {
 	req := &apis.CreateResourceTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateResourceTemplate 创建资源模板
-func (c *OpenAPIClient) CreateResourceTemplate(req *apis.CreateResourceTemplateRequest) (*apis.CreateResourceTemplateResponse, error) {
+func (c *UCloudStackClient) CreateResourceTemplate(req *apis.CreateResourceTemplateRequest) (*apis.CreateResourceTemplateResponse, error) {
 	var err error
 	var res apis.CreateResourceTemplateResponse
 
@@ -11771,17 +11771,17 @@ func (c *OpenAPIClient) CreateResourceTemplate(req *apis.CreateResourceTemplateR
 }
 
 // NewDeleteResourceTemplateRequest will create request of DeleteResourceTemplate action.
-func (c *OpenAPIClient) NewDeleteResourceTemplateRequest() *apis.DeleteResourceTemplateRequest {
+func (c *UCloudStackClient) NewDeleteResourceTemplateRequest() *apis.DeleteResourceTemplateRequest {
 	req := &apis.DeleteResourceTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteResourceTemplate 删除资源模版
-func (c *OpenAPIClient) DeleteResourceTemplate(req *apis.DeleteResourceTemplateRequest) (*apis.DeleteResourceTemplateResponse, error) {
+func (c *UCloudStackClient) DeleteResourceTemplate(req *apis.DeleteResourceTemplateRequest) (*apis.DeleteResourceTemplateResponse, error) {
 	var err error
 	var res apis.DeleteResourceTemplateResponse
 
@@ -11793,17 +11793,17 @@ func (c *OpenAPIClient) DeleteResourceTemplate(req *apis.DeleteResourceTemplateR
 }
 
 // NewDescribeResourceTemplateRequest will create request of DescribeResourceTemplate action.
-func (c *OpenAPIClient) NewDescribeResourceTemplateRequest() *apis.DescribeResourceTemplateRequest {
+func (c *UCloudStackClient) NewDescribeResourceTemplateRequest() *apis.DescribeResourceTemplateRequest {
 	req := &apis.DescribeResourceTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeResourceTemplate 查询资源模板
-func (c *OpenAPIClient) DescribeResourceTemplate(req *apis.DescribeResourceTemplateRequest) (*apis.DescribeResourceTemplateResponse, error) {
+func (c *UCloudStackClient) DescribeResourceTemplate(req *apis.DescribeResourceTemplateRequest) (*apis.DescribeResourceTemplateResponse, error) {
 	var err error
 	var res apis.DescribeResourceTemplateResponse
 
@@ -11815,17 +11815,17 @@ func (c *OpenAPIClient) DescribeResourceTemplate(req *apis.DescribeResourceTempl
 }
 
 // NewUpdateResourceTemplateRequest will create request of UpdateResourceTemplate action.
-func (c *OpenAPIClient) NewUpdateResourceTemplateRequest() *apis.UpdateResourceTemplateRequest {
+func (c *UCloudStackClient) NewUpdateResourceTemplateRequest() *apis.UpdateResourceTemplateRequest {
 	req := &apis.UpdateResourceTemplateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateResourceTemplate 更新资源模板
-func (c *OpenAPIClient) UpdateResourceTemplate(req *apis.UpdateResourceTemplateRequest) (*apis.UpdateResourceTemplateResponse, error) {
+func (c *UCloudStackClient) UpdateResourceTemplate(req *apis.UpdateResourceTemplateRequest) (*apis.UpdateResourceTemplateResponse, error) {
 	var err error
 	var res apis.UpdateResourceTemplateResponse
 
@@ -11837,17 +11837,17 @@ func (c *OpenAPIClient) UpdateResourceTemplate(req *apis.UpdateResourceTemplateR
 }
 
 // NewS3LoginRequest will create request of S3Login action.
-func (c *OpenAPIClient) NewS3LoginRequest() *apis.S3LoginRequest {
+func (c *UCloudStackClient) NewS3LoginRequest() *apis.S3LoginRequest {
 	req := &apis.S3LoginRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // S3Login 获取S3登录信息
-func (c *OpenAPIClient) S3Login(req *apis.S3LoginRequest) (*apis.S3LoginResponse, error) {
+func (c *UCloudStackClient) S3Login(req *apis.S3LoginRequest) (*apis.S3LoginResponse, error) {
 	var err error
 	var res apis.S3LoginResponse
 
@@ -11859,17 +11859,17 @@ func (c *OpenAPIClient) S3Login(req *apis.S3LoginRequest) (*apis.S3LoginResponse
 }
 
 // NewCreateDirectConnectRequest will create request of CreateDirectConnect action.
-func (c *OpenAPIClient) NewCreateDirectConnectRequest() *apis.CreateDirectConnectRequest {
+func (c *UCloudStackClient) NewCreateDirectConnectRequest() *apis.CreateDirectConnectRequest {
 	req := &apis.CreateDirectConnectRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateDirectConnect 创建DirectConnect专线接入
-func (c *OpenAPIClient) CreateDirectConnect(req *apis.CreateDirectConnectRequest) (*apis.CreateDirectConnectResponse, error) {
+func (c *UCloudStackClient) CreateDirectConnect(req *apis.CreateDirectConnectRequest) (*apis.CreateDirectConnectResponse, error) {
 	var err error
 	var res apis.CreateDirectConnectResponse
 
@@ -11881,17 +11881,17 @@ func (c *OpenAPIClient) CreateDirectConnect(req *apis.CreateDirectConnectRequest
 }
 
 // NewCreateSegmentRequest will create request of CreateSegment action.
-func (c *OpenAPIClient) NewCreateSegmentRequest() *apis.CreateSegmentRequest {
+func (c *UCloudStackClient) NewCreateSegmentRequest() *apis.CreateSegmentRequest {
 	req := &apis.CreateSegmentRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSegment 创建外网线路
-func (c *OpenAPIClient) CreateSegment(req *apis.CreateSegmentRequest) (*apis.CreateSegmentResponse, error) {
+func (c *UCloudStackClient) CreateSegment(req *apis.CreateSegmentRequest) (*apis.CreateSegmentResponse, error) {
 	var err error
 	var res apis.CreateSegmentResponse
 
@@ -11903,17 +11903,17 @@ func (c *OpenAPIClient) CreateSegment(req *apis.CreateSegmentRequest) (*apis.Cre
 }
 
 // NewCreateSegmentRouteRequest will create request of CreateSegmentRoute action.
-func (c *OpenAPIClient) NewCreateSegmentRouteRequest() *apis.CreateSegmentRouteRequest {
+func (c *UCloudStackClient) NewCreateSegmentRouteRequest() *apis.CreateSegmentRouteRequest {
 	req := &apis.CreateSegmentRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSegmentRoute 创建外网线路路由
-func (c *OpenAPIClient) CreateSegmentRoute(req *apis.CreateSegmentRouteRequest) (*apis.CreateSegmentRouteResponse, error) {
+func (c *UCloudStackClient) CreateSegmentRoute(req *apis.CreateSegmentRouteRequest) (*apis.CreateSegmentRouteResponse, error) {
 	var err error
 	var res apis.CreateSegmentRouteResponse
 
@@ -11925,17 +11925,17 @@ func (c *OpenAPIClient) CreateSegmentRoute(req *apis.CreateSegmentRouteRequest) 
 }
 
 // NewDeleteDirectConnectRequest will create request of DeleteDirectConnect action.
-func (c *OpenAPIClient) NewDeleteDirectConnectRequest() *apis.DeleteDirectConnectRequest {
+func (c *UCloudStackClient) NewDeleteDirectConnectRequest() *apis.DeleteDirectConnectRequest {
 	req := &apis.DeleteDirectConnectRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteDirectConnect 删除DirectConnect专线接入
-func (c *OpenAPIClient) DeleteDirectConnect(req *apis.DeleteDirectConnectRequest) (*apis.DeleteDirectConnectResponse, error) {
+func (c *UCloudStackClient) DeleteDirectConnect(req *apis.DeleteDirectConnectRequest) (*apis.DeleteDirectConnectResponse, error) {
 	var err error
 	var res apis.DeleteDirectConnectResponse
 
@@ -11947,17 +11947,17 @@ func (c *OpenAPIClient) DeleteDirectConnect(req *apis.DeleteDirectConnectRequest
 }
 
 // NewDeleteSegmentRequest will create request of DeleteSegment action.
-func (c *OpenAPIClient) NewDeleteSegmentRequest() *apis.DeleteSegmentRequest {
+func (c *UCloudStackClient) NewDeleteSegmentRequest() *apis.DeleteSegmentRequest {
 	req := &apis.DeleteSegmentRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteSegment 删除外网线路
-func (c *OpenAPIClient) DeleteSegment(req *apis.DeleteSegmentRequest) (*apis.DeleteSegmentResponse, error) {
+func (c *UCloudStackClient) DeleteSegment(req *apis.DeleteSegmentRequest) (*apis.DeleteSegmentResponse, error) {
 	var err error
 	var res apis.DeleteSegmentResponse
 
@@ -11969,17 +11969,17 @@ func (c *OpenAPIClient) DeleteSegment(req *apis.DeleteSegmentRequest) (*apis.Del
 }
 
 // NewDeleteSegmentRouteRequest will create request of DeleteSegmentRoute action.
-func (c *OpenAPIClient) NewDeleteSegmentRouteRequest() *apis.DeleteSegmentRouteRequest {
+func (c *UCloudStackClient) NewDeleteSegmentRouteRequest() *apis.DeleteSegmentRouteRequest {
 	req := &apis.DeleteSegmentRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteSegmentRoute 删除外网线路路由
-func (c *OpenAPIClient) DeleteSegmentRoute(req *apis.DeleteSegmentRouteRequest) (*apis.DeleteSegmentRouteResponse, error) {
+func (c *UCloudStackClient) DeleteSegmentRoute(req *apis.DeleteSegmentRouteRequest) (*apis.DeleteSegmentRouteResponse, error) {
 	var err error
 	var res apis.DeleteSegmentRouteResponse
 
@@ -11991,17 +11991,17 @@ func (c *OpenAPIClient) DeleteSegmentRoute(req *apis.DeleteSegmentRouteRequest) 
 }
 
 // NewDescribeDirectConnectRequest will create request of DescribeDirectConnect action.
-func (c *OpenAPIClient) NewDescribeDirectConnectRequest() *apis.DescribeDirectConnectRequest {
+func (c *UCloudStackClient) NewDescribeDirectConnectRequest() *apis.DescribeDirectConnectRequest {
 	req := &apis.DescribeDirectConnectRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeDirectConnect 查询DirectConnect专线接入
-func (c *OpenAPIClient) DescribeDirectConnect(req *apis.DescribeDirectConnectRequest) (*apis.DescribeDirectConnectResponse, error) {
+func (c *UCloudStackClient) DescribeDirectConnect(req *apis.DescribeDirectConnectRequest) (*apis.DescribeDirectConnectResponse, error) {
 	var err error
 	var res apis.DescribeDirectConnectResponse
 
@@ -12013,17 +12013,17 @@ func (c *OpenAPIClient) DescribeDirectConnect(req *apis.DescribeDirectConnectReq
 }
 
 // NewDescribeSegmentRequest will create request of DescribeSegment action.
-func (c *OpenAPIClient) NewDescribeSegmentRequest() *apis.DescribeSegmentRequest {
+func (c *UCloudStackClient) NewDescribeSegmentRequest() *apis.DescribeSegmentRequest {
 	req := &apis.DescribeSegmentRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSegment 查询线路
-func (c *OpenAPIClient) DescribeSegment(req *apis.DescribeSegmentRequest) (*apis.DescribeSegmentResponse, error) {
+func (c *UCloudStackClient) DescribeSegment(req *apis.DescribeSegmentRequest) (*apis.DescribeSegmentResponse, error) {
 	var err error
 	var res apis.DescribeSegmentResponse
 
@@ -12035,17 +12035,17 @@ func (c *OpenAPIClient) DescribeSegment(req *apis.DescribeSegmentRequest) (*apis
 }
 
 // NewDescribeSegmentRouteRequest will create request of DescribeSegmentRoute action.
-func (c *OpenAPIClient) NewDescribeSegmentRouteRequest() *apis.DescribeSegmentRouteRequest {
+func (c *UCloudStackClient) NewDescribeSegmentRouteRequest() *apis.DescribeSegmentRouteRequest {
 	req := &apis.DescribeSegmentRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSegmentRoute 查询外网线路路由
-func (c *OpenAPIClient) DescribeSegmentRoute(req *apis.DescribeSegmentRouteRequest) (*apis.DescribeSegmentRouteResponse, error) {
+func (c *UCloudStackClient) DescribeSegmentRoute(req *apis.DescribeSegmentRouteRequest) (*apis.DescribeSegmentRouteResponse, error) {
 	var err error
 	var res apis.DescribeSegmentRouteResponse
 
@@ -12057,17 +12057,17 @@ func (c *OpenAPIClient) DescribeSegmentRoute(req *apis.DescribeSegmentRouteReque
 }
 
 // NewUpdateDirectConnectBandwidthRequest will create request of UpdateDirectConnectBandwidth action.
-func (c *OpenAPIClient) NewUpdateDirectConnectBandwidthRequest() *apis.UpdateDirectConnectBandwidthRequest {
+func (c *UCloudStackClient) NewUpdateDirectConnectBandwidthRequest() *apis.UpdateDirectConnectBandwidthRequest {
 	req := &apis.UpdateDirectConnectBandwidthRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDirectConnectBandwidth 修改DirectConnect专线接入限速
-func (c *OpenAPIClient) UpdateDirectConnectBandwidth(req *apis.UpdateDirectConnectBandwidthRequest) (*apis.UpdateDirectConnectBandwidthResponse, error) {
+func (c *UCloudStackClient) UpdateDirectConnectBandwidth(req *apis.UpdateDirectConnectBandwidthRequest) (*apis.UpdateDirectConnectBandwidthResponse, error) {
 	var err error
 	var res apis.UpdateDirectConnectBandwidthResponse
 
@@ -12079,17 +12079,17 @@ func (c *OpenAPIClient) UpdateDirectConnectBandwidth(req *apis.UpdateDirectConne
 }
 
 // NewUpdateDirectConnectRemoteSubnetCIDRsRequest will create request of UpdateDirectConnectRemoteSubnetCIDRs action.
-func (c *OpenAPIClient) NewUpdateDirectConnectRemoteSubnetCIDRsRequest() *apis.UpdateDirectConnectRemoteSubnetCIDRsRequest {
+func (c *UCloudStackClient) NewUpdateDirectConnectRemoteSubnetCIDRsRequest() *apis.UpdateDirectConnectRemoteSubnetCIDRsRequest {
 	req := &apis.UpdateDirectConnectRemoteSubnetCIDRsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateDirectConnectRemoteSubnetCIDRs 修改DirectConnect专线接入远端子网网段
-func (c *OpenAPIClient) UpdateDirectConnectRemoteSubnetCIDRs(req *apis.UpdateDirectConnectRemoteSubnetCIDRsRequest) (*apis.UpdateDirectConnectRemoteSubnetCIDRsResponse, error) {
+func (c *UCloudStackClient) UpdateDirectConnectRemoteSubnetCIDRs(req *apis.UpdateDirectConnectRemoteSubnetCIDRsRequest) (*apis.UpdateDirectConnectRemoteSubnetCIDRsResponse, error) {
 	var err error
 	var res apis.UpdateDirectConnectRemoteSubnetCIDRsResponse
 
@@ -12101,17 +12101,17 @@ func (c *OpenAPIClient) UpdateDirectConnectRemoteSubnetCIDRs(req *apis.UpdateDir
 }
 
 // NewUpdateSegmentRequest will create request of UpdateSegment action.
-func (c *OpenAPIClient) NewUpdateSegmentRequest() *apis.UpdateSegmentRequest {
+func (c *UCloudStackClient) NewUpdateSegmentRequest() *apis.UpdateSegmentRequest {
 	req := &apis.UpdateSegmentRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateSegment 更新外网线路
-func (c *OpenAPIClient) UpdateSegment(req *apis.UpdateSegmentRequest) (*apis.UpdateSegmentResponse, error) {
+func (c *UCloudStackClient) UpdateSegment(req *apis.UpdateSegmentRequest) (*apis.UpdateSegmentResponse, error) {
 	var err error
 	var res apis.UpdateSegmentResponse
 
@@ -12123,17 +12123,17 @@ func (c *OpenAPIClient) UpdateSegment(req *apis.UpdateSegmentRequest) (*apis.Upd
 }
 
 // NewUpdateSegmentRouteRequest will create request of UpdateSegmentRoute action.
-func (c *OpenAPIClient) NewUpdateSegmentRouteRequest() *apis.UpdateSegmentRouteRequest {
+func (c *UCloudStackClient) NewUpdateSegmentRouteRequest() *apis.UpdateSegmentRouteRequest {
 	req := &apis.UpdateSegmentRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateSegmentRoute 更新外网线路路由
-func (c *OpenAPIClient) UpdateSegmentRoute(req *apis.UpdateSegmentRouteRequest) (*apis.UpdateSegmentRouteResponse, error) {
+func (c *UCloudStackClient) UpdateSegmentRoute(req *apis.UpdateSegmentRouteRequest) (*apis.UpdateSegmentRouteResponse, error) {
 	var err error
 	var res apis.UpdateSegmentRouteResponse
 
@@ -12145,17 +12145,17 @@ func (c *OpenAPIClient) UpdateSegmentRoute(req *apis.UpdateSegmentRouteRequest) 
 }
 
 // NewAliasSetRequest will create request of AliasSet action.
-func (c *OpenAPIClient) NewAliasSetRequest() *apis.AliasSetRequest {
+func (c *UCloudStackClient) NewAliasSetRequest() *apis.AliasSetRequest {
 	req := &apis.AliasSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AliasSet 设置计算集群别名
-func (c *OpenAPIClient) AliasSet(req *apis.AliasSetRequest) (*apis.AliasSetResponse, error) {
+func (c *UCloudStackClient) AliasSet(req *apis.AliasSetRequest) (*apis.AliasSetResponse, error) {
 	var err error
 	var res apis.AliasSetResponse
 
@@ -12167,17 +12167,17 @@ func (c *OpenAPIClient) AliasSet(req *apis.AliasSetRequest) (*apis.AliasSetRespo
 }
 
 // NewAliasStorageSetRequest will create request of AliasStorageSet action.
-func (c *OpenAPIClient) NewAliasStorageSetRequest() *apis.AliasStorageSetRequest {
+func (c *UCloudStackClient) NewAliasStorageSetRequest() *apis.AliasStorageSetRequest {
 	req := &apis.AliasStorageSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AliasStorageSet 设置存储集群别名
-func (c *OpenAPIClient) AliasStorageSet(req *apis.AliasStorageSetRequest) (*apis.AliasStorageSetResponse, error) {
+func (c *UCloudStackClient) AliasStorageSet(req *apis.AliasStorageSetRequest) (*apis.AliasStorageSetResponse, error) {
 	var err error
 	var res apis.AliasStorageSetResponse
 
@@ -12189,17 +12189,17 @@ func (c *OpenAPIClient) AliasStorageSet(req *apis.AliasStorageSetRequest) (*apis
 }
 
 // NewDescribeResourceUsersRequest will create request of DescribeResourceUsers action.
-func (c *OpenAPIClient) NewDescribeResourceUsersRequest() *apis.DescribeResourceUsersRequest {
+func (c *UCloudStackClient) NewDescribeResourceUsersRequest() *apis.DescribeResourceUsersRequest {
 	req := &apis.DescribeResourceUsersRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeResourceUsers 查询正在使用资源的用户
-func (c *OpenAPIClient) DescribeResourceUsers(req *apis.DescribeResourceUsersRequest) (*apis.DescribeResourceUsersResponse, error) {
+func (c *UCloudStackClient) DescribeResourceUsers(req *apis.DescribeResourceUsersRequest) (*apis.DescribeResourceUsersResponse, error) {
 	var err error
 	var res apis.DescribeResourceUsersResponse
 
@@ -12211,17 +12211,17 @@ func (c *OpenAPIClient) DescribeResourceUsers(req *apis.DescribeResourceUsersReq
 }
 
 // NewDescribeStorageSetRequest will create request of DescribeStorageSet action.
-func (c *OpenAPIClient) NewDescribeStorageSetRequest() *apis.DescribeStorageSetRequest {
+func (c *UCloudStackClient) NewDescribeStorageSetRequest() *apis.DescribeStorageSetRequest {
 	req := &apis.DescribeStorageSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeStorageSet 查询存储集群信息
-func (c *OpenAPIClient) DescribeStorageSet(req *apis.DescribeStorageSetRequest) (*apis.DescribeStorageSetResponse, error) {
+func (c *UCloudStackClient) DescribeStorageSet(req *apis.DescribeStorageSetRequest) (*apis.DescribeStorageSetResponse, error) {
 	var err error
 	var res apis.DescribeStorageSetResponse
 
@@ -12233,17 +12233,17 @@ func (c *OpenAPIClient) DescribeStorageSet(req *apis.DescribeStorageSetRequest) 
 }
 
 // NewDescribeStorageSetSortPolicyRequest will create request of DescribeStorageSetSortPolicy action.
-func (c *OpenAPIClient) NewDescribeStorageSetSortPolicyRequest() *apis.DescribeStorageSetSortPolicyRequest {
+func (c *UCloudStackClient) NewDescribeStorageSetSortPolicyRequest() *apis.DescribeStorageSetSortPolicyRequest {
 	req := &apis.DescribeStorageSetSortPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeStorageSetSortPolicy 获取存储集群排序策略
-func (c *OpenAPIClient) DescribeStorageSetSortPolicy(req *apis.DescribeStorageSetSortPolicyRequest) (*apis.DescribeStorageSetSortPolicyResponse, error) {
+func (c *UCloudStackClient) DescribeStorageSetSortPolicy(req *apis.DescribeStorageSetSortPolicyRequest) (*apis.DescribeStorageSetSortPolicyResponse, error) {
 	var err error
 	var res apis.DescribeStorageSetSortPolicyResponse
 
@@ -12255,17 +12255,17 @@ func (c *OpenAPIClient) DescribeStorageSetSortPolicy(req *apis.DescribeStorageSe
 }
 
 // NewDescribeStorageTypeRequest will create request of DescribeStorageType action.
-func (c *OpenAPIClient) NewDescribeStorageTypeRequest() *apis.DescribeStorageTypeRequest {
+func (c *UCloudStackClient) NewDescribeStorageTypeRequest() *apis.DescribeStorageTypeRequest {
 	req := &apis.DescribeStorageTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeStorageType 查询存储类型
-func (c *OpenAPIClient) DescribeStorageType(req *apis.DescribeStorageTypeRequest) (*apis.DescribeStorageTypeResponse, error) {
+func (c *UCloudStackClient) DescribeStorageType(req *apis.DescribeStorageTypeRequest) (*apis.DescribeStorageTypeResponse, error) {
 	var err error
 	var res apis.DescribeStorageTypeResponse
 
@@ -12277,17 +12277,17 @@ func (c *OpenAPIClient) DescribeStorageType(req *apis.DescribeStorageTypeRequest
 }
 
 // NewDescribeVMSetRequest will create request of DescribeVMSet action.
-func (c *OpenAPIClient) NewDescribeVMSetRequest() *apis.DescribeVMSetRequest {
+func (c *UCloudStackClient) NewDescribeVMSetRequest() *apis.DescribeVMSetRequest {
 	req := &apis.DescribeVMSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVMSet 获取虚拟机Set信息
-func (c *OpenAPIClient) DescribeVMSet(req *apis.DescribeVMSetRequest) (*apis.DescribeVMSetResponse, error) {
+func (c *UCloudStackClient) DescribeVMSet(req *apis.DescribeVMSetRequest) (*apis.DescribeVMSetResponse, error) {
 	var err error
 	var res apis.DescribeVMSetResponse
 
@@ -12299,17 +12299,17 @@ func (c *OpenAPIClient) DescribeVMSet(req *apis.DescribeVMSetRequest) (*apis.Des
 }
 
 // NewDescribeVMTypeRequest will create request of DescribeVMType action.
-func (c *OpenAPIClient) NewDescribeVMTypeRequest() *apis.DescribeVMTypeRequest {
+func (c *UCloudStackClient) NewDescribeVMTypeRequest() *apis.DescribeVMTypeRequest {
 	req := &apis.DescribeVMTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVMType 查询主机机型
-func (c *OpenAPIClient) DescribeVMType(req *apis.DescribeVMTypeRequest) (*apis.DescribeVMTypeResponse, error) {
+func (c *UCloudStackClient) DescribeVMType(req *apis.DescribeVMTypeRequest) (*apis.DescribeVMTypeResponse, error) {
 	var err error
 	var res apis.DescribeVMTypeResponse
 
@@ -12321,17 +12321,17 @@ func (c *OpenAPIClient) DescribeVMType(req *apis.DescribeVMTypeRequest) (*apis.D
 }
 
 // NewUpdateComputeSetCPUAllocationRatioRequest will create request of UpdateComputeSetCPUAllocationRatio action.
-func (c *OpenAPIClient) NewUpdateComputeSetCPUAllocationRatioRequest() *apis.UpdateComputeSetCPUAllocationRatioRequest {
+func (c *UCloudStackClient) NewUpdateComputeSetCPUAllocationRatioRequest() *apis.UpdateComputeSetCPUAllocationRatioRequest {
 	req := &apis.UpdateComputeSetCPUAllocationRatioRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateComputeSetCPUAllocationRatio 设置计算集群的超分比例
-func (c *OpenAPIClient) UpdateComputeSetCPUAllocationRatio(req *apis.UpdateComputeSetCPUAllocationRatioRequest) (*apis.UpdateComputeSetCPUAllocationRatioResponse, error) {
+func (c *UCloudStackClient) UpdateComputeSetCPUAllocationRatio(req *apis.UpdateComputeSetCPUAllocationRatioRequest) (*apis.UpdateComputeSetCPUAllocationRatioResponse, error) {
 	var err error
 	var res apis.UpdateComputeSetCPUAllocationRatioResponse
 
@@ -12343,17 +12343,17 @@ func (c *OpenAPIClient) UpdateComputeSetCPUAllocationRatio(req *apis.UpdateCompu
 }
 
 // NewUpdateComputeSetCPUModelsRequest will create request of UpdateComputeSetCPUModels action.
-func (c *OpenAPIClient) NewUpdateComputeSetCPUModelsRequest() *apis.UpdateComputeSetCPUModelsRequest {
+func (c *UCloudStackClient) NewUpdateComputeSetCPUModelsRequest() *apis.UpdateComputeSetCPUModelsRequest {
 	req := &apis.UpdateComputeSetCPUModelsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateComputeSetCPUModels 设置计算CPU模型
-func (c *OpenAPIClient) UpdateComputeSetCPUModels(req *apis.UpdateComputeSetCPUModelsRequest) (*apis.UpdateComputeSetCPUModelsResponse, error) {
+func (c *UCloudStackClient) UpdateComputeSetCPUModels(req *apis.UpdateComputeSetCPUModelsRequest) (*apis.UpdateComputeSetCPUModelsResponse, error) {
 	var err error
 	var res apis.UpdateComputeSetCPUModelsResponse
 
@@ -12365,17 +12365,17 @@ func (c *OpenAPIClient) UpdateComputeSetCPUModels(req *apis.UpdateComputeSetCPUM
 }
 
 // NewUpdateResourcePermissionRequest will create request of UpdateResourcePermission action.
-func (c *OpenAPIClient) NewUpdateResourcePermissionRequest() *apis.UpdateResourcePermissionRequest {
+func (c *UCloudStackClient) NewUpdateResourcePermissionRequest() *apis.UpdateResourcePermissionRequest {
 	req := &apis.UpdateResourcePermissionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateResourcePermission 修改资源权限
-func (c *OpenAPIClient) UpdateResourcePermission(req *apis.UpdateResourcePermissionRequest) (*apis.UpdateResourcePermissionResponse, error) {
+func (c *UCloudStackClient) UpdateResourcePermission(req *apis.UpdateResourcePermissionRequest) (*apis.UpdateResourcePermissionResponse, error) {
 	var err error
 	var res apis.UpdateResourcePermissionResponse
 
@@ -12387,17 +12387,17 @@ func (c *OpenAPIClient) UpdateResourcePermission(req *apis.UpdateResourcePermiss
 }
 
 // NewUpdateStorageSetSortPolicyRequest will create request of UpdateStorageSetSortPolicy action.
-func (c *OpenAPIClient) NewUpdateStorageSetSortPolicyRequest() *apis.UpdateStorageSetSortPolicyRequest {
+func (c *UCloudStackClient) NewUpdateStorageSetSortPolicyRequest() *apis.UpdateStorageSetSortPolicyRequest {
 	req := &apis.UpdateStorageSetSortPolicyRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateStorageSetSortPolicy 修改存储集群排序策略
-func (c *OpenAPIClient) UpdateStorageSetSortPolicy(req *apis.UpdateStorageSetSortPolicyRequest) (*apis.UpdateStorageSetSortPolicyResponse, error) {
+func (c *UCloudStackClient) UpdateStorageSetSortPolicy(req *apis.UpdateStorageSetSortPolicyRequest) (*apis.UpdateStorageSetSortPolicyResponse, error) {
 	var err error
 	var res apis.UpdateStorageSetSortPolicyResponse
 
@@ -12409,17 +12409,17 @@ func (c *OpenAPIClient) UpdateStorageSetSortPolicy(req *apis.UpdateStorageSetSor
 }
 
 // NewUpdateVMSetBoundImageRequest will create request of UpdateVMSetBoundImage action.
-func (c *OpenAPIClient) NewUpdateVMSetBoundImageRequest() *apis.UpdateVMSetBoundImageRequest {
+func (c *UCloudStackClient) NewUpdateVMSetBoundImageRequest() *apis.UpdateVMSetBoundImageRequest {
 	req := &apis.UpdateVMSetBoundImageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMSetBoundImage 更新计算集群绑定的镜像
-func (c *OpenAPIClient) UpdateVMSetBoundImage(req *apis.UpdateVMSetBoundImageRequest) (*apis.UpdateVMSetBoundImageResponse, error) {
+func (c *UCloudStackClient) UpdateVMSetBoundImage(req *apis.UpdateVMSetBoundImageRequest) (*apis.UpdateVMSetBoundImageResponse, error) {
 	var err error
 	var res apis.UpdateVMSetBoundImageResponse
 
@@ -12431,17 +12431,17 @@ func (c *OpenAPIClient) UpdateVMSetBoundImage(req *apis.UpdateVMSetBoundImageReq
 }
 
 // NewUpdateVMSetBoundStorageSetRequest will create request of UpdateVMSetBoundStorageSet action.
-func (c *OpenAPIClient) NewUpdateVMSetBoundStorageSetRequest() *apis.UpdateVMSetBoundStorageSetRequest {
+func (c *UCloudStackClient) NewUpdateVMSetBoundStorageSetRequest() *apis.UpdateVMSetBoundStorageSetRequest {
 	req := &apis.UpdateVMSetBoundStorageSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMSetBoundStorageSet 更新计算集群绑定的存储集群
-func (c *OpenAPIClient) UpdateVMSetBoundStorageSet(req *apis.UpdateVMSetBoundStorageSetRequest) (*apis.UpdateVMSetBoundStorageSetResponse, error) {
+func (c *UCloudStackClient) UpdateVMSetBoundStorageSet(req *apis.UpdateVMSetBoundStorageSetRequest) (*apis.UpdateVMSetBoundStorageSetResponse, error) {
 	var err error
 	var res apis.UpdateVMSetBoundStorageSetResponse
 
@@ -12453,17 +12453,17 @@ func (c *OpenAPIClient) UpdateVMSetBoundStorageSet(req *apis.UpdateVMSetBoundSto
 }
 
 // NewBindSecurityGroupRequest will create request of BindSecurityGroup action.
-func (c *OpenAPIClient) NewBindSecurityGroupRequest() *apis.BindSecurityGroupRequest {
+func (c *UCloudStackClient) NewBindSecurityGroupRequest() *apis.BindSecurityGroupRequest {
 	req := &apis.BindSecurityGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // BindSecurityGroup 绑定安全组
-func (c *OpenAPIClient) BindSecurityGroup(req *apis.BindSecurityGroupRequest) (*apis.BindSecurityGroupResponse, error) {
+func (c *UCloudStackClient) BindSecurityGroup(req *apis.BindSecurityGroupRequest) (*apis.BindSecurityGroupResponse, error) {
 	var err error
 	var res apis.BindSecurityGroupResponse
 
@@ -12475,17 +12475,17 @@ func (c *OpenAPIClient) BindSecurityGroup(req *apis.BindSecurityGroupRequest) (*
 }
 
 // NewCreateIPGroupRequest will create request of CreateIPGroup action.
-func (c *OpenAPIClient) NewCreateIPGroupRequest() *apis.CreateIPGroupRequest {
+func (c *UCloudStackClient) NewCreateIPGroupRequest() *apis.CreateIPGroupRequest {
 	req := &apis.CreateIPGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateIPGroup 创建IP组
-func (c *OpenAPIClient) CreateIPGroup(req *apis.CreateIPGroupRequest) (*apis.CreateIPGroupResponse, error) {
+func (c *UCloudStackClient) CreateIPGroup(req *apis.CreateIPGroupRequest) (*apis.CreateIPGroupResponse, error) {
 	var err error
 	var res apis.CreateIPGroupResponse
 
@@ -12497,17 +12497,17 @@ func (c *OpenAPIClient) CreateIPGroup(req *apis.CreateIPGroupRequest) (*apis.Cre
 }
 
 // NewCreatePortGroupRequest will create request of CreatePortGroup action.
-func (c *OpenAPIClient) NewCreatePortGroupRequest() *apis.CreatePortGroupRequest {
+func (c *UCloudStackClient) NewCreatePortGroupRequest() *apis.CreatePortGroupRequest {
 	req := &apis.CreatePortGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreatePortGroup 创建端口组
-func (c *OpenAPIClient) CreatePortGroup(req *apis.CreatePortGroupRequest) (*apis.CreatePortGroupResponse, error) {
+func (c *UCloudStackClient) CreatePortGroup(req *apis.CreatePortGroupRequest) (*apis.CreatePortGroupResponse, error) {
 	var err error
 	var res apis.CreatePortGroupResponse
 
@@ -12519,17 +12519,17 @@ func (c *OpenAPIClient) CreatePortGroup(req *apis.CreatePortGroupRequest) (*apis
 }
 
 // NewCreateSecurityGroupRequest will create request of CreateSecurityGroup action.
-func (c *OpenAPIClient) NewCreateSecurityGroupRequest() *apis.CreateSecurityGroupRequest {
+func (c *UCloudStackClient) NewCreateSecurityGroupRequest() *apis.CreateSecurityGroupRequest {
 	req := &apis.CreateSecurityGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSecurityGroup 创建安全组
-func (c *OpenAPIClient) CreateSecurityGroup(req *apis.CreateSecurityGroupRequest) (*apis.CreateSecurityGroupResponse, error) {
+func (c *UCloudStackClient) CreateSecurityGroup(req *apis.CreateSecurityGroupRequest) (*apis.CreateSecurityGroupResponse, error) {
 	var err error
 	var res apis.CreateSecurityGroupResponse
 
@@ -12541,17 +12541,17 @@ func (c *OpenAPIClient) CreateSecurityGroup(req *apis.CreateSecurityGroupRequest
 }
 
 // NewCreateSecurityGroupRuleRequest will create request of CreateSecurityGroupRule action.
-func (c *OpenAPIClient) NewCreateSecurityGroupRuleRequest() *apis.CreateSecurityGroupRuleRequest {
+func (c *UCloudStackClient) NewCreateSecurityGroupRuleRequest() *apis.CreateSecurityGroupRuleRequest {
 	req := &apis.CreateSecurityGroupRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSecurityGroupRule 新建安全组规则
-func (c *OpenAPIClient) CreateSecurityGroupRule(req *apis.CreateSecurityGroupRuleRequest) (*apis.CreateSecurityGroupRuleResponse, error) {
+func (c *UCloudStackClient) CreateSecurityGroupRule(req *apis.CreateSecurityGroupRuleRequest) (*apis.CreateSecurityGroupRuleResponse, error) {
 	var err error
 	var res apis.CreateSecurityGroupRuleResponse
 
@@ -12563,17 +12563,17 @@ func (c *OpenAPIClient) CreateSecurityGroupRule(req *apis.CreateSecurityGroupRul
 }
 
 // NewDeleteIPGroupRequest will create request of DeleteIPGroup action.
-func (c *OpenAPIClient) NewDeleteIPGroupRequest() *apis.DeleteIPGroupRequest {
+func (c *UCloudStackClient) NewDeleteIPGroupRequest() *apis.DeleteIPGroupRequest {
 	req := &apis.DeleteIPGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteIPGroup 删除IP组
-func (c *OpenAPIClient) DeleteIPGroup(req *apis.DeleteIPGroupRequest) (*apis.DeleteIPGroupResponse, error) {
+func (c *UCloudStackClient) DeleteIPGroup(req *apis.DeleteIPGroupRequest) (*apis.DeleteIPGroupResponse, error) {
 	var err error
 	var res apis.DeleteIPGroupResponse
 
@@ -12585,17 +12585,17 @@ func (c *OpenAPIClient) DeleteIPGroup(req *apis.DeleteIPGroupRequest) (*apis.Del
 }
 
 // NewDeletePortGroupRequest will create request of DeletePortGroup action.
-func (c *OpenAPIClient) NewDeletePortGroupRequest() *apis.DeletePortGroupRequest {
+func (c *UCloudStackClient) NewDeletePortGroupRequest() *apis.DeletePortGroupRequest {
 	req := &apis.DeletePortGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeletePortGroup 删除端口组
-func (c *OpenAPIClient) DeletePortGroup(req *apis.DeletePortGroupRequest) (*apis.DeletePortGroupResponse, error) {
+func (c *UCloudStackClient) DeletePortGroup(req *apis.DeletePortGroupRequest) (*apis.DeletePortGroupResponse, error) {
 	var err error
 	var res apis.DeletePortGroupResponse
 
@@ -12607,17 +12607,17 @@ func (c *OpenAPIClient) DeletePortGroup(req *apis.DeletePortGroupRequest) (*apis
 }
 
 // NewDeleteSecurityGroupRequest will create request of DeleteSecurityGroup action.
-func (c *OpenAPIClient) NewDeleteSecurityGroupRequest() *apis.DeleteSecurityGroupRequest {
+func (c *UCloudStackClient) NewDeleteSecurityGroupRequest() *apis.DeleteSecurityGroupRequest {
 	req := &apis.DeleteSecurityGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteSecurityGroup 删除安全组
-func (c *OpenAPIClient) DeleteSecurityGroup(req *apis.DeleteSecurityGroupRequest) (*apis.DeleteSecurityGroupResponse, error) {
+func (c *UCloudStackClient) DeleteSecurityGroup(req *apis.DeleteSecurityGroupRequest) (*apis.DeleteSecurityGroupResponse, error) {
 	var err error
 	var res apis.DeleteSecurityGroupResponse
 
@@ -12629,17 +12629,17 @@ func (c *OpenAPIClient) DeleteSecurityGroup(req *apis.DeleteSecurityGroupRequest
 }
 
 // NewDeleteSecurityGroupRuleRequest will create request of DeleteSecurityGroupRule action.
-func (c *OpenAPIClient) NewDeleteSecurityGroupRuleRequest() *apis.DeleteSecurityGroupRuleRequest {
+func (c *UCloudStackClient) NewDeleteSecurityGroupRuleRequest() *apis.DeleteSecurityGroupRuleRequest {
 	req := &apis.DeleteSecurityGroupRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteSecurityGroupRule 删除安全组规则
-func (c *OpenAPIClient) DeleteSecurityGroupRule(req *apis.DeleteSecurityGroupRuleRequest) (*apis.DeleteSecurityGroupRuleResponse, error) {
+func (c *UCloudStackClient) DeleteSecurityGroupRule(req *apis.DeleteSecurityGroupRuleRequest) (*apis.DeleteSecurityGroupRuleResponse, error) {
 	var err error
 	var res apis.DeleteSecurityGroupRuleResponse
 
@@ -12651,17 +12651,17 @@ func (c *OpenAPIClient) DeleteSecurityGroupRule(req *apis.DeleteSecurityGroupRul
 }
 
 // NewDescribeIPGroupRequest will create request of DescribeIPGroup action.
-func (c *OpenAPIClient) NewDescribeIPGroupRequest() *apis.DescribeIPGroupRequest {
+func (c *UCloudStackClient) NewDescribeIPGroupRequest() *apis.DescribeIPGroupRequest {
 	req := &apis.DescribeIPGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeIPGroup 查询IP组
-func (c *OpenAPIClient) DescribeIPGroup(req *apis.DescribeIPGroupRequest) (*apis.DescribeIPGroupResponse, error) {
+func (c *UCloudStackClient) DescribeIPGroup(req *apis.DescribeIPGroupRequest) (*apis.DescribeIPGroupResponse, error) {
 	var err error
 	var res apis.DescribeIPGroupResponse
 
@@ -12673,17 +12673,17 @@ func (c *OpenAPIClient) DescribeIPGroup(req *apis.DescribeIPGroupRequest) (*apis
 }
 
 // NewDescribePortGroupRequest will create request of DescribePortGroup action.
-func (c *OpenAPIClient) NewDescribePortGroupRequest() *apis.DescribePortGroupRequest {
+func (c *UCloudStackClient) NewDescribePortGroupRequest() *apis.DescribePortGroupRequest {
 	req := &apis.DescribePortGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribePortGroup 查询端口组
-func (c *OpenAPIClient) DescribePortGroup(req *apis.DescribePortGroupRequest) (*apis.DescribePortGroupResponse, error) {
+func (c *UCloudStackClient) DescribePortGroup(req *apis.DescribePortGroupRequest) (*apis.DescribePortGroupResponse, error) {
 	var err error
 	var res apis.DescribePortGroupResponse
 
@@ -12695,17 +12695,17 @@ func (c *OpenAPIClient) DescribePortGroup(req *apis.DescribePortGroupRequest) (*
 }
 
 // NewDescribeSecurityGroupRequest will create request of DescribeSecurityGroup action.
-func (c *OpenAPIClient) NewDescribeSecurityGroupRequest() *apis.DescribeSecurityGroupRequest {
+func (c *UCloudStackClient) NewDescribeSecurityGroupRequest() *apis.DescribeSecurityGroupRequest {
 	req := &apis.DescribeSecurityGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSecurityGroup 获取安全组
-func (c *OpenAPIClient) DescribeSecurityGroup(req *apis.DescribeSecurityGroupRequest) (*apis.DescribeSecurityGroupResponse, error) {
+func (c *UCloudStackClient) DescribeSecurityGroup(req *apis.DescribeSecurityGroupRequest) (*apis.DescribeSecurityGroupResponse, error) {
 	var err error
 	var res apis.DescribeSecurityGroupResponse
 
@@ -12717,17 +12717,17 @@ func (c *OpenAPIClient) DescribeSecurityGroup(req *apis.DescribeSecurityGroupReq
 }
 
 // NewDescribeSecurityGroupResourceRequest will create request of DescribeSecurityGroupResource action.
-func (c *OpenAPIClient) NewDescribeSecurityGroupResourceRequest() *apis.DescribeSecurityGroupResourceRequest {
+func (c *UCloudStackClient) NewDescribeSecurityGroupResourceRequest() *apis.DescribeSecurityGroupResourceRequest {
 	req := &apis.DescribeSecurityGroupResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSecurityGroupResource 获取安全组关联资源
-func (c *OpenAPIClient) DescribeSecurityGroupResource(req *apis.DescribeSecurityGroupResourceRequest) (*apis.DescribeSecurityGroupResourceResponse, error) {
+func (c *UCloudStackClient) DescribeSecurityGroupResource(req *apis.DescribeSecurityGroupResourceRequest) (*apis.DescribeSecurityGroupResourceResponse, error) {
 	var err error
 	var res apis.DescribeSecurityGroupResourceResponse
 
@@ -12739,17 +12739,17 @@ func (c *OpenAPIClient) DescribeSecurityGroupResource(req *apis.DescribeSecurity
 }
 
 // NewDescribeSecurityGroupRuleRequest will create request of DescribeSecurityGroupRule action.
-func (c *OpenAPIClient) NewDescribeSecurityGroupRuleRequest() *apis.DescribeSecurityGroupRuleRequest {
+func (c *UCloudStackClient) NewDescribeSecurityGroupRuleRequest() *apis.DescribeSecurityGroupRuleRequest {
 	req := &apis.DescribeSecurityGroupRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSecurityGroupRule 获取安全组规则
-func (c *OpenAPIClient) DescribeSecurityGroupRule(req *apis.DescribeSecurityGroupRuleRequest) (*apis.DescribeSecurityGroupRuleResponse, error) {
+func (c *UCloudStackClient) DescribeSecurityGroupRule(req *apis.DescribeSecurityGroupRuleRequest) (*apis.DescribeSecurityGroupRuleResponse, error) {
 	var err error
 	var res apis.DescribeSecurityGroupRuleResponse
 
@@ -12761,17 +12761,17 @@ func (c *OpenAPIClient) DescribeSecurityGroupRule(req *apis.DescribeSecurityGrou
 }
 
 // NewUnBindSecurityGroupRequest will create request of UnBindSecurityGroup action.
-func (c *OpenAPIClient) NewUnBindSecurityGroupRequest() *apis.UnBindSecurityGroupRequest {
+func (c *UCloudStackClient) NewUnBindSecurityGroupRequest() *apis.UnBindSecurityGroupRequest {
 	req := &apis.UnBindSecurityGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnBindSecurityGroup 解绑安全组
-func (c *OpenAPIClient) UnBindSecurityGroup(req *apis.UnBindSecurityGroupRequest) (*apis.UnBindSecurityGroupResponse, error) {
+func (c *UCloudStackClient) UnBindSecurityGroup(req *apis.UnBindSecurityGroupRequest) (*apis.UnBindSecurityGroupResponse, error) {
 	var err error
 	var res apis.UnBindSecurityGroupResponse
 
@@ -12783,17 +12783,17 @@ func (c *OpenAPIClient) UnBindSecurityGroup(req *apis.UnBindSecurityGroupRequest
 }
 
 // NewUpdateIPGroupRequest will create request of UpdateIPGroup action.
-func (c *OpenAPIClient) NewUpdateIPGroupRequest() *apis.UpdateIPGroupRequest {
+func (c *UCloudStackClient) NewUpdateIPGroupRequest() *apis.UpdateIPGroupRequest {
 	req := &apis.UpdateIPGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateIPGroup 更新IP组
-func (c *OpenAPIClient) UpdateIPGroup(req *apis.UpdateIPGroupRequest) (*apis.UpdateIPGroupResponse, error) {
+func (c *UCloudStackClient) UpdateIPGroup(req *apis.UpdateIPGroupRequest) (*apis.UpdateIPGroupResponse, error) {
 	var err error
 	var res apis.UpdateIPGroupResponse
 
@@ -12805,17 +12805,17 @@ func (c *OpenAPIClient) UpdateIPGroup(req *apis.UpdateIPGroupRequest) (*apis.Upd
 }
 
 // NewUpdatePortGroupRequest will create request of UpdatePortGroup action.
-func (c *OpenAPIClient) NewUpdatePortGroupRequest() *apis.UpdatePortGroupRequest {
+func (c *UCloudStackClient) NewUpdatePortGroupRequest() *apis.UpdatePortGroupRequest {
 	req := &apis.UpdatePortGroupRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdatePortGroup 更新端口组
-func (c *OpenAPIClient) UpdatePortGroup(req *apis.UpdatePortGroupRequest) (*apis.UpdatePortGroupResponse, error) {
+func (c *UCloudStackClient) UpdatePortGroup(req *apis.UpdatePortGroupRequest) (*apis.UpdatePortGroupResponse, error) {
 	var err error
 	var res apis.UpdatePortGroupResponse
 
@@ -12827,17 +12827,17 @@ func (c *OpenAPIClient) UpdatePortGroup(req *apis.UpdatePortGroupRequest) (*apis
 }
 
 // NewUpdateSecurityGroupRuleRequest will create request of UpdateSecurityGroupRule action.
-func (c *OpenAPIClient) NewUpdateSecurityGroupRuleRequest() *apis.UpdateSecurityGroupRuleRequest {
+func (c *UCloudStackClient) NewUpdateSecurityGroupRuleRequest() *apis.UpdateSecurityGroupRuleRequest {
 	req := &apis.UpdateSecurityGroupRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateSecurityGroupRule 更新安全组规则
-func (c *OpenAPIClient) UpdateSecurityGroupRule(req *apis.UpdateSecurityGroupRuleRequest) (*apis.UpdateSecurityGroupRuleResponse, error) {
+func (c *UCloudStackClient) UpdateSecurityGroupRule(req *apis.UpdateSecurityGroupRuleRequest) (*apis.UpdateSecurityGroupRuleResponse, error) {
 	var err error
 	var res apis.UpdateSecurityGroupRuleResponse
 
@@ -12849,17 +12849,17 @@ func (c *OpenAPIClient) UpdateSecurityGroupRule(req *apis.UpdateSecurityGroupRul
 }
 
 // NewAllocateExternalStorageSetDiskRequest will create request of AllocateExternalStorageSetDisk action.
-func (c *OpenAPIClient) NewAllocateExternalStorageSetDiskRequest() *apis.AllocateExternalStorageSetDiskRequest {
+func (c *UCloudStackClient) NewAllocateExternalStorageSetDiskRequest() *apis.AllocateExternalStorageSetDiskRequest {
 	req := &apis.AllocateExternalStorageSetDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateExternalStorageSetDisk 分配外置存储集群硬盘
-func (c *OpenAPIClient) AllocateExternalStorageSetDisk(req *apis.AllocateExternalStorageSetDiskRequest) (*apis.AllocateExternalStorageSetDiskResponse, error) {
+func (c *UCloudStackClient) AllocateExternalStorageSetDisk(req *apis.AllocateExternalStorageSetDiskRequest) (*apis.AllocateExternalStorageSetDiskResponse, error) {
 	var err error
 	var res apis.AllocateExternalStorageSetDiskResponse
 
@@ -12871,17 +12871,17 @@ func (c *OpenAPIClient) AllocateExternalStorageSetDisk(req *apis.AllocateExterna
 }
 
 // NewAttachExternalDiskRequest will create request of AttachExternalDisk action.
-func (c *OpenAPIClient) NewAttachExternalDiskRequest() *apis.AttachExternalDiskRequest {
+func (c *UCloudStackClient) NewAttachExternalDiskRequest() *apis.AttachExternalDiskRequest {
 	req := &apis.AttachExternalDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AttachExternalDisk 绑定外置存储
-func (c *OpenAPIClient) AttachExternalDisk(req *apis.AttachExternalDiskRequest) (*apis.AttachExternalDiskResponse, error) {
+func (c *UCloudStackClient) AttachExternalDisk(req *apis.AttachExternalDiskRequest) (*apis.AttachExternalDiskResponse, error) {
 	var err error
 	var res apis.AttachExternalDiskResponse
 
@@ -12893,17 +12893,17 @@ func (c *OpenAPIClient) AttachExternalDisk(req *apis.AttachExternalDiskRequest) 
 }
 
 // NewCreateExternalStorageSetRequest will create request of CreateExternalStorageSet action.
-func (c *OpenAPIClient) NewCreateExternalStorageSetRequest() *apis.CreateExternalStorageSetRequest {
+func (c *UCloudStackClient) NewCreateExternalStorageSetRequest() *apis.CreateExternalStorageSetRequest {
 	req := &apis.CreateExternalStorageSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateExternalStorageSet 创建外置存储集群
-func (c *OpenAPIClient) CreateExternalStorageSet(req *apis.CreateExternalStorageSetRequest) (*apis.CreateExternalStorageSetResponse, error) {
+func (c *UCloudStackClient) CreateExternalStorageSet(req *apis.CreateExternalStorageSetRequest) (*apis.CreateExternalStorageSetResponse, error) {
 	var err error
 	var res apis.CreateExternalStorageSetResponse
 
@@ -12915,17 +12915,17 @@ func (c *OpenAPIClient) CreateExternalStorageSet(req *apis.CreateExternalStorage
 }
 
 // NewDeleteExternalStorageSetRequest will create request of DeleteExternalStorageSet action.
-func (c *OpenAPIClient) NewDeleteExternalStorageSetRequest() *apis.DeleteExternalStorageSetRequest {
+func (c *UCloudStackClient) NewDeleteExternalStorageSetRequest() *apis.DeleteExternalStorageSetRequest {
 	req := &apis.DeleteExternalStorageSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteExternalStorageSet 删除外置存储集群
-func (c *OpenAPIClient) DeleteExternalStorageSet(req *apis.DeleteExternalStorageSetRequest) (*apis.DeleteExternalStorageSetResponse, error) {
+func (c *UCloudStackClient) DeleteExternalStorageSet(req *apis.DeleteExternalStorageSetRequest) (*apis.DeleteExternalStorageSetResponse, error) {
 	var err error
 	var res apis.DeleteExternalStorageSetResponse
 
@@ -12937,17 +12937,17 @@ func (c *OpenAPIClient) DeleteExternalStorageSet(req *apis.DeleteExternalStorage
 }
 
 // NewDescribeExternalDiskRequest will create request of DescribeExternalDisk action.
-func (c *OpenAPIClient) NewDescribeExternalDiskRequest() *apis.DescribeExternalDiskRequest {
+func (c *UCloudStackClient) NewDescribeExternalDiskRequest() *apis.DescribeExternalDiskRequest {
 	req := &apis.DescribeExternalDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeExternalDisk 查询外置存储集群硬盘
-func (c *OpenAPIClient) DescribeExternalDisk(req *apis.DescribeExternalDiskRequest) (*apis.DescribeExternalDiskResponse, error) {
+func (c *UCloudStackClient) DescribeExternalDisk(req *apis.DescribeExternalDiskRequest) (*apis.DescribeExternalDiskResponse, error) {
 	var err error
 	var res apis.DescribeExternalDiskResponse
 
@@ -12959,17 +12959,17 @@ func (c *OpenAPIClient) DescribeExternalDisk(req *apis.DescribeExternalDiskReque
 }
 
 // NewDescribeExternalStorageSetRequest will create request of DescribeExternalStorageSet action.
-func (c *OpenAPIClient) NewDescribeExternalStorageSetRequest() *apis.DescribeExternalStorageSetRequest {
+func (c *UCloudStackClient) NewDescribeExternalStorageSetRequest() *apis.DescribeExternalStorageSetRequest {
 	req := &apis.DescribeExternalStorageSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeExternalStorageSet 查询外置存储集群
-func (c *OpenAPIClient) DescribeExternalStorageSet(req *apis.DescribeExternalStorageSetRequest) (*apis.DescribeExternalStorageSetResponse, error) {
+func (c *UCloudStackClient) DescribeExternalStorageSet(req *apis.DescribeExternalStorageSetRequest) (*apis.DescribeExternalStorageSetResponse, error) {
 	var err error
 	var res apis.DescribeExternalStorageSetResponse
 
@@ -12981,17 +12981,17 @@ func (c *OpenAPIClient) DescribeExternalStorageSet(req *apis.DescribeExternalSto
 }
 
 // NewDescribeExternalStorageTypeRequest will create request of DescribeExternalStorageType action.
-func (c *OpenAPIClient) NewDescribeExternalStorageTypeRequest() *apis.DescribeExternalStorageTypeRequest {
+func (c *UCloudStackClient) NewDescribeExternalStorageTypeRequest() *apis.DescribeExternalStorageTypeRequest {
 	req := &apis.DescribeExternalStorageTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeExternalStorageType 查询外置存储集群类型
-func (c *OpenAPIClient) DescribeExternalStorageType(req *apis.DescribeExternalStorageTypeRequest) (*apis.DescribeExternalStorageTypeResponse, error) {
+func (c *UCloudStackClient) DescribeExternalStorageType(req *apis.DescribeExternalStorageTypeRequest) (*apis.DescribeExternalStorageTypeResponse, error) {
 	var err error
 	var res apis.DescribeExternalStorageTypeResponse
 
@@ -13003,17 +13003,17 @@ func (c *OpenAPIClient) DescribeExternalStorageType(req *apis.DescribeExternalSt
 }
 
 // NewDetachExternalDiskRequest will create request of DetachExternalDisk action.
-func (c *OpenAPIClient) NewDetachExternalDiskRequest() *apis.DetachExternalDiskRequest {
+func (c *UCloudStackClient) NewDetachExternalDiskRequest() *apis.DetachExternalDiskRequest {
 	req := &apis.DetachExternalDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DetachExternalDisk 解绑外置存储
-func (c *OpenAPIClient) DetachExternalDisk(req *apis.DetachExternalDiskRequest) (*apis.DetachExternalDiskResponse, error) {
+func (c *UCloudStackClient) DetachExternalDisk(req *apis.DetachExternalDiskRequest) (*apis.DetachExternalDiskResponse, error) {
 	var err error
 	var res apis.DetachExternalDiskResponse
 
@@ -13025,17 +13025,17 @@ func (c *OpenAPIClient) DetachExternalDisk(req *apis.DetachExternalDiskRequest) 
 }
 
 // NewScanFCSANRequest will create request of ScanFCSAN action.
-func (c *OpenAPIClient) NewScanFCSANRequest() *apis.ScanFCSANRequest {
+func (c *UCloudStackClient) NewScanFCSANRequest() *apis.ScanFCSANRequest {
 	req := &apis.ScanFCSANRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ScanFCSAN 扫描 FCSAN 外置存储集群硬盘
-func (c *OpenAPIClient) ScanFCSAN(req *apis.ScanFCSANRequest) (*apis.ScanFCSANResponse, error) {
+func (c *UCloudStackClient) ScanFCSAN(req *apis.ScanFCSANRequest) (*apis.ScanFCSANResponse, error) {
 	var err error
 	var res apis.ScanFCSANResponse
 
@@ -13047,17 +13047,17 @@ func (c *OpenAPIClient) ScanFCSAN(req *apis.ScanFCSANRequest) (*apis.ScanFCSANRe
 }
 
 // NewScanISCSIDiskRequest will create request of ScanISCSIDisk action.
-func (c *OpenAPIClient) NewScanISCSIDiskRequest() *apis.ScanISCSIDiskRequest {
+func (c *UCloudStackClient) NewScanISCSIDiskRequest() *apis.ScanISCSIDiskRequest {
 	req := &apis.ScanISCSIDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ScanISCSIDisk 扫描外置存储集群硬盘
-func (c *OpenAPIClient) ScanISCSIDisk(req *apis.ScanISCSIDiskRequest) (*apis.ScanISCSIDiskResponse, error) {
+func (c *UCloudStackClient) ScanISCSIDisk(req *apis.ScanISCSIDiskRequest) (*apis.ScanISCSIDiskResponse, error) {
 	var err error
 	var res apis.ScanISCSIDiskResponse
 
@@ -13069,17 +13069,17 @@ func (c *OpenAPIClient) ScanISCSIDisk(req *apis.ScanISCSIDiskRequest) (*apis.Sca
 }
 
 // NewSetShareAbleExternalStorageRequest will create request of SetShareAbleExternalStorage action.
-func (c *OpenAPIClient) NewSetShareAbleExternalStorageRequest() *apis.SetShareAbleExternalStorageRequest {
+func (c *UCloudStackClient) NewSetShareAbleExternalStorageRequest() *apis.SetShareAbleExternalStorageRequest {
 	req := &apis.SetShareAbleExternalStorageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetShareAbleExternalStorage 外置存储盘设置为可共享的磁盘
-func (c *OpenAPIClient) SetShareAbleExternalStorage(req *apis.SetShareAbleExternalStorageRequest) (*apis.SetShareAbleExternalStorageResponse, error) {
+func (c *UCloudStackClient) SetShareAbleExternalStorage(req *apis.SetShareAbleExternalStorageRequest) (*apis.SetShareAbleExternalStorageResponse, error) {
 	var err error
 	var res apis.SetShareAbleExternalStorageResponse
 
@@ -13091,17 +13091,17 @@ func (c *OpenAPIClient) SetShareAbleExternalStorage(req *apis.SetShareAbleExtern
 }
 
 // NewUpdateExternalStorageSetRequest will create request of UpdateExternalStorageSet action.
-func (c *OpenAPIClient) NewUpdateExternalStorageSetRequest() *apis.UpdateExternalStorageSetRequest {
+func (c *UCloudStackClient) NewUpdateExternalStorageSetRequest() *apis.UpdateExternalStorageSetRequest {
 	req := &apis.UpdateExternalStorageSetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateExternalStorageSet 更新外置存储集群
-func (c *OpenAPIClient) UpdateExternalStorageSet(req *apis.UpdateExternalStorageSetRequest) (*apis.UpdateExternalStorageSetResponse, error) {
+func (c *UCloudStackClient) UpdateExternalStorageSet(req *apis.UpdateExternalStorageSetRequest) (*apis.UpdateExternalStorageSetResponse, error) {
 	var err error
 	var res apis.UpdateExternalStorageSetResponse
 
@@ -13113,17 +13113,17 @@ func (c *OpenAPIClient) UpdateExternalStorageSet(req *apis.UpdateExternalStorage
 }
 
 // NewCompleteSMCRequest will create request of CompleteSMC action.
-func (c *OpenAPIClient) NewCompleteSMCRequest() *apis.CompleteSMCRequest {
+func (c *UCloudStackClient) NewCompleteSMCRequest() *apis.CompleteSMCRequest {
 	req := &apis.CompleteSMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CompleteSMC 完成迁移
-func (c *OpenAPIClient) CompleteSMC(req *apis.CompleteSMCRequest) (*apis.CompleteSMCResponse, error) {
+func (c *UCloudStackClient) CompleteSMC(req *apis.CompleteSMCRequest) (*apis.CompleteSMCResponse, error) {
 	var err error
 	var res apis.CompleteSMCResponse
 
@@ -13135,17 +13135,17 @@ func (c *OpenAPIClient) CompleteSMC(req *apis.CompleteSMCRequest) (*apis.Complet
 }
 
 // NewCreateSMCRequest will create request of CreateSMC action.
-func (c *OpenAPIClient) NewCreateSMCRequest() *apis.CreateSMCRequest {
+func (c *UCloudStackClient) NewCreateSMCRequest() *apis.CreateSMCRequest {
 	req := &apis.CreateSMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSMC 创建SMC任务
-func (c *OpenAPIClient) CreateSMC(req *apis.CreateSMCRequest) (*apis.CreateSMCResponse, error) {
+func (c *UCloudStackClient) CreateSMC(req *apis.CreateSMCRequest) (*apis.CreateSMCResponse, error) {
 	var err error
 	var res apis.CreateSMCResponse
 
@@ -13157,17 +13157,17 @@ func (c *OpenAPIClient) CreateSMC(req *apis.CreateSMCRequest) (*apis.CreateSMCRe
 }
 
 // NewDeleteSMCRequest will create request of DeleteSMC action.
-func (c *OpenAPIClient) NewDeleteSMCRequest() *apis.DeleteSMCRequest {
+func (c *UCloudStackClient) NewDeleteSMCRequest() *apis.DeleteSMCRequest {
 	req := &apis.DeleteSMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteSMC 删除SMC任务
-func (c *OpenAPIClient) DeleteSMC(req *apis.DeleteSMCRequest) (*apis.DeleteSMCResponse, error) {
+func (c *UCloudStackClient) DeleteSMC(req *apis.DeleteSMCRequest) (*apis.DeleteSMCResponse, error) {
 	var err error
 	var res apis.DeleteSMCResponse
 
@@ -13179,17 +13179,17 @@ func (c *OpenAPIClient) DeleteSMC(req *apis.DeleteSMCRequest) (*apis.DeleteSMCRe
 }
 
 // NewDescribeSMCRequest will create request of DescribeSMC action.
-func (c *OpenAPIClient) NewDescribeSMCRequest() *apis.DescribeSMCRequest {
+func (c *UCloudStackClient) NewDescribeSMCRequest() *apis.DescribeSMCRequest {
 	req := &apis.DescribeSMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSMC 获取SMC信息
-func (c *OpenAPIClient) DescribeSMC(req *apis.DescribeSMCRequest) (*apis.DescribeSMCResponse, error) {
+func (c *UCloudStackClient) DescribeSMC(req *apis.DescribeSMCRequest) (*apis.DescribeSMCResponse, error) {
 	var err error
 	var res apis.DescribeSMCResponse
 
@@ -13201,17 +13201,17 @@ func (c *OpenAPIClient) DescribeSMC(req *apis.DescribeSMCRequest) (*apis.Describ
 }
 
 // NewSMCHeartbeatRequest will create request of SMCHeartbeat action.
-func (c *OpenAPIClient) NewSMCHeartbeatRequest() *apis.SMCHeartbeatRequest {
+func (c *UCloudStackClient) NewSMCHeartbeatRequest() *apis.SMCHeartbeatRequest {
 	req := &apis.SMCHeartbeatRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SMCHeartbeat smc心跳
-func (c *OpenAPIClient) SMCHeartbeat(req *apis.SMCHeartbeatRequest) (*apis.SMCHeartbeatResponse, error) {
+func (c *UCloudStackClient) SMCHeartbeat(req *apis.SMCHeartbeatRequest) (*apis.SMCHeartbeatResponse, error) {
 	var err error
 	var res apis.SMCHeartbeatResponse
 
@@ -13223,17 +13223,17 @@ func (c *OpenAPIClient) SMCHeartbeat(req *apis.SMCHeartbeatRequest) (*apis.SMCHe
 }
 
 // NewSetupSMCRequest will create request of SetupSMC action.
-func (c *OpenAPIClient) NewSetupSMCRequest() *apis.SetupSMCRequest {
+func (c *UCloudStackClient) NewSetupSMCRequest() *apis.SetupSMCRequest {
 	req := &apis.SetupSMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetupSMC 设置SMC任务
-func (c *OpenAPIClient) SetupSMC(req *apis.SetupSMCRequest) (*apis.SetupSMCResponse, error) {
+func (c *UCloudStackClient) SetupSMC(req *apis.SetupSMCRequest) (*apis.SetupSMCResponse, error) {
 	var err error
 	var res apis.SetupSMCResponse
 
@@ -13245,17 +13245,17 @@ func (c *OpenAPIClient) SetupSMC(req *apis.SetupSMCRequest) (*apis.SetupSMCRespo
 }
 
 // NewStartSMCRequest will create request of StartSMC action.
-func (c *OpenAPIClient) NewStartSMCRequest() *apis.StartSMCRequest {
+func (c *UCloudStackClient) NewStartSMCRequest() *apis.StartSMCRequest {
 	req := &apis.StartSMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // StartSMC 开始迁移
-func (c *OpenAPIClient) StartSMC(req *apis.StartSMCRequest) (*apis.StartSMCResponse, error) {
+func (c *UCloudStackClient) StartSMC(req *apis.StartSMCRequest) (*apis.StartSMCResponse, error) {
 	var err error
 	var res apis.StartSMCResponse
 
@@ -13267,17 +13267,17 @@ func (c *OpenAPIClient) StartSMC(req *apis.StartSMCRequest) (*apis.StartSMCRespo
 }
 
 // NewStopSMCRequest will create request of StopSMC action.
-func (c *OpenAPIClient) NewStopSMCRequest() *apis.StopSMCRequest {
+func (c *UCloudStackClient) NewStopSMCRequest() *apis.StopSMCRequest {
 	req := &apis.StopSMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // StopSMC 停止迁移
-func (c *OpenAPIClient) StopSMC(req *apis.StopSMCRequest) (*apis.StopSMCResponse, error) {
+func (c *UCloudStackClient) StopSMC(req *apis.StopSMCRequest) (*apis.StopSMCResponse, error) {
 	var err error
 	var res apis.StopSMCResponse
 
@@ -13289,17 +13289,17 @@ func (c *OpenAPIClient) StopSMC(req *apis.StopSMCRequest) (*apis.StopSMCResponse
 }
 
 // NewBindTagRequest will create request of BindTag action.
-func (c *OpenAPIClient) NewBindTagRequest() *apis.BindTagRequest {
+func (c *UCloudStackClient) NewBindTagRequest() *apis.BindTagRequest {
 	req := &apis.BindTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // BindTag 绑定标签
-func (c *OpenAPIClient) BindTag(req *apis.BindTagRequest) (*apis.BindTagResponse, error) {
+func (c *UCloudStackClient) BindTag(req *apis.BindTagRequest) (*apis.BindTagResponse, error) {
 	var err error
 	var res apis.BindTagResponse
 
@@ -13311,17 +13311,17 @@ func (c *OpenAPIClient) BindTag(req *apis.BindTagRequest) (*apis.BindTagResponse
 }
 
 // NewCreateTagRequest will create request of CreateTag action.
-func (c *OpenAPIClient) NewCreateTagRequest() *apis.CreateTagRequest {
+func (c *UCloudStackClient) NewCreateTagRequest() *apis.CreateTagRequest {
 	req := &apis.CreateTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateTag 创建标签
-func (c *OpenAPIClient) CreateTag(req *apis.CreateTagRequest) (*apis.CreateTagResponse, error) {
+func (c *UCloudStackClient) CreateTag(req *apis.CreateTagRequest) (*apis.CreateTagResponse, error) {
 	var err error
 	var res apis.CreateTagResponse
 
@@ -13333,17 +13333,17 @@ func (c *OpenAPIClient) CreateTag(req *apis.CreateTagRequest) (*apis.CreateTagRe
 }
 
 // NewDeleteTagRequest will create request of DeleteTag action.
-func (c *OpenAPIClient) NewDeleteTagRequest() *apis.DeleteTagRequest {
+func (c *UCloudStackClient) NewDeleteTagRequest() *apis.DeleteTagRequest {
 	req := &apis.DeleteTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteTag 删除标签
-func (c *OpenAPIClient) DeleteTag(req *apis.DeleteTagRequest) (*apis.DeleteTagResponse, error) {
+func (c *UCloudStackClient) DeleteTag(req *apis.DeleteTagRequest) (*apis.DeleteTagResponse, error) {
 	var err error
 	var res apis.DeleteTagResponse
 
@@ -13355,17 +13355,17 @@ func (c *OpenAPIClient) DeleteTag(req *apis.DeleteTagRequest) (*apis.DeleteTagRe
 }
 
 // NewDescribeBindableTagResourceRequest will create request of DescribeBindableTagResource action.
-func (c *OpenAPIClient) NewDescribeBindableTagResourceRequest() *apis.DescribeBindableTagResourceRequest {
+func (c *UCloudStackClient) NewDescribeBindableTagResourceRequest() *apis.DescribeBindableTagResourceRequest {
 	req := &apis.DescribeBindableTagResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeBindableTagResource 查询可绑定标签的资源
-func (c *OpenAPIClient) DescribeBindableTagResource(req *apis.DescribeBindableTagResourceRequest) (*apis.DescribeBindableTagResourceResponse, error) {
+func (c *UCloudStackClient) DescribeBindableTagResource(req *apis.DescribeBindableTagResourceRequest) (*apis.DescribeBindableTagResourceResponse, error) {
 	var err error
 	var res apis.DescribeBindableTagResourceResponse
 
@@ -13377,17 +13377,17 @@ func (c *OpenAPIClient) DescribeBindableTagResource(req *apis.DescribeBindableTa
 }
 
 // NewDescribeTagRequest will create request of DescribeTag action.
-func (c *OpenAPIClient) NewDescribeTagRequest() *apis.DescribeTagRequest {
+func (c *UCloudStackClient) NewDescribeTagRequest() *apis.DescribeTagRequest {
 	req := &apis.DescribeTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeTag 查询标签
-func (c *OpenAPIClient) DescribeTag(req *apis.DescribeTagRequest) (*apis.DescribeTagResponse, error) {
+func (c *UCloudStackClient) DescribeTag(req *apis.DescribeTagRequest) (*apis.DescribeTagResponse, error) {
 	var err error
 	var res apis.DescribeTagResponse
 
@@ -13399,17 +13399,17 @@ func (c *OpenAPIClient) DescribeTag(req *apis.DescribeTagRequest) (*apis.Describ
 }
 
 // NewDescribeTagResourceRequest will create request of DescribeTagResource action.
-func (c *OpenAPIClient) NewDescribeTagResourceRequest() *apis.DescribeTagResourceRequest {
+func (c *UCloudStackClient) NewDescribeTagResourceRequest() *apis.DescribeTagResourceRequest {
 	req := &apis.DescribeTagResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeTagResource 查询标签资源
-func (c *OpenAPIClient) DescribeTagResource(req *apis.DescribeTagResourceRequest) (*apis.DescribeTagResourceResponse, error) {
+func (c *UCloudStackClient) DescribeTagResource(req *apis.DescribeTagResourceRequest) (*apis.DescribeTagResourceResponse, error) {
 	var err error
 	var res apis.DescribeTagResourceResponse
 
@@ -13421,17 +13421,17 @@ func (c *OpenAPIClient) DescribeTagResource(req *apis.DescribeTagResourceRequest
 }
 
 // NewSetResourceTagsRequest will create request of SetResourceTags action.
-func (c *OpenAPIClient) NewSetResourceTagsRequest() *apis.SetResourceTagsRequest {
+func (c *UCloudStackClient) NewSetResourceTagsRequest() *apis.SetResourceTagsRequest {
 	req := &apis.SetResourceTagsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetResourceTags 设置资源最终绑定的所有标签
-func (c *OpenAPIClient) SetResourceTags(req *apis.SetResourceTagsRequest) (*apis.SetResourceTagsResponse, error) {
+func (c *UCloudStackClient) SetResourceTags(req *apis.SetResourceTagsRequest) (*apis.SetResourceTagsResponse, error) {
 	var err error
 	var res apis.SetResourceTagsResponse
 
@@ -13443,17 +13443,17 @@ func (c *OpenAPIClient) SetResourceTags(req *apis.SetResourceTagsRequest) (*apis
 }
 
 // NewUnBindTagRequest will create request of UnBindTag action.
-func (c *OpenAPIClient) NewUnBindTagRequest() *apis.UnBindTagRequest {
+func (c *UCloudStackClient) NewUnBindTagRequest() *apis.UnBindTagRequest {
 	req := &apis.UnBindTagRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnBindTag 标签解绑
-func (c *OpenAPIClient) UnBindTag(req *apis.UnBindTagRequest) (*apis.UnBindTagResponse, error) {
+func (c *UCloudStackClient) UnBindTag(req *apis.UnBindTagRequest) (*apis.UnBindTagResponse, error) {
 	var err error
 	var res apis.UnBindTagResponse
 
@@ -13465,17 +13465,17 @@ func (c *OpenAPIClient) UnBindTag(req *apis.UnBindTagRequest) (*apis.UnBindTagRe
 }
 
 // NewCreateTimerRequest will create request of CreateTimer action.
-func (c *OpenAPIClient) NewCreateTimerRequest() *apis.CreateTimerRequest {
+func (c *UCloudStackClient) NewCreateTimerRequest() *apis.CreateTimerRequest {
 	req := &apis.CreateTimerRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateTimer 创建定时器
-func (c *OpenAPIClient) CreateTimer(req *apis.CreateTimerRequest) (*apis.CreateTimerResponse, error) {
+func (c *UCloudStackClient) CreateTimer(req *apis.CreateTimerRequest) (*apis.CreateTimerResponse, error) {
 	var err error
 	var res apis.CreateTimerResponse
 
@@ -13487,17 +13487,17 @@ func (c *OpenAPIClient) CreateTimer(req *apis.CreateTimerRequest) (*apis.CreateT
 }
 
 // NewDeleteTimerRequest will create request of DeleteTimer action.
-func (c *OpenAPIClient) NewDeleteTimerRequest() *apis.DeleteTimerRequest {
+func (c *UCloudStackClient) NewDeleteTimerRequest() *apis.DeleteTimerRequest {
 	req := &apis.DeleteTimerRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteTimer 删除定时器
-func (c *OpenAPIClient) DeleteTimer(req *apis.DeleteTimerRequest) (*apis.DeleteTimerResponse, error) {
+func (c *UCloudStackClient) DeleteTimer(req *apis.DeleteTimerRequest) (*apis.DeleteTimerResponse, error) {
 	var err error
 	var res apis.DeleteTimerResponse
 
@@ -13509,17 +13509,17 @@ func (c *OpenAPIClient) DeleteTimer(req *apis.DeleteTimerRequest) (*apis.DeleteT
 }
 
 // NewDescribeTimerRequest will create request of DescribeTimer action.
-func (c *OpenAPIClient) NewDescribeTimerRequest() *apis.DescribeTimerRequest {
+func (c *UCloudStackClient) NewDescribeTimerRequest() *apis.DescribeTimerRequest {
 	req := &apis.DescribeTimerRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeTimer 查询定时器
-func (c *OpenAPIClient) DescribeTimer(req *apis.DescribeTimerRequest) (*apis.DescribeTimerResponse, error) {
+func (c *UCloudStackClient) DescribeTimer(req *apis.DescribeTimerRequest) (*apis.DescribeTimerResponse, error) {
 	var err error
 	var res apis.DescribeTimerResponse
 
@@ -13531,17 +13531,17 @@ func (c *OpenAPIClient) DescribeTimer(req *apis.DescribeTimerRequest) (*apis.Des
 }
 
 // NewDescribeTimerTaskRequest will create request of DescribeTimerTask action.
-func (c *OpenAPIClient) NewDescribeTimerTaskRequest() *apis.DescribeTimerTaskRequest {
+func (c *UCloudStackClient) NewDescribeTimerTaskRequest() *apis.DescribeTimerTaskRequest {
 	req := &apis.DescribeTimerTaskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeTimerTask 查询定时器执行记录
-func (c *OpenAPIClient) DescribeTimerTask(req *apis.DescribeTimerTaskRequest) (*apis.DescribeTimerTaskResponse, error) {
+func (c *UCloudStackClient) DescribeTimerTask(req *apis.DescribeTimerTaskRequest) (*apis.DescribeTimerTaskResponse, error) {
 	var err error
 	var res apis.DescribeTimerTaskResponse
 
@@ -13553,17 +13553,17 @@ func (c *OpenAPIClient) DescribeTimerTask(req *apis.DescribeTimerTaskRequest) (*
 }
 
 // NewUpdateTimerRequest will create request of UpdateTimer action.
-func (c *OpenAPIClient) NewUpdateTimerRequest() *apis.UpdateTimerRequest {
+func (c *UCloudStackClient) NewUpdateTimerRequest() *apis.UpdateTimerRequest {
 	req := &apis.UpdateTimerRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateTimer 更新定时器
-func (c *OpenAPIClient) UpdateTimer(req *apis.UpdateTimerRequest) (*apis.UpdateTimerResponse, error) {
+func (c *UCloudStackClient) UpdateTimer(req *apis.UpdateTimerRequest) (*apis.UpdateTimerResponse, error) {
 	var err error
 	var res apis.UpdateTimerResponse
 
@@ -13575,17 +13575,17 @@ func (c *OpenAPIClient) UpdateTimer(req *apis.UpdateTimerRequest) (*apis.UpdateT
 }
 
 // NewCreateTrafficMirrorRequest will create request of CreateTrafficMirror action.
-func (c *OpenAPIClient) NewCreateTrafficMirrorRequest() *apis.CreateTrafficMirrorRequest {
+func (c *UCloudStackClient) NewCreateTrafficMirrorRequest() *apis.CreateTrafficMirrorRequest {
 	req := &apis.CreateTrafficMirrorRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateTrafficMirror 创建流量镜像
-func (c *OpenAPIClient) CreateTrafficMirror(req *apis.CreateTrafficMirrorRequest) (*apis.CreateTrafficMirrorResponse, error) {
+func (c *UCloudStackClient) CreateTrafficMirror(req *apis.CreateTrafficMirrorRequest) (*apis.CreateTrafficMirrorResponse, error) {
 	var err error
 	var res apis.CreateTrafficMirrorResponse
 
@@ -13597,17 +13597,17 @@ func (c *OpenAPIClient) CreateTrafficMirror(req *apis.CreateTrafficMirrorRequest
 }
 
 // NewDeleteTrafficMirrorRequest will create request of DeleteTrafficMirror action.
-func (c *OpenAPIClient) NewDeleteTrafficMirrorRequest() *apis.DeleteTrafficMirrorRequest {
+func (c *UCloudStackClient) NewDeleteTrafficMirrorRequest() *apis.DeleteTrafficMirrorRequest {
 	req := &apis.DeleteTrafficMirrorRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteTrafficMirror 删除流量镜像
-func (c *OpenAPIClient) DeleteTrafficMirror(req *apis.DeleteTrafficMirrorRequest) (*apis.DeleteTrafficMirrorResponse, error) {
+func (c *UCloudStackClient) DeleteTrafficMirror(req *apis.DeleteTrafficMirrorRequest) (*apis.DeleteTrafficMirrorResponse, error) {
 	var err error
 	var res apis.DeleteTrafficMirrorResponse
 
@@ -13619,17 +13619,17 @@ func (c *OpenAPIClient) DeleteTrafficMirror(req *apis.DeleteTrafficMirrorRequest
 }
 
 // NewDescribeTrafficMirrorRequest will create request of DescribeTrafficMirror action.
-func (c *OpenAPIClient) NewDescribeTrafficMirrorRequest() *apis.DescribeTrafficMirrorRequest {
+func (c *UCloudStackClient) NewDescribeTrafficMirrorRequest() *apis.DescribeTrafficMirrorRequest {
 	req := &apis.DescribeTrafficMirrorRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeTrafficMirror 查询流量镜像
-func (c *OpenAPIClient) DescribeTrafficMirror(req *apis.DescribeTrafficMirrorRequest) (*apis.DescribeTrafficMirrorResponse, error) {
+func (c *UCloudStackClient) DescribeTrafficMirror(req *apis.DescribeTrafficMirrorRequest) (*apis.DescribeTrafficMirrorResponse, error) {
 	var err error
 	var res apis.DescribeTrafficMirrorResponse
 
@@ -13641,17 +13641,17 @@ func (c *OpenAPIClient) DescribeTrafficMirror(req *apis.DescribeTrafficMirrorReq
 }
 
 // NewDescribeTrafficMirrorSourcesRequest will create request of DescribeTrafficMirrorSources action.
-func (c *OpenAPIClient) NewDescribeTrafficMirrorSourcesRequest() *apis.DescribeTrafficMirrorSourcesRequest {
+func (c *UCloudStackClient) NewDescribeTrafficMirrorSourcesRequest() *apis.DescribeTrafficMirrorSourcesRequest {
 	req := &apis.DescribeTrafficMirrorSourcesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeTrafficMirrorSources 查询流量镜像源设备信息
-func (c *OpenAPIClient) DescribeTrafficMirrorSources(req *apis.DescribeTrafficMirrorSourcesRequest) (*apis.DescribeTrafficMirrorSourcesResponse, error) {
+func (c *UCloudStackClient) DescribeTrafficMirrorSources(req *apis.DescribeTrafficMirrorSourcesRequest) (*apis.DescribeTrafficMirrorSourcesResponse, error) {
 	var err error
 	var res apis.DescribeTrafficMirrorSourcesResponse
 
@@ -13663,17 +13663,17 @@ func (c *OpenAPIClient) DescribeTrafficMirrorSources(req *apis.DescribeTrafficMi
 }
 
 // NewUpdateTrafficMirrorRequest will create request of UpdateTrafficMirror action.
-func (c *OpenAPIClient) NewUpdateTrafficMirrorRequest() *apis.UpdateTrafficMirrorRequest {
+func (c *UCloudStackClient) NewUpdateTrafficMirrorRequest() *apis.UpdateTrafficMirrorRequest {
 	req := &apis.UpdateTrafficMirrorRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateTrafficMirror 更新流量镜像
-func (c *OpenAPIClient) UpdateTrafficMirror(req *apis.UpdateTrafficMirrorRequest) (*apis.UpdateTrafficMirrorResponse, error) {
+func (c *UCloudStackClient) UpdateTrafficMirror(req *apis.UpdateTrafficMirrorRequest) (*apis.UpdateTrafficMirrorResponse, error) {
 	var err error
 	var res apis.UpdateTrafficMirrorResponse
 
@@ -13685,17 +13685,17 @@ func (c *OpenAPIClient) UpdateTrafficMirror(req *apis.UpdateTrafficMirrorRequest
 }
 
 // NewUpdateTrafficMirrorEnableRequest will create request of UpdateTrafficMirrorEnable action.
-func (c *OpenAPIClient) NewUpdateTrafficMirrorEnableRequest() *apis.UpdateTrafficMirrorEnableRequest {
+func (c *UCloudStackClient) NewUpdateTrafficMirrorEnableRequest() *apis.UpdateTrafficMirrorEnableRequest {
 	req := &apis.UpdateTrafficMirrorEnableRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateTrafficMirrorEnable 是否启用流量镜像
-func (c *OpenAPIClient) UpdateTrafficMirrorEnable(req *apis.UpdateTrafficMirrorEnableRequest) (*apis.UpdateTrafficMirrorEnableResponse, error) {
+func (c *UCloudStackClient) UpdateTrafficMirrorEnable(req *apis.UpdateTrafficMirrorEnableRequest) (*apis.UpdateTrafficMirrorEnableResponse, error) {
 	var err error
 	var res apis.UpdateTrafficMirrorEnableResponse
 
@@ -13707,17 +13707,17 @@ func (c *OpenAPIClient) UpdateTrafficMirrorEnable(req *apis.UpdateTrafficMirrorE
 }
 
 // NewUpdateTrafficMirrorRuleRequest will create request of UpdateTrafficMirrorRule action.
-func (c *OpenAPIClient) NewUpdateTrafficMirrorRuleRequest() *apis.UpdateTrafficMirrorRuleRequest {
+func (c *UCloudStackClient) NewUpdateTrafficMirrorRuleRequest() *apis.UpdateTrafficMirrorRuleRequest {
 	req := &apis.UpdateTrafficMirrorRuleRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateTrafficMirrorRule 更新流量镜像规则
-func (c *OpenAPIClient) UpdateTrafficMirrorRule(req *apis.UpdateTrafficMirrorRuleRequest) (*apis.UpdateTrafficMirrorRuleResponse, error) {
+func (c *UCloudStackClient) UpdateTrafficMirrorRule(req *apis.UpdateTrafficMirrorRuleRequest) (*apis.UpdateTrafficMirrorRuleResponse, error) {
 	var err error
 	var res apis.UpdateTrafficMirrorRuleResponse
 
@@ -13729,17 +13729,17 @@ func (c *OpenAPIClient) UpdateTrafficMirrorRule(req *apis.UpdateTrafficMirrorRul
 }
 
 // NewUpdateTrafficMirrorSourcesRequest will create request of UpdateTrafficMirrorSources action.
-func (c *OpenAPIClient) NewUpdateTrafficMirrorSourcesRequest() *apis.UpdateTrafficMirrorSourcesRequest {
+func (c *UCloudStackClient) NewUpdateTrafficMirrorSourcesRequest() *apis.UpdateTrafficMirrorSourcesRequest {
 	req := &apis.UpdateTrafficMirrorSourcesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateTrafficMirrorSources 更新流量镜像源设备信息
-func (c *OpenAPIClient) UpdateTrafficMirrorSources(req *apis.UpdateTrafficMirrorSourcesRequest) (*apis.UpdateTrafficMirrorSourcesResponse, error) {
+func (c *UCloudStackClient) UpdateTrafficMirrorSources(req *apis.UpdateTrafficMirrorSourcesRequest) (*apis.UpdateTrafficMirrorSourcesResponse, error) {
 	var err error
 	var res apis.UpdateTrafficMirrorSourcesResponse
 
@@ -13751,17 +13751,17 @@ func (c *OpenAPIClient) UpdateTrafficMirrorSources(req *apis.UpdateTrafficMirror
 }
 
 // NewAllocateUSBRequest will create request of AllocateUSB action.
-func (c *OpenAPIClient) NewAllocateUSBRequest() *apis.AllocateUSBRequest {
+func (c *UCloudStackClient) NewAllocateUSBRequest() *apis.AllocateUSBRequest {
 	req := &apis.AllocateUSBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateUSB 分配USB设备
-func (c *OpenAPIClient) AllocateUSB(req *apis.AllocateUSBRequest) (*apis.AllocateUSBResponse, error) {
+func (c *UCloudStackClient) AllocateUSB(req *apis.AllocateUSBRequest) (*apis.AllocateUSBResponse, error) {
 	var err error
 	var res apis.AllocateUSBResponse
 
@@ -13773,17 +13773,17 @@ func (c *OpenAPIClient) AllocateUSB(req *apis.AllocateUSBRequest) (*apis.Allocat
 }
 
 // NewAttachUSBRequest will create request of AttachUSB action.
-func (c *OpenAPIClient) NewAttachUSBRequest() *apis.AttachUSBRequest {
+func (c *UCloudStackClient) NewAttachUSBRequest() *apis.AttachUSBRequest {
 	req := &apis.AttachUSBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AttachUSB 加载USB设备
-func (c *OpenAPIClient) AttachUSB(req *apis.AttachUSBRequest) (*apis.AttachUSBResponse, error) {
+func (c *UCloudStackClient) AttachUSB(req *apis.AttachUSBRequest) (*apis.AttachUSBResponse, error) {
 	var err error
 	var res apis.AttachUSBResponse
 
@@ -13795,17 +13795,17 @@ func (c *OpenAPIClient) AttachUSB(req *apis.AttachUSBRequest) (*apis.AttachUSBRe
 }
 
 // NewDetachUSBRequest will create request of DetachUSB action.
-func (c *OpenAPIClient) NewDetachUSBRequest() *apis.DetachUSBRequest {
+func (c *UCloudStackClient) NewDetachUSBRequest() *apis.DetachUSBRequest {
 	req := &apis.DetachUSBRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DetachUSB 卸载USB设备
-func (c *OpenAPIClient) DetachUSB(req *apis.DetachUSBRequest) (*apis.DetachUSBResponse, error) {
+func (c *UCloudStackClient) DetachUSB(req *apis.DetachUSBRequest) (*apis.DetachUSBResponse, error) {
 	var err error
 	var res apis.DetachUSBResponse
 
@@ -13817,17 +13817,17 @@ func (c *OpenAPIClient) DetachUSB(req *apis.DetachUSBRequest) (*apis.DetachUSBRe
 }
 
 // NewListUSBsRequest will create request of ListUSBs action.
-func (c *OpenAPIClient) NewListUSBsRequest() *apis.ListUSBsRequest {
+func (c *UCloudStackClient) NewListUSBsRequest() *apis.ListUSBsRequest {
 	req := &apis.ListUSBsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListUSBs 获取USB设备信息
-func (c *OpenAPIClient) ListUSBs(req *apis.ListUSBsRequest) (*apis.ListUSBsResponse, error) {
+func (c *UCloudStackClient) ListUSBs(req *apis.ListUSBsRequest) (*apis.ListUSBsResponse, error) {
 	var err error
 	var res apis.ListUSBsResponse
 
@@ -13839,17 +13839,17 @@ func (c *OpenAPIClient) ListUSBs(req *apis.ListUSBsRequest) (*apis.ListUSBsRespo
 }
 
 // NewAllocateVIPRequest will create request of AllocateVIP action.
-func (c *OpenAPIClient) NewAllocateVIPRequest() *apis.AllocateVIPRequest {
+func (c *UCloudStackClient) NewAllocateVIPRequest() *apis.AllocateVIPRequest {
 	req := &apis.AllocateVIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateVIP 申请VIP
-func (c *OpenAPIClient) AllocateVIP(req *apis.AllocateVIPRequest) (*apis.AllocateVIPResponse, error) {
+func (c *UCloudStackClient) AllocateVIP(req *apis.AllocateVIPRequest) (*apis.AllocateVIPResponse, error) {
 	var err error
 	var res apis.AllocateVIPResponse
 
@@ -13861,17 +13861,17 @@ func (c *OpenAPIClient) AllocateVIP(req *apis.AllocateVIPRequest) (*apis.Allocat
 }
 
 // NewDescribeVIPRequest will create request of DescribeVIP action.
-func (c *OpenAPIClient) NewDescribeVIPRequest() *apis.DescribeVIPRequest {
+func (c *UCloudStackClient) NewDescribeVIPRequest() *apis.DescribeVIPRequest {
 	req := &apis.DescribeVIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVIP 获取VIP列表
-func (c *OpenAPIClient) DescribeVIP(req *apis.DescribeVIPRequest) (*apis.DescribeVIPResponse, error) {
+func (c *UCloudStackClient) DescribeVIP(req *apis.DescribeVIPRequest) (*apis.DescribeVIPResponse, error) {
 	var err error
 	var res apis.DescribeVIPResponse
 
@@ -13883,17 +13883,17 @@ func (c *OpenAPIClient) DescribeVIP(req *apis.DescribeVIPRequest) (*apis.Describ
 }
 
 // NewGetVIPDiffPriceRequest will create request of GetVIPDiffPrice action.
-func (c *OpenAPIClient) NewGetVIPDiffPriceRequest() *apis.GetVIPDiffPriceRequest {
+func (c *UCloudStackClient) NewGetVIPDiffPriceRequest() *apis.GetVIPDiffPriceRequest {
 	req := &apis.GetVIPDiffPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetVIPDiffPrice 获取外网VIP差价
-func (c *OpenAPIClient) GetVIPDiffPrice(req *apis.GetVIPDiffPriceRequest) (*apis.GetVIPDiffPriceResponse, error) {
+func (c *UCloudStackClient) GetVIPDiffPrice(req *apis.GetVIPDiffPriceRequest) (*apis.GetVIPDiffPriceResponse, error) {
 	var err error
 	var res apis.GetVIPDiffPriceResponse
 
@@ -13905,17 +13905,17 @@ func (c *OpenAPIClient) GetVIPDiffPrice(req *apis.GetVIPDiffPriceRequest) (*apis
 }
 
 // NewGetVIPPriceRequest will create request of GetVIPPrice action.
-func (c *OpenAPIClient) NewGetVIPPriceRequest() *apis.GetVIPPriceRequest {
+func (c *UCloudStackClient) NewGetVIPPriceRequest() *apis.GetVIPPriceRequest {
 	req := &apis.GetVIPPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetVIPPrice 获取外网VIP价格
-func (c *OpenAPIClient) GetVIPPrice(req *apis.GetVIPPriceRequest) (*apis.GetVIPPriceResponse, error) {
+func (c *UCloudStackClient) GetVIPPrice(req *apis.GetVIPPriceRequest) (*apis.GetVIPPriceResponse, error) {
 	var err error
 	var res apis.GetVIPPriceResponse
 
@@ -13927,17 +13927,17 @@ func (c *OpenAPIClient) GetVIPPrice(req *apis.GetVIPPriceRequest) (*apis.GetVIPP
 }
 
 // NewReleaseVIPRequest will create request of ReleaseVIP action.
-func (c *OpenAPIClient) NewReleaseVIPRequest() *apis.ReleaseVIPRequest {
+func (c *UCloudStackClient) NewReleaseVIPRequest() *apis.ReleaseVIPRequest {
 	req := &apis.ReleaseVIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ReleaseVIP 释放VIP
-func (c *OpenAPIClient) ReleaseVIP(req *apis.ReleaseVIPRequest) (*apis.ReleaseVIPResponse, error) {
+func (c *UCloudStackClient) ReleaseVIP(req *apis.ReleaseVIPRequest) (*apis.ReleaseVIPResponse, error) {
 	var err error
 	var res apis.ReleaseVIPResponse
 
@@ -13949,17 +13949,17 @@ func (c *OpenAPIClient) ReleaseVIP(req *apis.ReleaseVIPRequest) (*apis.ReleaseVI
 }
 
 // NewUpdateVIPBandwidthRequest will create request of UpdateVIPBandwidth action.
-func (c *OpenAPIClient) NewUpdateVIPBandwidthRequest() *apis.UpdateVIPBandwidthRequest {
+func (c *UCloudStackClient) NewUpdateVIPBandwidthRequest() *apis.UpdateVIPBandwidthRequest {
 	req := &apis.UpdateVIPBandwidthRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVIPBandwidth 修改外网VIP的带宽
-func (c *OpenAPIClient) UpdateVIPBandwidth(req *apis.UpdateVIPBandwidthRequest) (*apis.UpdateVIPBandwidthResponse, error) {
+func (c *UCloudStackClient) UpdateVIPBandwidth(req *apis.UpdateVIPBandwidthRequest) (*apis.UpdateVIPBandwidthResponse, error) {
 	var err error
 	var res apis.UpdateVIPBandwidthResponse
 
@@ -13971,17 +13971,17 @@ func (c *OpenAPIClient) UpdateVIPBandwidth(req *apis.UpdateVIPBandwidthRequest) 
 }
 
 // NewUpdateVIPBindResourceRequest will create request of UpdateVIPBindResource action.
-func (c *OpenAPIClient) NewUpdateVIPBindResourceRequest() *apis.UpdateVIPBindResourceRequest {
+func (c *UCloudStackClient) NewUpdateVIPBindResourceRequest() *apis.UpdateVIPBindResourceRequest {
 	req := &apis.UpdateVIPBindResourceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVIPBindResource 更新VIP绑定资源
-func (c *OpenAPIClient) UpdateVIPBindResource(req *apis.UpdateVIPBindResourceRequest) (*apis.UpdateVIPBindResourceResponse, error) {
+func (c *UCloudStackClient) UpdateVIPBindResource(req *apis.UpdateVIPBindResourceRequest) (*apis.UpdateVIPBindResourceResponse, error) {
 	var err error
 	var res apis.UpdateVIPBindResourceResponse
 
@@ -13993,17 +13993,17 @@ func (c *OpenAPIClient) UpdateVIPBindResource(req *apis.UpdateVIPBindResourceReq
 }
 
 // NewAbortMigrateVMDiskRequest will create request of AbortMigrateVMDisk action.
-func (c *OpenAPIClient) NewAbortMigrateVMDiskRequest() *apis.AbortMigrateVMDiskRequest {
+func (c *UCloudStackClient) NewAbortMigrateVMDiskRequest() *apis.AbortMigrateVMDiskRequest {
 	req := &apis.AbortMigrateVMDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AbortMigrateVMDisk 取消虚拟机热存储迁移
-func (c *OpenAPIClient) AbortMigrateVMDisk(req *apis.AbortMigrateVMDiskRequest) (*apis.AbortMigrateVMDiskResponse, error) {
+func (c *UCloudStackClient) AbortMigrateVMDisk(req *apis.AbortMigrateVMDiskRequest) (*apis.AbortMigrateVMDiskResponse, error) {
 	var err error
 	var res apis.AbortMigrateVMDiskResponse
 
@@ -14015,17 +14015,17 @@ func (c *OpenAPIClient) AbortMigrateVMDisk(req *apis.AbortMigrateVMDiskRequest) 
 }
 
 // NewAbortVMSnapshotRequest will create request of AbortVMSnapshot action.
-func (c *OpenAPIClient) NewAbortVMSnapshotRequest() *apis.AbortVMSnapshotRequest {
+func (c *UCloudStackClient) NewAbortVMSnapshotRequest() *apis.AbortVMSnapshotRequest {
 	req := &apis.AbortVMSnapshotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AbortVMSnapshot 取消虚拟机整机快照
-func (c *OpenAPIClient) AbortVMSnapshot(req *apis.AbortVMSnapshotRequest) (*apis.AbortVMSnapshotResponse, error) {
+func (c *UCloudStackClient) AbortVMSnapshot(req *apis.AbortVMSnapshotRequest) (*apis.AbortVMSnapshotResponse, error) {
 	var err error
 	var res apis.AbortVMSnapshotResponse
 
@@ -14037,17 +14037,17 @@ func (c *OpenAPIClient) AbortVMSnapshot(req *apis.AbortVMSnapshotRequest) (*apis
 }
 
 // NewAddVMDiskRequest will create request of AddVMDisk action.
-func (c *OpenAPIClient) NewAddVMDiskRequest() *apis.AddVMDiskRequest {
+func (c *UCloudStackClient) NewAddVMDiskRequest() *apis.AddVMDiskRequest {
 	req := &apis.AddVMDiskRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AddVMDisk 添加虚拟机磁盘
-func (c *OpenAPIClient) AddVMDisk(req *apis.AddVMDiskRequest) (*apis.AddVMDiskResponse, error) {
+func (c *UCloudStackClient) AddVMDisk(req *apis.AddVMDiskRequest) (*apis.AddVMDiskResponse, error) {
 	var err error
 	var res apis.AddVMDiskResponse
 
@@ -14059,17 +14059,17 @@ func (c *OpenAPIClient) AddVMDisk(req *apis.AddVMDiskRequest) (*apis.AddVMDiskRe
 }
 
 // NewAddVMNICRequest will create request of AddVMNIC action.
-func (c *OpenAPIClient) NewAddVMNICRequest() *apis.AddVMNICRequest {
+func (c *UCloudStackClient) NewAddVMNICRequest() *apis.AddVMNICRequest {
 	req := &apis.AddVMNICRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AddVMNIC 添加虚拟机网卡
-func (c *OpenAPIClient) AddVMNIC(req *apis.AddVMNICRequest) (*apis.AddVMNICResponse, error) {
+func (c *UCloudStackClient) AddVMNIC(req *apis.AddVMNICRequest) (*apis.AddVMNICResponse, error) {
 	var err error
 	var res apis.AddVMNICResponse
 
@@ -14081,17 +14081,17 @@ func (c *OpenAPIClient) AddVMNIC(req *apis.AddVMNICRequest) (*apis.AddVMNICRespo
 }
 
 // NewAllocateVMSSHSessionRequest will create request of AllocateVMSSHSession action.
-func (c *OpenAPIClient) NewAllocateVMSSHSessionRequest() *apis.AllocateVMSSHSessionRequest {
+func (c *UCloudStackClient) NewAllocateVMSSHSessionRequest() *apis.AllocateVMSSHSessionRequest {
 	req := &apis.AllocateVMSSHSessionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateVMSSHSession 申请虚拟机SSH会话
-func (c *OpenAPIClient) AllocateVMSSHSession(req *apis.AllocateVMSSHSessionRequest) (*apis.AllocateVMSSHSessionResponse, error) {
+func (c *UCloudStackClient) AllocateVMSSHSession(req *apis.AllocateVMSSHSessionRequest) (*apis.AllocateVMSSHSessionResponse, error) {
 	var err error
 	var res apis.AllocateVMSSHSessionResponse
 
@@ -14103,17 +14103,17 @@ func (c *OpenAPIClient) AllocateVMSSHSession(req *apis.AllocateVMSSHSessionReque
 }
 
 // NewAllocateVMVNCSessionRequest will create request of AllocateVMVNCSession action.
-func (c *OpenAPIClient) NewAllocateVMVNCSessionRequest() *apis.AllocateVMVNCSessionRequest {
+func (c *UCloudStackClient) NewAllocateVMVNCSessionRequest() *apis.AllocateVMVNCSessionRequest {
 	req := &apis.AllocateVMVNCSessionRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AllocateVMVNCSession 申请VNC会话
-func (c *OpenAPIClient) AllocateVMVNCSession(req *apis.AllocateVMVNCSessionRequest) (*apis.AllocateVMVNCSessionResponse, error) {
+func (c *UCloudStackClient) AllocateVMVNCSession(req *apis.AllocateVMVNCSessionRequest) (*apis.AllocateVMVNCSessionResponse, error) {
 	var err error
 	var res apis.AllocateVMVNCSessionResponse
 
@@ -14125,17 +14125,17 @@ func (c *OpenAPIClient) AllocateVMVNCSession(req *apis.AllocateVMVNCSessionReque
 }
 
 // NewCancelCloneVMInstanceRequest will create request of CancelCloneVMInstance action.
-func (c *OpenAPIClient) NewCancelCloneVMInstanceRequest() *apis.CancelCloneVMInstanceRequest {
+func (c *UCloudStackClient) NewCancelCloneVMInstanceRequest() *apis.CancelCloneVMInstanceRequest {
 	req := &apis.CancelCloneVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CancelCloneVMInstance 取消整机克隆
-func (c *OpenAPIClient) CancelCloneVMInstance(req *apis.CancelCloneVMInstanceRequest) (*apis.CancelCloneVMInstanceResponse, error) {
+func (c *UCloudStackClient) CancelCloneVMInstance(req *apis.CancelCloneVMInstanceRequest) (*apis.CancelCloneVMInstanceResponse, error) {
 	var err error
 	var res apis.CancelCloneVMInstanceResponse
 
@@ -14147,17 +14147,17 @@ func (c *OpenAPIClient) CancelCloneVMInstance(req *apis.CancelCloneVMInstanceReq
 }
 
 // NewCloneVMInstanceRequest will create request of CloneVMInstance action.
-func (c *OpenAPIClient) NewCloneVMInstanceRequest() *apis.CloneVMInstanceRequest {
+func (c *UCloudStackClient) NewCloneVMInstanceRequest() *apis.CloneVMInstanceRequest {
 	req := &apis.CloneVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CloneVMInstance 整机克隆
-func (c *OpenAPIClient) CloneVMInstance(req *apis.CloneVMInstanceRequest) (*apis.CloneVMInstanceResponse, error) {
+func (c *UCloudStackClient) CloneVMInstance(req *apis.CloneVMInstanceRequest) (*apis.CloneVMInstanceResponse, error) {
 	var err error
 	var res apis.CloneVMInstanceResponse
 
@@ -14169,17 +14169,17 @@ func (c *OpenAPIClient) CloneVMInstance(req *apis.CloneVMInstanceRequest) (*apis
 }
 
 // NewCreateVMInstanceRequest will create request of CreateVMInstance action.
-func (c *OpenAPIClient) NewCreateVMInstanceRequest() *apis.CreateVMInstanceRequest {
+func (c *UCloudStackClient) NewCreateVMInstanceRequest() *apis.CreateVMInstanceRequest {
 	req := &apis.CreateVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateVMInstance 创建虚拟机
-func (c *OpenAPIClient) CreateVMInstance(req *apis.CreateVMInstanceRequest) (*apis.CreateVMInstanceResponse, error) {
+func (c *UCloudStackClient) CreateVMInstance(req *apis.CreateVMInstanceRequest) (*apis.CreateVMInstanceResponse, error) {
 	var err error
 	var res apis.CreateVMInstanceResponse
 
@@ -14191,17 +14191,17 @@ func (c *OpenAPIClient) CreateVMInstance(req *apis.CreateVMInstanceRequest) (*ap
 }
 
 // NewDeleteVMCRequest will create request of DeleteVMC action.
-func (c *OpenAPIClient) NewDeleteVMCRequest() *apis.DeleteVMCRequest {
+func (c *UCloudStackClient) NewDeleteVMCRequest() *apis.DeleteVMCRequest {
 	req := &apis.DeleteVMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVMC 删除 VMC 资源
-func (c *OpenAPIClient) DeleteVMC(req *apis.DeleteVMCRequest) (*apis.DeleteVMCResponse, error) {
+func (c *UCloudStackClient) DeleteVMC(req *apis.DeleteVMCRequest) (*apis.DeleteVMCResponse, error) {
 	var err error
 	var res apis.DeleteVMCResponse
 
@@ -14213,17 +14213,17 @@ func (c *OpenAPIClient) DeleteVMC(req *apis.DeleteVMCRequest) (*apis.DeleteVMCRe
 }
 
 // NewDeleteVMInstanceRequest will create request of DeleteVMInstance action.
-func (c *OpenAPIClient) NewDeleteVMInstanceRequest() *apis.DeleteVMInstanceRequest {
+func (c *UCloudStackClient) NewDeleteVMInstanceRequest() *apis.DeleteVMInstanceRequest {
 	req := &apis.DeleteVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVMInstance 删除虚拟机
-func (c *OpenAPIClient) DeleteVMInstance(req *apis.DeleteVMInstanceRequest) (*apis.DeleteVMInstanceResponse, error) {
+func (c *UCloudStackClient) DeleteVMInstance(req *apis.DeleteVMInstanceRequest) (*apis.DeleteVMInstanceResponse, error) {
 	var err error
 	var res apis.DeleteVMInstanceResponse
 
@@ -14235,17 +14235,17 @@ func (c *OpenAPIClient) DeleteVMInstance(req *apis.DeleteVMInstanceRequest) (*ap
 }
 
 // NewDeleteVMNICRequest will create request of DeleteVMNIC action.
-func (c *OpenAPIClient) NewDeleteVMNICRequest() *apis.DeleteVMNICRequest {
+func (c *UCloudStackClient) NewDeleteVMNICRequest() *apis.DeleteVMNICRequest {
 	req := &apis.DeleteVMNICRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVMNIC 删除虚拟机网卡
-func (c *OpenAPIClient) DeleteVMNIC(req *apis.DeleteVMNICRequest) (*apis.DeleteVMNICResponse, error) {
+func (c *UCloudStackClient) DeleteVMNIC(req *apis.DeleteVMNICRequest) (*apis.DeleteVMNICResponse, error) {
 	var err error
 	var res apis.DeleteVMNICResponse
 
@@ -14257,17 +14257,17 @@ func (c *OpenAPIClient) DeleteVMNIC(req *apis.DeleteVMNICRequest) (*apis.DeleteV
 }
 
 // NewDeleteVMSnapshotRequest will create request of DeleteVMSnapshot action.
-func (c *OpenAPIClient) NewDeleteVMSnapshotRequest() *apis.DeleteVMSnapshotRequest {
+func (c *UCloudStackClient) NewDeleteVMSnapshotRequest() *apis.DeleteVMSnapshotRequest {
 	req := &apis.DeleteVMSnapshotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVMSnapshot 虚拟机删除快照
-func (c *OpenAPIClient) DeleteVMSnapshot(req *apis.DeleteVMSnapshotRequest) (*apis.DeleteVMSnapshotResponse, error) {
+func (c *UCloudStackClient) DeleteVMSnapshot(req *apis.DeleteVMSnapshotRequest) (*apis.DeleteVMSnapshotResponse, error) {
 	var err error
 	var res apis.DeleteVMSnapshotResponse
 
@@ -14279,17 +14279,17 @@ func (c *OpenAPIClient) DeleteVMSnapshot(req *apis.DeleteVMSnapshotRequest) (*ap
 }
 
 // NewDescribeCIStatusRequest will create request of DescribeCIStatus action.
-func (c *OpenAPIClient) NewDescribeCIStatusRequest() *apis.DescribeCIStatusRequest {
+func (c *UCloudStackClient) NewDescribeCIStatusRequest() *apis.DescribeCIStatusRequest {
 	req := &apis.DescribeCIStatusRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeCIStatus 查询CI状态
-func (c *OpenAPIClient) DescribeCIStatus(req *apis.DescribeCIStatusRequest) (*apis.DescribeCIStatusResponse, error) {
+func (c *UCloudStackClient) DescribeCIStatus(req *apis.DescribeCIStatusRequest) (*apis.DescribeCIStatusResponse, error) {
 	var err error
 	var res apis.DescribeCIStatusResponse
 
@@ -14301,17 +14301,17 @@ func (c *OpenAPIClient) DescribeCIStatus(req *apis.DescribeCIStatusRequest) (*ap
 }
 
 // NewDescribeVMCRequest will create request of DescribeVMC action.
-func (c *OpenAPIClient) NewDescribeVMCRequest() *apis.DescribeVMCRequest {
+func (c *UCloudStackClient) NewDescribeVMCRequest() *apis.DescribeVMCRequest {
 	req := &apis.DescribeVMCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVMC 获取 VMC 资源信息
-func (c *OpenAPIClient) DescribeVMC(req *apis.DescribeVMCRequest) (*apis.DescribeVMCResponse, error) {
+func (c *UCloudStackClient) DescribeVMC(req *apis.DescribeVMCRequest) (*apis.DescribeVMCResponse, error) {
 	var err error
 	var res apis.DescribeVMCResponse
 
@@ -14323,17 +14323,17 @@ func (c *OpenAPIClient) DescribeVMC(req *apis.DescribeVMCRequest) (*apis.Describ
 }
 
 // NewDescribeVMInstanceRequest will create request of DescribeVMInstance action.
-func (c *OpenAPIClient) NewDescribeVMInstanceRequest() *apis.DescribeVMInstanceRequest {
+func (c *UCloudStackClient) NewDescribeVMInstanceRequest() *apis.DescribeVMInstanceRequest {
 	req := &apis.DescribeVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVMInstance 获取虚拟机信息
-func (c *OpenAPIClient) DescribeVMInstance(req *apis.DescribeVMInstanceRequest) (*apis.DescribeVMInstanceResponse, error) {
+func (c *UCloudStackClient) DescribeVMInstance(req *apis.DescribeVMInstanceRequest) (*apis.DescribeVMInstanceResponse, error) {
 	var err error
 	var res apis.DescribeVMInstanceResponse
 
@@ -14345,17 +14345,17 @@ func (c *OpenAPIClient) DescribeVMInstance(req *apis.DescribeVMInstanceRequest) 
 }
 
 // NewDescribeVMWareVMsRequest will create request of DescribeVMWareVMs action.
-func (c *OpenAPIClient) NewDescribeVMWareVMsRequest() *apis.DescribeVMWareVMsRequest {
+func (c *UCloudStackClient) NewDescribeVMWareVMsRequest() *apis.DescribeVMWareVMsRequest {
 	req := &apis.DescribeVMWareVMsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVMWareVMs 获取 vmware 虚拟机信息
-func (c *OpenAPIClient) DescribeVMWareVMs(req *apis.DescribeVMWareVMsRequest) (*apis.DescribeVMWareVMsResponse, error) {
+func (c *UCloudStackClient) DescribeVMWareVMs(req *apis.DescribeVMWareVMsRequest) (*apis.DescribeVMWareVMsResponse, error) {
 	var err error
 	var res apis.DescribeVMWareVMsResponse
 
@@ -14367,17 +14367,17 @@ func (c *OpenAPIClient) DescribeVMWareVMs(req *apis.DescribeVMWareVMsRequest) (*
 }
 
 // NewGenerateVMWareConsoleTicketRequest will create request of GenerateVMWareConsoleTicket action.
-func (c *OpenAPIClient) NewGenerateVMWareConsoleTicketRequest() *apis.GenerateVMWareConsoleTicketRequest {
+func (c *UCloudStackClient) NewGenerateVMWareConsoleTicketRequest() *apis.GenerateVMWareConsoleTicketRequest {
 	req := &apis.GenerateVMWareConsoleTicketRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GenerateVMWareConsoleTicket 创建 vmware 虚拟机控制台凭证
-func (c *OpenAPIClient) GenerateVMWareConsoleTicket(req *apis.GenerateVMWareConsoleTicketRequest) (*apis.GenerateVMWareConsoleTicketResponse, error) {
+func (c *UCloudStackClient) GenerateVMWareConsoleTicket(req *apis.GenerateVMWareConsoleTicketRequest) (*apis.GenerateVMWareConsoleTicketResponse, error) {
 	var err error
 	var res apis.GenerateVMWareConsoleTicketResponse
 
@@ -14389,17 +14389,17 @@ func (c *OpenAPIClient) GenerateVMWareConsoleTicket(req *apis.GenerateVMWareCons
 }
 
 // NewGetPaymentOfPremiumRequest will create request of GetPaymentOfPremium action.
-func (c *OpenAPIClient) NewGetPaymentOfPremiumRequest() *apis.GetPaymentOfPremiumRequest {
+func (c *UCloudStackClient) NewGetPaymentOfPremiumRequest() *apis.GetPaymentOfPremiumRequest {
 	req := &apis.GetPaymentOfPremiumRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetPaymentOfPremium 获取修改配置后的差价
-func (c *OpenAPIClient) GetPaymentOfPremium(req *apis.GetPaymentOfPremiumRequest) (*apis.GetPaymentOfPremiumResponse, error) {
+func (c *UCloudStackClient) GetPaymentOfPremium(req *apis.GetPaymentOfPremiumRequest) (*apis.GetPaymentOfPremiumResponse, error) {
 	var err error
 	var res apis.GetPaymentOfPremiumResponse
 
@@ -14411,17 +14411,17 @@ func (c *OpenAPIClient) GetPaymentOfPremium(req *apis.GetPaymentOfPremiumRequest
 }
 
 // NewGetVMInstancePriceRequest will create request of GetVMInstancePrice action.
-func (c *OpenAPIClient) NewGetVMInstancePriceRequest() *apis.GetVMInstancePriceRequest {
+func (c *UCloudStackClient) NewGetVMInstancePriceRequest() *apis.GetVMInstancePriceRequest {
 	req := &apis.GetVMInstancePriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetVMInstancePrice 获取虚拟机价格
-func (c *OpenAPIClient) GetVMInstancePrice(req *apis.GetVMInstancePriceRequest) (*apis.GetVMInstancePriceResponse, error) {
+func (c *UCloudStackClient) GetVMInstancePrice(req *apis.GetVMInstancePriceRequest) (*apis.GetVMInstancePriceResponse, error) {
 	var err error
 	var res apis.GetVMInstancePriceResponse
 
@@ -14433,17 +14433,17 @@ func (c *OpenAPIClient) GetVMInstancePrice(req *apis.GetVMInstancePriceRequest) 
 }
 
 // NewGetVMScreenshotRequest will create request of GetVMScreenshot action.
-func (c *OpenAPIClient) NewGetVMScreenshotRequest() *apis.GetVMScreenshotRequest {
+func (c *UCloudStackClient) NewGetVMScreenshotRequest() *apis.GetVMScreenshotRequest {
 	req := &apis.GetVMScreenshotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetVMScreenshot 获取截屏
-func (c *OpenAPIClient) GetVMScreenshot(req *apis.GetVMScreenshotRequest) (*apis.GetVMScreenshotResponse, error) {
+func (c *UCloudStackClient) GetVMScreenshot(req *apis.GetVMScreenshotRequest) (*apis.GetVMScreenshotResponse, error) {
 	var err error
 	var res apis.GetVMScreenshotResponse
 
@@ -14455,17 +14455,17 @@ func (c *OpenAPIClient) GetVMScreenshot(req *apis.GetVMScreenshotRequest) (*apis
 }
 
 // NewGetVMSpiceInfoRequest will create request of GetVMSpiceInfo action.
-func (c *OpenAPIClient) NewGetVMSpiceInfoRequest() *apis.GetVMSpiceInfoRequest {
+func (c *UCloudStackClient) NewGetVMSpiceInfoRequest() *apis.GetVMSpiceInfoRequest {
 	req := &apis.GetVMSpiceInfoRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetVMSpiceInfo 获取Spice信息
-func (c *OpenAPIClient) GetVMSpiceInfo(req *apis.GetVMSpiceInfoRequest) (*apis.GetVMSpiceInfoResponse, error) {
+func (c *UCloudStackClient) GetVMSpiceInfo(req *apis.GetVMSpiceInfoRequest) (*apis.GetVMSpiceInfoResponse, error) {
 	var err error
 	var res apis.GetVMSpiceInfoResponse
 
@@ -14477,17 +14477,17 @@ func (c *OpenAPIClient) GetVMSpiceInfo(req *apis.GetVMSpiceInfoRequest) (*apis.G
 }
 
 // NewGetVMVNCInfoRequest will create request of GetVMVNCInfo action.
-func (c *OpenAPIClient) NewGetVMVNCInfoRequest() *apis.GetVMVNCInfoRequest {
+func (c *UCloudStackClient) NewGetVMVNCInfoRequest() *apis.GetVMVNCInfoRequest {
 	req := &apis.GetVMVNCInfoRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetVMVNCInfo 获取VNC信息
-func (c *OpenAPIClient) GetVMVNCInfo(req *apis.GetVMVNCInfoRequest) (*apis.GetVMVNCInfoResponse, error) {
+func (c *UCloudStackClient) GetVMVNCInfo(req *apis.GetVMVNCInfoRequest) (*apis.GetVMVNCInfoResponse, error) {
 	var err error
 	var res apis.GetVMVNCInfoResponse
 
@@ -14499,17 +14499,17 @@ func (c *OpenAPIClient) GetVMVNCInfo(req *apis.GetVMVNCInfoRequest) (*apis.GetVM
 }
 
 // NewGetVMWareClusterDatastoreRequest will create request of GetVMWareClusterDatastore action.
-func (c *OpenAPIClient) NewGetVMWareClusterDatastoreRequest() *apis.GetVMWareClusterDatastoreRequest {
+func (c *UCloudStackClient) NewGetVMWareClusterDatastoreRequest() *apis.GetVMWareClusterDatastoreRequest {
 	req := &apis.GetVMWareClusterDatastoreRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetVMWareClusterDatastore 获取 vmware 计算集群的信息
-func (c *OpenAPIClient) GetVMWareClusterDatastore(req *apis.GetVMWareClusterDatastoreRequest) (*apis.GetVMWareClusterDatastoreResponse, error) {
+func (c *UCloudStackClient) GetVMWareClusterDatastore(req *apis.GetVMWareClusterDatastoreRequest) (*apis.GetVMWareClusterDatastoreResponse, error) {
 	var err error
 	var res apis.GetVMWareClusterDatastoreResponse
 
@@ -14521,17 +14521,17 @@ func (c *OpenAPIClient) GetVMWareClusterDatastore(req *apis.GetVMWareClusterData
 }
 
 // NewMigrateMgrVMStorageRequest will create request of MigrateMgrVMStorage action.
-func (c *OpenAPIClient) NewMigrateMgrVMStorageRequest() *apis.MigrateMgrVMStorageRequest {
+func (c *UCloudStackClient) NewMigrateMgrVMStorageRequest() *apis.MigrateMgrVMStorageRequest {
 	req := &apis.MigrateMgrVMStorageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // MigrateMgrVMStorage 虚拟机热存储迁移
-func (c *OpenAPIClient) MigrateMgrVMStorage(req *apis.MigrateMgrVMStorageRequest) (*apis.MigrateMgrVMStorageResponse, error) {
+func (c *UCloudStackClient) MigrateMgrVMStorage(req *apis.MigrateMgrVMStorageRequest) (*apis.MigrateMgrVMStorageResponse, error) {
 	var err error
 	var res apis.MigrateMgrVMStorageResponse
 
@@ -14543,17 +14543,17 @@ func (c *OpenAPIClient) MigrateMgrVMStorage(req *apis.MigrateMgrVMStorageRequest
 }
 
 // NewMigrateStorageBandWidthRequest will create request of MigrateStorageBandWidth action.
-func (c *OpenAPIClient) NewMigrateStorageBandWidthRequest() *apis.MigrateStorageBandWidthRequest {
+func (c *UCloudStackClient) NewMigrateStorageBandWidthRequest() *apis.MigrateStorageBandWidthRequest {
 	req := &apis.MigrateStorageBandWidthRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // MigrateStorageBandWidth 虚拟机热存储迁移带宽设置
-func (c *OpenAPIClient) MigrateStorageBandWidth(req *apis.MigrateStorageBandWidthRequest) (*apis.MigrateStorageBandWidthResponse, error) {
+func (c *UCloudStackClient) MigrateStorageBandWidth(req *apis.MigrateStorageBandWidthRequest) (*apis.MigrateStorageBandWidthResponse, error) {
 	var err error
 	var res apis.MigrateStorageBandWidthResponse
 
@@ -14565,17 +14565,17 @@ func (c *OpenAPIClient) MigrateStorageBandWidth(req *apis.MigrateStorageBandWidt
 }
 
 // NewMigrateVMStorageRequest will create request of MigrateVMStorage action.
-func (c *OpenAPIClient) NewMigrateVMStorageRequest() *apis.MigrateVMStorageRequest {
+func (c *UCloudStackClient) NewMigrateVMStorageRequest() *apis.MigrateVMStorageRequest {
 	req := &apis.MigrateVMStorageRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // MigrateVMStorage 虚拟机热存储迁移
-func (c *OpenAPIClient) MigrateVMStorage(req *apis.MigrateVMStorageRequest) (*apis.MigrateVMStorageResponse, error) {
+func (c *UCloudStackClient) MigrateVMStorage(req *apis.MigrateVMStorageRequest) (*apis.MigrateVMStorageResponse, error) {
 	var err error
 	var res apis.MigrateVMStorageResponse
 
@@ -14587,17 +14587,17 @@ func (c *OpenAPIClient) MigrateVMStorage(req *apis.MigrateVMStorageRequest) (*ap
 }
 
 // NewPoweroffVMInstanceRequest will create request of PoweroffVMInstance action.
-func (c *OpenAPIClient) NewPoweroffVMInstanceRequest() *apis.PoweroffVMInstanceRequest {
+func (c *UCloudStackClient) NewPoweroffVMInstanceRequest() *apis.PoweroffVMInstanceRequest {
 	req := &apis.PoweroffVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // PoweroffVMInstance 断电主机
-func (c *OpenAPIClient) PoweroffVMInstance(req *apis.PoweroffVMInstanceRequest) (*apis.PoweroffVMInstanceResponse, error) {
+func (c *UCloudStackClient) PoweroffVMInstance(req *apis.PoweroffVMInstanceRequest) (*apis.PoweroffVMInstanceResponse, error) {
 	var err error
 	var res apis.PoweroffVMInstanceResponse
 
@@ -14609,17 +14609,17 @@ func (c *OpenAPIClient) PoweroffVMInstance(req *apis.PoweroffVMInstanceRequest) 
 }
 
 // NewReinstallVMInstanceRequest will create request of ReinstallVMInstance action.
-func (c *OpenAPIClient) NewReinstallVMInstanceRequest() *apis.ReinstallVMInstanceRequest {
+func (c *UCloudStackClient) NewReinstallVMInstanceRequest() *apis.ReinstallVMInstanceRequest {
 	req := &apis.ReinstallVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ReinstallVMInstance 重装系统
-func (c *OpenAPIClient) ReinstallVMInstance(req *apis.ReinstallVMInstanceRequest) (*apis.ReinstallVMInstanceResponse, error) {
+func (c *UCloudStackClient) ReinstallVMInstance(req *apis.ReinstallVMInstanceRequest) (*apis.ReinstallVMInstanceResponse, error) {
 	var err error
 	var res apis.ReinstallVMInstanceResponse
 
@@ -14631,17 +14631,17 @@ func (c *OpenAPIClient) ReinstallVMInstance(req *apis.ReinstallVMInstanceRequest
 }
 
 // NewResetVMInstancePasswordRequest will create request of ResetVMInstancePassword action.
-func (c *OpenAPIClient) NewResetVMInstancePasswordRequest() *apis.ResetVMInstancePasswordRequest {
+func (c *UCloudStackClient) NewResetVMInstancePasswordRequest() *apis.ResetVMInstancePasswordRequest {
 	req := &apis.ResetVMInstancePasswordRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ResetVMInstancePassword 重置主机密码
-func (c *OpenAPIClient) ResetVMInstancePassword(req *apis.ResetVMInstancePasswordRequest) (*apis.ResetVMInstancePasswordResponse, error) {
+func (c *UCloudStackClient) ResetVMInstancePassword(req *apis.ResetVMInstancePasswordRequest) (*apis.ResetVMInstancePasswordResponse, error) {
 	var err error
 	var res apis.ResetVMInstancePasswordResponse
 
@@ -14653,17 +14653,17 @@ func (c *OpenAPIClient) ResetVMInstancePassword(req *apis.ResetVMInstancePasswor
 }
 
 // NewResetVMNetConfigRequest will create request of ResetVMNetConfig action.
-func (c *OpenAPIClient) NewResetVMNetConfigRequest() *apis.ResetVMNetConfigRequest {
+func (c *UCloudStackClient) NewResetVMNetConfigRequest() *apis.ResetVMNetConfigRequest {
 	req := &apis.ResetVMNetConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ResetVMNetConfig 虚拟机网络参数重置
-func (c *OpenAPIClient) ResetVMNetConfig(req *apis.ResetVMNetConfigRequest) (*apis.ResetVMNetConfigResponse, error) {
+func (c *UCloudStackClient) ResetVMNetConfig(req *apis.ResetVMNetConfigRequest) (*apis.ResetVMNetConfigResponse, error) {
 	var err error
 	var res apis.ResetVMNetConfigResponse
 
@@ -14675,17 +14675,17 @@ func (c *OpenAPIClient) ResetVMNetConfig(req *apis.ResetVMNetConfigRequest) (*ap
 }
 
 // NewResizeVMConfigRequest will create request of ResizeVMConfig action.
-func (c *OpenAPIClient) NewResizeVMConfigRequest() *apis.ResizeVMConfigRequest {
+func (c *UCloudStackClient) NewResizeVMConfigRequest() *apis.ResizeVMConfigRequest {
 	req := &apis.ResizeVMConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ResizeVMConfig 修改虚拟机配置
-func (c *OpenAPIClient) ResizeVMConfig(req *apis.ResizeVMConfigRequest) (*apis.ResizeVMConfigResponse, error) {
+func (c *UCloudStackClient) ResizeVMConfig(req *apis.ResizeVMConfigRequest) (*apis.ResizeVMConfigResponse, error) {
 	var err error
 	var res apis.ResizeVMConfigResponse
 
@@ -14697,17 +14697,17 @@ func (c *OpenAPIClient) ResizeVMConfig(req *apis.ResizeVMConfigRequest) (*apis.R
 }
 
 // NewRestartVMInstanceRequest will create request of RestartVMInstance action.
-func (c *OpenAPIClient) NewRestartVMInstanceRequest() *apis.RestartVMInstanceRequest {
+func (c *UCloudStackClient) NewRestartVMInstanceRequest() *apis.RestartVMInstanceRequest {
 	req := &apis.RestartVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RestartVMInstance 重启主机
-func (c *OpenAPIClient) RestartVMInstance(req *apis.RestartVMInstanceRequest) (*apis.RestartVMInstanceResponse, error) {
+func (c *UCloudStackClient) RestartVMInstance(req *apis.RestartVMInstanceRequest) (*apis.RestartVMInstanceResponse, error) {
 	var err error
 	var res apis.RestartVMInstanceResponse
 
@@ -14719,17 +14719,17 @@ func (c *OpenAPIClient) RestartVMInstance(req *apis.RestartVMInstanceRequest) (*
 }
 
 // NewRestoreVMInstanceRequest will create request of RestoreVMInstance action.
-func (c *OpenAPIClient) NewRestoreVMInstanceRequest() *apis.RestoreVMInstanceRequest {
+func (c *UCloudStackClient) NewRestoreVMInstanceRequest() *apis.RestoreVMInstanceRequest {
 	req := &apis.RestoreVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // RestoreVMInstance 虚拟机恢复快照
-func (c *OpenAPIClient) RestoreVMInstance(req *apis.RestoreVMInstanceRequest) (*apis.RestoreVMInstanceResponse, error) {
+func (c *UCloudStackClient) RestoreVMInstance(req *apis.RestoreVMInstanceRequest) (*apis.RestoreVMInstanceResponse, error) {
 	var err error
 	var res apis.RestoreVMInstanceResponse
 
@@ -14741,17 +14741,17 @@ func (c *OpenAPIClient) RestoreVMInstance(req *apis.RestoreVMInstanceRequest) (*
 }
 
 // NewSaveVMInstanceRequest will create request of SaveVMInstance action.
-func (c *OpenAPIClient) NewSaveVMInstanceRequest() *apis.SaveVMInstanceRequest {
+func (c *UCloudStackClient) NewSaveVMInstanceRequest() *apis.SaveVMInstanceRequest {
 	req := &apis.SaveVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SaveVMInstance 虚拟机整机快照
-func (c *OpenAPIClient) SaveVMInstance(req *apis.SaveVMInstanceRequest) (*apis.SaveVMInstanceResponse, error) {
+func (c *UCloudStackClient) SaveVMInstance(req *apis.SaveVMInstanceRequest) (*apis.SaveVMInstanceResponse, error) {
 	var err error
 	var res apis.SaveVMInstanceResponse
 
@@ -14763,17 +14763,17 @@ func (c *OpenAPIClient) SaveVMInstance(req *apis.SaveVMInstanceRequest) (*apis.S
 }
 
 // NewSetBootFromCdromRequest will create request of SetBootFromCdrom action.
-func (c *OpenAPIClient) NewSetBootFromCdromRequest() *apis.SetBootFromCdromRequest {
+func (c *UCloudStackClient) NewSetBootFromCdromRequest() *apis.SetBootFromCdromRequest {
 	req := &apis.SetBootFromCdromRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // SetBootFromCdrom 设置虚拟机从Cdrom启动
-func (c *OpenAPIClient) SetBootFromCdrom(req *apis.SetBootFromCdromRequest) (*apis.SetBootFromCdromResponse, error) {
+func (c *UCloudStackClient) SetBootFromCdrom(req *apis.SetBootFromCdromRequest) (*apis.SetBootFromCdromResponse, error) {
 	var err error
 	var res apis.SetBootFromCdromResponse
 
@@ -14785,17 +14785,17 @@ func (c *OpenAPIClient) SetBootFromCdrom(req *apis.SetBootFromCdromRequest) (*ap
 }
 
 // NewStartVMInstanceRequest will create request of StartVMInstance action.
-func (c *OpenAPIClient) NewStartVMInstanceRequest() *apis.StartVMInstanceRequest {
+func (c *UCloudStackClient) NewStartVMInstanceRequest() *apis.StartVMInstanceRequest {
 	req := &apis.StartVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // StartVMInstance 启动主机
-func (c *OpenAPIClient) StartVMInstance(req *apis.StartVMInstanceRequest) (*apis.StartVMInstanceResponse, error) {
+func (c *UCloudStackClient) StartVMInstance(req *apis.StartVMInstanceRequest) (*apis.StartVMInstanceResponse, error) {
 	var err error
 	var res apis.StartVMInstanceResponse
 
@@ -14807,17 +14807,17 @@ func (c *OpenAPIClient) StartVMInstance(req *apis.StartVMInstanceRequest) (*apis
 }
 
 // NewStopVMInstanceRequest will create request of StopVMInstance action.
-func (c *OpenAPIClient) NewStopVMInstanceRequest() *apis.StopVMInstanceRequest {
+func (c *UCloudStackClient) NewStopVMInstanceRequest() *apis.StopVMInstanceRequest {
 	req := &apis.StopVMInstanceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // StopVMInstance 关闭主机
-func (c *OpenAPIClient) StopVMInstance(req *apis.StopVMInstanceRequest) (*apis.StopVMInstanceResponse, error) {
+func (c *UCloudStackClient) StopVMInstance(req *apis.StopVMInstanceRequest) (*apis.StopVMInstanceResponse, error) {
 	var err error
 	var res apis.StopVMInstanceResponse
 
@@ -14829,17 +14829,17 @@ func (c *OpenAPIClient) StopVMInstance(req *apis.StopVMInstanceRequest) (*apis.S
 }
 
 // NewUnSetBootFromCdromRequest will create request of UnSetBootFromCdrom action.
-func (c *OpenAPIClient) NewUnSetBootFromCdromRequest() *apis.UnSetBootFromCdromRequest {
+func (c *UCloudStackClient) NewUnSetBootFromCdromRequest() *apis.UnSetBootFromCdromRequest {
 	req := &apis.UnSetBootFromCdromRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnSetBootFromCdrom 设置虚拟机不从Cdrom启动
-func (c *OpenAPIClient) UnSetBootFromCdrom(req *apis.UnSetBootFromCdromRequest) (*apis.UnSetBootFromCdromResponse, error) {
+func (c *UCloudStackClient) UnSetBootFromCdrom(req *apis.UnSetBootFromCdromRequest) (*apis.UnSetBootFromCdromResponse, error) {
 	var err error
 	var res apis.UnSetBootFromCdromResponse
 
@@ -14851,17 +14851,17 @@ func (c *OpenAPIClient) UnSetBootFromCdrom(req *apis.UnSetBootFromCdromRequest) 
 }
 
 // NewUpdateVMAdvancedOptionsRequest will create request of UpdateVMAdvancedOptions action.
-func (c *OpenAPIClient) NewUpdateVMAdvancedOptionsRequest() *apis.UpdateVMAdvancedOptionsRequest {
+func (c *UCloudStackClient) NewUpdateVMAdvancedOptionsRequest() *apis.UpdateVMAdvancedOptionsRequest {
 	req := &apis.UpdateVMAdvancedOptionsRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMAdvancedOptions 设置虚拟机高级参数(DNS)
-func (c *OpenAPIClient) UpdateVMAdvancedOptions(req *apis.UpdateVMAdvancedOptionsRequest) (*apis.UpdateVMAdvancedOptionsResponse, error) {
+func (c *UCloudStackClient) UpdateVMAdvancedOptions(req *apis.UpdateVMAdvancedOptionsRequest) (*apis.UpdateVMAdvancedOptionsResponse, error) {
 	var err error
 	var res apis.UpdateVMAdvancedOptionsResponse
 
@@ -14873,17 +14873,17 @@ func (c *OpenAPIClient) UpdateVMAdvancedOptions(req *apis.UpdateVMAdvancedOption
 }
 
 // NewUpdateVMBootBootLoaderTypeRequest will create request of UpdateVMBootBootLoaderType action.
-func (c *OpenAPIClient) NewUpdateVMBootBootLoaderTypeRequest() *apis.UpdateVMBootBootLoaderTypeRequest {
+func (c *UCloudStackClient) NewUpdateVMBootBootLoaderTypeRequest() *apis.UpdateVMBootBootLoaderTypeRequest {
 	req := &apis.UpdateVMBootBootLoaderTypeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMBootBootLoaderType 设置虚拟机引导方式
-func (c *OpenAPIClient) UpdateVMBootBootLoaderType(req *apis.UpdateVMBootBootLoaderTypeRequest) (*apis.UpdateVMBootBootLoaderTypeResponse, error) {
+func (c *UCloudStackClient) UpdateVMBootBootLoaderType(req *apis.UpdateVMBootBootLoaderTypeRequest) (*apis.UpdateVMBootBootLoaderTypeResponse, error) {
 	var err error
 	var res apis.UpdateVMBootBootLoaderTypeResponse
 
@@ -14895,17 +14895,17 @@ func (c *OpenAPIClient) UpdateVMBootBootLoaderType(req *apis.UpdateVMBootBootLoa
 }
 
 // NewUpdateVMBootDevicesRequest will create request of UpdateVMBootDevices action.
-func (c *OpenAPIClient) NewUpdateVMBootDevicesRequest() *apis.UpdateVMBootDevicesRequest {
+func (c *UCloudStackClient) NewUpdateVMBootDevicesRequest() *apis.UpdateVMBootDevicesRequest {
 	req := &apis.UpdateVMBootDevicesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMBootDevices 设置虚拟机引导顺序
-func (c *OpenAPIClient) UpdateVMBootDevices(req *apis.UpdateVMBootDevicesRequest) (*apis.UpdateVMBootDevicesResponse, error) {
+func (c *UCloudStackClient) UpdateVMBootDevices(req *apis.UpdateVMBootDevicesRequest) (*apis.UpdateVMBootDevicesResponse, error) {
 	var err error
 	var res apis.UpdateVMBootDevicesResponse
 
@@ -14917,17 +14917,17 @@ func (c *OpenAPIClient) UpdateVMBootDevices(req *apis.UpdateVMBootDevicesRequest
 }
 
 // NewUpdateVMCPUHypervisorRequest will create request of UpdateVMCPUHypervisor action.
-func (c *OpenAPIClient) NewUpdateVMCPUHypervisorRequest() *apis.UpdateVMCPUHypervisorRequest {
+func (c *UCloudStackClient) NewUpdateVMCPUHypervisorRequest() *apis.UpdateVMCPUHypervisorRequest {
 	req := &apis.UpdateVMCPUHypervisorRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMCPUHypervisor 设置虚拟机CPU虚拟化隐藏标记
-func (c *OpenAPIClient) UpdateVMCPUHypervisor(req *apis.UpdateVMCPUHypervisorRequest) (*apis.UpdateVMCPUHypervisorResponse, error) {
+func (c *UCloudStackClient) UpdateVMCPUHypervisor(req *apis.UpdateVMCPUHypervisorRequest) (*apis.UpdateVMCPUHypervisorResponse, error) {
 	var err error
 	var res apis.UpdateVMCPUHypervisorResponse
 
@@ -14939,17 +14939,17 @@ func (c *OpenAPIClient) UpdateVMCPUHypervisor(req *apis.UpdateVMCPUHypervisorReq
 }
 
 // NewUpdateVMCPULimitPercentRequest will create request of UpdateVMCPULimitPercent action.
-func (c *OpenAPIClient) NewUpdateVMCPULimitPercentRequest() *apis.UpdateVMCPULimitPercentRequest {
+func (c *UCloudStackClient) NewUpdateVMCPULimitPercentRequest() *apis.UpdateVMCPULimitPercentRequest {
 	req := &apis.UpdateVMCPULimitPercentRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMCPULimitPercent 修改虚拟机CPU资源限制
-func (c *OpenAPIClient) UpdateVMCPULimitPercent(req *apis.UpdateVMCPULimitPercentRequest) (*apis.UpdateVMCPULimitPercentResponse, error) {
+func (c *UCloudStackClient) UpdateVMCPULimitPercent(req *apis.UpdateVMCPULimitPercentRequest) (*apis.UpdateVMCPULimitPercentResponse, error) {
 	var err error
 	var res apis.UpdateVMCPULimitPercentResponse
 
@@ -14961,17 +14961,17 @@ func (c *OpenAPIClient) UpdateVMCPULimitPercent(req *apis.UpdateVMCPULimitPercen
 }
 
 // NewUpdateVMCPUModelRequest will create request of UpdateVMCPUModel action.
-func (c *OpenAPIClient) NewUpdateVMCPUModelRequest() *apis.UpdateVMCPUModelRequest {
+func (c *UCloudStackClient) NewUpdateVMCPUModelRequest() *apis.UpdateVMCPUModelRequest {
 	req := &apis.UpdateVMCPUModelRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMCPUModel 设置虚拟机cpu模型
-func (c *OpenAPIClient) UpdateVMCPUModel(req *apis.UpdateVMCPUModelRequest) (*apis.UpdateVMCPUModelResponse, error) {
+func (c *UCloudStackClient) UpdateVMCPUModel(req *apis.UpdateVMCPUModelRequest) (*apis.UpdateVMCPUModelResponse, error) {
 	var err error
 	var res apis.UpdateVMCPUModelResponse
 
@@ -14983,17 +14983,17 @@ func (c *OpenAPIClient) UpdateVMCPUModel(req *apis.UpdateVMCPUModelRequest) (*ap
 }
 
 // NewUpdateVMCPUPriorityRequest will create request of UpdateVMCPUPriority action.
-func (c *OpenAPIClient) NewUpdateVMCPUPriorityRequest() *apis.UpdateVMCPUPriorityRequest {
+func (c *UCloudStackClient) NewUpdateVMCPUPriorityRequest() *apis.UpdateVMCPUPriorityRequest {
 	req := &apis.UpdateVMCPUPriorityRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMCPUPriority 修改虚拟机CPU资源优先级
-func (c *OpenAPIClient) UpdateVMCPUPriority(req *apis.UpdateVMCPUPriorityRequest) (*apis.UpdateVMCPUPriorityResponse, error) {
+func (c *UCloudStackClient) UpdateVMCPUPriority(req *apis.UpdateVMCPUPriorityRequest) (*apis.UpdateVMCPUPriorityResponse, error) {
 	var err error
 	var res apis.UpdateVMCPUPriorityResponse
 
@@ -15005,17 +15005,17 @@ func (c *OpenAPIClient) UpdateVMCPUPriority(req *apis.UpdateVMCPUPriorityRequest
 }
 
 // NewUpdateVMDNSRequest will create request of UpdateVMDNS action.
-func (c *OpenAPIClient) NewUpdateVMDNSRequest() *apis.UpdateVMDNSRequest {
+func (c *UCloudStackClient) NewUpdateVMDNSRequest() *apis.UpdateVMDNSRequest {
 	req := &apis.UpdateVMDNSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMDNS 设置虚拟机DNS
-func (c *OpenAPIClient) UpdateVMDNS(req *apis.UpdateVMDNSRequest) (*apis.UpdateVMDNSResponse, error) {
+func (c *UCloudStackClient) UpdateVMDNS(req *apis.UpdateVMDNSRequest) (*apis.UpdateVMDNSResponse, error) {
 	var err error
 	var res apis.UpdateVMDNSResponse
 
@@ -15027,17 +15027,17 @@ func (c *OpenAPIClient) UpdateVMDNS(req *apis.UpdateVMDNSRequest) (*apis.UpdateV
 }
 
 // NewUpdateVMDefaultGWRequest will create request of UpdateVMDefaultGW action.
-func (c *OpenAPIClient) NewUpdateVMDefaultGWRequest() *apis.UpdateVMDefaultGWRequest {
+func (c *UCloudStackClient) NewUpdateVMDefaultGWRequest() *apis.UpdateVMDefaultGWRequest {
 	req := &apis.UpdateVMDefaultGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMDefaultGW 设置虚拟机出口
-func (c *OpenAPIClient) UpdateVMDefaultGW(req *apis.UpdateVMDefaultGWRequest) (*apis.UpdateVMDefaultGWResponse, error) {
+func (c *UCloudStackClient) UpdateVMDefaultGW(req *apis.UpdateVMDefaultGWRequest) (*apis.UpdateVMDefaultGWResponse, error) {
 	var err error
 	var res apis.UpdateVMDefaultGWResponse
 
@@ -15049,17 +15049,17 @@ func (c *OpenAPIClient) UpdateVMDefaultGW(req *apis.UpdateVMDefaultGWRequest) (*
 }
 
 // NewUpdateVMDiskBusRequest will create request of UpdateVMDiskBus action.
-func (c *OpenAPIClient) NewUpdateVMDiskBusRequest() *apis.UpdateVMDiskBusRequest {
+func (c *UCloudStackClient) NewUpdateVMDiskBusRequest() *apis.UpdateVMDiskBusRequest {
 	req := &apis.UpdateVMDiskBusRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMDiskBus 更新磁盘总线类型
-func (c *OpenAPIClient) UpdateVMDiskBus(req *apis.UpdateVMDiskBusRequest) (*apis.UpdateVMDiskBusResponse, error) {
+func (c *UCloudStackClient) UpdateVMDiskBus(req *apis.UpdateVMDiskBusRequest) (*apis.UpdateVMDiskBusResponse, error) {
 	var err error
 	var res apis.UpdateVMDiskBusResponse
 
@@ -15071,17 +15071,17 @@ func (c *OpenAPIClient) UpdateVMDiskBus(req *apis.UpdateVMDiskBusRequest) (*apis
 }
 
 // NewUpdateVMDiskCacheModeRequest will create request of UpdateVMDiskCacheMode action.
-func (c *OpenAPIClient) NewUpdateVMDiskCacheModeRequest() *apis.UpdateVMDiskCacheModeRequest {
+func (c *UCloudStackClient) NewUpdateVMDiskCacheModeRequest() *apis.UpdateVMDiskCacheModeRequest {
 	req := &apis.UpdateVMDiskCacheModeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMDiskCacheMode 设置虚拟机磁盘缓存类型
-func (c *OpenAPIClient) UpdateVMDiskCacheMode(req *apis.UpdateVMDiskCacheModeRequest) (*apis.UpdateVMDiskCacheModeResponse, error) {
+func (c *UCloudStackClient) UpdateVMDiskCacheMode(req *apis.UpdateVMDiskCacheModeRequest) (*apis.UpdateVMDiskCacheModeResponse, error) {
 	var err error
 	var res apis.UpdateVMDiskCacheModeResponse
 
@@ -15093,17 +15093,17 @@ func (c *OpenAPIClient) UpdateVMDiskCacheMode(req *apis.UpdateVMDiskCacheModeReq
 }
 
 // NewUpdateVMHighAvailabilityRequest will create request of UpdateVMHighAvailability action.
-func (c *OpenAPIClient) NewUpdateVMHighAvailabilityRequest() *apis.UpdateVMHighAvailabilityRequest {
+func (c *UCloudStackClient) NewUpdateVMHighAvailabilityRequest() *apis.UpdateVMHighAvailabilityRequest {
 	req := &apis.UpdateVMHighAvailabilityRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMHighAvailability 设置虚拟机高可用
-func (c *OpenAPIClient) UpdateVMHighAvailability(req *apis.UpdateVMHighAvailabilityRequest) (*apis.UpdateVMHighAvailabilityResponse, error) {
+func (c *UCloudStackClient) UpdateVMHighAvailability(req *apis.UpdateVMHighAvailabilityRequest) (*apis.UpdateVMHighAvailabilityResponse, error) {
 	var err error
 	var res apis.UpdateVMHighAvailabilityResponse
 
@@ -15115,17 +15115,17 @@ func (c *OpenAPIClient) UpdateVMHighAvailability(req *apis.UpdateVMHighAvailabil
 }
 
 // NewUpdateVMISOSlotRequest will create request of UpdateVMISOSlot action.
-func (c *OpenAPIClient) NewUpdateVMISOSlotRequest() *apis.UpdateVMISOSlotRequest {
+func (c *UCloudStackClient) NewUpdateVMISOSlotRequest() *apis.UpdateVMISOSlotRequest {
 	req := &apis.UpdateVMISOSlotRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMISOSlot 设置虚拟机iso插槽数量
-func (c *OpenAPIClient) UpdateVMISOSlot(req *apis.UpdateVMISOSlotRequest) (*apis.UpdateVMISOSlotResponse, error) {
+func (c *UCloudStackClient) UpdateVMISOSlot(req *apis.UpdateVMISOSlotRequest) (*apis.UpdateVMISOSlotResponse, error) {
 	var err error
 	var res apis.UpdateVMISOSlotResponse
 
@@ -15137,17 +15137,17 @@ func (c *OpenAPIClient) UpdateVMISOSlot(req *apis.UpdateVMISOSlotRequest) (*apis
 }
 
 // NewUpdateVMMACRequest will create request of UpdateVMMAC action.
-func (c *OpenAPIClient) NewUpdateVMMACRequest() *apis.UpdateVMMACRequest {
+func (c *UCloudStackClient) NewUpdateVMMACRequest() *apis.UpdateVMMACRequest {
 	req := &apis.UpdateVMMACRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMMAC 修改网卡的MAC
-func (c *OpenAPIClient) UpdateVMMAC(req *apis.UpdateVMMACRequest) (*apis.UpdateVMMACResponse, error) {
+func (c *UCloudStackClient) UpdateVMMAC(req *apis.UpdateVMMACRequest) (*apis.UpdateVMMACResponse, error) {
 	var err error
 	var res apis.UpdateVMMACResponse
 
@@ -15159,17 +15159,17 @@ func (c *OpenAPIClient) UpdateVMMAC(req *apis.UpdateVMMACRequest) (*apis.UpdateV
 }
 
 // NewUpdateVMNICLinkStateRequest will create request of UpdateVMNICLinkState action.
-func (c *OpenAPIClient) NewUpdateVMNICLinkStateRequest() *apis.UpdateVMNICLinkStateRequest {
+func (c *UCloudStackClient) NewUpdateVMNICLinkStateRequest() *apis.UpdateVMNICLinkStateRequest {
 	req := &apis.UpdateVMNICLinkStateRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMNICLinkState 更新虚拟机网卡启用状态
-func (c *OpenAPIClient) UpdateVMNICLinkState(req *apis.UpdateVMNICLinkStateRequest) (*apis.UpdateVMNICLinkStateResponse, error) {
+func (c *UCloudStackClient) UpdateVMNICLinkState(req *apis.UpdateVMNICLinkStateRequest) (*apis.UpdateVMNICLinkStateResponse, error) {
 	var err error
 	var res apis.UpdateVMNICLinkStateResponse
 
@@ -15181,17 +15181,17 @@ func (c *OpenAPIClient) UpdateVMNICLinkState(req *apis.UpdateVMNICLinkStateReque
 }
 
 // NewUpdateVMNICModelRequest will create request of UpdateVMNICModel action.
-func (c *OpenAPIClient) NewUpdateVMNICModelRequest() *apis.UpdateVMNICModelRequest {
+func (c *UCloudStackClient) NewUpdateVMNICModelRequest() *apis.UpdateVMNICModelRequest {
 	req := &apis.UpdateVMNICModelRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMNICModel 更新虚拟机网卡型号
-func (c *OpenAPIClient) UpdateVMNICModel(req *apis.UpdateVMNICModelRequest) (*apis.UpdateVMNICModelResponse, error) {
+func (c *UCloudStackClient) UpdateVMNICModel(req *apis.UpdateVMNICModelRequest) (*apis.UpdateVMNICModelResponse, error) {
 	var err error
 	var res apis.UpdateVMNICModelResponse
 
@@ -15203,17 +15203,17 @@ func (c *OpenAPIClient) UpdateVMNICModel(req *apis.UpdateVMNICModelRequest) (*ap
 }
 
 // NewUpdateVMNICQueuesRequest will create request of UpdateVMNICQueues action.
-func (c *OpenAPIClient) NewUpdateVMNICQueuesRequest() *apis.UpdateVMNICQueuesRequest {
+func (c *UCloudStackClient) NewUpdateVMNICQueuesRequest() *apis.UpdateVMNICQueuesRequest {
 	req := &apis.UpdateVMNICQueuesRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMNICQueues 更新虚拟机网卡队列
-func (c *OpenAPIClient) UpdateVMNICQueues(req *apis.UpdateVMNICQueuesRequest) (*apis.UpdateVMNICQueuesResponse, error) {
+func (c *UCloudStackClient) UpdateVMNICQueues(req *apis.UpdateVMNICQueuesRequest) (*apis.UpdateVMNICQueuesResponse, error) {
 	var err error
 	var res apis.UpdateVMNICQueuesResponse
 
@@ -15225,17 +15225,17 @@ func (c *OpenAPIClient) UpdateVMNICQueues(req *apis.UpdateVMNICQueuesRequest) (*
 }
 
 // NewUpdateVMOSRequest will create request of UpdateVMOS action.
-func (c *OpenAPIClient) NewUpdateVMOSRequest() *apis.UpdateVMOSRequest {
+func (c *UCloudStackClient) NewUpdateVMOSRequest() *apis.UpdateVMOSRequest {
 	req := &apis.UpdateVMOSRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMOS 更新虚拟机操作系统
-func (c *OpenAPIClient) UpdateVMOS(req *apis.UpdateVMOSRequest) (*apis.UpdateVMOSResponse, error) {
+func (c *UCloudStackClient) UpdateVMOS(req *apis.UpdateVMOSRequest) (*apis.UpdateVMOSResponse, error) {
 	var err error
 	var res apis.UpdateVMOSResponse
 
@@ -15247,17 +15247,17 @@ func (c *OpenAPIClient) UpdateVMOS(req *apis.UpdateVMOSRequest) (*apis.UpdateVMO
 }
 
 // NewUpdateVMSupportHotPlugRequest will create request of UpdateVMSupportHotPlug action.
-func (c *OpenAPIClient) NewUpdateVMSupportHotPlugRequest() *apis.UpdateVMSupportHotPlugRequest {
+func (c *UCloudStackClient) NewUpdateVMSupportHotPlugRequest() *apis.UpdateVMSupportHotPlugRequest {
 	req := &apis.UpdateVMSupportHotPlugRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMSupportHotPlug 更新虚拟机热插拔
-func (c *OpenAPIClient) UpdateVMSupportHotPlug(req *apis.UpdateVMSupportHotPlugRequest) (*apis.UpdateVMSupportHotPlugResponse, error) {
+func (c *UCloudStackClient) UpdateVMSupportHotPlug(req *apis.UpdateVMSupportHotPlugRequest) (*apis.UpdateVMSupportHotPlugResponse, error) {
 	var err error
 	var res apis.UpdateVMSupportHotPlugResponse
 
@@ -15269,17 +15269,17 @@ func (c *OpenAPIClient) UpdateVMSupportHotPlug(req *apis.UpdateVMSupportHotPlugR
 }
 
 // NewUpdateVMUserDataRequest will create request of UpdateVMUserData action.
-func (c *OpenAPIClient) NewUpdateVMUserDataRequest() *apis.UpdateVMUserDataRequest {
+func (c *UCloudStackClient) NewUpdateVMUserDataRequest() *apis.UpdateVMUserDataRequest {
 	req := &apis.UpdateVMUserDataRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMUserData 设置虚拟机用户数据
-func (c *OpenAPIClient) UpdateVMUserData(req *apis.UpdateVMUserDataRequest) (*apis.UpdateVMUserDataResponse, error) {
+func (c *UCloudStackClient) UpdateVMUserData(req *apis.UpdateVMUserDataRequest) (*apis.UpdateVMUserDataResponse, error) {
 	var err error
 	var res apis.UpdateVMUserDataResponse
 
@@ -15291,17 +15291,17 @@ func (c *OpenAPIClient) UpdateVMUserData(req *apis.UpdateVMUserDataRequest) (*ap
 }
 
 // NewUpdateVMVCPUBindingRequest will create request of UpdateVMVCPUBinding action.
-func (c *OpenAPIClient) NewUpdateVMVCPUBindingRequest() *apis.UpdateVMVCPUBindingRequest {
+func (c *UCloudStackClient) NewUpdateVMVCPUBindingRequest() *apis.UpdateVMVCPUBindingRequest {
 	req := &apis.UpdateVMVCPUBindingRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVMVCPUBinding 虚拟机更新VCPU绑定
-func (c *OpenAPIClient) UpdateVMVCPUBinding(req *apis.UpdateVMVCPUBindingRequest) (*apis.UpdateVMVCPUBindingResponse, error) {
+func (c *UCloudStackClient) UpdateVMVCPUBinding(req *apis.UpdateVMVCPUBindingRequest) (*apis.UpdateVMVCPUBindingResponse, error) {
 	var err error
 	var res apis.UpdateVMVCPUBindingResponse
 
@@ -15313,17 +15313,17 @@ func (c *OpenAPIClient) UpdateVMVCPUBinding(req *apis.UpdateVMVCPUBindingRequest
 }
 
 // NewAssociateVPCPeeringRequest will create request of AssociateVPCPeering action.
-func (c *OpenAPIClient) NewAssociateVPCPeeringRequest() *apis.AssociateVPCPeeringRequest {
+func (c *UCloudStackClient) NewAssociateVPCPeeringRequest() *apis.AssociateVPCPeeringRequest {
 	req := &apis.AssociateVPCPeeringRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // AssociateVPCPeering 创建VPC对等连接
-func (c *OpenAPIClient) AssociateVPCPeering(req *apis.AssociateVPCPeeringRequest) (*apis.AssociateVPCPeeringResponse, error) {
+func (c *UCloudStackClient) AssociateVPCPeering(req *apis.AssociateVPCPeeringRequest) (*apis.AssociateVPCPeeringResponse, error) {
 	var err error
 	var res apis.AssociateVPCPeeringResponse
 
@@ -15335,17 +15335,17 @@ func (c *OpenAPIClient) AssociateVPCPeering(req *apis.AssociateVPCPeeringRequest
 }
 
 // NewCreateSubnetRequest will create request of CreateSubnet action.
-func (c *OpenAPIClient) NewCreateSubnetRequest() *apis.CreateSubnetRequest {
+func (c *UCloudStackClient) NewCreateSubnetRequest() *apis.CreateSubnetRequest {
 	req := &apis.CreateSubnetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSubnet 创建子网
-func (c *OpenAPIClient) CreateSubnet(req *apis.CreateSubnetRequest) (*apis.CreateSubnetResponse, error) {
+func (c *UCloudStackClient) CreateSubnet(req *apis.CreateSubnetRequest) (*apis.CreateSubnetResponse, error) {
 	var err error
 	var res apis.CreateSubnetResponse
 
@@ -15357,17 +15357,17 @@ func (c *OpenAPIClient) CreateSubnet(req *apis.CreateSubnetRequest) (*apis.Creat
 }
 
 // NewCreateSubnetRouteRequest will create request of CreateSubnetRoute action.
-func (c *OpenAPIClient) NewCreateSubnetRouteRequest() *apis.CreateSubnetRouteRequest {
+func (c *UCloudStackClient) NewCreateSubnetRouteRequest() *apis.CreateSubnetRouteRequest {
 	req := &apis.CreateSubnetRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateSubnetRoute 创建子网路由
-func (c *OpenAPIClient) CreateSubnetRoute(req *apis.CreateSubnetRouteRequest) (*apis.CreateSubnetRouteResponse, error) {
+func (c *UCloudStackClient) CreateSubnetRoute(req *apis.CreateSubnetRouteRequest) (*apis.CreateSubnetRouteResponse, error) {
 	var err error
 	var res apis.CreateSubnetRouteResponse
 
@@ -15379,17 +15379,17 @@ func (c *OpenAPIClient) CreateSubnetRoute(req *apis.CreateSubnetRouteRequest) (*
 }
 
 // NewCreateVPCRequest will create request of CreateVPC action.
-func (c *OpenAPIClient) NewCreateVPCRequest() *apis.CreateVPCRequest {
+func (c *UCloudStackClient) NewCreateVPCRequest() *apis.CreateVPCRequest {
 	req := &apis.CreateVPCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateVPC 创建VPC
-func (c *OpenAPIClient) CreateVPC(req *apis.CreateVPCRequest) (*apis.CreateVPCResponse, error) {
+func (c *UCloudStackClient) CreateVPC(req *apis.CreateVPCRequest) (*apis.CreateVPCResponse, error) {
 	var err error
 	var res apis.CreateVPCResponse
 
@@ -15401,17 +15401,17 @@ func (c *OpenAPIClient) CreateVPC(req *apis.CreateVPCRequest) (*apis.CreateVPCRe
 }
 
 // NewDeleteSubnetRequest will create request of DeleteSubnet action.
-func (c *OpenAPIClient) NewDeleteSubnetRequest() *apis.DeleteSubnetRequest {
+func (c *UCloudStackClient) NewDeleteSubnetRequest() *apis.DeleteSubnetRequest {
 	req := &apis.DeleteSubnetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteSubnet 删除子网
-func (c *OpenAPIClient) DeleteSubnet(req *apis.DeleteSubnetRequest) (*apis.DeleteSubnetResponse, error) {
+func (c *UCloudStackClient) DeleteSubnet(req *apis.DeleteSubnetRequest) (*apis.DeleteSubnetResponse, error) {
 	var err error
 	var res apis.DeleteSubnetResponse
 
@@ -15423,17 +15423,17 @@ func (c *OpenAPIClient) DeleteSubnet(req *apis.DeleteSubnetRequest) (*apis.Delet
 }
 
 // NewDeleteSubnetRouteRequest will create request of DeleteSubnetRoute action.
-func (c *OpenAPIClient) NewDeleteSubnetRouteRequest() *apis.DeleteSubnetRouteRequest {
+func (c *UCloudStackClient) NewDeleteSubnetRouteRequest() *apis.DeleteSubnetRouteRequest {
 	req := &apis.DeleteSubnetRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteSubnetRoute 删除子网路由
-func (c *OpenAPIClient) DeleteSubnetRoute(req *apis.DeleteSubnetRouteRequest) (*apis.DeleteSubnetRouteResponse, error) {
+func (c *UCloudStackClient) DeleteSubnetRoute(req *apis.DeleteSubnetRouteRequest) (*apis.DeleteSubnetRouteResponse, error) {
 	var err error
 	var res apis.DeleteSubnetRouteResponse
 
@@ -15445,17 +15445,17 @@ func (c *OpenAPIClient) DeleteSubnetRoute(req *apis.DeleteSubnetRouteRequest) (*
 }
 
 // NewDeleteVPCRequest will create request of DeleteVPC action.
-func (c *OpenAPIClient) NewDeleteVPCRequest() *apis.DeleteVPCRequest {
+func (c *UCloudStackClient) NewDeleteVPCRequest() *apis.DeleteVPCRequest {
 	req := &apis.DeleteVPCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVPC 删除VPC
-func (c *OpenAPIClient) DeleteVPC(req *apis.DeleteVPCRequest) (*apis.DeleteVPCResponse, error) {
+func (c *UCloudStackClient) DeleteVPC(req *apis.DeleteVPCRequest) (*apis.DeleteVPCResponse, error) {
 	var err error
 	var res apis.DeleteVPCResponse
 
@@ -15467,17 +15467,17 @@ func (c *OpenAPIClient) DeleteVPC(req *apis.DeleteVPCRequest) (*apis.DeleteVPCRe
 }
 
 // NewDescribeSubnetRequest will create request of DescribeSubnet action.
-func (c *OpenAPIClient) NewDescribeSubnetRequest() *apis.DescribeSubnetRequest {
+func (c *UCloudStackClient) NewDescribeSubnetRequest() *apis.DescribeSubnetRequest {
 	req := &apis.DescribeSubnetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSubnet 获取子网
-func (c *OpenAPIClient) DescribeSubnet(req *apis.DescribeSubnetRequest) (*apis.DescribeSubnetResponse, error) {
+func (c *UCloudStackClient) DescribeSubnet(req *apis.DescribeSubnetRequest) (*apis.DescribeSubnetResponse, error) {
 	var err error
 	var res apis.DescribeSubnetResponse
 
@@ -15489,17 +15489,17 @@ func (c *OpenAPIClient) DescribeSubnet(req *apis.DescribeSubnetRequest) (*apis.D
 }
 
 // NewDescribeSubnetRouteRequest will create request of DescribeSubnetRoute action.
-func (c *OpenAPIClient) NewDescribeSubnetRouteRequest() *apis.DescribeSubnetRouteRequest {
+func (c *UCloudStackClient) NewDescribeSubnetRouteRequest() *apis.DescribeSubnetRouteRequest {
 	req := &apis.DescribeSubnetRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeSubnetRoute 查询子网路由
-func (c *OpenAPIClient) DescribeSubnetRoute(req *apis.DescribeSubnetRouteRequest) (*apis.DescribeSubnetRouteResponse, error) {
+func (c *UCloudStackClient) DescribeSubnetRoute(req *apis.DescribeSubnetRouteRequest) (*apis.DescribeSubnetRouteResponse, error) {
 	var err error
 	var res apis.DescribeSubnetRouteResponse
 
@@ -15511,17 +15511,17 @@ func (c *OpenAPIClient) DescribeSubnetRoute(req *apis.DescribeSubnetRouteRequest
 }
 
 // NewDescribeVPCRequest will create request of DescribeVPC action.
-func (c *OpenAPIClient) NewDescribeVPCRequest() *apis.DescribeVPCRequest {
+func (c *UCloudStackClient) NewDescribeVPCRequest() *apis.DescribeVPCRequest {
 	req := &apis.DescribeVPCRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVPC 获取VPC信息
-func (c *OpenAPIClient) DescribeVPC(req *apis.DescribeVPCRequest) (*apis.DescribeVPCResponse, error) {
+func (c *UCloudStackClient) DescribeVPC(req *apis.DescribeVPCRequest) (*apis.DescribeVPCResponse, error) {
 	var err error
 	var res apis.DescribeVPCResponse
 
@@ -15533,17 +15533,17 @@ func (c *OpenAPIClient) DescribeVPC(req *apis.DescribeVPCRequest) (*apis.Describ
 }
 
 // NewDissociateVPCPeeringRequest will create request of DissociateVPCPeering action.
-func (c *OpenAPIClient) NewDissociateVPCPeeringRequest() *apis.DissociateVPCPeeringRequest {
+func (c *UCloudStackClient) NewDissociateVPCPeeringRequest() *apis.DissociateVPCPeeringRequest {
 	req := &apis.DissociateVPCPeeringRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DissociateVPCPeering 删除VPC对等连接
-func (c *OpenAPIClient) DissociateVPCPeering(req *apis.DissociateVPCPeeringRequest) (*apis.DissociateVPCPeeringResponse, error) {
+func (c *UCloudStackClient) DissociateVPCPeering(req *apis.DissociateVPCPeeringRequest) (*apis.DissociateVPCPeeringResponse, error) {
 	var err error
 	var res apis.DissociateVPCPeeringResponse
 
@@ -15555,17 +15555,17 @@ func (c *OpenAPIClient) DissociateVPCPeering(req *apis.DissociateVPCPeeringReque
 }
 
 // NewGetSubnetAvailableIPQuotaRequest will create request of GetSubnetAvailableIPQuota action.
-func (c *OpenAPIClient) NewGetSubnetAvailableIPQuotaRequest() *apis.GetSubnetAvailableIPQuotaRequest {
+func (c *UCloudStackClient) NewGetSubnetAvailableIPQuotaRequest() *apis.GetSubnetAvailableIPQuotaRequest {
 	req := &apis.GetSubnetAvailableIPQuotaRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetSubnetAvailableIPQuota 获取子网可用IP数量
-func (c *OpenAPIClient) GetSubnetAvailableIPQuota(req *apis.GetSubnetAvailableIPQuotaRequest) (*apis.GetSubnetAvailableIPQuotaResponse, error) {
+func (c *UCloudStackClient) GetSubnetAvailableIPQuota(req *apis.GetSubnetAvailableIPQuotaRequest) (*apis.GetSubnetAvailableIPQuotaResponse, error) {
 	var err error
 	var res apis.GetSubnetAvailableIPQuotaResponse
 
@@ -15577,17 +15577,17 @@ func (c *OpenAPIClient) GetSubnetAvailableIPQuota(req *apis.GetSubnetAvailableIP
 }
 
 // NewListAllocatedIPsInSubnetRequest will create request of ListAllocatedIPsInSubnet action.
-func (c *OpenAPIClient) NewListAllocatedIPsInSubnetRequest() *apis.ListAllocatedIPsInSubnetRequest {
+func (c *UCloudStackClient) NewListAllocatedIPsInSubnetRequest() *apis.ListAllocatedIPsInSubnetRequest {
 	req := &apis.ListAllocatedIPsInSubnetRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ListAllocatedIPsInSubnet 获取子网中申请出来的IP列表
-func (c *OpenAPIClient) ListAllocatedIPsInSubnet(req *apis.ListAllocatedIPsInSubnetRequest) (*apis.ListAllocatedIPsInSubnetResponse, error) {
+func (c *UCloudStackClient) ListAllocatedIPsInSubnet(req *apis.ListAllocatedIPsInSubnetRequest) (*apis.ListAllocatedIPsInSubnetResponse, error) {
 	var err error
 	var res apis.ListAllocatedIPsInSubnetResponse
 
@@ -15599,17 +15599,17 @@ func (c *OpenAPIClient) ListAllocatedIPsInSubnet(req *apis.ListAllocatedIPsInSub
 }
 
 // NewReplaceIPRequest will create request of ReplaceIP action.
-func (c *OpenAPIClient) NewReplaceIPRequest() *apis.ReplaceIPRequest {
+func (c *UCloudStackClient) NewReplaceIPRequest() *apis.ReplaceIPRequest {
 	req := &apis.ReplaceIPRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // ReplaceIP 更新产品内网IP
-func (c *OpenAPIClient) ReplaceIP(req *apis.ReplaceIPRequest) (*apis.ReplaceIPResponse, error) {
+func (c *UCloudStackClient) ReplaceIP(req *apis.ReplaceIPRequest) (*apis.ReplaceIPResponse, error) {
 	var err error
 	var res apis.ReplaceIPResponse
 
@@ -15621,17 +15621,17 @@ func (c *OpenAPIClient) ReplaceIP(req *apis.ReplaceIPRequest) (*apis.ReplaceIPRe
 }
 
 // NewUpdateSubnetRouteRequest will create request of UpdateSubnetRoute action.
-func (c *OpenAPIClient) NewUpdateSubnetRouteRequest() *apis.UpdateSubnetRouteRequest {
+func (c *UCloudStackClient) NewUpdateSubnetRouteRequest() *apis.UpdateSubnetRouteRequest {
 	req := &apis.UpdateSubnetRouteRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateSubnetRoute 更新子网路由
-func (c *OpenAPIClient) UpdateSubnetRoute(req *apis.UpdateSubnetRouteRequest) (*apis.UpdateSubnetRouteResponse, error) {
+func (c *UCloudStackClient) UpdateSubnetRoute(req *apis.UpdateSubnetRouteRequest) (*apis.UpdateSubnetRouteResponse, error) {
 	var err error
 	var res apis.UpdateSubnetRouteResponse
 
@@ -15643,17 +15643,17 @@ func (c *OpenAPIClient) UpdateSubnetRoute(req *apis.UpdateSubnetRouteRequest) (*
 }
 
 // NewBindEIPToVPNRequest will create request of BindEIPToVPN action.
-func (c *OpenAPIClient) NewBindEIPToVPNRequest() *apis.BindEIPToVPNRequest {
+func (c *UCloudStackClient) NewBindEIPToVPNRequest() *apis.BindEIPToVPNRequest {
 	req := &apis.BindEIPToVPNRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // BindEIPToVPN 绑定EIP到VPN
-func (c *OpenAPIClient) BindEIPToVPN(req *apis.BindEIPToVPNRequest) (*apis.BindEIPToVPNResponse, error) {
+func (c *UCloudStackClient) BindEIPToVPN(req *apis.BindEIPToVPNRequest) (*apis.BindEIPToVPNResponse, error) {
 	var err error
 	var res apis.BindEIPToVPNResponse
 
@@ -15665,17 +15665,17 @@ func (c *OpenAPIClient) BindEIPToVPN(req *apis.BindEIPToVPNRequest) (*apis.BindE
 }
 
 // NewCreateRemoteVPNGWRequest will create request of CreateRemoteVPNGW action.
-func (c *OpenAPIClient) NewCreateRemoteVPNGWRequest() *apis.CreateRemoteVPNGWRequest {
+func (c *UCloudStackClient) NewCreateRemoteVPNGWRequest() *apis.CreateRemoteVPNGWRequest {
 	req := &apis.CreateRemoteVPNGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateRemoteVPNGW 创建对端网关
-func (c *OpenAPIClient) CreateRemoteVPNGW(req *apis.CreateRemoteVPNGWRequest) (*apis.CreateRemoteVPNGWResponse, error) {
+func (c *UCloudStackClient) CreateRemoteVPNGW(req *apis.CreateRemoteVPNGWRequest) (*apis.CreateRemoteVPNGWResponse, error) {
 	var err error
 	var res apis.CreateRemoteVPNGWResponse
 
@@ -15687,17 +15687,17 @@ func (c *OpenAPIClient) CreateRemoteVPNGW(req *apis.CreateRemoteVPNGWRequest) (*
 }
 
 // NewCreateVPNGWRequest will create request of CreateVPNGW action.
-func (c *OpenAPIClient) NewCreateVPNGWRequest() *apis.CreateVPNGWRequest {
+func (c *UCloudStackClient) NewCreateVPNGWRequest() *apis.CreateVPNGWRequest {
 	req := &apis.CreateVPNGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateVPNGW 创建网关
-func (c *OpenAPIClient) CreateVPNGW(req *apis.CreateVPNGWRequest) (*apis.CreateVPNGWResponse, error) {
+func (c *UCloudStackClient) CreateVPNGW(req *apis.CreateVPNGWRequest) (*apis.CreateVPNGWResponse, error) {
 	var err error
 	var res apis.CreateVPNGWResponse
 
@@ -15709,17 +15709,17 @@ func (c *OpenAPIClient) CreateVPNGW(req *apis.CreateVPNGWRequest) (*apis.CreateV
 }
 
 // NewCreateVPNTunnelRequest will create request of CreateVPNTunnel action.
-func (c *OpenAPIClient) NewCreateVPNTunnelRequest() *apis.CreateVPNTunnelRequest {
+func (c *UCloudStackClient) NewCreateVPNTunnelRequest() *apis.CreateVPNTunnelRequest {
 	req := &apis.CreateVPNTunnelRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateVPNTunnel 创建隧道
-func (c *OpenAPIClient) CreateVPNTunnel(req *apis.CreateVPNTunnelRequest) (*apis.CreateVPNTunnelResponse, error) {
+func (c *UCloudStackClient) CreateVPNTunnel(req *apis.CreateVPNTunnelRequest) (*apis.CreateVPNTunnelResponse, error) {
 	var err error
 	var res apis.CreateVPNTunnelResponse
 
@@ -15731,17 +15731,17 @@ func (c *OpenAPIClient) CreateVPNTunnel(req *apis.CreateVPNTunnelRequest) (*apis
 }
 
 // NewDeleteRemoteVPNGWRequest will create request of DeleteRemoteVPNGW action.
-func (c *OpenAPIClient) NewDeleteRemoteVPNGWRequest() *apis.DeleteRemoteVPNGWRequest {
+func (c *UCloudStackClient) NewDeleteRemoteVPNGWRequest() *apis.DeleteRemoteVPNGWRequest {
 	req := &apis.DeleteRemoteVPNGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteRemoteVPNGW 删除对端网关
-func (c *OpenAPIClient) DeleteRemoteVPNGW(req *apis.DeleteRemoteVPNGWRequest) (*apis.DeleteRemoteVPNGWResponse, error) {
+func (c *UCloudStackClient) DeleteRemoteVPNGW(req *apis.DeleteRemoteVPNGWRequest) (*apis.DeleteRemoteVPNGWResponse, error) {
 	var err error
 	var res apis.DeleteRemoteVPNGWResponse
 
@@ -15753,17 +15753,17 @@ func (c *OpenAPIClient) DeleteRemoteVPNGW(req *apis.DeleteRemoteVPNGWRequest) (*
 }
 
 // NewDeleteVPNGWRequest will create request of DeleteVPNGW action.
-func (c *OpenAPIClient) NewDeleteVPNGWRequest() *apis.DeleteVPNGWRequest {
+func (c *UCloudStackClient) NewDeleteVPNGWRequest() *apis.DeleteVPNGWRequest {
 	req := &apis.DeleteVPNGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVPNGW 删除网关
-func (c *OpenAPIClient) DeleteVPNGW(req *apis.DeleteVPNGWRequest) (*apis.DeleteVPNGWResponse, error) {
+func (c *UCloudStackClient) DeleteVPNGW(req *apis.DeleteVPNGWRequest) (*apis.DeleteVPNGWResponse, error) {
 	var err error
 	var res apis.DeleteVPNGWResponse
 
@@ -15775,17 +15775,17 @@ func (c *OpenAPIClient) DeleteVPNGW(req *apis.DeleteVPNGWRequest) (*apis.DeleteV
 }
 
 // NewDeleteVPNTunnelRequest will create request of DeleteVPNTunnel action.
-func (c *OpenAPIClient) NewDeleteVPNTunnelRequest() *apis.DeleteVPNTunnelRequest {
+func (c *UCloudStackClient) NewDeleteVPNTunnelRequest() *apis.DeleteVPNTunnelRequest {
 	req := &apis.DeleteVPNTunnelRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteVPNTunnel 删除隧道
-func (c *OpenAPIClient) DeleteVPNTunnel(req *apis.DeleteVPNTunnelRequest) (*apis.DeleteVPNTunnelResponse, error) {
+func (c *UCloudStackClient) DeleteVPNTunnel(req *apis.DeleteVPNTunnelRequest) (*apis.DeleteVPNTunnelResponse, error) {
 	var err error
 	var res apis.DeleteVPNTunnelResponse
 
@@ -15797,17 +15797,17 @@ func (c *OpenAPIClient) DeleteVPNTunnel(req *apis.DeleteVPNTunnelRequest) (*apis
 }
 
 // NewDescribeRemoteVPNGWRequest will create request of DescribeRemoteVPNGW action.
-func (c *OpenAPIClient) NewDescribeRemoteVPNGWRequest() *apis.DescribeRemoteVPNGWRequest {
+func (c *UCloudStackClient) NewDescribeRemoteVPNGWRequest() *apis.DescribeRemoteVPNGWRequest {
 	req := &apis.DescribeRemoteVPNGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeRemoteVPNGW 获取对端网关信息
-func (c *OpenAPIClient) DescribeRemoteVPNGW(req *apis.DescribeRemoteVPNGWRequest) (*apis.DescribeRemoteVPNGWResponse, error) {
+func (c *UCloudStackClient) DescribeRemoteVPNGW(req *apis.DescribeRemoteVPNGWRequest) (*apis.DescribeRemoteVPNGWResponse, error) {
 	var err error
 	var res apis.DescribeRemoteVPNGWResponse
 
@@ -15819,17 +15819,17 @@ func (c *OpenAPIClient) DescribeRemoteVPNGW(req *apis.DescribeRemoteVPNGWRequest
 }
 
 // NewDescribeVPNGWRequest will create request of DescribeVPNGW action.
-func (c *OpenAPIClient) NewDescribeVPNGWRequest() *apis.DescribeVPNGWRequest {
+func (c *UCloudStackClient) NewDescribeVPNGWRequest() *apis.DescribeVPNGWRequest {
 	req := &apis.DescribeVPNGWRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVPNGW 获取网关信息
-func (c *OpenAPIClient) DescribeVPNGW(req *apis.DescribeVPNGWRequest) (*apis.DescribeVPNGWResponse, error) {
+func (c *UCloudStackClient) DescribeVPNGW(req *apis.DescribeVPNGWRequest) (*apis.DescribeVPNGWResponse, error) {
 	var err error
 	var res apis.DescribeVPNGWResponse
 
@@ -15841,17 +15841,17 @@ func (c *OpenAPIClient) DescribeVPNGW(req *apis.DescribeVPNGWRequest) (*apis.Des
 }
 
 // NewDescribeVPNTunnelRequest will create request of DescribeVPNTunnel action.
-func (c *OpenAPIClient) NewDescribeVPNTunnelRequest() *apis.DescribeVPNTunnelRequest {
+func (c *UCloudStackClient) NewDescribeVPNTunnelRequest() *apis.DescribeVPNTunnelRequest {
 	req := &apis.DescribeVPNTunnelRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeVPNTunnel 获取隧道信息
-func (c *OpenAPIClient) DescribeVPNTunnel(req *apis.DescribeVPNTunnelRequest) (*apis.DescribeVPNTunnelResponse, error) {
+func (c *UCloudStackClient) DescribeVPNTunnel(req *apis.DescribeVPNTunnelRequest) (*apis.DescribeVPNTunnelResponse, error) {
 	var err error
 	var res apis.DescribeVPNTunnelResponse
 
@@ -15863,17 +15863,17 @@ func (c *OpenAPIClient) DescribeVPNTunnel(req *apis.DescribeVPNTunnelRequest) (*
 }
 
 // NewGetPriceRequest will create request of GetPrice action.
-func (c *OpenAPIClient) NewGetPriceRequest() *apis.GetPriceRequest {
+func (c *UCloudStackClient) NewGetPriceRequest() *apis.GetPriceRequest {
 	req := &apis.GetPriceRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetPrice 获取价格
-func (c *OpenAPIClient) GetPrice(req *apis.GetPriceRequest) (*apis.GetPriceResponse, error) {
+func (c *UCloudStackClient) GetPrice(req *apis.GetPriceRequest) (*apis.GetPriceResponse, error) {
 	var err error
 	var res apis.GetPriceResponse
 
@@ -15885,17 +15885,17 @@ func (c *OpenAPIClient) GetPrice(req *apis.GetPriceRequest) (*apis.GetPriceRespo
 }
 
 // NewGetVPNTunnelConfigRequest will create request of GetVPNTunnelConfig action.
-func (c *OpenAPIClient) NewGetVPNTunnelConfigRequest() *apis.GetVPNTunnelConfigRequest {
+func (c *UCloudStackClient) NewGetVPNTunnelConfigRequest() *apis.GetVPNTunnelConfigRequest {
 	req := &apis.GetVPNTunnelConfigRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // GetVPNTunnelConfig 获取隧道配置
-func (c *OpenAPIClient) GetVPNTunnelConfig(req *apis.GetVPNTunnelConfigRequest) (*apis.GetVPNTunnelConfigResponse, error) {
+func (c *UCloudStackClient) GetVPNTunnelConfig(req *apis.GetVPNTunnelConfigRequest) (*apis.GetVPNTunnelConfigResponse, error) {
 	var err error
 	var res apis.GetVPNTunnelConfigResponse
 
@@ -15907,17 +15907,17 @@ func (c *OpenAPIClient) GetVPNTunnelConfig(req *apis.GetVPNTunnelConfigRequest) 
 }
 
 // NewUnbindEIPFromVPNRequest will create request of UnbindEIPFromVPN action.
-func (c *OpenAPIClient) NewUnbindEIPFromVPNRequest() *apis.UnbindEIPFromVPNRequest {
+func (c *UCloudStackClient) NewUnbindEIPFromVPNRequest() *apis.UnbindEIPFromVPNRequest {
 	req := &apis.UnbindEIPFromVPNRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UnbindEIPFromVPN 从VPN解绑EIP
-func (c *OpenAPIClient) UnbindEIPFromVPN(req *apis.UnbindEIPFromVPNRequest) (*apis.UnbindEIPFromVPNResponse, error) {
+func (c *UCloudStackClient) UnbindEIPFromVPN(req *apis.UnbindEIPFromVPNRequest) (*apis.UnbindEIPFromVPNResponse, error) {
 	var err error
 	var res apis.UnbindEIPFromVPNResponse
 
@@ -15929,17 +15929,17 @@ func (c *OpenAPIClient) UnbindEIPFromVPN(req *apis.UnbindEIPFromVPNRequest) (*ap
 }
 
 // NewUpdateVPNTunnelRequest will create request of UpdateVPNTunnel action.
-func (c *OpenAPIClient) NewUpdateVPNTunnelRequest() *apis.UpdateVPNTunnelRequest {
+func (c *UCloudStackClient) NewUpdateVPNTunnelRequest() *apis.UpdateVPNTunnelRequest {
 	req := &apis.UpdateVPNTunnelRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateVPNTunnel 更新隧道信息
-func (c *OpenAPIClient) UpdateVPNTunnel(req *apis.UpdateVPNTunnelRequest) (*apis.UpdateVPNTunnelResponse, error) {
+func (c *UCloudStackClient) UpdateVPNTunnel(req *apis.UpdateVPNTunnelRequest) (*apis.UpdateVPNTunnelResponse, error) {
 	var err error
 	var res apis.UpdateVPNTunnelResponse
 
@@ -15951,17 +15951,17 @@ func (c *OpenAPIClient) UpdateVPNTunnel(req *apis.UpdateVPNTunnelRequest) (*apis
 }
 
 // NewUpgradeVPNGWToHARequest will create request of UpgradeVPNGWToHA action.
-func (c *OpenAPIClient) NewUpgradeVPNGWToHARequest() *apis.UpgradeVPNGWToHARequest {
+func (c *UCloudStackClient) NewUpgradeVPNGWToHARequest() *apis.UpgradeVPNGWToHARequest {
 	req := &apis.UpgradeVPNGWToHARequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpgradeVPNGWToHA 升级为高可用版本
-func (c *OpenAPIClient) UpgradeVPNGWToHA(req *apis.UpgradeVPNGWToHARequest) (*apis.UpgradeVPNGWToHAResponse, error) {
+func (c *UCloudStackClient) UpgradeVPNGWToHA(req *apis.UpgradeVPNGWToHARequest) (*apis.UpgradeVPNGWToHAResponse, error) {
 	var err error
 	var res apis.UpgradeVPNGWToHAResponse
 
@@ -15973,17 +15973,17 @@ func (c *OpenAPIClient) UpgradeVPNGWToHA(req *apis.UpgradeVPNGWToHARequest) (*ap
 }
 
 // NewCreateWorkflowRequest will create request of CreateWorkflow action.
-func (c *OpenAPIClient) NewCreateWorkflowRequest() *apis.CreateWorkflowRequest {
+func (c *UCloudStackClient) NewCreateWorkflowRequest() *apis.CreateWorkflowRequest {
 	req := &apis.CreateWorkflowRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // CreateWorkflow 创建自定义流程
-func (c *OpenAPIClient) CreateWorkflow(req *apis.CreateWorkflowRequest) (*apis.CreateWorkflowResponse, error) {
+func (c *UCloudStackClient) CreateWorkflow(req *apis.CreateWorkflowRequest) (*apis.CreateWorkflowResponse, error) {
 	var err error
 	var res apis.CreateWorkflowResponse
 
@@ -15995,17 +15995,17 @@ func (c *OpenAPIClient) CreateWorkflow(req *apis.CreateWorkflowRequest) (*apis.C
 }
 
 // NewDeleteWorkflowRequest will create request of DeleteWorkflow action.
-func (c *OpenAPIClient) NewDeleteWorkflowRequest() *apis.DeleteWorkflowRequest {
+func (c *UCloudStackClient) NewDeleteWorkflowRequest() *apis.DeleteWorkflowRequest {
 	req := &apis.DeleteWorkflowRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DeleteWorkflow 删除自定义流程
-func (c *OpenAPIClient) DeleteWorkflow(req *apis.DeleteWorkflowRequest) (*apis.DeleteWorkflowResponse, error) {
+func (c *UCloudStackClient) DeleteWorkflow(req *apis.DeleteWorkflowRequest) (*apis.DeleteWorkflowResponse, error) {
 	var err error
 	var res apis.DeleteWorkflowResponse
 
@@ -16017,17 +16017,17 @@ func (c *OpenAPIClient) DeleteWorkflow(req *apis.DeleteWorkflowRequest) (*apis.D
 }
 
 // NewDescribeApplicationRequest will create request of DescribeApplication action.
-func (c *OpenAPIClient) NewDescribeApplicationRequest() *apis.DescribeApplicationRequest {
+func (c *UCloudStackClient) NewDescribeApplicationRequest() *apis.DescribeApplicationRequest {
 	req := &apis.DescribeApplicationRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeApplication 查询审批记录
-func (c *OpenAPIClient) DescribeApplication(req *apis.DescribeApplicationRequest) (*apis.DescribeApplicationResponse, error) {
+func (c *UCloudStackClient) DescribeApplication(req *apis.DescribeApplicationRequest) (*apis.DescribeApplicationResponse, error) {
 	var err error
 	var res apis.DescribeApplicationResponse
 
@@ -16039,17 +16039,17 @@ func (c *OpenAPIClient) DescribeApplication(req *apis.DescribeApplicationRequest
 }
 
 // NewDescribeApplicationNodeRequest will create request of DescribeApplicationNode action.
-func (c *OpenAPIClient) NewDescribeApplicationNodeRequest() *apis.DescribeApplicationNodeRequest {
+func (c *UCloudStackClient) NewDescribeApplicationNodeRequest() *apis.DescribeApplicationNodeRequest {
 	req := &apis.DescribeApplicationNodeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeApplicationNode 查询审批列表
-func (c *OpenAPIClient) DescribeApplicationNode(req *apis.DescribeApplicationNodeRequest) (*apis.DescribeApplicationNodeResponse, error) {
+func (c *UCloudStackClient) DescribeApplicationNode(req *apis.DescribeApplicationNodeRequest) (*apis.DescribeApplicationNodeResponse, error) {
 	var err error
 	var res apis.DescribeApplicationNodeResponse
 
@@ -16061,17 +16061,17 @@ func (c *OpenAPIClient) DescribeApplicationNode(req *apis.DescribeApplicationNod
 }
 
 // NewDescribeWorkflowRequest will create request of DescribeWorkflow action.
-func (c *OpenAPIClient) NewDescribeWorkflowRequest() *apis.DescribeWorkflowRequest {
+func (c *UCloudStackClient) NewDescribeWorkflowRequest() *apis.DescribeWorkflowRequest {
 	req := &apis.DescribeWorkflowRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // DescribeWorkflow 查询自定义流程
-func (c *OpenAPIClient) DescribeWorkflow(req *apis.DescribeWorkflowRequest) (*apis.DescribeWorkflowResponse, error) {
+func (c *UCloudStackClient) DescribeWorkflow(req *apis.DescribeWorkflowRequest) (*apis.DescribeWorkflowResponse, error) {
 	var err error
 	var res apis.DescribeWorkflowResponse
 
@@ -16083,17 +16083,17 @@ func (c *OpenAPIClient) DescribeWorkflow(req *apis.DescribeWorkflowRequest) (*ap
 }
 
 // NewUpdateApplicationNodeRequest will create request of UpdateApplicationNode action.
-func (c *OpenAPIClient) NewUpdateApplicationNodeRequest() *apis.UpdateApplicationNodeRequest {
+func (c *UCloudStackClient) NewUpdateApplicationNodeRequest() *apis.UpdateApplicationNodeRequest {
 	req := &apis.UpdateApplicationNodeRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateApplicationNode 更新审批节点信息
-func (c *OpenAPIClient) UpdateApplicationNode(req *apis.UpdateApplicationNodeRequest) (*apis.UpdateApplicationNodeResponse, error) {
+func (c *UCloudStackClient) UpdateApplicationNode(req *apis.UpdateApplicationNodeRequest) (*apis.UpdateApplicationNodeResponse, error) {
 	var err error
 	var res apis.UpdateApplicationNodeResponse
 
@@ -16105,17 +16105,17 @@ func (c *OpenAPIClient) UpdateApplicationNode(req *apis.UpdateApplicationNodeReq
 }
 
 // NewUpdateWorkflowRequest will create request of UpdateWorkflow action.
-func (c *OpenAPIClient) NewUpdateWorkflowRequest() *apis.UpdateWorkflowRequest {
+func (c *UCloudStackClient) NewUpdateWorkflowRequest() *apis.UpdateWorkflowRequest {
 	req := &apis.UpdateWorkflowRequest{}
 
 	c.Client.SetupRequest(req)
 	req.SetRetryable(true)
-	
+
 	return req
 }
 
 // UpdateWorkflow 更新自定义流程
-func (c *OpenAPIClient) UpdateWorkflow(req *apis.UpdateWorkflowRequest) (*apis.UpdateWorkflowResponse, error) {
+func (c *UCloudStackClient) UpdateWorkflow(req *apis.UpdateWorkflowRequest) (*apis.UpdateWorkflowResponse, error) {
 	var err error
 	var res apis.UpdateWorkflowResponse
 
