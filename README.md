@@ -1,6 +1,6 @@
 # UCloudStack SDK Go
 
-[![Go Version](https://img.shields.io/badge/Go-%3E%3D%201.21-blue.svg)](https://go.dev/)
+[![Go Version](https://img.shields.io/badge/Go-%3E%3D%201.25-blue.svg)](https://go.dev/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
 UCloudStack SDK Go 是 UCloudStack API 的 Go 客户端库。
