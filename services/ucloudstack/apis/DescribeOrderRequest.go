@@ -18,8 +18,8 @@ type DescribeOrderRequest struct {
 	Limit *int `json:"Limit"`
 	// 分页偏移量，指定从第几条记录开始返回
 	Offset *int `json:"Offset"`
-	// 项目组ID列表，保留字段，当前接口不会根据项目进行过滤；传空字符串时表示筛选未归属项目组数据
-	ProjectIDs []string `json:"ProjectIDs"`
+	// 项目组ID列表，保留字段，当前接口不会根据项目进行过滤
+	ProjectIDs []string `json:"ProjectIDs" required:"true"`
 	// 地域ID，指定订单资源所属的物理区域，传入all或空值表示查询所有地域的订单
 	Region *string `json:"Region"`
 	// 租户唯一标识ID，用于标识资源所属的租户，实现多租户环境下的资源隔离和权限控制，根据此租户ID查询所有订单

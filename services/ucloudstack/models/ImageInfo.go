@@ -25,7 +25,7 @@ type ImageInfo struct {
 	Encrypted *bool `json:"Encrypted"`
 	// 镜像描述，等同于Remark
 	ImageDescription *string `json:"ImageDescription"`
-	// 镜像格式，返回值为qcow2、iso、vmdk、raw
+	// 镜像格式，返回值为qcow2或iso
 	ImageFormat *string `json:"ImageFormat"`
 	// 镜像来源，可能为vm-... image-...、远程URL、Local、System等
 	ImageFrom *string `json:"ImageFrom"`

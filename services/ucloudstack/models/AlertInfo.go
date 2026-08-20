@@ -7,24 +7,14 @@ package models
 type AlertInfo struct {
 	// 活跃时间，告警活跃时间戳，表示告警首次触发或最后一次活跃的时间
 	ActiveAt *int `json:"ActiveAt"`
-	// 告警指纹，基于稳定标签生成的唯一标识，用于关联当前告警与历史记录
-	AlertFingerprint *string `json:"AlertFingerprint"`
-	// 告警实例标识，格式为 AlertFingerprint:ActiveAtUnixNano，用于区分同一指纹在不同触发轮次中的具体实例
-	AlertOccurrenceKey *string `json:"AlertOccurrenceKey"`
 	// 租户ID，告警所属租户ID
 	CompanyID *int `json:"CompanyID"`
 	// 租户邮箱，告警所属租户邮箱
 	Email *string `json:"Email"`
-	// 忽略截止时间，Unix时间戳(秒)，为0表示未忽略
-	IgnoreUntil *int `json:"IgnoreUntil"`
-	// 是否处于忽略期，true 表示当前时间早于 IgnoreUntil
-	Ignored *bool `json:"Ignored"`
 	// 告警标签，告警标签信息
 	LabelSet []AlertLabelSet `json:"LabelSet"`
 	// 告警指标，触发告警的监控指标名称
 	Metric *string `json:"Metric"`
-	// 人工处理状态，取值：Open、Handled；未有状态记录的当前告警默认返回Open
-	ProcessStatus *string `json:"ProcessStatus"`
 	// 地域，告警所属地域
 	Region *string `json:"Region"`
 	// 地域名称，告警所属地域名称

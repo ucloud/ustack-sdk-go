@@ -16,7 +16,7 @@ type CreateSubnetRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 子网网段，CIDR格式的地址范围
 	Network *string `json:"Network" required:"true"`
-	// 项目ID，资源所属项目分组标识，未传时尝试分配默认项目
+	// 项目ID，资源所属项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`

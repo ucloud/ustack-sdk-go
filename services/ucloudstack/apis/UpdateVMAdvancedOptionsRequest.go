@@ -6,29 +6,29 @@ import (
 	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
-// UpdateVMAdvancedOptionsRequest 设置虚拟机高级参数(DNS)
+// UpdateVMAdvancedOptionsRequest 设置虚拟机高级参数
 type UpdateVMAdvancedOptionsRequest struct {
 	request.CommonBase
 
-	// 已废弃，不生效
+	// 引导方式，虚拟机的系统引导协议，取值：bios、uefi
 	BootloaderType *string `json:"BootloaderType"`
-	// 已废弃，不生效
+	// CPU模式，虚拟机的CPU模拟方式，取值：host-passthrough（直通）、custom（自定义）
 	CPUMode *string `json:"CPUMode"`
-	// 已废弃，不生效
+	// CPU型号，仅在CPUMode为custom时生效，取值：default、general、other
 	CPUModel *string `json:"CPUModel"`
 	// DNS配置，虚拟机使用的DNS服务器列表
 	DNS *string `json:"DNS"`
-	// 已废弃，不生效
+	// 磁盘缓存模式，磁盘I/O缓存策略，取值：writeback、none、directsync
 	DiskCacheMode *string `json:"DiskCacheMode"`
-	// 已废弃，不生效
+	// 高可用模式，虚拟机的HA策略，取值：NeverStop（默认）、None
 	HighAvailability *string `json:"HighAvailability"`
-	// 已废弃，不生效
+	// ISO插槽配额，配置的ISO挂载插槽数量，需重启生效
 	ISOTotal *int `json:"ISOTotal"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// 已废弃，不生效
+	// 卸载ISO，标识是否卸载挂载的ISO镜像
 	UninstallISO *bool `json:"UninstallISO"`
-	// 自定义数据，需 base64 编码后传入
+	// Cloud-Init脚本，用于自定义系统初始化配置
 	UserData *string `json:"UserData"`
 	// 虚拟机ID，待修改配置的虚拟机标识
 	VMID *string `json:"VMID" required:"true"`

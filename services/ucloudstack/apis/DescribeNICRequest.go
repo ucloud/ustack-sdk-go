@@ -30,8 +30,8 @@ type DescribeNICRequest struct {
 	Region *string `json:"Region" required:"true"`
 	// 外网线路ID过滤，用于查询指定线路的外网网卡
 	SegmentID *string `json:"SegmentID"`
-	// 状态列表，查询指定状态的网卡
-	Status []string `json:"Status"`
+	// 状态过滤，查询指定状态的网卡
+	Status *string `json:"Status"`
 	// 子网ID过滤，用于查询指定子网下的网卡
 	SubnetID *string `json:"SubnetID"`
 }

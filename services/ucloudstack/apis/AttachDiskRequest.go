@@ -10,8 +10,6 @@ import (
 type AttachDiskRequest struct {
 	request.CommonBase
 
-	// 缓存类型，取值 directsync、none、writeback
-	CacheMode *string `json:"CacheMode"`
 	// 租户ID，资源所属租户标识
 	CompanyID *int `json:"CompanyID"`
 	// 磁盘ID，要挂载的磁盘标识，共享盘仅在Detached/Shareabling/Shareabled状态下允许绑定，否则会返回StatusDiskStatusNotStable；共享盘绑定数量受到RegionConfigKeyDiskShareAbleLimit限制，超限返回StatusDiskShareAbleLimit

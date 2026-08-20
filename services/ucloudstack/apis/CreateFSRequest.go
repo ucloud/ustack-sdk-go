@@ -24,7 +24,7 @@ type CreateFSRequest struct {
 	EIPID *string `json:"EIPID"`
 	// 文件存储名称，支持中英文、数字、点、下划线和中划线，长度1-128个字符
 	Name *string `json:"Name" required:"true"`
-	// 项目组ID，资源所属项目组，未传时尝试分配默认项目
+	// 项目组ID，资源所属项目组
 	ProjectID *string `json:"ProjectID"`
 	// 计费数量，用于指定购买时长的数量，按月/年计费时表示购买的月/年数，按小时计费时默认为1
 	Quantity *int `json:"Quantity" required:"true"`

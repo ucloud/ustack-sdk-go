@@ -32,7 +32,7 @@ type CreateRedisRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// Redis登录密码，要求：1.长度6-64个字符2.支持字母、数字及部分特殊字符（~!@#^&*_+{}|:<>?-=[],./等）3.不支持反引号、单引号、反斜杠、$、%、;、小括号4.必须包含至少2种字符类型（大写字母、小写字母、数字、特殊字符）
 	Password *string `json:"Password"`
-	// 项目ID，用于实现资源的逻辑分组管理，未传时尝试分配默认项目
+	// 项目ID，用于实现资源的逻辑分组管理
 	ProjectID *string `json:"ProjectID"`
 	// 计费数量，指定计费周期的数量，按月/年计费时表示购买的月数/年数，按小时计费时强制为1
 	Quantity *int `json:"Quantity"`

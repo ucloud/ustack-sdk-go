@@ -28,12 +28,10 @@ type DescribeVMInstanceRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// 搜索字段，指定关键词匹配的字段，取值：Name（仅按名称字段模糊匹配）；不传或空值表示全字段匹配
+	// 搜索字段，指定关键词匹配的字段，取值：Name（名称，前缀匹配）；不传或空值表示全字段匹配
 	SearchField *string `json:"SearchField"`
 	// 计算集群ID，过滤指定计算集群下的虚拟机
 	SetID *string `json:"SetID"`
-	// 是否仅查询简略信息
-	SimpleInfo *bool `json:"SimpleInfo"`
 	// 排序方向，指定排序的升降序，取值：Ascending（升序）、Descending（降序）
 	Sort *string `json:"Sort"`
 	// 排序字段，指定返回结果的排序依据，取值：CreateTime（创建时间）、CPUUtilization（CPU利用率）、MemUsage（内存利用率）、SpaceUsage（空间利用率）

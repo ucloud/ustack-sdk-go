@@ -24,13 +24,13 @@ type CreateClusterRequest struct {
 	EIPID *string `json:"EIPID"`
 	// 高可用类型
 	HighAvailability *string `json:"HighAvailability"`
-	// k8s版本号。可为1.25.0
+	// k8s版本号。可为1.25.0,1.34.9
 	K8SVersion *string `json:"K8SVersion" required:"true"`
 	// 名称
 	Name *string `json:"Name" required:"true"`
 	// Pod子网ID
 	PodSubnetIDs []string `json:"PodSubnetIDs"`
-	// 项目组ID，未传时尝试分配默认项目
+	// 项目组ID
 	ProjectID *string `json:"ProjectID"`
 	// 计费数量
 	Quantity *int `json:"Quantity" required:"true"`
@@ -38,8 +38,8 @@ type CreateClusterRequest struct {
 	Region *string `json:"Region" required:"true"`
 	// 备注
 	Remark *string `json:"Remark"`
-	// Service CIDR
-	ServiceCIDR *string `json:"ServiceCIDR" required:"true"`
+	// Service CIDR 或 Serivce 所在子网Id
+	ServiceCIDR *string `json:"ServiceCIDR"`
 	// 存储集群类型
 	StorageclassType *string `json:"StorageclassType" required:"true"`
 	// 子网Id

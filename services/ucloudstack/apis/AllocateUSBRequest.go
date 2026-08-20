@@ -10,7 +10,7 @@ import (
 type AllocateUSBRequest struct {
 	request.CommonBase
 
-	// 项目ID，USB设备分配后归属的项目，未传时尝试分配默认项目
+	// 项目ID，USB设备分配后归属的项目
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`

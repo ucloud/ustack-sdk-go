@@ -16,7 +16,7 @@ type DescribeOPLogsRequest struct {
 	CompanyID *int `json:"CompanyID"`
 	// 结束时间，查询时间范围的结束Unix时间戳，需大于BeginTime
 	EndTime *int `json:"EndTime" required:"true"`
-	// 是否成功，筛选成功或失败的操作日志；取值：1 表示成功，0 表示失败，空表示全部
+	// 是否成功，筛选成功或失败的操作日志；取值：Y表示成功，N表示失败，空表示全部
 	IsSuccess *string `json:"IsSuccess"`
 	// 关键词，用于按API名称、资源ID等字段检索
 	Keyword *string `json:"Keyword"`

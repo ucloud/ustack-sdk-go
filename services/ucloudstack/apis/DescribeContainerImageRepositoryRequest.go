@@ -24,6 +24,4 @@ type DescribeContainerImageRepositoryRequest struct {
 	Public *bool `json:"Public"`
 	// 地域，镜像仓库所属地域
 	Region *string `json:"Region" required:"true"`
-	// 状态列表，按状态过滤镜像仓库
-	Status []string `json:"Status"`
 }

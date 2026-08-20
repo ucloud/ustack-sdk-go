@@ -32,6 +32,4 @@ type DescribeEIPRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// EIP状态列表，用于按多个状态过滤EIP，支持前端按Status.0、Status.1等形式传参
-	Status []string `json:"Status"`
 }

@@ -15,8 +15,6 @@ type ResourceEventInfo struct {
 	Count *int `json:"Count"`
 	// 事件等级，事件的严重程度
 	Level *string `json:"Level"`
-	// 人工处理状态，仅当Type=MonitorAlert时返回，取值：Open、Handled；未有状态记录时默认Open
-	ProcessStatus *string `json:"ProcessStatus"`
 	// 地域ID，标识该资源事件所属的地域
 	Region *string `json:"Region"`
 	// 资源事件ID，事件的唯一标识，包含event前缀和14位随机字符

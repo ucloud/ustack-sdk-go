@@ -6,7 +6,7 @@ import (
 	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
-// DeleteNICRequest 删除弹性网卡
+// DeleteNICRequest 删除网卡
 type DeleteNICRequest struct {
 	request.CommonBase
 

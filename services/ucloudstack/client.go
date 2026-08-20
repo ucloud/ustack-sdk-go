@@ -572,28 +572,6 @@ func (c *UCloudStackClient) DescribeResourceEventNotifyRule(req *apis.DescribeRe
 	return &res, nil
 }
 
-// NewOperateAlertRequest will create request of OperateAlert action.
-func (c *UCloudStackClient) NewOperateAlertRequest() *apis.OperateAlertRequest {
-	req := &apis.OperateAlertRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// OperateAlert 操作告警处理状态
-func (c *UCloudStackClient) OperateAlert(req *apis.OperateAlertRequest) (*apis.OperateAlertResponse, error) {
-	var err error
-	var res apis.OperateAlertResponse
-
-	err = c.Client.InvokeAction("OperateAlert", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
 // NewPrometheusQueryRequest will create request of PrometheusQuery action.
 func (c *UCloudStackClient) NewPrometheusQueryRequest() *apis.PrometheusQueryRequest {
 	req := &apis.PrometheusQueryRequest{}
@@ -2282,28 +2260,6 @@ func (c *UCloudStackClient) ListGlobalConfigs(req *apis.ListGlobalConfigsRequest
 	var res apis.ListGlobalConfigsResponse
 
 	err = c.Client.InvokeAction("ListGlobalConfigs", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewListRegionConfigSyncStatusRequest will create request of ListRegionConfigSyncStatus action.
-func (c *UCloudStackClient) NewListRegionConfigSyncStatusRequest() *apis.ListRegionConfigSyncStatusRequest {
-	req := &apis.ListRegionConfigSyncStatusRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// ListRegionConfigSyncStatus 查询地域配置同步状态
-func (c *UCloudStackClient) ListRegionConfigSyncStatus(req *apis.ListRegionConfigSyncStatusRequest) (*apis.ListRegionConfigSyncStatusResponse, error) {
-	var err error
-	var res apis.ListRegionConfigSyncStatusResponse
-
-	err = c.Client.InvokeAction("ListRegionConfigSyncStatus", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -4488,6 +4444,28 @@ func (c *UCloudStackClient) DescribeNodeNUMAInfo(req *apis.DescribeNodeNUMAInfoR
 	return &res, nil
 }
 
+// NewDescribeSRIOVStateRequest will create request of DescribeSRIOVState action.
+func (c *UCloudStackClient) NewDescribeSRIOVStateRequest() *apis.DescribeSRIOVStateRequest {
+	req := &apis.DescribeSRIOVStateRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// DescribeSRIOVState 查询物理网卡SR-IOV状态
+func (c *UCloudStackClient) DescribeSRIOVState(req *apis.DescribeSRIOVStateRequest) (*apis.DescribeSRIOVStateResponse, error) {
+	var err error
+	var res apis.DescribeSRIOVStateResponse
+
+	err = c.Client.InvokeAction("DescribeSRIOVState", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
 // NewDescribeVMHostRequest will create request of DescribeVMHost action.
 func (c *UCloudStackClient) NewDescribeVMHostRequest() *apis.DescribeVMHostRequest {
 	req := &apis.DescribeVMHostRequest{}
@@ -4702,6 +4680,28 @@ func (c *UCloudStackClient) UpdateNodeCPUGovernor(req *apis.UpdateNodeCPUGoverno
 	var res apis.UpdateNodeCPUGovernorResponse
 
 	err = c.Client.InvokeAction("UpdateNodeCPUGovernor", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewUpdateSRIOVStateRequest will create request of UpdateSRIOVState action.
+func (c *UCloudStackClient) NewUpdateSRIOVStateRequest() *apis.UpdateSRIOVStateRequest {
+	req := &apis.UpdateSRIOVStateRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// UpdateSRIOVState 启用或禁用物理网卡SR-IOV
+func (c *UCloudStackClient) UpdateSRIOVState(req *apis.UpdateSRIOVStateRequest) (*apis.UpdateSRIOVStateResponse, error) {
+	var err error
+	var res apis.UpdateSRIOVStateResponse
+
+	err = c.Client.InvokeAction("UpdateSRIOVState", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -5412,28 +5412,6 @@ func (c *UCloudStackClient) ListResourceUsages(req *apis.ListResourceUsagesReque
 	return &res, nil
 }
 
-// NewRetryResourceUsageRequest will create request of RetryResourceUsage action.
-func (c *UCloudStackClient) NewRetryResourceUsageRequest() *apis.RetryResourceUsageRequest {
-	req := &apis.RetryResourceUsageRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// RetryResourceUsage 重试重新生成资源使用情况报告
-func (c *UCloudStackClient) RetryResourceUsage(req *apis.RetryResourceUsageRequest) (*apis.RetryResourceUsageResponse, error) {
-	var err error
-	var res apis.RetryResourceUsageResponse
-
-	err = c.Client.InvokeAction("RetryResourceUsage", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
 // NewAllocateEIPRequest will create request of AllocateEIP action.
 func (c *UCloudStackClient) NewAllocateEIPRequest() *apis.AllocateEIPRequest {
 	req := &apis.AllocateEIPRequest{}
@@ -5984,6 +5962,28 @@ func (c *UCloudStackClient) CreateNativeNode(req *apis.CreateNativeNodeRequest) 
 	return &res, nil
 }
 
+// NewCreateSuperNodeRequest will create request of CreateSuperNode action.
+func (c *UCloudStackClient) NewCreateSuperNodeRequest() *apis.CreateSuperNodeRequest {
+	req := &apis.CreateSuperNodeRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// CreateSuperNode 创建k8s集群SuperNode
+func (c *UCloudStackClient) CreateSuperNode(req *apis.CreateSuperNodeRequest) (*apis.CreateSuperNodeResponse, error) {
+	var err error
+	var res apis.CreateSuperNodeResponse
+
+	err = c.Client.InvokeAction("CreateSuperNode", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
 // NewDeleteClusterRequest will create request of DeleteCluster action.
 func (c *UCloudStackClient) NewDeleteClusterRequest() *apis.DeleteClusterRequest {
 	req := &apis.DeleteClusterRequest{}
@@ -6028,6 +6028,28 @@ func (c *UCloudStackClient) DeleteNativeNode(req *apis.DeleteNativeNodeRequest) 
 	return &res, nil
 }
 
+// NewDeleteSuperNodeRequest will create request of DeleteSuperNode action.
+func (c *UCloudStackClient) NewDeleteSuperNodeRequest() *apis.DeleteSuperNodeRequest {
+	req := &apis.DeleteSuperNodeRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// DeleteSuperNode 删除k8s集群SuperNode
+func (c *UCloudStackClient) DeleteSuperNode(req *apis.DeleteSuperNodeRequest) (*apis.DeleteSuperNodeResponse, error) {
+	var err error
+	var res apis.DeleteSuperNodeResponse
+
+	err = c.Client.InvokeAction("DeleteSuperNode", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
 // NewDescribeClusterRequest will create request of DescribeCluster action.
 func (c *UCloudStackClient) NewDescribeClusterRequest() *apis.DescribeClusterRequest {
 	req := &apis.DescribeClusterRequest{}
@@ -6066,6 +6088,28 @@ func (c *UCloudStackClient) DescribeNativeNode(req *apis.DescribeNativeNodeReque
 	var res apis.DescribeNativeNodeResponse
 
 	err = c.Client.InvokeAction("DescribeNativeNode", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewDescribeSuperNodeRequest will create request of DescribeSuperNode action.
+func (c *UCloudStackClient) NewDescribeSuperNodeRequest() *apis.DescribeSuperNodeRequest {
+	req := &apis.DescribeSuperNodeRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// DescribeSuperNode 查询k8s集群Node
+func (c *UCloudStackClient) DescribeSuperNode(req *apis.DescribeSuperNodeRequest) (*apis.DescribeSuperNodeResponse, error) {
+	var err error
+	var res apis.DescribeSuperNodeResponse
+
+	err = c.Client.InvokeAction("DescribeSuperNode", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -6286,6 +6330,50 @@ func (c *UCloudStackClient) UpdateNativeNodeWAN(req *apis.UpdateNativeNodeWANReq
 	var res apis.UpdateNativeNodeWANResponse
 
 	err = c.Client.InvokeAction("UpdateNativeNodeWAN", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewUpdateSuperNodeRequest will create request of UpdateSuperNode action.
+func (c *UCloudStackClient) NewUpdateSuperNodeRequest() *apis.UpdateSuperNodeRequest {
+	req := &apis.UpdateSuperNodeRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// UpdateSuperNode 更新k8s集群SuperNode
+func (c *UCloudStackClient) UpdateSuperNode(req *apis.UpdateSuperNodeRequest) (*apis.UpdateSuperNodeResponse, error) {
+	var err error
+	var res apis.UpdateSuperNodeResponse
+
+	err = c.Client.InvokeAction("UpdateSuperNode", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewUpdateSuperNodeGPURequest will create request of UpdateSuperNodeGPU action.
+func (c *UCloudStackClient) NewUpdateSuperNodeGPURequest() *apis.UpdateSuperNodeGPURequest {
+	req := &apis.UpdateSuperNodeGPURequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// UpdateSuperNodeGPU 更新k8s集群SuperNodeGPU
+func (c *UCloudStackClient) UpdateSuperNodeGPU(req *apis.UpdateSuperNodeGPURequest) (*apis.UpdateSuperNodeGPUResponse, error) {
+	var err error
+	var res apis.UpdateSuperNodeGPUResponse
+
+	err = c.Client.InvokeAction("UpdateSuperNodeGPU", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -8304,7 +8392,7 @@ func (c *UCloudStackClient) NewCreateNICRequest() *apis.CreateNICRequest {
 	return req
 }
 
-// CreateNIC 创建弹性网卡
+// CreateNIC 创建网卡
 func (c *UCloudStackClient) CreateNIC(req *apis.CreateNICRequest) (*apis.CreateNICResponse, error) {
 	var err error
 	var res apis.CreateNICResponse
@@ -8326,7 +8414,7 @@ func (c *UCloudStackClient) NewDeleteNICRequest() *apis.DeleteNICRequest {
 	return req
 }
 
-// DeleteNIC 删除弹性网卡
+// DeleteNIC 删除网卡
 func (c *UCloudStackClient) DeleteNIC(req *apis.DeleteNICRequest) (*apis.DeleteNICResponse, error) {
 	var err error
 	var res apis.DeleteNICResponse
@@ -8420,28 +8508,6 @@ func (c *UCloudStackClient) GetUpdateNICPrice(req *apis.GetUpdateNICPriceRequest
 	var res apis.GetUpdateNICPriceResponse
 
 	err = c.Client.InvokeAction("GetUpdateNICPrice", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateNICIPRequest will create request of UpdateNICIP action.
-func (c *UCloudStackClient) NewUpdateNICIPRequest() *apis.UpdateNICIPRequest {
-	req := &apis.UpdateNICIPRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateNICIP 更新网卡的IP
-func (c *UCloudStackClient) UpdateNICIP(req *apis.UpdateNICIPRequest) (*apis.UpdateNICIPResponse, error) {
-	var err error
-	var res apis.UpdateNICIPResponse
-
-	err = c.Client.InvokeAction("UpdateNICIP", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -11192,28 +11258,6 @@ func (c *UCloudStackClient) TerminateResource(req *apis.TerminateResourceRequest
 	var res apis.TerminateResourceResponse
 
 	err = c.Client.InvokeAction("TerminateResource", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewAllocateRedisConsoleSessionRequest will create request of AllocateRedisConsoleSession action.
-func (c *UCloudStackClient) NewAllocateRedisConsoleSessionRequest() *apis.AllocateRedisConsoleSessionRequest {
-	req := &apis.AllocateRedisConsoleSessionRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// AllocateRedisConsoleSession 申请redis控制台会话
-func (c *UCloudStackClient) AllocateRedisConsoleSession(req *apis.AllocateRedisConsoleSessionRequest) (*apis.AllocateRedisConsoleSessionResponse, error) {
-	var err error
-	var res apis.AllocateRedisConsoleSessionResponse
-
-	err = c.Client.InvokeAction("AllocateRedisConsoleSession", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -13992,94 +14036,6 @@ func (c *UCloudStackClient) UpdateVIPBindResource(req *apis.UpdateVIPBindResourc
 	return &res, nil
 }
 
-// NewAbortMigrateVMDiskRequest will create request of AbortMigrateVMDisk action.
-func (c *UCloudStackClient) NewAbortMigrateVMDiskRequest() *apis.AbortMigrateVMDiskRequest {
-	req := &apis.AbortMigrateVMDiskRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// AbortMigrateVMDisk 取消虚拟机热存储迁移
-func (c *UCloudStackClient) AbortMigrateVMDisk(req *apis.AbortMigrateVMDiskRequest) (*apis.AbortMigrateVMDiskResponse, error) {
-	var err error
-	var res apis.AbortMigrateVMDiskResponse
-
-	err = c.Client.InvokeAction("AbortMigrateVMDisk", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewAbortVMSnapshotRequest will create request of AbortVMSnapshot action.
-func (c *UCloudStackClient) NewAbortVMSnapshotRequest() *apis.AbortVMSnapshotRequest {
-	req := &apis.AbortVMSnapshotRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// AbortVMSnapshot 取消虚拟机整机快照
-func (c *UCloudStackClient) AbortVMSnapshot(req *apis.AbortVMSnapshotRequest) (*apis.AbortVMSnapshotResponse, error) {
-	var err error
-	var res apis.AbortVMSnapshotResponse
-
-	err = c.Client.InvokeAction("AbortVMSnapshot", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewAddVMDiskRequest will create request of AddVMDisk action.
-func (c *UCloudStackClient) NewAddVMDiskRequest() *apis.AddVMDiskRequest {
-	req := &apis.AddVMDiskRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// AddVMDisk 添加虚拟机磁盘
-func (c *UCloudStackClient) AddVMDisk(req *apis.AddVMDiskRequest) (*apis.AddVMDiskResponse, error) {
-	var err error
-	var res apis.AddVMDiskResponse
-
-	err = c.Client.InvokeAction("AddVMDisk", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewAddVMNICRequest will create request of AddVMNIC action.
-func (c *UCloudStackClient) NewAddVMNICRequest() *apis.AddVMNICRequest {
-	req := &apis.AddVMNICRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// AddVMNIC 添加虚拟机网卡
-func (c *UCloudStackClient) AddVMNIC(req *apis.AddVMNICRequest) (*apis.AddVMNICResponse, error) {
-	var err error
-	var res apis.AddVMNICResponse
-
-	err = c.Client.InvokeAction("AddVMNIC", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
 // NewAllocateVMSSHSessionRequest will create request of AllocateVMSSHSession action.
 func (c *UCloudStackClient) NewAllocateVMSSHSessionRequest() *apis.AllocateVMSSHSessionRequest {
 	req := &apis.AllocateVMSSHSessionRequest{}
@@ -14228,28 +14184,6 @@ func (c *UCloudStackClient) DeleteVMInstance(req *apis.DeleteVMInstanceRequest) 
 	var res apis.DeleteVMInstanceResponse
 
 	err = c.Client.InvokeAction("DeleteVMInstance", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewDeleteVMNICRequest will create request of DeleteVMNIC action.
-func (c *UCloudStackClient) NewDeleteVMNICRequest() *apis.DeleteVMNICRequest {
-	req := &apis.DeleteVMNICRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// DeleteVMNIC 删除虚拟机网卡
-func (c *UCloudStackClient) DeleteVMNIC(req *apis.DeleteVMNICRequest) (*apis.DeleteVMNICResponse, error) {
-	var err error
-	var res apis.DeleteVMNICResponse
-
-	err = c.Client.InvokeAction("DeleteVMNIC", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -14426,28 +14360,6 @@ func (c *UCloudStackClient) GetVMInstancePrice(req *apis.GetVMInstancePriceReque
 	var res apis.GetVMInstancePriceResponse
 
 	err = c.Client.InvokeAction("GetVMInstancePrice", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewGetVMScreenshotRequest will create request of GetVMScreenshot action.
-func (c *UCloudStackClient) NewGetVMScreenshotRequest() *apis.GetVMScreenshotRequest {
-	req := &apis.GetVMScreenshotRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// GetVMScreenshot 获取截屏
-func (c *UCloudStackClient) GetVMScreenshot(req *apis.GetVMScreenshotRequest) (*apis.GetVMScreenshotResponse, error) {
-	var err error
-	var res apis.GetVMScreenshotResponse
-
-	err = c.Client.InvokeAction("GetVMScreenshot", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -14860,166 +14772,12 @@ func (c *UCloudStackClient) NewUpdateVMAdvancedOptionsRequest() *apis.UpdateVMAd
 	return req
 }
 
-// UpdateVMAdvancedOptions 设置虚拟机高级参数(DNS)
+// UpdateVMAdvancedOptions 设置虚拟机高级参数
 func (c *UCloudStackClient) UpdateVMAdvancedOptions(req *apis.UpdateVMAdvancedOptionsRequest) (*apis.UpdateVMAdvancedOptionsResponse, error) {
 	var err error
 	var res apis.UpdateVMAdvancedOptionsResponse
 
 	err = c.Client.InvokeAction("UpdateVMAdvancedOptions", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMBootBootLoaderTypeRequest will create request of UpdateVMBootBootLoaderType action.
-func (c *UCloudStackClient) NewUpdateVMBootBootLoaderTypeRequest() *apis.UpdateVMBootBootLoaderTypeRequest {
-	req := &apis.UpdateVMBootBootLoaderTypeRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMBootBootLoaderType 设置虚拟机引导方式
-func (c *UCloudStackClient) UpdateVMBootBootLoaderType(req *apis.UpdateVMBootBootLoaderTypeRequest) (*apis.UpdateVMBootBootLoaderTypeResponse, error) {
-	var err error
-	var res apis.UpdateVMBootBootLoaderTypeResponse
-
-	err = c.Client.InvokeAction("UpdateVMBootBootLoaderType", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMBootDevicesRequest will create request of UpdateVMBootDevices action.
-func (c *UCloudStackClient) NewUpdateVMBootDevicesRequest() *apis.UpdateVMBootDevicesRequest {
-	req := &apis.UpdateVMBootDevicesRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMBootDevices 设置虚拟机引导顺序
-func (c *UCloudStackClient) UpdateVMBootDevices(req *apis.UpdateVMBootDevicesRequest) (*apis.UpdateVMBootDevicesResponse, error) {
-	var err error
-	var res apis.UpdateVMBootDevicesResponse
-
-	err = c.Client.InvokeAction("UpdateVMBootDevices", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMCPUHypervisorRequest will create request of UpdateVMCPUHypervisor action.
-func (c *UCloudStackClient) NewUpdateVMCPUHypervisorRequest() *apis.UpdateVMCPUHypervisorRequest {
-	req := &apis.UpdateVMCPUHypervisorRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMCPUHypervisor 设置虚拟机CPU虚拟化隐藏标记
-func (c *UCloudStackClient) UpdateVMCPUHypervisor(req *apis.UpdateVMCPUHypervisorRequest) (*apis.UpdateVMCPUHypervisorResponse, error) {
-	var err error
-	var res apis.UpdateVMCPUHypervisorResponse
-
-	err = c.Client.InvokeAction("UpdateVMCPUHypervisor", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMCPULimitPercentRequest will create request of UpdateVMCPULimitPercent action.
-func (c *UCloudStackClient) NewUpdateVMCPULimitPercentRequest() *apis.UpdateVMCPULimitPercentRequest {
-	req := &apis.UpdateVMCPULimitPercentRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMCPULimitPercent 修改虚拟机CPU资源限制
-func (c *UCloudStackClient) UpdateVMCPULimitPercent(req *apis.UpdateVMCPULimitPercentRequest) (*apis.UpdateVMCPULimitPercentResponse, error) {
-	var err error
-	var res apis.UpdateVMCPULimitPercentResponse
-
-	err = c.Client.InvokeAction("UpdateVMCPULimitPercent", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMCPUModelRequest will create request of UpdateVMCPUModel action.
-func (c *UCloudStackClient) NewUpdateVMCPUModelRequest() *apis.UpdateVMCPUModelRequest {
-	req := &apis.UpdateVMCPUModelRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMCPUModel 设置虚拟机cpu模型
-func (c *UCloudStackClient) UpdateVMCPUModel(req *apis.UpdateVMCPUModelRequest) (*apis.UpdateVMCPUModelResponse, error) {
-	var err error
-	var res apis.UpdateVMCPUModelResponse
-
-	err = c.Client.InvokeAction("UpdateVMCPUModel", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMCPUPriorityRequest will create request of UpdateVMCPUPriority action.
-func (c *UCloudStackClient) NewUpdateVMCPUPriorityRequest() *apis.UpdateVMCPUPriorityRequest {
-	req := &apis.UpdateVMCPUPriorityRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMCPUPriority 修改虚拟机CPU资源优先级
-func (c *UCloudStackClient) UpdateVMCPUPriority(req *apis.UpdateVMCPUPriorityRequest) (*apis.UpdateVMCPUPriorityResponse, error) {
-	var err error
-	var res apis.UpdateVMCPUPriorityResponse
-
-	err = c.Client.InvokeAction("UpdateVMCPUPriority", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMDNSRequest will create request of UpdateVMDNS action.
-func (c *UCloudStackClient) NewUpdateVMDNSRequest() *apis.UpdateVMDNSRequest {
-	req := &apis.UpdateVMDNSRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMDNS 设置虚拟机DNS
-func (c *UCloudStackClient) UpdateVMDNS(req *apis.UpdateVMDNSRequest) (*apis.UpdateVMDNSResponse, error) {
-	var err error
-	var res apis.UpdateVMDNSResponse
-
-	err = c.Client.InvokeAction("UpdateVMDNS", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -15048,94 +14806,6 @@ func (c *UCloudStackClient) UpdateVMDefaultGW(req *apis.UpdateVMDefaultGWRequest
 	return &res, nil
 }
 
-// NewUpdateVMDiskBusRequest will create request of UpdateVMDiskBus action.
-func (c *UCloudStackClient) NewUpdateVMDiskBusRequest() *apis.UpdateVMDiskBusRequest {
-	req := &apis.UpdateVMDiskBusRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMDiskBus 更新磁盘总线类型
-func (c *UCloudStackClient) UpdateVMDiskBus(req *apis.UpdateVMDiskBusRequest) (*apis.UpdateVMDiskBusResponse, error) {
-	var err error
-	var res apis.UpdateVMDiskBusResponse
-
-	err = c.Client.InvokeAction("UpdateVMDiskBus", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMDiskCacheModeRequest will create request of UpdateVMDiskCacheMode action.
-func (c *UCloudStackClient) NewUpdateVMDiskCacheModeRequest() *apis.UpdateVMDiskCacheModeRequest {
-	req := &apis.UpdateVMDiskCacheModeRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMDiskCacheMode 设置虚拟机磁盘缓存类型
-func (c *UCloudStackClient) UpdateVMDiskCacheMode(req *apis.UpdateVMDiskCacheModeRequest) (*apis.UpdateVMDiskCacheModeResponse, error) {
-	var err error
-	var res apis.UpdateVMDiskCacheModeResponse
-
-	err = c.Client.InvokeAction("UpdateVMDiskCacheMode", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMHighAvailabilityRequest will create request of UpdateVMHighAvailability action.
-func (c *UCloudStackClient) NewUpdateVMHighAvailabilityRequest() *apis.UpdateVMHighAvailabilityRequest {
-	req := &apis.UpdateVMHighAvailabilityRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMHighAvailability 设置虚拟机高可用
-func (c *UCloudStackClient) UpdateVMHighAvailability(req *apis.UpdateVMHighAvailabilityRequest) (*apis.UpdateVMHighAvailabilityResponse, error) {
-	var err error
-	var res apis.UpdateVMHighAvailabilityResponse
-
-	err = c.Client.InvokeAction("UpdateVMHighAvailability", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMISOSlotRequest will create request of UpdateVMISOSlot action.
-func (c *UCloudStackClient) NewUpdateVMISOSlotRequest() *apis.UpdateVMISOSlotRequest {
-	req := &apis.UpdateVMISOSlotRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMISOSlot 设置虚拟机iso插槽数量
-func (c *UCloudStackClient) UpdateVMISOSlot(req *apis.UpdateVMISOSlotRequest) (*apis.UpdateVMISOSlotResponse, error) {
-	var err error
-	var res apis.UpdateVMISOSlotResponse
-
-	err = c.Client.InvokeAction("UpdateVMISOSlot", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
 // NewUpdateVMMACRequest will create request of UpdateVMMAC action.
 func (c *UCloudStackClient) NewUpdateVMMACRequest() *apis.UpdateVMMACRequest {
 	req := &apis.UpdateVMMACRequest{}
@@ -15158,138 +14828,6 @@ func (c *UCloudStackClient) UpdateVMMAC(req *apis.UpdateVMMACRequest) (*apis.Upd
 	return &res, nil
 }
 
-// NewUpdateVMNICLinkStateRequest will create request of UpdateVMNICLinkState action.
-func (c *UCloudStackClient) NewUpdateVMNICLinkStateRequest() *apis.UpdateVMNICLinkStateRequest {
-	req := &apis.UpdateVMNICLinkStateRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMNICLinkState 更新虚拟机网卡启用状态
-func (c *UCloudStackClient) UpdateVMNICLinkState(req *apis.UpdateVMNICLinkStateRequest) (*apis.UpdateVMNICLinkStateResponse, error) {
-	var err error
-	var res apis.UpdateVMNICLinkStateResponse
-
-	err = c.Client.InvokeAction("UpdateVMNICLinkState", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMNICModelRequest will create request of UpdateVMNICModel action.
-func (c *UCloudStackClient) NewUpdateVMNICModelRequest() *apis.UpdateVMNICModelRequest {
-	req := &apis.UpdateVMNICModelRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMNICModel 更新虚拟机网卡型号
-func (c *UCloudStackClient) UpdateVMNICModel(req *apis.UpdateVMNICModelRequest) (*apis.UpdateVMNICModelResponse, error) {
-	var err error
-	var res apis.UpdateVMNICModelResponse
-
-	err = c.Client.InvokeAction("UpdateVMNICModel", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMNICQueuesRequest will create request of UpdateVMNICQueues action.
-func (c *UCloudStackClient) NewUpdateVMNICQueuesRequest() *apis.UpdateVMNICQueuesRequest {
-	req := &apis.UpdateVMNICQueuesRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMNICQueues 更新虚拟机网卡队列
-func (c *UCloudStackClient) UpdateVMNICQueues(req *apis.UpdateVMNICQueuesRequest) (*apis.UpdateVMNICQueuesResponse, error) {
-	var err error
-	var res apis.UpdateVMNICQueuesResponse
-
-	err = c.Client.InvokeAction("UpdateVMNICQueues", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMOSRequest will create request of UpdateVMOS action.
-func (c *UCloudStackClient) NewUpdateVMOSRequest() *apis.UpdateVMOSRequest {
-	req := &apis.UpdateVMOSRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMOS 更新虚拟机操作系统
-func (c *UCloudStackClient) UpdateVMOS(req *apis.UpdateVMOSRequest) (*apis.UpdateVMOSResponse, error) {
-	var err error
-	var res apis.UpdateVMOSResponse
-
-	err = c.Client.InvokeAction("UpdateVMOS", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMSupportHotPlugRequest will create request of UpdateVMSupportHotPlug action.
-func (c *UCloudStackClient) NewUpdateVMSupportHotPlugRequest() *apis.UpdateVMSupportHotPlugRequest {
-	req := &apis.UpdateVMSupportHotPlugRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMSupportHotPlug 更新虚拟机热插拔
-func (c *UCloudStackClient) UpdateVMSupportHotPlug(req *apis.UpdateVMSupportHotPlugRequest) (*apis.UpdateVMSupportHotPlugResponse, error) {
-	var err error
-	var res apis.UpdateVMSupportHotPlugResponse
-
-	err = c.Client.InvokeAction("UpdateVMSupportHotPlug", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewUpdateVMUserDataRequest will create request of UpdateVMUserData action.
-func (c *UCloudStackClient) NewUpdateVMUserDataRequest() *apis.UpdateVMUserDataRequest {
-	req := &apis.UpdateVMUserDataRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// UpdateVMUserData 设置虚拟机用户数据
-func (c *UCloudStackClient) UpdateVMUserData(req *apis.UpdateVMUserDataRequest) (*apis.UpdateVMUserDataResponse, error) {
-	var err error
-	var res apis.UpdateVMUserDataResponse
-
-	err = c.Client.InvokeAction("UpdateVMUserData", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
 // NewUpdateVMVCPUBindingRequest will create request of UpdateVMVCPUBinding action.
 func (c *UCloudStackClient) NewUpdateVMVCPUBindingRequest() *apis.UpdateVMVCPUBindingRequest {
 	req := &apis.UpdateVMVCPUBindingRequest{}
@@ -15306,6 +14844,50 @@ func (c *UCloudStackClient) UpdateVMVCPUBinding(req *apis.UpdateVMVCPUBindingReq
 	var res apis.UpdateVMVCPUBindingResponse
 
 	err = c.Client.InvokeAction("UpdateVMVCPUBinding", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewAddSubnetNetworkRequest will create request of AddSubnetNetwork action.
+func (c *UCloudStackClient) NewAddSubnetNetworkRequest() *apis.AddSubnetNetworkRequest {
+	req := &apis.AddSubnetNetworkRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// AddSubnetNetwork 添加子网IPv6网络
+func (c *UCloudStackClient) AddSubnetNetwork(req *apis.AddSubnetNetworkRequest) (*apis.AddSubnetNetworkResponse, error) {
+	var err error
+	var res apis.AddSubnetNetworkResponse
+
+	err = c.Client.InvokeAction("AddSubnetNetwork", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewAddVPCNetworkRequest will create request of AddVPCNetwork action.
+func (c *UCloudStackClient) NewAddVPCNetworkRequest() *apis.AddVPCNetworkRequest {
+	req := &apis.AddVPCNetworkRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// AddVPCNetwork 添加VPC IPv6网络
+func (c *UCloudStackClient) AddVPCNetwork(req *apis.AddVPCNetworkRequest) (*apis.AddVPCNetworkResponse, error) {
+	var err error
+	var res apis.AddVPCNetworkResponse
+
+	err = c.Client.InvokeAction("AddVPCNetwork", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -15592,6 +15174,50 @@ func (c *UCloudStackClient) ListAllocatedIPsInSubnet(req *apis.ListAllocatedIPsI
 	var res apis.ListAllocatedIPsInSubnetResponse
 
 	err = c.Client.InvokeAction("ListAllocatedIPsInSubnet", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewRemoveSubnetNetworkRequest will create request of RemoveSubnetNetwork action.
+func (c *UCloudStackClient) NewRemoveSubnetNetworkRequest() *apis.RemoveSubnetNetworkRequest {
+	req := &apis.RemoveSubnetNetworkRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// RemoveSubnetNetwork 移除子网IPv6网络
+func (c *UCloudStackClient) RemoveSubnetNetwork(req *apis.RemoveSubnetNetworkRequest) (*apis.RemoveSubnetNetworkResponse, error) {
+	var err error
+	var res apis.RemoveSubnetNetworkResponse
+
+	err = c.Client.InvokeAction("RemoveSubnetNetwork", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewRemoveVPCNetworkRequest will create request of RemoveVPCNetwork action.
+func (c *UCloudStackClient) NewRemoveVPCNetworkRequest() *apis.RemoveVPCNetworkRequest {
+	req := &apis.RemoveVPCNetworkRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// RemoveVPCNetwork 移除VPC IPv6网络
+func (c *UCloudStackClient) RemoveVPCNetwork(req *apis.RemoveVPCNetworkRequest) (*apis.RemoveVPCNetworkResponse, error) {
+	var err error
+	var res apis.RemoveVPCNetworkResponse
+
+	err = c.Client.InvokeAction("RemoveVPCNetwork", req, &res)
 	if err != nil {
 		return &res, err
 	}

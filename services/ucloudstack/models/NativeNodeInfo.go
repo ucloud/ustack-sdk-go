@@ -33,10 +33,6 @@ type NativeNodeInfo struct {
 	EIPID *string `json:"EIPID"`
 	// 弹性IP名称
 	EIPName *string `json:"EIPName"`
-	// GPU数量，挂载的物理GPU数量
-	GPU *int `json:"GPU"`
-	// GPU规格，挂载的物理GPU型号
-	GPUMdevName *string `json:"GPUMdevName"`
 	// 
 	InstanceStatus *string `json:"InstanceStatus"`
 	// 

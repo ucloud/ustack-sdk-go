@@ -6,7 +6,7 @@ import (
 	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
-// DeleteNICResponse - 删除弹性网卡
+// DeleteNICResponse - 删除网卡
 type DeleteNICResponse struct {
 	response.CommonBase
 

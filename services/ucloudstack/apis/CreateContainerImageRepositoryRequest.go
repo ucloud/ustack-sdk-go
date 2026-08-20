@@ -14,7 +14,7 @@ type CreateContainerImageRepositoryRequest struct {
 	CompanyID *int `json:"CompanyID" required:"true"`
 	// 镜像仓库名称，作为仓库唯一标识且同地域内不可重名，不能使用系统保留名称，仅支持字母、数字和中划线，长度3-63
 	Name *string `json:"Name" required:"true"`
-	// 项目组ID，资源所属项目组，未传时尝试分配默认项目
+	// 项目组ID，资源所属项目组
 	ProjectID *string `json:"ProjectID"`
 	// 是否为公有仓库，true 时系统会在资源上打上公有标记并在 Registry 中创建允许所有租户拉取的命名空间，false 时仅仓库所属租户可访问
 	Public *bool `json:"Public"`

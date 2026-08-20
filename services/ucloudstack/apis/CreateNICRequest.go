@@ -6,7 +6,7 @@ import (
 	"github.com/ucloud/ustack-sdk-go/common/request"
 )
 
-// CreateNICRequest 创建弹性网卡
+// CreateNICRequest 创建网卡
 type CreateNICRequest struct {
 	request.CommonBase
 
@@ -34,7 +34,7 @@ type CreateNICRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 出向平均带宽，仅Flat类型网卡可指定，用于QoS流量整形；0表示不限制，单位Mbps，取值范围由网卡规格配置确定，
 	OutAverageBandwidth *int `json:"OutAverageBandwidth"`
-	// 项目ID，资源所属项目分组标识，未传时尝试分配默认项目
+	// 项目ID，资源所属项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 计费数量，按月/年计费时表示购买Quantity个月/年；仅WAN类型网卡计费生效
 	Quantity *int `json:"Quantity" required:"true"`

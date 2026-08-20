@@ -22,8 +22,6 @@ type DescribeVIPRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// 状态列表，按状态过滤VIP
-	Status []string `json:"Status"`
 	// VIPID列表，VIP的唯一标识符
 	VIPIDs []string `json:"VIPIDs"`
 	// VIP类型，LAN为内网VIP，WAN为外网VIP

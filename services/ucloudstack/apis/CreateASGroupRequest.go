@@ -32,7 +32,7 @@ type CreateASGroupRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 监听端口，当AsType为VS时必填，用于指定伸缩成员加入负载均衡后端服务节点时使用的端口号
 	Port *int `json:"Port"`
-	// 项目ID，用于实现资源的逻辑分组管理，伸缩组将归属于指定项目，未传时尝试分配默认项目
+	// 项目ID，用于实现资源的逻辑分组管理，伸缩组将归属于指定项目
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，指定伸缩组所属的物理区域，伸缩组创建后无法修改地域
 	Region *string `json:"Region" required:"true"`

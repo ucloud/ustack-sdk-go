@@ -12,8 +12,6 @@ type BindSecurityGroupRequest struct {
 
 	// 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制
 	CompanyID *int `json:"CompanyID" required:"true"`
-	// 网卡ID，绑定安全组时指定的网络接口唯一标识符，Flat时传入,其他场景传空字符串
-	NICID *string `json:"NICID"`
 	// 网卡类型，取值LAN/WAN；对于MySQL/Redis/OSS/FS仅支持WAN
 	NICType *string `json:"NICType" required:"true"`
 	// 地域ID，用于标识资源和安全组所属的地理区域

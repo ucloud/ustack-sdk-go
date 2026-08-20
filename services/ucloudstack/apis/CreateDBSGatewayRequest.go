@@ -16,7 +16,7 @@ type CreateDBSGatewayRequest struct {
 	EIPID *string `json:"EIPID"`
 	// 名称，DBS网关名称，长度1-128字符，支持中英文、数字、点、下划线和中划线
 	Name *string `json:"Name" required:"true"`
-	// 项目组ID，项目组的ID，未传时尝试分配默认项目
+	// 项目组ID，项目组的ID
 	ProjectID *string `json:"ProjectID"`
 	// 地域，备份源的地域
 	Region *string `json:"Region" required:"true"`

@@ -24,7 +24,7 @@ type AllocateEIPRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 运营商网段名称，指定EIP所属的运营商网络段
 	OperatorName *string `json:"OperatorName" required:"true"`
-	// 项目ID，资源所属项目分组标识，未传时尝试分配默认项目
+	// 项目ID，资源所属项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 计费数量，指定计费周期的数量，按月/年计费时表示购买Quantity个月/年
 	Quantity *int `json:"Quantity" required:"true"`

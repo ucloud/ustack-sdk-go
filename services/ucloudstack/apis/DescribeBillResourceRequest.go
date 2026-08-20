@@ -30,8 +30,8 @@ type DescribeBillResourceRequest struct {
 	OrderTypes []string `json:"OrderTypes"`
 	// 产品类型列表，过滤指定产品类型的资源账单，不填写默认查询所有产品，产品类型从ListProductResources获取
 	ProductTypes []string `json:"ProductTypes"`
-	// 项目组ID列表，过滤指定项目组的资源账单，不填写默认查询所有项目组；传空字符串时表示筛选未归属项目组数据
-	ProjectIDs []string `json:"ProjectIDs"`
+	// 项目组ID列表，过滤指定项目组的资源账单，不填写默认查询所有项目组
+	ProjectIDs []string `json:"ProjectIDs" required:"true"`
 	// 地域列表，过滤指定地域的资源账单，不填写默认查询所有地域，支持多地域过滤
 	Regions []string `json:"Regions"`
 	// 排序方式，保留字段，接口固定按金额降序返回资源账单，设置该字段不会改变排序结果

@@ -10,8 +10,6 @@ import (
 type AttachExternalDiskRequest struct {
 	request.CommonBase
 
-	// 缓存类型，取值 directsync、none、writeback
-	CacheMode *string `json:"CacheMode"`
 	// 租户ID，资源所属租户的权限上下文
 	CompanyID *int `json:"CompanyID"`
 	// 磁盘ID，待绑定的外置存储盘资源ID

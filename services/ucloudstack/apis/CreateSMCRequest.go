@@ -39,7 +39,7 @@ type CreateSMCRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 源端操作系统类型，表示源服务器的操作系统，如Linux或Windows
 	OS *string `json:"OS"`
-	// 项目ID，用于实现资源的逻辑分组管理，同一项目下的资源可统一计费和权限管理，未传时尝试分配默认项目
+	// 项目ID，用于实现资源的逻辑分组管理，同一项目下的资源可统一计费和权限管理
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，指定SMC任务所属的物理区域，决定了迁移资源在哪个云数据中心部署
 	Region *string `json:"Region" required:"true"`

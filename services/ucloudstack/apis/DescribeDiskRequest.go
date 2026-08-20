@@ -34,6 +34,4 @@ type DescribeDiskRequest struct {
 	SetIDs []string `json:"SetIDs"`
 	// 筛选共享盘，取值true（仅返回共享盘）或false（仅返回普通盘），空值表示返回所有类型
 	ShareAbleFilter *string `json:"ShareAbleFilter"`
-	// 状态列表，用于筛选指定状态的磁盘资源
-	Status []string `json:"Status"`
 }

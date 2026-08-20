@@ -26,6 +26,4 @@ type DescribeSnapshotRequest struct {
 	Region *string `json:"Region" required:"true"`
 	// 快照ID列表，用于查询指定快照信息
 	SnapshotIDs []string `json:"SnapshotIDs"`
-	// 状态列表，用于筛选指定状态的快照资源
-	Status []string `json:"Status"`
 }

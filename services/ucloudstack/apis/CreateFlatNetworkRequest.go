@@ -14,14 +14,10 @@ type CreateFlatNetworkRequest struct {
 	CIDR *string `json:"CIDR"`
 	// DHCP服务器IP地址，指定DHCP服务监听的IP地址，启用DHCP时建议传入，不启用时为空
 	DHCPServerIP *string `json:"DHCPServerIP"`
-	// DNS配置，指定DNS服务器地址，多个服务器用逗号分隔，格式为IP地址列表
-	DNS *string `json:"DNS"`
 	// 物理网卡设备名称，指定扁平网络绑定的物理网络接口
 	Device *string `json:"Device" required:"true"`
 	// 是否开启DHCP服务，启用后将为接入网络的主机自动分配IP地址
 	EnableDHCP *bool `json:"EnableDHCP"`
-	// 网关IP地址，指定网络的默认网关IP，必须在网段CIDR范围内
-	GatewayIP *string `json:"GatewayIP"`
 	// 可用IP范围，指定从网段中可分配的IP地址范围，支持多个范围用逗号分隔，格式为192.168.1.10-192.168.1.20
 	IPRange *string `json:"IPRange"`
 	// 扁平网络名称，用于标识扁平网络资源，长度为1-128个字符，名称只能包含中英文、数字、点、下划线和中划线

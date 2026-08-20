@@ -18,18 +18,6 @@ type UpdateDiskQoSRequest struct {
 	DiskID *string `json:"DiskID" required:"true"`
 	// 硬盘IOPS限制，取值范围0-50000，0表示不限制
 	DiskIOPS *int `json:"DiskIOPS"`
-	// 硬盘QoS限速读带宽，单位MB/s，0表示不限制
-	DiskReadBandwidth *int `json:"DiskReadBandwidth"`
-	// 硬盘QoS限速读IOPS，0表示不限制
-	DiskReadIOPS *int `json:"DiskReadIOPS"`
-	// 硬盘QoS限速总带宽，单位MB/s，0表示不限制
-	DiskTotalBandwidth *int `json:"DiskTotalBandwidth"`
-	// 硬盘QoS限速总IOPS，0表示不限制
-	DiskTotalIOPS *int `json:"DiskTotalIOPS"`
-	// 硬盘QoS限速写带宽，单位MB/s，0表示不限制
-	DiskWriteBandwidth *int `json:"DiskWriteBandwidth"`
-	// 硬盘QoS限速写IOPS，0表示不限制
-	DiskWriteIOPS *int `json:"DiskWriteIOPS"`
 	// 地域ID，指定资源所属的地域
 	Region *string `json:"Region" required:"true"`
 }

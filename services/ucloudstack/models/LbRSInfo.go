@@ -9,6 +9,8 @@ type LbRSInfo struct {
 	BindResourceID *string `json:"BindResourceID"`
 	// 绑定资源名称，用于展示服务节点关联资源名称（如VM名称）
 	BindResourceName *string `json:"BindResourceName"`
+	// 绑定资源类型，取值范围：VM、OSS
+	BindResourceType *string `json:"BindResourceType"`
 	// 创建时间，秒级Unix时间戳
 	CreateTime *int `json:"CreateTime"`
 	// 健康检查地址，用于健康检查的IP和端口地址

@@ -12,6 +12,8 @@ type GetSubnetAvailableIPQuotaRequest struct {
 
 	// 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围
 	CompanyID *int `json:"CompanyID" required:"true"`
+	// 是否返回扩展网段的相关数量，默认false仅返回主网段
+	IncludeExpand *bool `json:"IncludeExpand"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
 	// 子网ID，用于查询可用IP数量的子网标识

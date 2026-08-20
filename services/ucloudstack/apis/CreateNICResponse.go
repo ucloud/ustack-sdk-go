@@ -6,7 +6,7 @@ import (
 	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
-// CreateNICResponse - 创建弹性网卡
+// CreateNICResponse - 创建网卡
 type CreateNICResponse struct {
 	response.CommonBase
 

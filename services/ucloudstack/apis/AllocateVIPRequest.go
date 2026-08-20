@@ -26,7 +26,7 @@ type AllocateVIPRequest struct {
 	IPVersion *string `json:"IPVersion"`
 	// VIP名称，用于标识VIP，长度1-128个字符，仅支持中英文、数字、点、下划线和中划线
 	Name *string `json:"Name" required:"true"`
-	// 项目ID，资源所属项目分组标识，未传时尝试分配默认项目
+	// 项目ID，资源所属项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 计费数量，WAN类型VIP时使用；按月/年计费表示购买Quantity个月/年
 	Quantity *int `json:"Quantity" required:"true"`

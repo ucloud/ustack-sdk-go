@@ -24,6 +24,4 @@ type DescribeDTSTaskRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// 状态列表，按状态过滤DTS任务
-	Status []string `json:"Status"`
 }

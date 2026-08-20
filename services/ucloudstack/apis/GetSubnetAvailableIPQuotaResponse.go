@@ -12,6 +12,10 @@ type GetSubnetAvailableIPQuotaResponse struct {
 
 	// 主网段可用IP数量
 	AvailableCount *int `json:"AvailableCount"`
+	// 扩展网段可用IP数量
+	ExpandAvailableCount *int `json:"ExpandAvailableCount"`
+	// 扩展网段已用IP数量
+	ExpandUsedCount *int `json:"ExpandUsedCount"`
 	// 主网段已用IP数量
 	UsedCount *int `json:"UsedCount"`
 }

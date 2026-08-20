@@ -24,8 +24,6 @@ type DescribeVPCRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// VPC状态列表，用于按多个状态过滤VPC，支持前端按Status.0、Status.1等形式传参
-	Status []string `json:"Status"`
 	// VPCID列表，用于查询指定的虚拟私有网络
 	VPCIDs []string `json:"VPCIDs"`
 }

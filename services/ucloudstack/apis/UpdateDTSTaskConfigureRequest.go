@@ -4,15 +4,12 @@ package apis
 
 import (
 	"github.com/ucloud/ustack-sdk-go/common/request"
-	"github.com/ucloud/ustack-sdk-go/services/ucloudstack/models"
 )
 
 // UpdateDTSTaskConfigureRequest 更新数据传输任务配置
 type UpdateDTSTaskConfigureRequest struct {
 	request.CommonBase
 
-	// 单批写入大小，用于控制 sinker 每次批量写入的记录数；为0时使用系统默认值1000
-	BatchSize *int `json:"BatchSize"`
 	// DTS任务ID，待更新配置的DTS任务唯一标识
 	DTSID *string `json:"DTSID" required:"true"`
 	// 数据标记表，用于双向同步场景记录已同步数据，格式为database.table_name，若不指定则同步服务自动创建，需确保数据库账户有创建表权限
@@ -43,8 +40,6 @@ type UpdateDTSTaskConfigureRequest struct {
 	IgnoreDatabases *string `json:"IgnoreDatabases"`
 	// 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，与Tables互斥使用
 	IgnoreTables *string `json:"IgnoreTables"`
-	// 增量同步阶段的 DTS 自恢复策略；不传表示保留当前配置，显式 Enabled=false 表示关闭 DTS 自恢复
-	IncrementalRestart *models.DTSServiceRestartPolicy `json:"IncrementalRestart"`
 	// 最大每秒同步记录数，用于限制数据同步速率，取值最小范围为100，最大范围根据DTS实例CPU核数确定，1核上限为20000，2核上限为40000
 	MaxRPS *int `json:"MaxRPS" required:"true"`
 	// 地域ID，用于标识资源所属的地理区域

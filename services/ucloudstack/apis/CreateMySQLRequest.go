@@ -32,7 +32,7 @@ type CreateMySQLRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// root用户密码，长度6-64个字符，支持字母、数字及部分特殊字符，必须包含至少2种字符类型
 	Password *string `json:"Password" required:"true"`
-	// 项目ID，用于实现资源的逻辑分组管理，未传时尝试分配默认项目
+	// 项目ID，用于实现资源的逻辑分组管理
 	ProjectID *string `json:"ProjectID"`
 	// 计费数量，指定计费周期的数量，按月/年计费时表示购买的月数/年数，按小时计费时强制为1
 	Quantity *int `json:"Quantity" required:"true"`

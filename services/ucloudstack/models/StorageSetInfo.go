@@ -29,6 +29,8 @@ type StorageSetInfo struct {
 	SetArch *string `json:"SetArch"`
 	// 卷备份角色，当前存储集群在卷备份中的角色，值为master、slave或空字符串
 	SetBlockBackupRole *string `json:"SetBlockBackupRole"`
+	// set数量，UDisk存储集群的set个数，用于前端计算分配率，仅UDisk类型返回
+	SetCount *int `json:"SetCount"`
 	// 集群ID，存储集群的唯一标识，由底层Huanghe系统生成和管理
 	SetID *string `json:"SetID"`
 	// 集群制备器，存储集群的底层存储提供商类型

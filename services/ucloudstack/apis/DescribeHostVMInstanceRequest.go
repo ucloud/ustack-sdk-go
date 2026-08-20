@@ -24,6 +24,4 @@ type DescribeHostVMInstanceRequest struct {
 	Region *string `json:"Region" required:"true"`
 	// 计算集群ID，用于筛选指定集群上的虚拟机
 	SetID *string `json:"SetID"`
-	// 虚拟机ID列表，用于精确筛选指定计算实例
-	VMIDs []string `json:"VMIDs"`
 }

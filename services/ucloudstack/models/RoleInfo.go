@@ -15,6 +15,8 @@ type RoleInfo struct {
 	Remark *string `json:"Remark"`
 	// 角色ID，系统生成的权限定义唯一标识符
 	RoleID *string `json:"RoleID"`
+	// 角色授权层级，取值：System、Region或Company
+	Stratum *string `json:"Stratum"`
 	// 角色类型，标识角色来源，取值：System或Custom
 	Type *string `json:"Type"`
 	// 更新时间，角色信息最后修改的Unix时间戳

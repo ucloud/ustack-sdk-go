@@ -12,7 +12,7 @@ type AbortMigratePaaSInstanceRequest struct {
 
 	// 租户ID，保留字段
 	CompanyID *int `json:"CompanyID" required:"true"`
-	// 实例ID，只有迁移已报错( MigrationError=true )时才允许取消；其他状态会返回状态错误
+	// 实例ID，只有当迁移进度仍为0或迁移已报错( MigrationError=true )时才允许取消；其他状态会返回参数错误
 	InstanceID *string `json:"InstanceID" required:"true"`
 	// 地域ID，指定资源所属地域
 	Region *string `json:"Region" required:"true"`

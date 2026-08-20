@@ -10,8 +10,6 @@ import (
 type MigrateVMInstanceRequest struct {
 	request.CommonBase
 
-	// 是否自动收敛
-	AutoConverge *bool `json:"AutoConverge"`
 	// 计算实例ID，用于标识待迁移的虚拟机
 	CIID *string `json:"CIID" required:"true"`
 	// 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围

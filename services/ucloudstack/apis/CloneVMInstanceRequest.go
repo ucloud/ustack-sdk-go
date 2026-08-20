@@ -29,8 +29,12 @@ type CloneVMInstanceRequest struct {
 	FlatNetworkID *string `json:"FlatNetworkID"`
 	// IP版本，新虚拟机使用的IP协议版本，取值：IPv4、IPv6
 	IPVersion *string `json:"IPVersion"`
+	// 扩展IP，指定内网扩展IP地址
+	InternalExpandIP *string `json:"InternalExpandIP"`
 	// 内网IP，指定新虚拟机的内网IP地址，留空则自动分配
 	InternalIP *string `json:"InternalIP"`
+	// 内网协议，指定内网IP协议版本，取值：IPv4、IPv6、ALL、空值
+	InternalIPVersion *string `json:"InternalIPVersion"`
 	// 外网IP，指定新虚拟机的外网IP地址，留空则自动分配
 	InternetIP *string `json:"InternetIP"`
 	// 入向带宽限制，第一张网卡的入向平均带宽限制，单位：Mbps，0表示不限制
@@ -47,7 +51,7 @@ type CloneVMInstanceRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 外网线路ID，指定外网宽带运营商线路
 	OperatorName *string `json:"OperatorName"`
-	// 项目ID，资源所属的项目分组标识，未传时尝试分配默认项目
+	// 项目ID，资源所属的项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 计费周期，购买的时长，按月/年计费时表示月数/年数
 	Quantity *int `json:"Quantity" required:"true"`

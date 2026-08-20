@@ -44,7 +44,7 @@ type CreateVPNTunnelRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 预共享密钥，用于IPSec隧道协商，长度1-128字符，不能包含空格或?
 	PreSharedKey *string `json:"PreSharedKey" required:"true"`
-	// 项目ID，用于标识资源所属项目分组，未传时尝试分配默认项目
+	// 项目ID，用于标识资源所属项目分组
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`

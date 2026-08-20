@@ -12,8 +12,6 @@ type DescribeSecurityGroupRuleRequest struct {
 
 	// 租户ID，指定查询范围内的租户组织，若不指定则返回当前租户的规则
 	CompanyID *int `json:"CompanyID"`
-	// 流量方向筛选，取值1为入站、0为出站；为空时返回全部方向规则
-	IsIn *string `json:"IsIn"`
 	// 分页大小，指定每页返回的记录数
 	Limit *int `json:"Limit"`
 	// 分页偏移量，指定跳过的记录数

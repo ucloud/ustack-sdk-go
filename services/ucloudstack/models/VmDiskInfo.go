@@ -5,10 +5,6 @@ package models
 
 // VmDiskInfo 
 type VmDiskInfo struct {
-	// 总线类型
-	Bus *string `json:"Bus"`
-	// 缓存类型，取值 directsync、none、writeback
-	CacheMode *string `json:"CacheMode"`
 	// 磁盘ID，虚拟机绑定的磁盘唯一标识
 	DiskID *string `json:"DiskID"`
 	// 设备名，磁盘在操作系统内的设备路径
@@ -21,12 +17,6 @@ type VmDiskInfo struct {
 	IsSharedblock *bool `json:"IsSharedblock"`
 	// 磁盘名称，磁盘的可视化显示名称
 	Name *string `json:"Name"`
-	// QoS限速读带宽，单位MB/s
-	ReadBandwidth *int `json:"ReadBandwidth"`
-	// QoS限速读IOPS
-	ReadIOPS *int `json:"ReadIOPS"`
-	// 存储集群ID，磁盘所属存储集群的唯一标识
-	SetID *string `json:"SetID"`
 	// 共享标识，标识磁盘是否支持多点挂载
 	ShareAble *bool `json:"ShareAble"`
 	// 磁盘容量，单位：GiB
@@ -39,14 +29,6 @@ type VmDiskInfo struct {
 	StorageSetProvider *string `json:"StorageSetProvider"`
 	// 存储集群类型，磁盘所属的存储集群标识
 	StorageSetType *string `json:"StorageSetType"`
-	// QoS限速总带宽，单位MB/s
-	TotalBandwidth *int `json:"TotalBandwidth"`
-	// QoS限速总IOPS
-	TotalIOPS *int `json:"TotalIOPS"`
 	// 磁盘类型，标识引导盘或数据盘，取值：boot（启动盘）、data（数据盘）
 	Type *string `json:"Type"`
-	// QoS限速写带宽，单位MB/s
-	WriteBandwidth *int `json:"WriteBandwidth"`
-	// QoS限速写IOPS
-	WriteIOPS *int `json:"WriteIOPS"`
 }
