@@ -14,7 +14,7 @@ type AllocateExternalStorageSetDiskRequest struct {
 	CompanyID *int `json:"CompanyID"`
 	// 硬盘ID，待分配的外置存储盘资源ID
 	DiskID *string `json:"DiskID" required:"true"`
-	// 项目ID，资源分配到目标租户后的项目归属，未传时尝试分配默认项目
+	// 项目ID，资源分配到目标租户后的项目归属
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，指定资源所属的物理区域
 	Region *string `json:"Region" required:"true"`

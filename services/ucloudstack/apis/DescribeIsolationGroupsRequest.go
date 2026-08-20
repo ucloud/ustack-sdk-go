@@ -34,6 +34,4 @@ type DescribeIsolationGroupsRequest struct {
 	SetID *string `json:"SetID"`
 	// 计算集群类型，用于按类型筛选隔离组
 	SetType *string `json:"SetType"`
-	// 状态列表，过滤隔离组状态
-	Status []string `json:"Status"`
 }

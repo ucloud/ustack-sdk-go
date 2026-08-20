@@ -10,8 +10,6 @@ import (
 type DescribeSecurityGroupResourceRequest struct {
 	request.CommonBase
 
-	// 返回粒度，Resource 表示按资源聚合（默认，兼容旧行为），NIC 表示按网卡粒度返回；仅对存在网卡概念的资源生效
-	GroupBy *string `json:"GroupBy"`
 	// 分页大小，指定每页返回的记录数
 	Limit *int `json:"Limit"`
 	// 分页偏移量，指定跳过的记录数

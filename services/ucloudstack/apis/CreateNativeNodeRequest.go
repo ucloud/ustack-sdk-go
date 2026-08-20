@@ -28,10 +28,6 @@ type CreateNativeNodeRequest struct {
 	DataDiskSpace *int `json:"DataDiskSpace"`
 	// 原生节点外网IP
 	EIPID *string `json:"EIPID"`
-	// GPU数量
-	GPU *int `json:"GPU"`
-	// GPU型号
-	GPUMdevName *string `json:"GPUMdevName"`
 	// 镜像ID
 	ImageID *string `json:"ImageID" required:"true"`
 	// 原生节点pod数量

@@ -14,6 +14,8 @@ type ListAdminRequest struct {
 	Keyword *string `json:"Keyword"`
 	// 分页大小，控制单次返回数量
 	Limit *int `json:"Limit"`
+	// 管理员ID列表，用于精确筛选指定管理员，非必填
+	MemberIDs []int `json:"MemberIDs"`
 	// 分页偏移量，用于分页起点，默认为0
 	Offset *int `json:"Offset"`
 }

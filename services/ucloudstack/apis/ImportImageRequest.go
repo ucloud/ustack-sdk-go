@@ -16,7 +16,7 @@ type ImportImageRequest struct {
 	CompanyID *int `json:"CompanyID" required:"true"`
 	// 镜像描述，用于补充说明，需符合uremark规则（0-100字符，禁止包含<script>/javascript）
 	ImageDescription *string `json:"ImageDescription"`
-	// 镜像格式，指定导入的虚拟化文件格式，取值qcow2、iso、vmdk、raw
+	// 镜像格式，指定导入的虚拟化文件格式，取值qcow2、iso
 	ImageFormat *string `json:"ImageFormat" required:"true"`
 	// 镜像名称，用于标识导入的镜像资源
 	ImageName *string `json:"ImageName" required:"true"`
@@ -31,7 +31,7 @@ type ImportImageRequest struct {
 	// 操作系统类型，如Linux、Windows
 	OSType *string `json:"OSType" required:"true"`
 	// 操作系统版本，指定镜像内部安装的具体发行版本号
-	OSVersion *string `json:"OSVersion"`
+	OSVersion *string `json:"OSVersion" required:"true"`
 	// 项目ID，资源所属的项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，用于标识资源所属的地理区域
@@ -39,7 +39,7 @@ type ImportImageRequest struct {
 	// 镜像密钥，用于镜像在存储层的解密与使用
 	Secret *string `json:"Secret"`
 	// 架构类型，基于计算集群支持的指令集，如x86_64、aarch64
-	SetArch *string `json:"SetArch"`
+	SetArch *string `json:"SetArch" required:"true"`
 	// Cloud-Init支持，标识镜像是否支持自动化初始化配置
 	SupportCloudInit *bool `json:"SupportCloudInit"`
 	// QEMU Guest Agent支持，标识镜像内是否预装QGA组件

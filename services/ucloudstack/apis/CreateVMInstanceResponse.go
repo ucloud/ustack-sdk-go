@@ -10,14 +10,14 @@ import (
 type CreateVMInstanceResponse struct {
 	response.CommonBase
 
-	// 数据盘ID，盘的唯一标识
+	// 磁盘ID，系统盘的唯一标识
 	DiskID *string `json:"DiskID"`
-	// 数据盘ID列表，挂载的数据盘唯一标识列表
-	DiskIDs []string `json:"DiskIDs"`
 	// 外网资源ID，绑定的弹性IP标识
 	EIPID *string `json:"EIPID"`
 	// 外网资源ID列表，创建阶段生成的WAN IP标识列表；首个元素与EIPID一致，后续元素为附加WAN IP的标识
 	EIPIDs []string `json:"EIPIDs"`
+	// 扁平网络ID，绑定的扁平网络IP标识
+	FlatIPID *string `json:"FlatIPID"`
 	// 虚拟机ID，创建成功的云主机实例标识
 	VMID *string `json:"VMID"`
 }

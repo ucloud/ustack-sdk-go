@@ -9,8 +9,8 @@ type NUMANode struct {
 	CPUs []NUMANodeCPU `json:"CPUs"`
 	// NUMA节点ID，物理NUMA拓扑节点标识
 	NUMAID *int `json:"NUMAID"`
-	// 物理NUMA内存
+	// 物理NUMA内存，单位：MiB
 	TotalMemory *int `json:"TotalMemory"`
-	// 物理NUMA已被虚拟机使用的内存
+	// 物理NUMA已被虚拟机使用的内存，单位：MiB
 	UsedMemory *int `json:"UsedMemory"`
 }

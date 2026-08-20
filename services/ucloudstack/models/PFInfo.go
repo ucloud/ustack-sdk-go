@@ -5,6 +5,8 @@ package models
 
 // PFInfo 
 type PFInfo struct {
+	// 当前是否可以启用SR-IOV，任一节点或网卡前置条件不满足时为false
+	CanEnableSRIOV *bool `json:"CanEnableSRIOV"`
 	// 网卡型号标准编号，网卡型号标识
 	Code *string `json:"Code"`
 	// 网卡名，操作系统设备名
@@ -17,6 +19,10 @@ type PFInfo struct {
 	PCI *string `json:"PCI"`
 	// 网卡型号，网卡型号名称
 	Product *string `json:"Product"`
+	// 不能启用SR-IOV时的原因码
+	SRIOVEnableReason *string `json:"SRIOVEnableReason"`
+	// SR-IOV状态，取值Enabling、Disabling、Enabled或Disabled
+	SRIOVState *string `json:"SRIOVState"`
 	// 已使用的VF网卡列表
 	UsedVFs []VFInfo `json:"UsedVFs"`
 	// 逻辑限制的VF数量，VFLogicCount<=VFPhyCount，VFLogicCount为0时以VFPhyCount为准

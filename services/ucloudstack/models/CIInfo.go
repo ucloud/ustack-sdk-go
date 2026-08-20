@@ -67,4 +67,6 @@ type CIInfo struct {
 	VGPUID *string `json:"VGPUID"`
 	// 虚拟机ID，虚拟机唯一标识
 	VMID *string `json:"VMID"`
+	// 计算集群别名，虚拟机所在计算集群的人性化显示名称
+	VMTypeAlias *string `json:"VMTypeAlias"`
 }

@@ -19,8 +19,6 @@ type DiskInfo struct {
 	AttachShareBlockInfos []AttachShareBlock `json:"AttachShareBlockInfos"`
 	// 带宽，单位MB/s
 	Bandwidth *int `json:"Bandwidth"`
-	// 缓存类型，取值 directsync、none、writeback
-	CacheMode *string `json:"CacheMode"`
 	// 计费类型，计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费）；兼容历史值：hour、month、year，别名映射：Dynamic→HOUR、Month→MONTH、Year→YEAR
 	ChargeType *string `json:"ChargeType"`
 	// 租户ID，资源所属的租户标识

@@ -12,7 +12,7 @@ type CreateSecurityGroupRuleRequest struct {
 
 	// 租户ID，标识安全组所属的租户组织，用于多租户资源隔离与权限控制
 	CompanyID *int `json:"CompanyID" required:"true"`
-	// 项目ID，规则所属项目分组标识，未传时尝试分配默认项目
+	// 项目ID，规则所属项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，用于标识安全组所属的地理区域
 	Region *string `json:"Region" required:"true"`

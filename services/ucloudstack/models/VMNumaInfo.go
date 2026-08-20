@@ -9,7 +9,7 @@ type VMNumaInfo struct {
 	GPUInfos []NumaGPUInfo `json:"GPUInfos"`
 	// 物理NUMAID，宿主机的NUMA节点索引
 	HostNumaID *int `json:"HostNumaID"`
-	// 内存容量，分配给该NUMA节点的内存大小，单位：KiB
+	// 内存容量，分配给该NUMA节点的内存大小，单位：MiB
 	Memory *int `json:"Memory"`
 	// 虚拟NUMAID，虚拟机内部的NUMA节点索引
 	NumaID *int `json:"NumaID"`

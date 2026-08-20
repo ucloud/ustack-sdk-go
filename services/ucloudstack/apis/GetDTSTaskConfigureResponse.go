@@ -4,15 +4,12 @@ package apis
 
 import (
 	"github.com/ucloud/ustack-sdk-go/common/response"
-	"github.com/ucloud/ustack-sdk-go/services/ucloudstack/models"
 )
 
 // GetDTSTaskConfigureResponse - 获取传输任务配置
 type GetDTSTaskConfigureResponse struct {
 	response.CommonBase
 
-	// 单批写入大小，用于控制 sinker 每次批量写入的记录数；为0时使用系统默认值1000
-	BatchSize *int `json:"BatchSize"`
 	// DTS任务ID，数据传输任务唯一标识
 	DTSID *string `json:"DTSID"`
 	// 数据标记表，用于双向同步场景记录已同步数据，格式为database.table_name，未指定则自动创建
@@ -45,8 +42,6 @@ type GetDTSTaskConfigureResponse struct {
 	IgnoreDatabases *string `json:"IgnoreDatabases"`
 	// 忽略数据表列表，用于排除不需要同步的数据表
 	IgnoreTables *string `json:"IgnoreTables"`
-	// 增量同步阶段的 DTS 自恢复策略；为空表示沿用 DTS 默认自恢复策略
-	IncrementalRestart *models.DTSServiceRestartPolicy `json:"IncrementalRestart"`
 	// binlog GTID集合，用于增量或全量加增量同步
 	SourceEndpointBinlogGTID *string `json:"SourceEndpointBinlogGTID"`
 	// binlog文件名，用于增量或全量加增量同步

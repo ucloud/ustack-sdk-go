@@ -16,8 +16,6 @@ type ResizeVMConfigRequest struct {
 	ApplicationReason *string `json:"ApplicationReason"`
 	// 核心数，调整后的vCPU核心数量
 	CPU *int `json:"CPU" required:"true"`
-	// CPU每个插槽内核数，可选字段，默认等于CPU
-	CPUCoresPerSocket *int `json:"CPUCoresPerSocket"`
 	// 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围
 	CompanyID *int `json:"CompanyID"`
 	// GPU数量，调整后的物理GPU数量，仅在GPUType为GPU时有效且必填

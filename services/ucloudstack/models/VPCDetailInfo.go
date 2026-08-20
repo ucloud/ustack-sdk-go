@@ -13,6 +13,10 @@ type VPCDetailInfo struct {
 	CreateTime *int `json:"CreateTime"`
 	// 租户邮箱，资源所属租户的联系邮箱
 	Email *string `json:"Email"`
+	// 扩展网段，VPC关联的IPv6地址范围
+	ExpandNetwork *string `json:"ExpandNetwork"`
+	// 扩展子网数量，展示扩展网段下已划分的子网总数
+	ExpandSubnetCount *int `json:"ExpandSubnetCount"`
 	// VPC名称
 	Name *string `json:"Name"`
 	// 网段，VPC主网段的CIDR地址范围

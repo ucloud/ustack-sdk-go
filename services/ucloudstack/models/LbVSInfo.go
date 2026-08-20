@@ -15,9 +15,9 @@ type LbVSInfo struct {
 	Domain *string `json:"Domain"`
 	// 健康检查类型，健康检查的类型，取值范围：Port、Path
 	HealthcheckType *string `json:"HealthcheckType"`
-	// 请求体大小限制，单位MB，最大512；0表示不配置，继承负载均衡全局默认值
+	// 请求体大小限制，单位MB，最大512；未配置时返回历史兼容默认展示值64
 	HttpClientMaxBodySizeMB *int `json:"HttpClientMaxBodySizeMB"`
-	// 请求头大小限制，单位KB，最大512；0表示不配置，继承负载均衡全局默认值
+	// 请求头大小限制，单位KB，最大512；未配置时返回历史兼容默认展示值32
 	HttpClientMaxHeaderSizeKB *int `json:"HttpClientMaxHeaderSizeKB"`
 	// 连接空闲超时时间，负载均衡的连接空闲超时时间，单位为秒
 	KeepaliveTimeout *int `json:"KeepaliveTimeout"`

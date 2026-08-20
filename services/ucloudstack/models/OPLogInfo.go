@@ -23,9 +23,9 @@ type OPLogInfo struct {
 	OPLogID *int `json:"OPLogID"`
 	// 产品类型，操作涉及的产品分类
 	ProductType *string `json:"ProductType"`
-	// 地域ID；地域类操作返回具体地域标识，全局类或账号级日志可为空
+	// 地域ID，操作发生的地域标识
 	Region *string `json:"Region"`
-	// 地域别称；当 Region 非空时保证非空，优先返回地域显示名称，缺失时可回退为 Region 原值；当 Region 为空时该字段也为空
+	// 地域别称，地域的显示名称
 	RegionAlias *string `json:"RegionAlias"`
 	// 资源ID，操作涉及的资源唯一标识
 	ResourceID *string `json:"ResourceID"`

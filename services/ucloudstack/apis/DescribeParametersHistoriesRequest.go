@@ -12,7 +12,7 @@ type DescribeParametersHistoriesRequest struct {
 
 	// 开始时间，Unix秒时间戳，配合结束时间筛选操作日志，必须早于EndTime
 	BeginTime *int `json:"BeginTime" required:"true"`
-	// 租户唯一标识ID，用于校验目标实例租户归属；不会作为审计日志查询条件
+	// 租户唯一标识ID，作为审计日志查询条件之一
 	CompanyID *int `json:"CompanyID" required:"true"`
 	// 数据库实例ID，仅支持MySQL/Redis实例，后台会以该ID作为资源ID去审计日志服务中查询
 	DatabaseID *string `json:"DatabaseID" required:"true"`
@@ -26,6 +26,6 @@ type DescribeParametersHistoriesRequest struct {
 	Offset *int `json:"Offset"`
 	// 产品类型，当前仅支持MySQL或Redis，系统会根据取值限定操作类型（MySQL对应UpdateMySQLConfigParam，Redis对应UpdateRedisConfigParams）
 	ProductType *string `json:"ProductType" required:"true"`
-	// 地域ID，用于校验目标实例所属地域；审计日志查询范围由DatabaseID、ProductType和对应操作类型收敛
+	// 地域ID，指定实例所在地域，后台会据此到对应审计日志库查询操作记录
 	Region *string `json:"Region" required:"true"`
 }

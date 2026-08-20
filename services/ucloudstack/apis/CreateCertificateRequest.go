@@ -20,7 +20,7 @@ type CreateCertificateRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 私钥内容，证书的私钥，证书类型为ServerCrt时必填，CA证书时无效，必须为有效的PEM格式私钥，且必须与证书配对
 	PrivateKey *string `json:"PrivateKey"`
-	// 项目ID，证书所属项目分组标识，未传时尝试分配默认项目
+	// 项目ID，证书所属项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`

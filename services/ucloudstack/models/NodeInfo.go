@@ -23,28 +23,20 @@ type NodeInfo struct {
 	NodeID *string `json:"NodeID"`
 	// 节点IP地址，节点管理IP地址
 	NodeIP *string `json:"NodeIP"`
-	// 节点IPMI管理地址
-	NodeIPMIIP *string `json:"NodeIPMIIP"`
 	// 节点IPv6地址，节点管理IPv6地址
 	NodeIPv6 *string `json:"NodeIPv6"`
 	// 节点状态，当前运行状态
 	NodeStatus *string `json:"NodeStatus"`
 	// NUMA节点数，节点NUMA拓扑数量
 	NumaNodes *int `json:"NumaNodes"`
-	// 操作系统
-	OS *string `json:"OS"`
 	// 存储节点OSD详情，存储服务状态信息
 	OSDInfos []OSDStat `json:"OSDInfos"`
 	// 物理磁盘详情，节点磁盘列表信息
 	PhysicalDisks []PhysicalDisk `json:"PhysicalDisks"`
 	// 地域ID，节点所属地域
 	Region *string `json:"Region"`
-	// 地域别名，地域的人性化显示名称
-	RegionAlias *string `json:"RegionAlias"`
 	// 序列号，硬件设备序列号
 	SerialNumber *string `json:"SerialNumber"`
-	// 集群别名，节点所属计算集群的自定义名称
-	SetAlias *string `json:"SetAlias"`
 	// 节点类型，节点角色列表
 	Types []string `json:"Types"`
 	// UUID，节点硬件唯一标识

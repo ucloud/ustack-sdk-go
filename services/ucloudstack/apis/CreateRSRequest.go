@@ -10,8 +10,10 @@ import (
 type CreateRSRequest struct {
 	request.CommonBase
 
-	// 绑定资源ID，服务节点的资源ID，仅支持添加与LB相同VPC的虚拟机资源，且该虚拟机必须存在并配置有内网IP地址
+	// 绑定资源ID，BindResourceType为空或VM时传虚拟机ID，BindResourceType为OSS时传对象存储ID
 	BindResourceID *string `json:"BindResourceID" required:"true"`
+	// 绑定资源类型，空或VM表示虚拟机，OSS表示对象存储
+	BindResourceType *string `json:"BindResourceType"`
 	// 租户ID，标识资源所属的租户组织，用于多租户资源隔离与权限控制
 	CompanyID *int `json:"CompanyID"`
 	// 负载均衡ID，用于定位需要添加服务节点的负载均衡实例

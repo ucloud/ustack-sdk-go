@@ -9,8 +9,6 @@ type DTSTaskInfo struct {
 	AllowStart *int `json:"AllowStart"`
 	// 架构，DTS实例架构
 	Arch *string `json:"Arch"`
-	// 单批写入大小，用于控制 sinker 每次批量写入的记录数；为0时使用系统默认值1000
-	BatchSize *int `json:"BatchSize"`
 	// CPU核数，DTS实例CPU配置
 	CPU *int `json:"CPU"`
 	// 计费类型，取值范围：Dynamic、Month、Year；兼容历史值：hour、month、year，别名映射：Dynamic->HOUR、Month->MONTH、Year->YEAR
@@ -41,8 +39,6 @@ type DTSTaskInfo struct {
 	Email *string `json:"Email"`
 	// 过期时间，秒级Unix时间戳
 	ExpireTime *int `json:"ExpireTime"`
-	// 增量同步阶段的 DTS 自恢复策略；为空表示沿用 DTS 默认自恢复策略
-	IncrementalRestart *DTSServiceRestartPolicy `json:"IncrementalRestart"`
 	// 最大每秒同步记录数，用于限制同步速率，取值最小范围为100，最大范围根据DTS实例CPU核数确定，1核上限为20000，2核上限为40000
 	MaxRPS *int `json:"MaxRPS"`
 	// 内存大小，单位GB，DTS实例内存配置

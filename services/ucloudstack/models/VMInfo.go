@@ -9,20 +9,10 @@ type VMInfo struct {
 	AttachedUSBIDs []string `json:"AttachedUSBIDs"`
 	// 基础镜像名称，用于创建虚拟机的源镜像名称
 	BasicImageName *string `json:"BasicImageName"`
-	// 引导顺序，可选字段，支持：hd（硬盘），cdrom（光驱），network（网络）
-	BootDevices []string `json:"BootDevices"`
 	// 引导方式，虚拟机的系统引导协议
 	BootloaderType *string `json:"BootloaderType"`
-	// 光驱列表，挂载到虚拟机的光驱详细信息
-	CDROMInfos []VmCDROMInfo `json:"CDROMInfos"`
 	// 核心数，虚拟机的vCPU核心数量
 	CPU *int `json:"CPU"`
-	// CPU每个插槽内核数，可选字段，默认等于CPU
-	CPUCoresPerSocket *int `json:"CPUCoresPerSocket"`
-	// 是否隐藏虚拟化标记
-	CPUHypervisorDisable *bool `json:"CPUHypervisorDisable"`
-	// CPU频率限制百分比，可选字段，默认100%
-	CPULimitPercent *int `json:"CPULimitPercent"`
 	// CPU模式，虚拟机的CPU模拟方式
 	CPUMode *string `json:"CPUMode"`
 	// CPU型号，虚拟机的CPU处理器型号
@@ -33,13 +23,11 @@ type VMInfo struct {
 	CPUModelInSetIntersectionSpec *bool `json:"CPUModelInSetIntersectionSpec"`
 	// 期望CPU型号，用户指定的预期CPU型号
 	CPUModelSpec *string `json:"CPUModelSpec"`
-	// CPU优先级，取值：Normal，High （高），可选字段，默认Normal
-	CPUPriority *string `json:"CPUPriority"`
 	// CPU利用率，10分钟平均CPU使用百分比
 	CPUUtilization *float64 `json:"CPUUtilization"`
 	// 是否可登录，标识虚拟机操作系统是否已就绪可供登录
 	CanLogin *bool `json:"CanLogin"`
-	// 迁移/快照可取消，标识当前是否处于可取消的迁移状态
+	// 迁移可取消，标识当前是否处于可取消的迁移状态
 	CanMigrateAbort *bool `json:"CanMigrateAbort"`
 	// 计费类型，资源的计费模式状态
 	ChargeType *string `json:"ChargeType"`
@@ -55,8 +43,6 @@ type VMInfo struct {
 	CreateTime *int `json:"CreateTime"`
 	// DNS配置，虚拟机使用的DNS服务器列表
 	DNS *string `json:"DNS"`
-	// DNS模式，DNS配置的分配方式，Auto-自动分配，Manual-手动指定
-	DNSMode *string `json:"DNSMode"`
 	// 磁盘缓存模式，当前生效的磁盘I/O缓存策略
 	DiskCacheMode *string `json:"DiskCacheMode"`
 	// 磁盘列表，挂载到虚拟机的磁盘详细信息
@@ -111,8 +97,6 @@ type VMInfo struct {
 	MemUsage *float64 `json:"MemUsage"`
 	// 内存容量，虚拟机的内存大小，单位：MiB
 	Memory *int `json:"Memory"`
-	// 网卡列表，挂载到虚拟机的网卡详细信息
-	NICInfos []VmNICInfo `json:"NICInfos"`
 	// 虚拟机名称，自定义的云主机实例标识
 	Name *string `json:"Name"`
 	// 网络类型，虚拟机网络接入类型

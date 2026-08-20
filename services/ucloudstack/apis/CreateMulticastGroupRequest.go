@@ -22,7 +22,7 @@ type CreateMulticastGroupRequest struct {
 	MulticastSource *string `json:"MulticastSource" required:"true"`
 	// 组播组名称，长度为1-128个字符，名称只能包含中英文、数字、点、下划线和中划线
 	Name *string `json:"Name" required:"true"`
-	// 项目ID，用于实现资源的逻辑分组管理，未传时尝试分配默认项目
+	// 项目ID，用于实现资源的逻辑分组管理
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，指定资源所属的物理区域
 	Region *string `json:"Region" required:"true"`

@@ -6,7 +6,7 @@ import (
 	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
-// UpdateVMAdvancedOptionsResponse - 设置虚拟机高级参数(DNS)
+// UpdateVMAdvancedOptionsResponse - 设置虚拟机高级参数
 type UpdateVMAdvancedOptionsResponse struct {
 	response.CommonBase
 

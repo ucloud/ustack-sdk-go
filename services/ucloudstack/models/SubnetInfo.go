@@ -7,6 +7,8 @@ package models
 type SubnetInfo struct {
 	// 创建时间，秒级Unix时间戳
 	CreateTime *int `json:"CreateTime"`
+	// 扩展网段，子网关联的IPv6地址范围
+	ExpandNetwork *string `json:"ExpandNetwork"`
 	// IP版本，标识子网支持的地址协议版本
 	IPVersion *string `json:"IPVersion"`
 	// 子网名称

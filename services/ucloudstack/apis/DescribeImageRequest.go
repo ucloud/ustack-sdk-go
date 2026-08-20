@@ -12,7 +12,7 @@ type DescribeImageRequest struct {
 
 	// 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围
 	CompanyID *int `json:"CompanyID"`
-	// 镜像格式，用于筛选镜像格式，取值qcow2、iso、vmdk、raw
+	// 镜像格式，用于筛选镜像格式，取值qcow2、iso
 	ImageFormat *string `json:"ImageFormat"`
 	// 镜像ID列表，用于精确筛选指定镜像集合
 	ImageIDs []string `json:"ImageIDs"`
@@ -28,6 +28,4 @@ type DescribeImageRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// 状态列表，用于筛选指定状态的镜像资源
-	Status []string `json:"Status"`
 }

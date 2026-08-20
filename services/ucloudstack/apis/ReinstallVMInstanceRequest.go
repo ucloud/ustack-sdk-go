@@ -18,7 +18,7 @@ type ReinstallVMInstanceRequest struct {
 	Password *string `json:"Password"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// Cloud-Init脚本，用于自定义系统初始化配置，需 base64 编码后传入
+	// Cloud-Init脚本，用于自定义系统初始化配置
 	UserData *string `json:"UserData"`
 	// 虚拟机ID，待重装的虚拟机资源标识
 	VMID *string `json:"VMID" required:"true"`

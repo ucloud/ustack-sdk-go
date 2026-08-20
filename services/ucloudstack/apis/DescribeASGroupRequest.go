@@ -26,6 +26,4 @@ type DescribeASGroupRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域ID，指定查询的物理区域
 	Region *string `json:"Region" required:"true"`
-	// 状态列表，按状态过滤伸缩组
-	Status []string `json:"Status"`
 }

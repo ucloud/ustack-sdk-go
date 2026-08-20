@@ -14,7 +14,7 @@ type CreateIPGroupRequest struct {
 	CompanyID *int `json:"CompanyID"`
 	// IP组名称，用于标识IP组，支持中文、英文字母、数字、点、下划线和中划线，长度1-128字符
 	Name *string `json:"Name" required:"true"`
-	// 项目ID，IP组所属项目分组标识，未传时尝试分配默认项目
+	// 项目ID，IP组所属项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，用于标识IP组所属的地理区域
 	Region *string `json:"Region" required:"true"`

@@ -12,11 +12,13 @@ type CreateVPCRequest struct {
 
 	// 租户唯一标识ID，标识用户所属的租户组织，用于实现多租户环境下的资源隔离和权限控制，系统根据此ID确定用户的资源访问范围
 	CompanyID *int `json:"CompanyID" required:"true"`
+	// VPC扩展网段，用于扩展VPC的IPv6地址空间，仅支持IPv6CIDR
+	ExpandNetwork *string `json:"ExpandNetwork"`
 	// VPC名称，用于标识虚拟私有网络，长度为1-128个字符，仅支持中英文、数字、点、下划线和中划线
 	Name *string `json:"Name" required:"true"`
 	// VPC主网段，IPv4CIDR格式的地址范围，使用10.0.0.0/8需在全局配置中放开策略
 	Network *string `json:"Network" required:"true"`
-	// 项目ID，资源所属项目分组标识，未传时尝试分配默认项目
+	// 项目ID，资源所属项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`

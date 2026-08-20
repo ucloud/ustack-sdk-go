@@ -24,6 +24,4 @@ type DescribeClusterRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域
 	Region *string `json:"Region" required:"true"`
-	// 状态列表，按状态过滤容器集群
-	Status []string `json:"Status"`
 }

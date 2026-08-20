@@ -28,10 +28,6 @@ type GetNativeNodePriceRequest struct {
 	DataDiskSetType *string `json:"DataDiskSetType"`
 	// 数据盘大小
 	DataDiskSpace *int `json:"DataDiskSpace"`
-	// GPU数量
-	GPU *int `json:"GPU"`
-	// GPU型号
-	GPUMdevName *string `json:"GPUMdevName"`
 	// 内存大小
 	Memory *int `json:"Memory" required:"true"`
 	// 地域

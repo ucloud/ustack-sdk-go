@@ -13,8 +13,6 @@ type FlatNetwork struct {
 	CreateTime *int `json:"CreateTime"`
 	// DHCP服务器IP地址，DHCP服务监听的IP
 	DHCPServerIP *string `json:"DHCPServerIP"`
-	// DNS配置，DNS服务器地址列表，多个地址用逗号分隔
-	DNS *string `json:"DNS"`
 	// 备注信息，网络的用途说明
 	Description *string `json:"Description"`
 	// 物理网卡设备名称，绑定的物理网络接口
@@ -23,8 +21,6 @@ type FlatNetwork struct {
 	EnableDHCP *bool `json:"EnableDHCP"`
 	// 扁平网络ID，网络的唯一标识
 	FlatNetworkID *string `json:"FlatNetworkID"`
-	// 网关IP地址，网络的默认网关IP
-	GatewayIP *string `json:"GatewayIP"`
 	// 可用IP范围，可分配的IP地址段
 	IPRanges *string `json:"IPRanges"`
 	// IP协议版本，IPv4或IPv6

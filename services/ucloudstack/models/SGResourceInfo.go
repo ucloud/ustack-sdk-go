@@ -5,12 +5,6 @@ package models
 
 // SGResourceInfo 
 type SGResourceInfo struct {
-	// IP地址，按网卡粒度查询时返回网卡主IP；未获取到时为空
-	IP *string `json:"IP"`
-	// MAC地址，按网卡粒度查询时返回网卡MAC；未获取到时为空
-	MAC *string `json:"MAC"`
-	// 网卡ID，按网卡粒度查询时返回绑定安全组的网卡唯一标识符；非网卡资源为空
-	NICID *string `json:"NICID"`
 	// 网卡类型，资源绑定安全组时的网络接口类型；取值LAN/WAN
 	NICType *string `json:"NICType"`
 	// 资源名称
