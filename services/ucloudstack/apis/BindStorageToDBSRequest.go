@@ -12,7 +12,7 @@ type BindStorageToDBSRequest struct {
 
 	// 外部服务访问密钥，当StorageType为S3时必填
 	AccessKey *string `json:"AccessKey"`
-	// 外部服务存储桶名称，当StorageType为S3时可选，空值默认dbs
+	// 外部服务存储桶名称，当StorageType为S3时必填
 	BucketName *string `json:"BucketName"`
 	// 租户ID，备份存储池所属租户
 	CompanyID *int `json:"CompanyID" required:"true"`

@@ -28,7 +28,7 @@ type DescribeVMInstanceRequest struct {
 	ProjectIDs []string `json:"ProjectIDs"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`
-	// 搜索字段，指定关键词匹配的字段，取值：Name（名称，前缀匹配）；不传或空值表示全字段匹配
+	// 搜索字段，指定关键词匹配的字段，取值：Name（名称，模糊匹配，仅匹配名称中包含关键词的虚拟机）；不传或空值表示全字段匹配
 	SearchField *string `json:"SearchField"`
 	// 计算集群ID，过滤指定计算集群下的虚拟机
 	SetID *string `json:"SetID"`

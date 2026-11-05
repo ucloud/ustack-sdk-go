@@ -4,12 +4,15 @@ package apis
 
 import (
 	"github.com/ucloud/ustack-sdk-go/common/request"
+	"github.com/ucloud/ustack-sdk-go/services/ucloudstack/models"
 )
 
 // CreateDTSTaskRequest 创建数据传输任务
 type CreateDTSTaskRequest struct {
 	request.CommonBase
 
+	// 单批写入大小，用于控制 sinker 每次批量写入的记录数；为0时使用系统默认值1000
+	BatchSize *int `json:"BatchSize"`
 	// CPU核数，用于指定DTS实例的CPU配置
 	CPU *int `json:"CPU" required:"true"`
 	// 计费类型，用于指定计费模式，取值范围：Dynamic（按小时计费）、Month（按月计费）、Year（按年计费）；兼容历史值：hour、month、year，别名映射：Dynamic->HOUR、Month->MONTH、Year->YEAR
@@ -44,10 +47,12 @@ type CreateDTSTaskRequest struct {
 	HeartbeatInterval *int `json:"HeartbeatInterval"`
 	// 心跳表名称，用于增量或双向同步场景定时推进binlog位点，格式为database.table_name，若不指定则同步服务自动创建，需确保数据库账户有创建表权限
 	HeartbeatTable *string `json:"HeartbeatTable"`
-	// 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，与Databases互斥使用
+	// 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，命中即不同步，优先级高于同步配置
 	IgnoreDatabases *string `json:"IgnoreDatabases"`
-	// 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，与Tables互斥使用
+	// 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，命中即不同步，优先级高于同步配置
 	IgnoreTables *string `json:"IgnoreTables"`
+	// 增量同步阶段的 DTS 自恢复策略；不传表示沿用 DTS 默认自恢复策略，显式 Enabled=false 表示关闭 DTS 自恢复
+	IncrementalRestart *models.DTSServiceRestartPolicy `json:"IncrementalRestart"`
 	// 最大每秒同步记录数，用于限制数据同步速率，取值最小范围为100，最大范围根据DTS实例CPU核数确定，1核上限为20000，2核上限为40000
 	MaxRPS *int `json:"MaxRPS" required:"true"`
 	// 内存大小，单位GB，用于指定DTS实例的内存配置
