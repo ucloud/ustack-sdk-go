@@ -15,4 +15,6 @@ type InstallNetworkConfig struct {
 	Type *string `json:"Type"`
 	// VLAN配置
 	VLAN *InstallVLANConfig `json:"VLAN"`
+	// 交换机端口模式，来自该网卡最近一次装机时选择的值；access表示交换机端口为Access模式，trunk或空表示Trunk模式
+	VlanMode *string `json:"VlanMode"`
 }

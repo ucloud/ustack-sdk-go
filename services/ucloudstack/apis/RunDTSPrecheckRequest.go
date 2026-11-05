@@ -10,6 +10,8 @@ import (
 type RunDTSPrecheckRequest struct {
 	request.CommonBase
 
+	// DTS任务ID，已有DTS任务预检查时用于在对应DTS虚拟机内执行命令；新建任务预检查时无需传入
+	DTSID *string `json:"DTSID"`
 	// 同步数据库列表，指定需要同步的数据库名称，多个数据库用逗号分隔；不指定则同步所有数据库
 	Databases *string `json:"Databases"`
 	// 目标库GTID集合，用于双向同步场景，指定目标库的GTID起始位置，可通过show master status获取，用于反向增量同步
@@ -28,9 +30,9 @@ type RunDTSPrecheckRequest struct {
 	DestinationEndpointUserName *string `json:"DestinationEndpointUserName"`
 	// 目标实例数据库类型，指定目标数据库引擎类型，取值范围：MYSQL、REDIS，必须与SourceEngine一致
 	DestinationEngine *string `json:"DestinationEngine" required:"true"`
-	// 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，与Databases互斥使用
+	// 忽略数据库列表，指定需要排除的数据库名称，多个数据库用逗号分隔，命中即不同步，优先级高于同步配置
 	IgnoreDatabases *string `json:"IgnoreDatabases"`
-	// 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，与Tables互斥使用
+	// 忽略数据表列表，指定需要排除的数据表，支持通配符，格式为database.table，多个表用逗号分隔，命中即不同步，优先级高于同步配置
 	IgnoreTables *string `json:"IgnoreTables"`
 	// 地域ID，用于标识资源所属的地理区域
 	Region *string `json:"Region" required:"true"`

@@ -13,6 +13,8 @@ type HostInfo struct {
 	CPUType *string `json:"CPUType"`
 	// 已用CPU，已分配的CPU核心数
 	CPUUsed *int `json:"CPUUsed"`
+	// vCPU绑定CPU余量，启用vCPU绑定的物理机剩余可分配CPU核心数
+	CPUVCPUBinding *int `json:"CPUVCPUBinding"`
 	// 创建时间，资源创建的秒级Unix时间戳
 	CreateTime *int `json:"CreateTime"`
 	// 可用GPU，剩余可分配的GPU数量
@@ -43,6 +45,8 @@ type HostInfo struct {
 	MemoryReserved *int `json:"MemoryReserved"`
 	// 已用内存，已分配的内存容量，单位GiB
 	MemoryUsed *int `json:"MemoryUsed"`
+	// vCPU绑定内存余量，启用vCPU绑定的物理机剩余可分配内存，单位GiB
+	MemoryVCPUBinding *float64 `json:"MemoryVCPUBinding"`
 	// NUMA节点数，物理机的NUMA节点数量
 	NumaNodes *int `json:"NumaNodes"`
 	// 地域ID，资源所属的地理标识

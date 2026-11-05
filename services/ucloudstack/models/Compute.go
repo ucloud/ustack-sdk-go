@@ -15,6 +15,8 @@ type Compute struct {
 	CPUType *string `json:"CPUType"`
 	// CPU已用，已分配CPU核心数
 	CPUUsed *int `json:"CPUUsed"`
+	// vCPU绑定CPU量，vCPU绑定节点预留的CPU核心数
+	CPUVCPUBinding *int `json:"CPUVCPUBinding"`
 	// GPU可分配，剩余可分配GPU数量
 	GPUAllocable *int `json:"GPUAllocable"`
 	// GPU数量，GPU总数
@@ -39,6 +41,8 @@ type Compute struct {
 	MemoryReserved *float64 `json:"MemoryReserved"`
 	// 内存已用，已分配内存容量
 	MemoryUsed *float64 `json:"MemoryUsed"`
+	// vCPU绑定内存量，vCPU绑定节点预留的内存容量，单位为GB
+	MemoryVCPUBinding *float64 `json:"MemoryVCPUBinding"`
 	// 资源总数，节点资源总数
 	ResourceCount *int `json:"ResourceCount"`
 	// 集群ID，用于标识集群

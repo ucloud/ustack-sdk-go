@@ -51,6 +51,8 @@ type CloneVMInstanceRequest struct {
 	Name *string `json:"Name" required:"true"`
 	// 外网线路ID，指定外网宽带运营商线路
 	OperatorName *string `json:"OperatorName"`
+	// 网卡型号，指定物理网卡的硬件型号编码，支持SR-IOV加速，仅适用于扁平网络，与内网带宽限速互斥
+	PFCode *string `json:"PFCode"`
 	// 项目ID，资源所属的项目分组标识
 	ProjectID *string `json:"ProjectID"`
 	// 计费周期，购买的时长，按月/年计费时表示月数/年数
