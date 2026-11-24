@@ -22,6 +22,8 @@ type CreateNativeNodeRequest struct {
 	CompanyID *int `json:"CompanyID"`
 	// 计算集群类型
 	ComputeclassType *string `json:"ComputeclassType" required:"true"`
+	// 默认DNS，none 表示不设置，或逗号分隔的 IP 列表；为空时按地域全局配置补齐
+	DNS *string `json:"DNS"`
 	// 数据盘集群ID
 	DataDiskSetType *string `json:"DataDiskSetType"`
 	// 数据盘大小

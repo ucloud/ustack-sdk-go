@@ -18,7 +18,7 @@ type CreateUserRequest struct {
 	Email *string `json:"Email" required:"true"`
 	// 租户名称，请求传入并写入租户及主账号显示名称，用于组织识别与展示；创建租户场景使用，长度为1-30个字符，只能包含中英文、数字、点、下划线和中划线
 	Name *string `json:"Name" required:"true"`
-	// 登录密码，请求传入并设置为主账号初始登录密码，作为后续登录凭据；创建租户场景使用；采用Base64(AES-CBC加密)编码传入；密码长度和复杂度由系统配置决定（PASSWORD_LENGTH、PASSWORD_COMPLEXITY），支持字符包括：大小写字母、数字、特殊符号()、反引号、~!@#$%^&*-+=_|{}[]:;'<>,.?/
+	// 登录密码，请求传入并设置为主账号初始登录密码，作为后续登录凭据；创建租户场景使用；明文传入（依赖 TLS 传输加密）；密码长度和复杂度由系统配置决定（PASSWORD_LENGTH、PASSWORD_COMPLEXITY），支持字符包括：大小写字母、数字、特殊符号()、反引号、~!@#$%^&*-+=_|{}[]:;'<>,.?/
 	PassWord *string `json:"PassWord" required:"true"`
 	// 手机号，请求传入并写入租户与主账号联系方式，用于短信验证码及敏感操作二次验证；创建或安全校验场景使用；需符合手机号校验规则
 	Phone *string `json:"Phone"`

@@ -20,6 +20,8 @@ type GetClusterPriceRequest struct {
 	CompanyID *int `json:"CompanyID"`
 	// 计算集群类型
 	ComputeclassType *string `json:"ComputeclassType" required:"true"`
+	// 控制面规格档位，可为 1x、2x、4x，缺省为 1x
+	ControlPlaneSpec *string `json:"ControlPlaneSpec"`
 	// 高可用
 	HighAvailability *string `json:"HighAvailability"`
 	// 内存大小

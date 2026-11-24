@@ -5302,6 +5302,28 @@ func (c *UCloudStackClient) DescribeResourceEvent(req *apis.DescribeResourceEven
 	return &res, nil
 }
 
+// NewDescribeVMMigrationEventRequest will create request of DescribeVMMigrationEvent action.
+func (c *UCloudStackClient) NewDescribeVMMigrationEventRequest() *apis.DescribeVMMigrationEventRequest {
+	req := &apis.DescribeVMMigrationEventRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// DescribeVMMigrationEvent 获取虚拟机迁移事件列表
+func (c *UCloudStackClient) DescribeVMMigrationEvent(req *apis.DescribeVMMigrationEventRequest) (*apis.DescribeVMMigrationEventResponse, error) {
+	var err error
+	var res apis.DescribeVMMigrationEventResponse
+
+	err = c.Client.InvokeAction("DescribeVMMigrationEvent", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
 // NewGetOnSiteInspectionRequest will create request of GetOnSiteInspection action.
 func (c *UCloudStackClient) NewGetOnSiteInspectionRequest() *apis.GetOnSiteInspectionRequest {
 	req := &apis.GetOnSiteInspectionRequest{}
@@ -6160,6 +6182,28 @@ func (c *UCloudStackClient) ForwardCluster(req *apis.ForwardClusterRequest) (*ap
 	return &res, nil
 }
 
+// NewGetClusterControlPlaneSpecPriceRequest will create request of GetClusterControlPlaneSpecPrice action.
+func (c *UCloudStackClient) NewGetClusterControlPlaneSpecPriceRequest() *apis.GetClusterControlPlaneSpecPriceRequest {
+	req := &apis.GetClusterControlPlaneSpecPriceRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// GetClusterControlPlaneSpecPrice 获取K8S集群控制面规格升档差价
+func (c *UCloudStackClient) GetClusterControlPlaneSpecPrice(req *apis.GetClusterControlPlaneSpecPriceRequest) (*apis.GetClusterControlPlaneSpecPriceResponse, error) {
+	var err error
+	var res apis.GetClusterControlPlaneSpecPriceResponse
+
+	err = c.Client.InvokeAction("GetClusterControlPlaneSpecPrice", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
 // NewGetClusterPaymentOfPremiumRequest will create request of GetClusterPaymentOfPremium action.
 func (c *UCloudStackClient) NewGetClusterPaymentOfPremiumRequest() *apis.GetClusterPaymentOfPremiumRequest {
 	req := &apis.GetClusterPaymentOfPremiumRequest{}
@@ -6248,6 +6292,28 @@ func (c *UCloudStackClient) GetNativeNodePrice(req *apis.GetNativeNodePriceReque
 	return &res, nil
 }
 
+// NewGetNativeNodeResizePriceRequest will create request of GetNativeNodeResizePrice action.
+func (c *UCloudStackClient) NewGetNativeNodeResizePriceRequest() *apis.GetNativeNodeResizePriceRequest {
+	req := &apis.GetNativeNodeResizePriceRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// GetNativeNodeResizePrice 获取K8S原生节点升配差价
+func (c *UCloudStackClient) GetNativeNodeResizePrice(req *apis.GetNativeNodeResizePriceRequest) (*apis.GetNativeNodeResizePriceResponse, error) {
+	var err error
+	var res apis.GetNativeNodeResizePriceResponse
+
+	err = c.Client.InvokeAction("GetNativeNodeResizePrice", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
 // NewUpdateClusterRequest will create request of UpdateCluster action.
 func (c *UCloudStackClient) NewUpdateClusterRequest() *apis.UpdateClusterRequest {
 	req := &apis.UpdateClusterRequest{}
@@ -6292,6 +6358,50 @@ func (c *UCloudStackClient) UpdateClusterCapacity(req *apis.UpdateClusterCapacit
 	return &res, nil
 }
 
+// NewUpdateClusterControlPlaneSpecRequest will create request of UpdateClusterControlPlaneSpec action.
+func (c *UCloudStackClient) NewUpdateClusterControlPlaneSpecRequest() *apis.UpdateClusterControlPlaneSpecRequest {
+	req := &apis.UpdateClusterControlPlaneSpecRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// UpdateClusterControlPlaneSpec 升级k8s集群控制面规格档位（只支持升级，不支持降级）
+func (c *UCloudStackClient) UpdateClusterControlPlaneSpec(req *apis.UpdateClusterControlPlaneSpecRequest) (*apis.UpdateClusterControlPlaneSpecResponse, error) {
+	var err error
+	var res apis.UpdateClusterControlPlaneSpecResponse
+
+	err = c.Client.InvokeAction("UpdateClusterControlPlaneSpec", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewUpdateNativeNodeDNSRequest will create request of UpdateNativeNodeDNS action.
+func (c *UCloudStackClient) NewUpdateNativeNodeDNSRequest() *apis.UpdateNativeNodeDNSRequest {
+	req := &apis.UpdateNativeNodeDNSRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// UpdateNativeNodeDNS 更新k8s集群NativeNode默认DNS
+func (c *UCloudStackClient) UpdateNativeNodeDNS(req *apis.UpdateNativeNodeDNSRequest) (*apis.UpdateNativeNodeDNSResponse, error) {
+	var err error
+	var res apis.UpdateNativeNodeDNSResponse
+
+	err = c.Client.InvokeAction("UpdateNativeNodeDNS", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
 // NewUpdateNativeNodeInstanceStatusRequest will create request of UpdateNativeNodeInstanceStatus action.
 func (c *UCloudStackClient) NewUpdateNativeNodeInstanceStatusRequest() *apis.UpdateNativeNodeInstanceStatusRequest {
 	req := &apis.UpdateNativeNodeInstanceStatusRequest{}
@@ -6308,6 +6418,28 @@ func (c *UCloudStackClient) UpdateNativeNodeInstanceStatus(req *apis.UpdateNativ
 	var res apis.UpdateNativeNodeInstanceStatusResponse
 
 	err = c.Client.InvokeAction("UpdateNativeNodeInstanceStatus", req, &res)
+	if err != nil {
+		return &res, err
+	}
+	return &res, nil
+}
+
+// NewUpdateNativeNodeResourcesRequest will create request of UpdateNativeNodeResources action.
+func (c *UCloudStackClient) NewUpdateNativeNodeResourcesRequest() *apis.UpdateNativeNodeResourcesRequest {
+	req := &apis.UpdateNativeNodeResourcesRequest{}
+
+	c.Client.SetupRequest(req)
+	req.SetRetryable(true)
+
+	return req
+}
+
+// UpdateNativeNodeResources 更新k8s集群NativeNode规格（在线升配，只支持扩容）
+func (c *UCloudStackClient) UpdateNativeNodeResources(req *apis.UpdateNativeNodeResourcesRequest) (*apis.UpdateNativeNodeResourcesResponse, error) {
+	var err error
+	var res apis.UpdateNativeNodeResourcesResponse
+
+	err = c.Client.InvokeAction("UpdateNativeNodeResources", req, &res)
 	if err != nil {
 		return &res, err
 	}
@@ -7782,28 +7914,6 @@ func (c *UCloudStackClient) DescribeMySQLSlowLogRecords(req *apis.DescribeMySQLS
 	var res apis.DescribeMySQLSlowLogRecordsResponse
 
 	err = c.Client.InvokeAction("DescribeMySQLSlowLogRecords", req, &res)
-	if err != nil {
-		return &res, err
-	}
-	return &res, nil
-}
-
-// NewDescribePMAURLRequest will create request of DescribePMAURL action.
-func (c *UCloudStackClient) NewDescribePMAURLRequest() *apis.DescribePMAURLRequest {
-	req := &apis.DescribePMAURLRequest{}
-
-	c.Client.SetupRequest(req)
-	req.SetRetryable(true)
-
-	return req
-}
-
-// DescribePMAURL 获取 PMA URL
-func (c *UCloudStackClient) DescribePMAURL(req *apis.DescribePMAURLRequest) (*apis.DescribePMAURLResponse, error) {
-	var err error
-	var res apis.DescribePMAURLResponse
-
-	err = c.Client.InvokeAction("DescribePMAURL", req, &res)
 	if err != nil {
 		return &res, err
 	}

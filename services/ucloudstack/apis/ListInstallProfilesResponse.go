@@ -15,4 +15,6 @@ type ListInstallProfilesResponse struct {
 	Infos []models.InstallProfileInfo `json:"Infos"`
 	// 总数
 	TotalCount *int `json:"TotalCount"`
+	// 结果是否因扫描上限被截断；为 true 时 TotalCount 不是完整总数，调用方应缩小查询范围
+	Truncated *bool `json:"Truncated"`
 }

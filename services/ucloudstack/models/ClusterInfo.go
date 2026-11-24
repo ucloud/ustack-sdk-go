@@ -27,6 +27,8 @@ type ClusterInfo struct {
 	ComputeclassAlias *string `json:"ComputeclassAlias"`
 	// 计算集群类型
 	ComputeclassType *string `json:"ComputeclassType"`
+	// 控制面规格档位，存量集群与空值统一返回 1x
+	ControlPlaneSpec *string `json:"ControlPlaneSpec"`
 	// 集群控制面状态
 	ControllerPlaneStatus *ControllerPlaneStatus `json:"ControllerPlaneStatus"`
 	// 创建时间
