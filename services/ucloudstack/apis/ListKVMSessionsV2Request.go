@@ -10,11 +10,11 @@ import (
 type ListKVMSessionsV2Request struct {
 	request.CommonBase
 
-	// 租户ID，过滤指定租户下的KVM会话
-	CompanyID *int `json:"CompanyID" required:"true"`
-	// 分页大小，每页返回的记录数，默认值为20，最大值为100
+	// 租户ID，可选；System/Region 管理员不传或传平台管理员 CompanyID 时查看授权地域全量，传具体租户时按该租户收敛；Company 用户始终按登录租户收敛
+	CompanyID *int `json:"CompanyID"`
+	// 分页大小，每页返回的记录数，默认值为10，最大值为100
 	Limit *int `json:"Limit"`
-	// 分页偏移，指定跳过的记录数，最小值为0
+	// 分页偏移，按 Limit 对齐到页窗口，最小值为0
 	Offset *int `json:"Offset"`
 	// 裸金属ID，过滤指定裸金属的KVM会话，若不指定则返回所有裸金属的会话
 	PMID *string `json:"PMID"`

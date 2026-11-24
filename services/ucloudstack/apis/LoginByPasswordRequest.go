@@ -14,7 +14,7 @@ type LoginByPasswordRequest struct {
 	ClientID *string `json:"ClientID"`
 	// 账号邮箱，登录身份标识并用于查询账号权限，需符合邮箱格式
 	Email *string `json:"Email" required:"true"`
-	// 登录密码，用于认证；若使用 X-Auth-Method: plain 则需 Base64 输入，服务端转为 AES 加密
+	// 登录密码，用于认证；明文传输（依赖 TLS），口令不再做前端加密；若使用 X-Auth-Method: plain 则需 Base64 输入
 	Password *string `json:"Password" required:"true"`
 	// OAuth2重定向地址，ClientID存在时必填，需为合法URI
 	RedirectURI *string `json:"RedirectURI"`

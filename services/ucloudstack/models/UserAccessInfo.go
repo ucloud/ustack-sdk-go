@@ -31,8 +31,6 @@ type UserAccessInfo struct {
 	OAuth2UniqueID *string `json:"OAuth2UniqueID"`
 	// 手机号，用于安全通知或验证码接收
 	Phone *string `json:"Phone"`
-	// API私钥，用于请求签名，需妥善保管
-	PrivateKey *string `json:"PrivateKey"`
 	// 权限级别，标识账号在租户内的管理范围
 	Privileges *string `json:"Privileges"`
 	// API公钥，用于请求签名校验与鉴权

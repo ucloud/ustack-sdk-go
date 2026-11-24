@@ -6,10 +6,8 @@ import (
 	"github.com/ucloud/ustack-sdk-go/common/response"
 )
 
-// DescribePMAURLResponse - 获取 PMA URL
-type DescribePMAURLResponse struct {
+// UpdateNativeNodeDNSResponse - 更新k8s集群NativeNode默认DNS
+type UpdateNativeNodeDNSResponse struct {
 	response.CommonBase
 
-	// PMAURL，Web管理地址
-	PMAURL *string `json:"PMAURL"`
 }

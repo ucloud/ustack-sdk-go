@@ -31,8 +31,6 @@ type TenantTenantInfoRes struct {
 	Name *string `json:"Name"`
 	// 手机号，查询结果返回的主账号安全手机号，用于短信验证码及敏感操作二次验证展示
 	Phone *string `json:"Phone"`
-	// API私钥，API调用请求签名RSA私钥，用于请求签名
-	PrivateKey *string `json:"PrivateKey"`
 	// API公钥，API调用身份验证RSA公钥，用于签名验证
 	PublicKey *string `json:"PublicKey"`
 	// 备注，说明或备注信息

@@ -16,7 +16,7 @@ type CreateAdminRequest struct {
 	MemberEmail *string `json:"MemberEmail" required:"true"`
 	// 成员名称，管理员展示名称用于管理界面显示，长度为1-30个字符，只能包含中英文、数字、点、下划线和中划线
 	MemberName *string `json:"MemberName" required:"true"`
-	// 登录密码，用于管理员登录；若使用 X-Auth-Method: plain 则需 Base64 输入并在服务端转为 AES 加密；需满足 GlobalConfigKeyPasswordLength 与 GlobalConfigKeyPasswordComplexity 规则
+	// 登录密码，用于管理员登录；明文传输（依赖 TLS）；若使用 X-Auth-Method: plain 则需 Base64 输入；需满足 GlobalConfigKeyPasswordLength 与 GlobalConfigKeyPasswordComplexity 规则
 	Password *string `json:"Password" required:"true"`
 	// 手机号，用于安全通知或验证码接收，需为合法手机号
 	Phone *string `json:"Phone"`

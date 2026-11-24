@@ -18,7 +18,7 @@ type CreateSubMemberRequest struct {
 	MemberName *string `json:"MemberName" required:"true"`
 	// OAuth2唯一标识ID，用于绑定外部身份认证系统的用户身份
 	OAuth2UniqueID *string `json:"OAuth2UniqueID"`
-	// 登录密码，用于子账号登录；若使用 X-Auth-Method: plain 则需 Base64 输入并在服务端转为 AES 加密；需满足 GlobalConfigKeyPasswordLength 与 GlobalConfigKeyPasswordComplexity 规则
+	// 登录密码，用于子账号登录；明文传输（依赖 TLS）；若使用 X-Auth-Method: plain 则需 Base64 输入；需满足 GlobalConfigKeyPasswordLength 与 GlobalConfigKeyPasswordComplexity 规则
 	Password *string `json:"Password" required:"true"`
 	// 手机号，用于安全通知或验证码接收，需为合法手机号
 	Phone *string `json:"Phone"`

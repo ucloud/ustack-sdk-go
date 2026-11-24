@@ -12,4 +12,8 @@ type CreateSubMemberResponse struct {
 
 	// 成员ID，创建成功后返回的账号标识
 	MemberID *int `json:"MemberID"`
+	// API私钥，子账号私钥，仅在本次创建响应中返回一次，请立即妥善保存；后续查询接口不返回
+	PrivateKey *string `json:"PrivateKey"`
+	// API公钥，子账号公钥，仅在本次创建响应中返回
+	PublicKey *string `json:"PublicKey"`
 }
