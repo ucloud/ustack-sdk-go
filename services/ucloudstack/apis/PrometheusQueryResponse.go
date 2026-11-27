@@ -10,6 +10,6 @@ import (
 type PrometheusQueryResponse struct {
 	response.CommonBase
 
-	// 查询结果，Prometheus标准响应JSON字符串，包含status/data/warnings，后端会直接将Prometheus返回值序列化写入响应
+	// 查询结果，Prometheus标准响应JSON字符串（含status/data/warnings），以字符串形式内嵌于统一响应体的Result字段，调用方需二次解析该字段获取Prometheus数据
 	Result *string `json:"Result"`
 }
